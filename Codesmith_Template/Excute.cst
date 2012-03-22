@@ -1,0 +1,88 @@
+<%-- 
+Name: Go.cst
+Author: John Winstanley
+Description: Run SubTemplates From This File And OutPut those templates to file
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="Text" Src="" Inherits="" Debug="False" Description="Template description here." %>
+<%@ Assembly Name="CodeSmith.CustomProperties" %>
+<%@ Import Namespace="CodeSmith.CustomProperties" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+
+
+<%-- Use the Register directive to register a subtemplate --%>
+<%@ Property Name="SourceDatabase" Optional="True" Type="SchemaExplorer.DatabaseSchema" Category="1. Context" Description="Database that the stored procedures should be based on." %>
+<%--@ Property Name="_outputDirectory" Optional="True" Type="System.String" Category="1. Context" Description="Database that the stored procedures should be based on." --%>
+<%@ Register Name="Classes" Template="Classes.cst" %>
+<%@ Register Name="Javascript" Template="Javascript.cst" %>
+<%--@Register Name="View" Template="BUS.cst" %>
+
+
+
+
+<%-- Create a property on the temaplte that displays a file selector --%>
+<script runat="template">
+private string _outputDirectory = @"C:\OutPut";
+[Editor(typeof(System.Windows.Forms.Design.FolderNameEditor), typeof(System.Drawing.Design.UITypeEditor)),
+Category("Custom"), Description("Output directory.")]
+public string OutputDirectory
+{
+       get {return _outputDirectory;}
+       set {_outputDirectory= value;}
+}
+
+public static string GetClassName(string name)
+{									
+	if(name.EndsWith("s") && !name.EndsWith("ss"))
+	{
+		//name = name.Substring(0,name.Length - 1);
+	}
+	if(name.EndsWith("sse"))
+	{
+		name = name.Substring(0,name.Length - 1);
+	}
+	int index = name.IndexOf("_");
+    name = name.Substring(index+1);
+    index = name.IndexOf("_");
+    while(index != -1)
+    {
+        name =  name.Substring(0,index)+ name[index+1].ToString().ToUpper() + name.Substring(index+2);
+        index = name.IndexOf("_");
+    }
+   
+    //index = name.IndexOf("-");
+   // name = name.Substring(index+1);
+    name  = name.Replace(" ","");			
+    return name[0].ToString().ToUpper() + name.Substring(1);;
+}
+
+</script>
+
+<%
+// Create an instance of the SubTemplate
+
+//AllStoreProcedure allStoreProcedure = new AllStoreProcedure();
+//allStoreProcedure.SourceDatabase = this.SourceDatabase;
+// OutPut the sub template to a file
+//allStoreProcedure.RenderToFile(OutputDirectory+"/AllStoreProcedure.sql",true);
+
+Classes objClass = this.Create<Classes>();
+Javascript objJs = this.Create<Javascript>();
+
+foreach(TableSchema table in SourceDatabase.Tables)
+{	
+	objClass.SourceTable = table;
+    objJs.SourceTable = table;
+	//CodeSmith.Engine.PreserveRegionsMergeStrategy preserveRegionsMergeStrategy = new PreserveRegionsMergeStrategy();
+	//preserveRegionsMergeStrategy.Language = "PHP";
+	//preserveRegionsMergeStrategy.RegionNameRegex = "PRESERVE";
+	Response.WriteLine("Finished {0}",objClass);
+	objClass.RenderToFile(
+		_outputDirectory + "\\Classes\\" + GetClassName(table.Name) + ".php",
+	true);
+	objJs.RenderToFile(
+		_outputDirectory + "\\Javascript\\" + GetClassName(table.Name) + ".js",
+	true);
+	Response.WriteLine("Finished {0}",table);
+}
+%>
