@@ -1,0 +1,1052 @@
+"General"
+{
+"ProjectType" = "local"
+"AutoLoadTemplate" = "%s.php;class.%s.php;"
+}
+"Configurations"
+{
+    "Local|PHP 5"
+    {
+    "IncludeDirs" = ""
+    }
+    "Local|PHP 4"
+    {
+    "IncludeDirs" = ""
+    }
+    "Remote|PHP 5"
+    {
+    "IncludeDirs" = ""
+    }
+    "Remote|PHP 4"
+    {
+    "IncludeDirs" = ""
+    }
+}
+"Files"
+{
+    "class\\model_paymentmode.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\global_common.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderDb.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_paymentmode.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\logs_2012\\fulltext.log"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-icons_454545_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_role.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-icons_cd0a0a_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.tabs.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_numberaire.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_evaluationtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.selectable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\varia\\LoggerLevelMatchFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.selectable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\or\\LoggerDefaultRenderer.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.button.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_notificationtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.resizable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_menu.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\Logger.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_numberaire.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderConsole.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers\\LoggerPatternParser.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\application.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.button.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx_D"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_glass_95_fef1ec_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.dialog.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts\\LoggerLayoutTTCC.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\demo-spindown-open.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_commentbad.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_header.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_offer.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-icons_cd0a0a_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_glass_75_dadada_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts\\LoggerPatternLayout.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.all.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.progressbar.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\Search Icon.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\or\\LoggerObjectRenderer.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.autocomplete.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_commentbad.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\xml\\LoggerDOMConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_role.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.datepicker.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\maxid"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-icons_222222_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_search_box.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerManager.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.base.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.datepicker.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.slider.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\global_editor.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loadingfb.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.core.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\common\\include.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_menu.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.all.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.slider.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_request.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\content.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_glass_65_ffffff_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-icons_888888_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-icons_2e83ff_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-icons_454545_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerAppender.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_comment.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_district.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_flat_75_ffffff_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx_linux"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loading_4.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\varia\\LoggerDenyAllFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_setting.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_auction.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\varia\\LoggerStringMatchFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_district.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\demo-config-on-tile.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\varia"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers\\LoggerOptionConverter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.theme.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerFactory.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.accordion.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts\\LoggerLayoutHtml.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.progressbar.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.theme.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_article.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerNDC.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-icons_222222_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\logs_2012"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts\\LoggerLayoutSimple.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.resizable.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerPropertyConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_currency.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx\\temp"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerLayout.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-icons_888888_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "config\\log4php_config.xml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerHierarchy.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_articletype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-icons_2e83ff_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_request.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-icons_cd0a0a_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loading_6.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\xml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers\\LoggerTransform.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_glass_75_e6e6e6_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_comment.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\config\\LoggerPropertySetter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\xml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\varia\\LoggerLevelRangeFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderDailyFile.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.tabs.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\success.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_setting.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_glass_75_dadada_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_userrank.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_glass_65_ffffff_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\common\\dbconnection.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerLevel.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_userrank.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_partner.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\error.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_glass_75_dadada_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerAppenderSkeleton.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_article.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\or\\LoggerRendererMap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_product.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderMail.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\icon-docs-info.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_status.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\insertimage.JPG"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderSocket.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerCategory.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\demo-config-on.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-icons_888888_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerLocationInfo.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\maxid\\temp"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_shiptype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_highlight-soft_75_cccccc_1x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\demo-spindown-closed.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_advertising.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_flat_0_aaaaaa_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx_linux\\temp"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_advertising.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_shiptype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\base.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerLoggingEvent.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\or"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-icons_222222_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.dialog.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\calendar.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_glass_75_e6e6e6_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_auction.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_partner.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_property.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.base.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderFile.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "upload"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\jquery.ui.accordion.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderNull.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_evaluation.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_property.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_notificationtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-icons_2e83ff_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers\\LoggerPatternConverter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\footer_bg.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts\\LoggerXmlLayout.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerRoot.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_like.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "config\\globalconfig.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_evaluation.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_status.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers"
+    {
+    "ProjRelPath" = "T"
+    }
+    "javascript"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerBasicConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_city.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_adtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_glass_65_ffffff_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\main.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\layouts"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderRollingFile.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loading.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_flat_75_ffffff_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\index2.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.core.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_product.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_datatype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loading_5.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_datatype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_search_box_detail.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-icons_454545_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_currency.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\helpers\\LoggerFormattingInfo.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery-ui-1.8.16.custom.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_like.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\icons_set.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_articletype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\common"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerDefaultCategoryFactory.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_evaluationtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderSyslog.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderMailEvent.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\base\\images\\ui-bg_glass_75_e6e6e6_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderPhp.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_manufactory.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerLog.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_city.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_adtype.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_manufactory.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\LoggerMDC.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\global_system.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "file\\sphinx_D\\temp"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\pbar-ani.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\ui-bg_glass_55_fbf9ee_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_menu.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_search_box_menu.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\config\\LoggerPropertyGetter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\insertimage.GIF"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\appenders\\LoggerAppenderEcho.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "image\\loader_light_blue.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_footer.inc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.autocomplete.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "admin_offer.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\images\\ui-bg_flat_75_ffffff_40x100.png"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}
+"References"
+{
+}
