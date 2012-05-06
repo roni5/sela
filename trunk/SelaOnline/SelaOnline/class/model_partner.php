@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:56 PM
  *
  */
 
@@ -64,45 +64,45 @@ class Model_Partner
 			IsDeleted
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\', \'16\', \'17\', \'18\', \'19\', \'20\', \'21\', \'22\', \'23\', \'24\', \'25\', \'26\', \'27\', \'28\', \'29\', \'30\', \'31\', \'32\', \'33\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\', \'{21}\', \'{22}\', \'{23}\', \'{24}\', \'{25}\', \'{26}\', \'{27}\', \'{28}\', \'{29}\', \'{30}\', \'{31}\', \'{32}\', \'{33}\'
         );';
         
 	const SQL_UPDATE_SL_PARTNER		= 'UPDATE `{0}`
 		SET  
-			`ParterID` = \'1\',
-			`PartnerName` = \'2\',
-			`Company` = \'3\',
-			`Address 1` = \'4\',
-			`Address 2` = \'5\',
-			`Address 3` = \'6\',
-			`Address 4` = \'7\',
-			`Address 5` = \'8\',
-			`Email 1` = \'9\',
-			`Email 2` = \'10\',
-			`Email 3` = \'11\',
-			`Email 4` = \'12\',
-			`Email 5` = \'13\',
-			`Phone 1` = \'14\',
-			`Phone 2` = \'15\',
-			`Phone 3` = \'16\',
-			`Phone 4` = \'17\',
-			`Phone 5` = \'18\',
-			`Fax 1` = \'19\',
-			`Fax 2` = \'20\',
-			`Fax 3` = \'21\',
-			`Fax 4` = \'22\',
-			`Fax 5` = \'23\',
-			`TaxNumber` = \'24\',
-			`AccountNumber` = \'25\',
-			`CreatedBy` = \'26\',
-			`CreatedDate` = \'27\',
-			`ModifiedBy` = \'28\',
-			`ModifiedDate` = \'29\',
-			`DeletedBy` = \'30\',
-			`DeletedDate` = \'31\',
-			`Status` = \'32\',
-			`IsDeleted` = \'33\'
-		WHERE `ParterID` = \'1\'  ';
+			`ParterID` = \'{1}\',
+			`PartnerName` = \'{2}\',
+			`Company` = \'{3}\',
+			`Address 1` = \'{4}\',
+			`Address 2` = \'{5}\',
+			`Address 3` = \'{6}\',
+			`Address 4` = \'{7}\',
+			`Address 5` = \'{8}\',
+			`Email 1` = \'{9}\',
+			`Email 2` = \'{10}\',
+			`Email 3` = \'{11}\',
+			`Email 4` = \'{12}\',
+			`Email 5` = \'{13}\',
+			`Phone 1` = \'{14}\',
+			`Phone 2` = \'{15}\',
+			`Phone 3` = \'{16}\',
+			`Phone 4` = \'{17}\',
+			`Phone 5` = \'{18}\',
+			`Fax 1` = \'{19}\',
+			`Fax 2` = \'{20}\',
+			`Fax 3` = \'{21}\',
+			`Fax 4` = \'{22}\',
+			`Fax 5` = \'{23}\',
+			`TaxNumber` = \'{24}\',
+			`AccountNumber` = \'{25}\',
+			`CreatedBy` = \'{26}\',
+			`CreatedDate` = \'{27}\',
+			`ModifiedBy` = \'{28}\',
+			`ModifiedDate` = \'{29}\',
+			`DeletedBy` = \'{30}\',
+			`DeletedDate` = \'{31}\',
+			`Status` = \'{32}\',
+			`IsDeleted` = \'{33}\'
+		WHERE `ParterID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_PARTNER		= 'CREATE TABLE `{0}` (

@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:53 PM
  *
  */
 
@@ -36,17 +36,17 @@ class Model_Like
 			UnlikeUsers
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\'
         );';
         
 	const SQL_UPDATE_SL_LIKE		= 'UPDATE `{0}`
 		SET  
-			`LikeID` = \'1\',
-			`LikeAmount` = \'2\',
-			`UnlikeAmount` = \'3\',
-			`LIkeUsers` = \'4\',
-			`UnlikeUsers` = \'5\'
-		WHERE `LikeID` = \'1\'  ';
+			`LikeID` = \'{1}\',
+			`LikeAmount` = \'{2}\',
+			`UnlikeAmount` = \'{3}\',
+			`LIkeUsers` = \'{4}\',
+			`UnlikeUsers` = \'{5}\'
+		WHERE `LikeID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_LIKE		= 'CREATE TABLE `{0}` (

@@ -17,6 +17,15 @@ a:hover{color:#f90}
 #content {float:left; height:100%;width:75%; background-color:#EEF8FB}
 #slider-right {float:left; height:650px;width:10%;background-color:red}
 #footer{position:relative;clear:both; height:100px;background-color:#036}
+
+
+/*********** common for admin page *********/
+.div_admin_group_title {text-align:left}
+#admin-box {float:left; height:100%;width:100%; background-color:#EEF8FB}
+#admin-content {float:left; margin-left:220px; padding:0 5px}
+#admin-slider-left {float:left; min-height:400px;width:220px;margin-left:-100%; background-color:#090}
+/*********** end common for admin page ************/
+
 .input-text-invalid{border: 2px solid red}
 .clear{clear:both}
 .center{text-align:center}
@@ -186,11 +195,6 @@ forumd...lup.css (line 1)
 .paging a {background: #493A3A; text-decoration:none; font-weight:bold; color:White; width:40px; padding:3px 5px 3px 5px; cursor:pointer}
 /*********** end paging ************/
 
-
-/*********** common for admin page *********/
-.div_admin_group_title {text-align:left}
-#admin-content {float:left; height:100%;width:100%; background-color:#EEF8FB}
-/*********** end common for admin page ************/
 
 /* Css for Tooltip */
 #tooltip {position: absolute;	z-index: 3000;	border: 1px solid #111;*border: 1px solid #111;	background-color: #eee;	padding: 5px 10px 5px 10px;	opacity: 0.95;font-size: 10px;font-weight: normal;color: red; vertical-align: middle}

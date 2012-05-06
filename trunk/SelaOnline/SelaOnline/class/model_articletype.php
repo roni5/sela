@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:46 PM
  *
  */
 
@@ -41,22 +41,22 @@ class Model_ArticleType
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\'
         );';
         
 	const SQL_UPDATE_SL_ARTICLE_TYPE		= 'UPDATE `{0}`
 		SET  
-			`ArticleTypeID` = \'1\',
-			`ArticleTypeName` = \'2\',
-			`CreatedBy` = \'3\',
-			`CreatedDate` = \'4\',
-			`ModifiedBy` = \'5\',
-			`ModifiedDate` = \'6\',
-			`DeletedBy` = \'7\',
-			`DeletedDate` = \'8\',
-			`IsDeleted` = \'9\',
-			`Status` = \'10\'
-		WHERE `ArticleTypeID` = \'1\'  ';
+			`ArticleTypeID` = \'{1}\',
+			`ArticleTypeName` = \'{2}\',
+			`CreatedBy` = \'{3}\',
+			`CreatedDate` = \'{4}\',
+			`ModifiedBy` = \'{5}\',
+			`ModifiedDate` = \'{6}\',
+			`DeletedBy` = \'{7}\',
+			`DeletedDate` = \'{8}\',
+			`IsDeleted` = \'{9}\',
+			`Status` = \'{10}\'
+		WHERE `ArticleTypeID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_ARTICLE_TYPE		= 'CREATE TABLE `{0}` (
@@ -214,7 +214,15 @@ class Model_ArticleType
 				"_objMenu.changePage")."</div>";
 		return $strHTML;
 	}
-    
+	public function DisplayAllCategory()
+	{
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
+		//echo 'sql:'.$strSQL;	
+		$arrResult = $this->_objConnection->selectCommand($strSQL);
+		//print_r($arrResult);
+	}
+	
     #endregion   
 }
 ?>

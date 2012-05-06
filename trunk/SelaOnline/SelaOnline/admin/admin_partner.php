@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 11:39:33 AM
+ * Date Created 5/6/2012 1:07:07 PM
  *
  */
 
@@ -89,7 +89,7 @@ if ($_pgR["act"] == model_Partner::ACT_ADD)
 		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objPartner->insert($parterid,$partnername,$company,$address 1,$address 2,$address 3,$address 4,$address 5,$email 1,$email 2,$email 3,$email 4,$email 5,$phone 1,$phone 2,$phone 3,$phone 4,$phone 5,$fax 1,$fax 2,$fax 3,$fax 4,$fax 5,$taxnumber,$accountnumber,$status,);
+		$resultID = $objPartner->insert($parterID,$partnerName,$company,$address 1,$address 2,$address 3,$address 4,$address 5,$email 1,$email 2,$email 3,$email 4,$email 5,$phone 1,$phone 2,$phone 3,$phone 4,$phone 5,$fax 1,$fax 2,$fax 3,$fax 4,$fax 5,$taxNumber,$accountNumber,$status,);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -180,7 +180,7 @@ elseif($_pgR['act'] == model_Partner::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objPartner->update($parterid,$partnername,$company,$address 1,$address 2,$address 3,$address 4,$address 5,$email 1,$email 2,$email 3,$email 4,$email 5,$phone 1,$phone 2,$phone 3,$phone 4,$phone 5,$fax 1,$fax 2,$fax 3,$fax 4,$fax 5,$taxnumber,$accountnumber,$status,);
+		$resultID = $objPartner->update($parterID,$partnerName,$company,$address 1,$address 2,$address 3,$address 4,$address 5,$email 1,$email 2,$email 3,$email 4,$email 5,$phone 1,$phone 2,$phone 3,$phone 4,$phone 5,$fax 1,$fax 2,$fax 3,$fax 4,$fax 5,$taxNumber,$accountNumber,$status,);
 		
 		if ($resultID)
 		{

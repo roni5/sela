@@ -14,6 +14,7 @@
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ui/jquery.ui.autocomplete.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ui/jquery.ui.core.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('jquery.tooltip.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJs('nicEdit.js');?>"></script>
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ajax.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('global_config.js');?>"></script>
@@ -41,7 +42,7 @@
 			}
 				else
 					{
-				echo '<label >Chào mừng '.$_SESSION[global_common::SES_C_USERINFO]['name'].'</label>
+				echo '<label >Chào mừng '.$_SESSION[global_common::SES_C_USERINFO]['UserName'].'</label>
 					<input id="btnChangePass" type="button" class="btn btn-oliver" class="btn btn-oliver" value="Đổi mật khẩu" onclick="core.redirect(\'index.php\');"/>
 					<input id="btnlogin" type="button" class="btn btn-oliver" class="btn btn-oliver" value="Đăng xuất" onclick="_objUser.logout();"/>
 					

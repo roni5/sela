@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:59 PM
  *
  */
 
@@ -41,22 +41,22 @@ class Model_Role
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\'
         );';
         
 	const SQL_UPDATE_SL_ROLE		= 'UPDATE `{0}`
 		SET  
-			`RoleID` = \'1\',
-			`RoleName` = \'2\',
-			`CreatedBy` = \'3\',
-			`CreatedDate` = \'4\',
-			`ModifiedBy` = \'5\',
-			`ModifiedDate` = \'6\',
-			`DeletedBy` = \'7\',
-			`DeletedDate` = \'8\',
-			`IsDeleted` = \'9\',
-			`Status` = \'10\'
-		WHERE `RoleID` = \'1\'  ';
+			`RoleID` = \'{1}\',
+			`RoleName` = \'{2}\',
+			`CreatedBy` = \'{3}\',
+			`CreatedDate` = \'{4}\',
+			`ModifiedBy` = \'{5}\',
+			`ModifiedDate` = \'{6}\',
+			`DeletedBy` = \'{7}\',
+			`DeletedDate` = \'{8}\',
+			`IsDeleted` = \'{9}\',
+			`Status` = \'{10}\'
+		WHERE `RoleID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_ROLE		= 'CREATE TABLE `{0}` (

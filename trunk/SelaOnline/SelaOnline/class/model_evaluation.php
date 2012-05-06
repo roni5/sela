@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:51 PM
  *
  */
 
@@ -36,17 +36,17 @@ class Model_Evaluation
 			LastEvaluated
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\'
         );';
         
 	const SQL_UPDATE_SL_EVALUATION		= 'UPDATE `{0}`
 		SET  
-			`ArticleID` = \'1\',
-			`EvaluationID` = \'2\',
-			`NumEvaluation` = \'3\',
-			`EvaluatedBy` = \'4\',
-			`LastEvaluated` = \'5\'
-		WHERE `EvaluationID` = \'2\'  ';
+			`ArticleID` = \'{1}\',
+			`EvaluationID` = \'{2}\',
+			`NumEvaluation` = \'{3}\',
+			`EvaluatedBy` = \'{4}\',
+			`LastEvaluated` = \'{5}\'
+		WHERE `EvaluationID` = \'{2}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_EVALUATION		= 'CREATE TABLE `{0}` (

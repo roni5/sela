@@ -16,6 +16,35 @@ var CLASS_INPUT_INVALID = "input-text-invalid";
 
 function global_core() {
 
+    var p;
+    this.changePage = changePage;
+    function changePage(strPage, action, intPage) {
+        var strRequest = "?isAJ=1&act=" + action + "&p=" + intPage + '&uptime=' + core.getMilliseconds();
+        var ajax = new Ajax();
+        p = intPage;
+        ajax.SendRequestToServerWithCustomMsgCache(strPage + strRequest, null, changePage_OnCallBack, true, MSG_AJAX_SENDING_VN);
+    }
+
+    function changePage_OnCallBack(xmlHTTPRequest) {
+
+        if (xmlHTTPRequest.readyState == 4) {
+            if (xmlHTTPRequest.status == 200) {
+                var strRespond = core.parserXML(xmlHTTPRequest.responseText);
+
+                if (!core.headerProcessingArr(strRespond[0], Array(true, false, false))) {
+                    //show fail
+                    popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
+                    return;
+                }
+                if (parseInt(strRespond[1]["rs"]) == 1) {
+                    showInfoBar('success', "Thao tác thành công.");
+                    // alert(strRespond[1]["inf"]);
+                    core.getObject('list-content').html(strRespond[1]["inf"]);
+                    core.getObject("txtPage")[0].value = p;
+                }
+            }
+        }
+    }
     this.ValidateInputTextBox = ValidateInputTextBox;
     function ValidateInputTextBox(controlId, msg, isFocus) {
         if ($.trim(msg) != "") {

@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:45 PM
  *
  */
 
@@ -51,32 +51,32 @@ class Model_Article
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\', \'16\', \'17\', \'18\', \'19\', \'20\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\'
         );';
         
 	const SQL_UPDATE_SL_ARTICLE		= 'UPDATE `{0}`
 		SET  
-			`ArticleID` = \'1\',
-			`Prefix` = \'2\',
-			`Title` = \'3\',
-			`FileName` = \'4\',
-			`ArticleType` = \'5\',
-			`Content` = \'6\',
-			`NotificationType` = \'7\',
-			`Tags` = \'8\',
-			`CatalogueID` = \'9\',
-			`SectionID` = \'10\',
-			`NumView` = \'11\',
-			`NumComment` = \'12\',
-			`CreatedBy` = \'13\',
-			`CreatedDate` = \'14\',
-			`ModifiedBy` = \'15\',
-			`ModifiedDate` = \'16\',
-			`DeletedBy` = \'17\',
-			`DeletedDate` = \'18\',
-			`IsDeleted` = \'19\',
-			`Status` = \'20\'
-		WHERE `ArticleID` = \'1\'  ';
+			`ArticleID` = \'{1}\',
+			`Prefix` = \'{2}\',
+			`Title` = \'{3}\',
+			`FileName` = \'{4}\',
+			`ArticleType` = \'{5}\',
+			`Content` = \'{6}\',
+			`NotificationType` = \'{7}\',
+			`Tags` = \'{8}\',
+			`CatalogueID` = \'{9}\',
+			`SectionID` = \'{10}\',
+			`NumView` = \'{11}\',
+			`NumComment` = \'{12}\',
+			`CreatedBy` = \'{13}\',
+			`CreatedDate` = \'{14}\',
+			`ModifiedBy` = \'{15}\',
+			`ModifiedDate` = \'{16}\',
+			`DeletedBy` = \'{17}\',
+			`DeletedDate` = \'{18}\',
+			`IsDeleted` = \'{19}\',
+			`Status` = \'{20}\'
+		WHERE `ArticleID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_ARTICLE		= 'CREATE TABLE `{0}` (
@@ -210,7 +210,6 @@ class Model_Article
 		//print_r($arrResult);
 		$strHTML = '<table class="tbl-list">
                     <thead>
-						<td>ArticleID</td>
 						<td>Prefix</td>
 						<td>Title</td>
 						<td>FileName</td>

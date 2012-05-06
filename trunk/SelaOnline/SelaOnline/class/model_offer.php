@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:56 PM
  *
  */
 
@@ -38,19 +38,19 @@ class Model_Offer
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\'
         );';
         
 	const SQL_UPDATE_SL_OFFER		= 'UPDATE `{0}`
 		SET  
-			`AuctionID` = \'1\',
-			`UserID` = \'2\',
-			`Price` = \'3\',
-			`OfferedDate` = \'4\',
-			`DeletedDate` = \'5\',
-			`IsDelete` = \'6\',
-			`Status` = \'7\'
-		WHERE `UserID` = \'2\'  ';
+			`AuctionID` = \'{1}\',
+			`UserID` = \'{2}\',
+			`Price` = \'{3}\',
+			`OfferedDate` = \'{4}\',
+			`DeletedDate` = \'{5}\',
+			`IsDelete` = \'{6}\',
+			`Status` = \'{7}\'
+		WHERE `UserID` = \'{2}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_OFFER		= 'CREATE TABLE `{0}` (

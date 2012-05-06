@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:54 PM
  *
  */
 
@@ -42,23 +42,23 @@ class Model_Menu
 			DeletedDate
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\'
         );';
         
 	const SQL_UPDATE_SL_MENU		= 'UPDATE `{0}`
 		SET  
-			`MenuID` = \'1\',
-			`MenuName` = \'2\',
-			`Link` = \'3\',
-			`NumOrder` = \'4\',
-			`IsDeleted` = \'5\',
-			`CreatedBy` = \'6\',
-			`CreatedDate` = \'7\',
-			`ModifiedBy` = \'8\',
-			`ModifiedDate` = \'9\',
-			`DeletedBy` = \'10\',
-			`DeletedDate` = \'11\'
-		WHERE `MenuID` = \'1\'  ';
+			`MenuID` = \'{1}\',
+			`MenuName` = \'{2}\',
+			`Link` = \'{3}\',
+			`NumOrder` = \'{4}\',
+			`IsDeleted` = \'{5}\',
+			`CreatedBy` = \'{6}\',
+			`CreatedDate` = \'{7}\',
+			`ModifiedBy` = \'{8}\',
+			`ModifiedDate` = \'{9}\',
+			`DeletedBy` = \'{10}\',
+			`DeletedDate` = \'{11}\'
+		WHERE `MenuID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_MENU		= 'CREATE TABLE `{0}` (

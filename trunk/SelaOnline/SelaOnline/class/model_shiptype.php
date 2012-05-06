@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:16:00 PM
  *
  */
 
@@ -40,21 +40,21 @@ class Model_ShipType
 			IsDeleted
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\'
         );';
         
 	const SQL_UPDATE_SL_SHIP_TYPE		= 'UPDATE `{0}`
 		SET  
-			`ShipTypeID` = \'1\',
-			`ShipTypeName` = \'2\',
-			`CreatedBy` = \'3\',
-			`CreatedDate` = \'4\',
-			`ModifiedBy` = \'5\',
-			`ModifiedDate` = \'6\',
-			`DeletedBy` = \'7\',
-			`DeletedDate` = \'8\',
-			`IsDeleted` = \'9\'
-		WHERE `ShipTypeID` = \'1\'  ';
+			`ShipTypeID` = \'{1}\',
+			`ShipTypeName` = \'{2}\',
+			`CreatedBy` = \'{3}\',
+			`CreatedDate` = \'{4}\',
+			`ModifiedBy` = \'{5}\',
+			`ModifiedDate` = \'{6}\',
+			`DeletedBy` = \'{7}\',
+			`DeletedDate` = \'{8}\',
+			`IsDeleted` = \'{9}\'
+		WHERE `ShipTypeID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_SHIP_TYPE		= 'CREATE TABLE `{0}` (

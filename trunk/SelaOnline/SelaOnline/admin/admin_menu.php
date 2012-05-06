@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 11:39:33 AM
+ * Date Created 5/6/2012 1:07:07 PM
  *
  */
 
@@ -45,7 +45,7 @@ if ($_pgR["act"] == model_Menu::ACT_ADD)
 		$numOrder = global_editor::rteSafe(html_entity_decode($numOrder,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objMenu->insert($menuid,$menuname,$link,$numorder,);
+		$resultID = $objMenu->insert($menuID,$menuName,$link,$numOrder,);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -92,7 +92,7 @@ elseif($_pgR['act'] == model_Menu::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objMenu->update($menuid,$menuname,$link,$numorder,);
+		$resultID = $objMenu->update($menuID,$menuName,$link,$numOrder,);
 		
 		if ($resultID)
 		{
