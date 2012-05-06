@@ -21,8 +21,27 @@ include_once('class/model_user.php');
 <?php
 
 $objUser = new Model_User($objConnection);
-
-if ($_pgR["act"] == model_User::ACT_REGISTER)
+if($_pgR['act'] == Model_User::ACT_LOGIN)
+{
+	$userName = $_pgR['username'];
+	$password = $_pgR['password'];
+	$result =  $objUser->login($userName,$password);
+	//print_r($result);
+	if ($result) 
+	{
+		$_SESSION[global_common::SES_C_USERINFO] = $result;
+		//print_r($_SESSION[user_common::SES_C_USERINFO]);
+		$_SESSION[global_common::SES_C_USERINFO]["active"] = 1;
+		echo global_common::convertToXML($strMessageHeader, array('rs'), array(1),array(0));
+		return;
+	}
+	else
+	{
+		echo global_common::convertToXML($strMessageHeader, array('rs'), array(0),array(0));
+		return;	
+	}
+	
+}elseif ($_pgR["act"] == model_User::ACT_REGISTER)
 {
 	
 	//if (global_common::isCLogin())
@@ -35,7 +54,6 @@ if ($_pgR["act"] == model_User::ACT_REGISTER)
 		//	return;
 		//}
 		
-		$userID = global_common::getMaxID(Model_User::TBL_SL_USER);
 		$userName = $_pgR['UserName'];
 		global_common::writeLog($userName);
 		$userName = global_editor::rteSafe(html_entity_decode($userName,ENT_COMPAT ,'UTF-8' ));
@@ -68,7 +86,7 @@ if ($_pgR["act"] == model_User::ACT_REGISTER)
 		$isActived = global_editor::rteSafe(html_entity_decode($isActived,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objUser->insert($userid,$username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avartar,$accountid,$isactived);
+		$resultID = $objUser->insert($userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -90,7 +108,7 @@ if ($_pgR["act"] == model_User::ACT_REGISTER)
 		echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_REQUIRE_LOGIN), array(0,1));
 	}*/
 	return;
-}elseif ($_pgR["act"] == model_User::ACT_ADD)
+}elseif($_pgR["act"] == model_User::ACT_ADD)
 {
 	
 	if (global_common::isCLogin())
@@ -135,7 +153,7 @@ if ($_pgR["act"] == model_User::ACT_REGISTER)
 		$isActived = global_editor::rteSafe(html_entity_decode($isActived,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objUser->insert($userid,$username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avartar,$accountid,$isactived);
+		$resultID = $objUser->insert($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -204,7 +222,7 @@ elseif($_pgR['act'] == model_User::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objUser->update($userid,$username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avartar,$accountid,$isactived);
+		$resultID = $objUser->update($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
 		
 		if ($resultID)
 		{

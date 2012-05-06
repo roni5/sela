@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:58 PM
  *
  */
 
@@ -40,21 +40,21 @@ class Model_Request
 			IsDeleted
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\'
         );';
         
 	const SQL_UPDATE_SL_REQUEST		= 'UPDATE `{0}`
 		SET  
-			`RequesID` = \'1\',
-			`ContentRequest` = \'2\',
-			`RequestedBy` = \'3\',
-			`RequestedDate` = \'4\',
-			`ContentRespone` = \'5\',
-			`ResponedBy` = \'6\',
-			`ResponedDate` = \'7\',
-			`IsApproved` = \'8\',
-			`IsDeleted` = \'9\'
-		WHERE `RequesID` = \'1\'  ';
+			`RequesID` = \'{1}\',
+			`ContentRequest` = \'{2}\',
+			`RequestedBy` = \'{3}\',
+			`RequestedDate` = \'{4}\',
+			`ContentRespone` = \'{5}\',
+			`ResponedBy` = \'{6}\',
+			`ResponedDate` = \'{7}\',
+			`IsApproved` = \'{8}\',
+			`IsDeleted` = \'{9}\'
+		WHERE `RequesID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_REQUEST		= 'CREATE TABLE `{0}` (

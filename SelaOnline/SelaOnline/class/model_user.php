@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:16:01 PM
  *
  */
 
@@ -23,11 +23,13 @@ class Model_User
     const ACT_CHANGE_PAGE					= 13;
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
-    const NUM_PER_PAGE                      = 15;
-	const ACT_LOGON							= 100;
+	const ACT_LOGIN							= 100;
 	const ACT_LOGOUT						= 101;
 	const ACT_CHANGE_PASS					= 102;
 	const ACT_REGISTER						= 103;
+	
+    const NUM_PER_PAGE                      = 15;
+    
     const TBL_SL_USER			            = 'sl_user';
 
 	const SQL_INSERT_SL_USER		= 'INSERT INTO `{0}`
@@ -49,27 +51,27 @@ class Model_User
 			IsActived
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\'
         );';
         
 	const SQL_UPDATE_SL_USER		= 'UPDATE `{0}`
 		SET  
-			`UserID` = \'1\',
-			`UserName` = \'2\',
-			`Password` = \'3\',
-			`Fullname` = \'4\',
-			`BirthDate` = \'5\',
-			`Address` = \'6\',
-			`Phone` = \'7\',
-			`Email` = \'8\',
-			`Sex` = \'9\',
-			`Identity` = \'10\',
-			`RoleID` = \'11\',
-			`UserRankID` = \'12\',
-			`Avartar` = \'13\',
-			`AccountID` = \'14\',
-			`IsActived` = \'15\'
-		WHERE `UserID` = \'1\'  ';
+			`UserID` = \'{1}\',
+			`UserName` = \'{2}\',
+			`Password` = \'{3}\',
+			`Fullname` = \'{4}\',
+			`BirthDate` = \'{5}\',
+			`Address` = \'{6}\',
+			`Phone` = \'{7}\',
+			`Email` = \'{8}\',
+			`Sex` = \'{9}\',
+			`Identity` = \'{10}\',
+			`RoleID` = \'{11}\',
+			`UserRankID` = \'{12}\',
+			`Avartar` = \'{13}\',
+			`AccountID` = \'{14}\',
+			`IsActived` = \'{15}\'
+		WHERE `UserID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_USER		= 'CREATE TABLE `{0}` (
@@ -119,7 +121,7 @@ class Model_User
     public function insert( $username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avartar,$accountid,$isactived)
 	{
 		$intID = global_common::getMaxID(self::TBL_SL_USER);
-		
+		$password = self::getPassword($username,$password);
 		$strTableName = self::TBL_SL_USER;
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_USER,
 				array(self::TBL_SL_USER,$intID,global_common::escape_mysql_string($username),global_common::escape_mysql_string($password),global_common::escape_mysql_string($fullname),global_common::escape_mysql_string($birthdate),global_common::escape_mysql_string($address),global_common::escape_mysql_string($phone),global_common::escape_mysql_string($email),global_common::escape_mysql_string($sex),global_common::escape_mysql_string($identity),global_common::escape_mysql_string($roleid),global_common::escape_mysql_string($userrankid),global_common::escape_mysql_string($avartar),global_common::escape_mysql_string($accountid),global_common::escape_mysql_string($isactived)));
@@ -131,7 +133,6 @@ class Model_User
 			return false;
 		}	
 		return $intID;
-		
 	}
     
     public function update($userid,$username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avartar,$accountid,$isactived)
@@ -165,6 +166,22 @@ class Model_User
 		return $arrResult[0];
 	}
     
+	public function getUserByUserName($objUserName,$selectField='*') 
+	{		
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+				array($selectField, self::TBL_SL_USER ,							
+					'WHERE UserName = \''.$objUserName.'\' '));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get sl_user By UserName:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult[0];
+	}
+	
     public function getAllUser($selectField='*') 
 	{		
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
@@ -243,6 +260,29 @@ class Model_User
 		return $strHTML;
 	}
     
+	public function getPassword($username,$pass) 
+	{
+		//echo $user_id.$pass.'->';
+		return md5($username.$pass);
+	}
+	
+	public function login($username,$pass) 
+	{
+		//echo $pass;
+		$enPass = $this->getPassword($username,$pass);
+		//echo $enPass;
+		$objUser = $this->getUserByUserName($username);
+		//print_r($objUser);
+		if ($objUser && $objUser['Password'] == $enPass) 
+		{
+			//print_r($objUser);
+			return $objUser;
+		}
+		else
+		{
+			return false;	
+		}
+	}
     #endregion   
 }
 ?>

@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 11:39:33 AM
+ * Date Created 5/6/2012 1:07:07 PM
  *
  */
 
@@ -41,7 +41,7 @@ if ($_pgR["act"] == model_Manufactory::ACT_ADD)
 		$manufactoryName = global_editor::rteSafe(html_entity_decode($manufactoryName,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objManufactory->insert($manufactoryid,$manufactoryname,);
+		$resultID = $objManufactory->insert($manufactoryID,$manufactoryName,);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -84,7 +84,7 @@ elseif($_pgR['act'] == model_Manufactory::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objManufactory->update($manufactoryid,$manufactoryname,);
+		$resultID = $objManufactory->update($manufactoryID,$manufactoryName,);
 		
 		if ($resultID)
 		{

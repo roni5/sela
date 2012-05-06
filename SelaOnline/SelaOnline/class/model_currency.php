@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:50 PM
  *
  */
 
@@ -46,27 +46,27 @@ class Model_Currency
 			IsDeleted
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\'
         );';
         
 	const SQL_UPDATE_SL_CURRENCY		= 'UPDATE `{0}`
 		SET  
-			`CurrencyID` = \'1\',
-			`CurrencyName` = \'2\',
-			`EuroRate` = \'3\',
-			`USDRate` = \'4\',
-			`AUDRate` = \'5\',
-			`NDTRate` = \'6\',
-			`CADRate` = \'7\',
-			`GBPRate` = \'8\',
-			`CreatedBy` = \'9\',
-			`CreatedDate` = \'10\',
-			`ModifiedBy` = \'11\',
-			`ModifiedDate` = \'12\',
-			`DeletedBy` = \'13\',
-			`DeletedDate` = \'14\',
-			`IsDeleted` = \'15\'
-		WHERE `CurrencyID` = \'1\'  ';
+			`CurrencyID` = \'{1}\',
+			`CurrencyName` = \'{2}\',
+			`EuroRate` = \'{3}\',
+			`USDRate` = \'{4}\',
+			`AUDRate` = \'{5}\',
+			`NDTRate` = \'{6}\',
+			`CADRate` = \'{7}\',
+			`GBPRate` = \'{8}\',
+			`CreatedBy` = \'{9}\',
+			`CreatedDate` = \'{10}\',
+			`ModifiedBy` = \'{11}\',
+			`ModifiedDate` = \'{12}\',
+			`DeletedBy` = \'{13}\',
+			`DeletedDate` = \'{14}\',
+			`IsDeleted` = \'{15}\'
+		WHERE `CurrencyID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_CURRENCY		= 'CREATE TABLE `{0}` (

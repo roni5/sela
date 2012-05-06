@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:46 PM
  *
  */
 
@@ -45,26 +45,26 @@ class Model_Auction
 			IsDeleted
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\'
         );';
         
 	const SQL_UPDATE_SL_AUCTION		= 'UPDATE `{0}`
 		SET  
-			`AuctionID` = \'1\',
-			`ProductID` = \'2\',
-			`StartDate` = \'3\',
-			`EndDate` = \'4\',
-			`StartingPrice` = \'5\',
-			`NumOffer` = \'6\',
-			`CreatedBy` = \'7\',
-			`CreatedDate` = \'8\',
-			`ModifiedBy` = \'9\',
-			`ModifiedDate` = \'10\',
-			`DeletedBy` = \'11\',
-			`DeletedDate` = \'12\',
-			`Status` = \'13\',
-			`IsDeleted` = \'14\'
-		WHERE `AuctionID` = \'1\'  ';
+			`AuctionID` = \'{1}\',
+			`ProductID` = \'{2}\',
+			`StartDate` = \'{3}\',
+			`EndDate` = \'{4}\',
+			`StartingPrice` = \'{5}\',
+			`NumOffer` = \'{6}\',
+			`CreatedBy` = \'{7}\',
+			`CreatedDate` = \'{8}\',
+			`ModifiedBy` = \'{9}\',
+			`ModifiedDate` = \'{10}\',
+			`DeletedBy` = \'{11}\',
+			`DeletedDate` = \'{12}\',
+			`Status` = \'{13}\',
+			`IsDeleted` = \'{14}\'
+		WHERE `AuctionID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_AUCTION		= 'CREATE TABLE `{0}` (

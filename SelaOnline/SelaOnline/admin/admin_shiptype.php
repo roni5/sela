@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 11:39:33 AM
+ * Date Created 5/6/2012 1:07:07 PM
  *
  */
 
@@ -41,7 +41,7 @@ if ($_pgR["act"] == model_ShipType::ACT_ADD)
 		$shipTypeName = global_editor::rteSafe(html_entity_decode($shipTypeName,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objShipType->insert($shiptypeid,$shiptypename,);
+		$resultID = $objShipType->insert($shipTypeID,$shipTypeName,);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -84,7 +84,7 @@ elseif($_pgR['act'] == model_ShipType::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objShipType->update($shiptypeid,$shiptypename,);
+		$resultID = $objShipType->update($shipTypeID,$shipTypeName,);
 		
 		if ($resultID)
 		{

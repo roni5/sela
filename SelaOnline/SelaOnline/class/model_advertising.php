@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:44 PM
  *
  */
 
@@ -46,27 +46,27 @@ class Model_Advertising
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\'
         );';
         
 	const SQL_UPDATE_SL_ADVERTISING		= 'UPDATE `{0}`
 		SET  
-			`AdvertisingID` = \'1\',
-			`AdvertisingName` = \'2\',
-			`PartnerID` = \'3\',
-			`StartDate` = \'4\',
-			`EndDate` = \'5\',
-			`AdTypeID` = \'6\',
-			`ImageLink` = \'7\',
-			`CreatedBy` = \'8\',
-			`CreatedDate` = \'9\',
-			`ModifiedBy` = \'10\',
-			`ModifiedDate` = \'11\',
-			`DeletedBy` = \'12\',
-			`DeletedDate` = \'13\',
-			`IsDeleted` = \'14\',
-			`Status` = \'15\'
-		WHERE `AdvertisingID` = \'1\'  ';
+			`AdvertisingID` = \'{1}\',
+			`AdvertisingName` = \'{2}\',
+			`PartnerID` = \'{3}\',
+			`StartDate` = \'{4}\',
+			`EndDate` = \'{5}\',
+			`AdTypeID` = \'{6}\',
+			`ImageLink` = \'{7}\',
+			`CreatedBy` = \'{8}\',
+			`CreatedDate` = \'{9}\',
+			`ModifiedBy` = \'{10}\',
+			`ModifiedDate` = \'{11}\',
+			`DeletedBy` = \'{12}\',
+			`DeletedDate` = \'{13}\',
+			`IsDeleted` = \'{14}\',
+			`Status` = \'{15}\'
+		WHERE `AdvertisingID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_ADVERTISING		= 'CREATE TABLE `{0}` (

@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:58 PM
  *
  */
 
@@ -44,25 +44,25 @@ class Model_Property
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\'
         );';
         
 	const SQL_UPDATE_SL_PROPERTY		= 'UPDATE `{0}`
 		SET  
-			`PropertyID` = \'1\',
-			`PropertyName` = \'2\',
-			`ProductID` = \'3\',
-			`PropertyValue` = \'4\',
-			`DataTypeID` = \'5\',
-			`CreatedBy` = \'6\',
-			`CreatedDate` = \'7\',
-			`ModifiedBy` = \'8\',
-			`ModifiedDate` = \'9\',
-			`DeletedBy` = \'10\',
-			`DeletedDate` = \'11\',
-			`IsDeleted` = \'12\',
-			`Status` = \'13\'
-		WHERE `PropertyID` = \'1\'  ';
+			`PropertyID` = \'{1}\',
+			`PropertyName` = \'{2}\',
+			`ProductID` = \'{3}\',
+			`PropertyValue` = \'{4}\',
+			`DataTypeID` = \'{5}\',
+			`CreatedBy` = \'{6}\',
+			`CreatedDate` = \'{7}\',
+			`ModifiedBy` = \'{8}\',
+			`ModifiedDate` = \'{9}\',
+			`DeletedBy` = \'{10}\',
+			`DeletedDate` = \'{11}\',
+			`IsDeleted` = \'{12}\',
+			`Status` = \'{13}\'
+		WHERE `PropertyID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_PROPERTY		= 'CREATE TABLE `{0}` (

@@ -24,9 +24,9 @@ function User() {
     var ACT_SHOW_EDIT = 14;
     var ACT_GET = 15;
     var ACT_LOGIN = 100;
-	var ACT_LOGOUT = 101;
-	var ACT_CHANGE_PASS = 102;
-	var ACT_REGISTER = 103;;
+    var ACT_LOGOUT = 101;
+    var ACT_CHANGE_PASS = 102;
+    var ACT_REGISTER = 103; ;
     var _strPage = "admin_user.php";
     var _strPageForFontEnd = "admin/admin_user.php";
 
@@ -250,7 +250,7 @@ function User() {
                 if (parseInt(strRespond[1]['rs']) == 1) {
                     showInfoBar('success', strRespond[1]["inf"]);
                     showAddMode();
-                    changePage(core.getObject("txtPage").val());
+                    changePage(_strPage, ACT_CHANGE_PAGE, core.getObject("txtPage").val());
                 }
                 else {
                     //var popDiv = new PopDiv();
@@ -316,7 +316,7 @@ function User() {
                 if (parseInt(strRespond[1]['rs']) == 1) {
                     showInfoBar('success', strRespond[1]["inf"]);
                     showAddMode();
-                    changePage(core.getObject("txtPage").val());
+                    changePage(_strPage, ACT_CHANGE_PAGE, 1);
                 }
                 else {
                     //var popDiv = new PopDiv();
@@ -441,13 +441,55 @@ function User() {
         core.getObject('txtAccountID').val('');
         core.getObject('txtIsActived').val('');
     }
+
+    function validationLogin() {
+        core.disableControl("btnOK", true);
+        var isValid = true;
+
+        var userName = core.trim(core.getObject("txtUserName").val());
+        core.ValidateInputTextBox('txtUserName', '');
+        if (userName == '') {
+            core.ValidateInputTextBox('txtUserName', 'UserName is required', isValid);
+            isValid = false;
+        } else if (userName.length > 50) {
+            core.ValidateInputTextBox('txtUserName', 'UserName must be less than 50', isValid);
+            isValid = false;
+        }
+
+        var password = core.trim(core.getObject("txtPassword").val());
+        core.ValidateInputTextBox('txtPassword', '');
+        if (password == '') {
+            core.ValidateInputTextBox('txtPassword', 'Password is required', isValid);
+            isValid = false;
+        }
+        else if (password.length < 6) {
+            core.ValidateInputTextBox('txtPassword', 'Password must be great than 6', isValid);
+            isValid = false;
+        }
+        else if (password.length > 255) {
+            core.ValidateInputTextBox('txtPassword', 'Password must be less than 255', isValid);
+            isValid = false;
+        }
+
+        if (isValid == false) {
+            core.disableControl("btnOK", false);
+            return false;
+        }
+        return true;
+    }
+
     this.login = login;
     function login() {
-        pass = core.getObject('password').val();
-        name = core.getObject('username').val();
-        var strRequest = "index.php?isAJ=1&act=" + ACT_LOGIN + "&id=" + name + '&pass=' + pass;
-        var ajax = new Ajax();
-        ajax.SendRequestToServerWithCustomMsgCache(strRequest, null, login_OnCallBack, true, MSG_AJAX_SENDING_VN);
+        if (validationLogin() == true) {
+            var password = core.trim(core.getObject("txtPassword").val());
+            var username = core.trim(core.getObject("txtUserName").val());
+            var strRequest = "isAJ=1&act=" + ACT_LOGIN + "&username=" + username + '&password=' + password;
+            var ajax = new Ajax();
+            ajax.SendRequestToServerWithCustomMsg(_strPageForFontEnd, strRequest, login_OnCallBack, true, MSG_AJAX_SENDING_VN);
+        }
+        else {
+            core.disableControl("btnOK", false);
+        }
     }
 
     function login_OnCallBack(xmlHTTPRequest) {
@@ -465,13 +507,11 @@ function User() {
                     showInfoBar('success', "Thao tác thành công.");
 
                     // alert(strRespond[1]["inf"]);
-                    core.redirect("new_faq.php");
                 }
                 else {
                     showInfoBar('fail', "Thất bại.");
                     core.getObject('error')[0].innerHTML = 'Sai username hoặc password.'
                 }
-
             }
         }
     }
@@ -653,39 +693,42 @@ function User() {
             //'&Address=' + core.urlencode(address) +
             //'&Phone=' + core.urlencode(phone) +
 			'&Email=' + core.urlencode(email);
-			//'&Sex=' + core.urlencode(sex) +
-			//'&Identity=' + core.urlencode(identity) +
-			//'&RoleID=' + core.urlencode(roleID) +
-			//'&UserRankID=' + core.urlencode(userRankID) +
-			//'&Avartar=' + core.urlencode(avartar) +
-			//'&AccountID=' + core.urlencode(accountID) +
-			//'&IsActived=' + core.urlencode(isActived);
+            //'&Sex=' + core.urlencode(sex) +
+            //'&Identity=' + core.urlencode(identity) +
+            //'&RoleID=' + core.urlencode(roleID) +
+            //'&UserRankID=' + core.urlencode(userRankID) +
+            //'&Avartar=' + core.urlencode(avartar) +
+            //'&AccountID=' + core.urlencode(accountID) +
+            //'&IsActived=' + core.urlencode(isActived);
 
             var ajax = new Ajax();
             ajax.SendRequestToServerWithCustomMsg(_strPageForFontEnd, strRequest, register_OnCallBack, true, MSG_AJAX_FETCHING_VN);
         }
-
-        function register_OnCallBack(xmlHTTPRequest) {
+        else {
             core.disableControl("btnOK", false);
-            if (xmlHTTPRequest.readyState == 4) {
-                if (xmlHTTPRequest.status == 200) {
-                    var strRespond = core.parserXML(xmlHTTPRequest.responseText);
-                    if (!core.headerProcessingArr(strRespond[0], Array(true, true, false))) {
-                        // ph?i kh?i t?o l?i d? tr?nh d?ng popdiv addFavourite
-                        //var popDiv = new PopDiv();
-                        //popDiv.init();
-                        //popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
-                        return;
-                    }
-                    if (parseInt(strRespond[1]['rs']) == 1) {
-                        showInfoBar('success', strRespond[1]["inf"]);
-                        alert("Success");
-                    }
-                    else {
-                        //var popDiv = new PopDiv();
-                        //popDiv.init();
-                       // top.popDiv.childPop.alert(strRespond[1]["inf"], SYSTEM_TITLE_ERROR, 1);
-                    }
+        }
+    }
+
+    function register_OnCallBack(xmlHTTPRequest) {
+        core.disableControl("btnOK", false);
+        if (xmlHTTPRequest.readyState == 4) {
+            if (xmlHTTPRequest.status == 200) {
+                var strRespond = core.parserXML(xmlHTTPRequest.responseText);
+                if (!core.headerProcessingArr(strRespond[0], Array(true, true, false))) {
+                    // ph?i kh?i t?o l?i d? tr?nh d?ng popdiv addFavourite
+                    //var popDiv = new PopDiv();
+                    //popDiv.init();
+                    //popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
+                    return;
+                }
+                if (parseInt(strRespond[1]['rs']) == 1) {
+                    showInfoBar('success', strRespond[1]["inf"]);
+                    alert("Success");
+                }
+                else {
+                    //var popDiv = new PopDiv();
+                    //popDiv.init();
+                    // top.popDiv.childPop.alert(strRespond[1]["inf"], SYSTEM_TITLE_ERROR, 1);
                 }
             }
         }

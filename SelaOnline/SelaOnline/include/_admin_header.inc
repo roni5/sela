@@ -15,6 +15,7 @@
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ui/jquery.ui.autocomplete.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ui/jquery.ui.core.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('jquery.tooltip.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJs('nicEdit.js');?>"></script>
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ajax.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('global_config.js');?>"></script>
@@ -52,7 +53,8 @@
 		 </div>
 		<p></p>
     </div>
-	<div class="wrapper">
-		<div  id="admin-content">
+	<div class="wrapper">		
+		<div  id="admin-box">
+			<div  id="admin-content">
        
        

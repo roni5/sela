@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 11:39:33 AM
+ * Date Created 5/6/2012 1:07:07 PM
  *
  */
 
@@ -63,7 +63,7 @@ if ($_pgR["act"] == model_Article::ACT_ADD)
 		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objArticle->insert($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$status);
+		$resultID = $objArticle->insert($articleID,$prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -128,7 +128,7 @@ elseif($_pgR['act'] == model_Article::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objArticle->update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$status);
+		$resultID = $objArticle->update($articleID,$prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status);
 		
 		if ($resultID)
 		{
@@ -215,7 +215,16 @@ include_once('include/_admin_header.inc');
 include_once('include/_admin_menu.inc');
 ?>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('sela_Article.js');?>"></script>
-	
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor(
+	{
+		buttonList : ['save','bold','italic','underline','left','center','right','justify','ol','ul','fontSize','fontFamily','fontFormat','indent','outdent','image','link','unlink','forecolor','bgcolor'],
+		
+	})
+	.panelInstance('txtContent');
+});
+</script>
 <!--Begin Form Input -->
 <input type="hidden" id="adddocmode" name="adddocmode" value="1<?php //echo $intMode;?>" />
 <input type="hidden" id="txtPage" name="txtPage" value="<?php echo $_pgR["p"]?$intPage:1;?>" />
@@ -232,67 +241,72 @@ include_once('include/_admin_menu.inc');
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>ArticleID</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtArticleID' name='txtArticleID' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
+							<td ><input id='txtArticleID' name='txtArticleID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>Prefix</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtPrefix' name='txtPrefix' value='' style='width: 49.5%;'  maxlength='765' type='text'></td>
+							<td ><input id='txtPrefix' name='txtPrefix' value='' style='width: 80%;'  maxlength='765' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>Title</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtTitle' name='txtTitle' value='' style='width: 49.5%;'  maxlength='765' type='text'></td>
+							<td ><input id='txtTitle' name='txtTitle' value='' style='width: 80%;'  maxlength='765' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>FileName</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtFileName' name='txtFileName' value='' style='width: 49.5%;'  maxlength='765' type='text'></td>
+							<td ><input id='txtFileName' name='txtFileName' value='' style='width: 80%;'  maxlength='765' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>ArticleType</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtArticleType' name='txtArticleType' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
+							<td ><input id='txtArticleType' name='txtArticleType' value='' style='width: 80%;'  maxlength='60' type='text'></td>
 						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Content</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><textarea id='txtContent' name='txtContent'  style='width: 49.5%;'  maxlength='65535' ></textarea></td>
-						</tr>
+						
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>NotificationType</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtNotificationType' name='txtNotificationType' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
-						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Tags</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><textarea id='txtTags' name='txtTags'  style='width: 49.5%;'  maxlength='65535' ></textarea></td>
-						</tr>
+							<td ><input id='txtNotificationType' name='txtNotificationType' value='' style='width: 80%;'  maxlength='60' type='text'></td>
+						</tr>						
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>CatalogueID</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtCatalogueID' name='txtCatalogueID' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
+							<td ><input id='txtCatalogueID' name='txtCatalogueID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>SectionID</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtSectionID' name='txtSectionID' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
+							<td ><input id='txtSectionID' name='txtSectionID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>NumView</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtNumView' name='txtNumView' value='' style='width: 49.5%;'  maxlength='20' type='text'></td>
+							<td ><input id='txtNumView' name='txtNumView' value='' style='width: 80%;'  maxlength='20' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>NumComment</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtNumComment' name='txtNumComment' value='' style='width: 49.5%;'  maxlength='20' type='text'></td>
+							<td ><input id='txtNumComment' name='txtNumComment' value='' style='width: 80%;'  maxlength='20' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>Status</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtStatus' name='txtStatus' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
+							<td ><input id='txtStatus' name='txtStatus' value='' style='width: 80%;'  maxlength='60' type='text'></td>
+						</tr>
+						<tr>
+							<td width='110'><span style='cursor:default; font-family:inherit'>Tags</span></td>
+							<td width='10'><span class='forceFillForm'></span></td>
+							<td ><textarea id='txtTags' name='txtTags'  style='width: 80%;'  maxlength='65535' ></textarea></td>
+						</tr>
+						<tr>
+							<td width='110'><span style='cursor:default; font-family:inherit'>Content</span></td>
+							<td width='10'><span class='forceFillForm'></span></td>
+							<td>
+							<div style="">
+							<textarea id='txtContent' name='txtContent'  style='width: 80.4%;height:400px'  maxlength='' ></textarea>
+							</div>
+							</td>
 						</tr>
                         </tbody>
                     </table>

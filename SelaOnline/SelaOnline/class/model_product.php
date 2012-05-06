@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:15:57 PM
  *
  */
 
@@ -50,31 +50,31 @@ class Model_Product
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\', \'13\', \'14\', \'15\', \'16\', \'17\', \'18\', \'19\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\'
         );';
         
 	const SQL_UPDATE_SL_PRODUCT		= 'UPDATE `{0}`
 		SET  
-			`ProductID` = \'1\',
-			`ProductName` = \'2\',
-			`CatalogueID` = \'3\',
-			`ImageLink` = \'4\',
-			`ManufactoryID` = \'5\',
-			`PaymentModeID` = \'6\',
-			`NumberaireID` = \'7\',
-			`StorageDate` = \'8\',
-			`Price` = \'9\',
-			`Amount` = \'10\',
-			`Description` = \'11\',
-			`CreatedBy` = \'12\',
-			`CreatedDate` = \'13\',
-			`ModifiedBy` = \'14\',
-			`ModifiedDate` = \'15\',
-			`DeletedBy` = \'16\',
-			`DeletedDate` = \'17\',
-			`IsDeleted` = \'18\',
-			`Status` = \'19\'
-		WHERE `ProductID` = \'1\'  ';
+			`ProductID` = \'{1}\',
+			`ProductName` = \'{2}\',
+			`CatalogueID` = \'{3}\',
+			`ImageLink` = \'{4}\',
+			`ManufactoryID` = \'{5}\',
+			`PaymentModeID` = \'{6}\',
+			`NumberaireID` = \'{7}\',
+			`StorageDate` = \'{8}\',
+			`Price` = \'{9}\',
+			`Amount` = \'{10}\',
+			`Description` = \'{11}\',
+			`CreatedBy` = \'{12}\',
+			`CreatedDate` = \'{13}\',
+			`ModifiedBy` = \'{14}\',
+			`ModifiedDate` = \'{15}\',
+			`DeletedBy` = \'{16}\',
+			`DeletedDate` = \'{17}\',
+			`IsDeleted` = \'{18}\',
+			`Status` = \'{19}\'
+		WHERE `ProductID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_PRODUCT		= 'CREATE TABLE `{0}` (

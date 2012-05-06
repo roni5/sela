@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:28 PM
+ * Date Created 5/6/2012 1:16:01 PM
  *
  */
 
@@ -42,23 +42,23 @@ class Model_Status
 			Type
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\'
         );';
         
 	const SQL_UPDATE_SL_STATUS		= 'UPDATE `{0}`
 		SET  
-			`StatusID` = \'1\',
-			`StatusName` = \'2\',
-			`CreatedBy` = \'3\',
-			`CreatedDate` = \'4\',
-			`ModifiedBy` = \'5\',
-			`ModifiedDate` = \'6\',
-			`DeletedBy` = \'7\',
-			`DeletedDate` = \'8\',
-			`IsDeleted` = \'9\',
-			`Status` = \'10\',
-			`Type` = \'11\'
-		WHERE `StatusID` = \'1\'  ';
+			`StatusID` = \'{1}\',
+			`StatusName` = \'{2}\',
+			`CreatedBy` = \'{3}\',
+			`CreatedDate` = \'{4}\',
+			`ModifiedBy` = \'{5}\',
+			`ModifiedDate` = \'{6}\',
+			`DeletedBy` = \'{7}\',
+			`DeletedDate` = \'{8}\',
+			`IsDeleted` = \'{9}\',
+			`Status` = \'{10}\',
+			`Type` = \'{11}\'
+		WHERE `StatusID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_STATUS		= 'CREATE TABLE `{0}` (

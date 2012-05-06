@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 12:46:27 PM
+ * Date Created 5/6/2012 1:15:48 PM
  *
  */
 
@@ -43,24 +43,24 @@ class Model_Comment
 			Status
         )
         VALUES (
-			\'1\', \'2\', \'3\', \'4\', \'5\', \'6\', \'7\', \'8\', \'9\', \'10\', \'11\', \'12\'
+			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\'
         );';
         
 	const SQL_UPDATE_SL_COMMENT		= 'UPDATE `{0}`
 		SET  
-			`CommentID` = \'1\',
-			`CommentType` = \'2\',
-			`ArticleID` = \'3\',
-			`Content` = \'4\',
-			`CreatedBy` = \'5\',
-			`CreatedDate` = \'6\',
-			`ModifiedBy` = \'7\',
-			`ModifiedDate` = \'8\',
-			`DeletedBy` = \'9\',
-			`DeletedDate` = \'10\',
-			`IsDeleted` = \'11\',
-			`Status` = \'12\'
-		WHERE `CommentID` = \'1\'  ';
+			`CommentID` = \'{1}\',
+			`CommentType` = \'{2}\',
+			`ArticleID` = \'{3}\',
+			`Content` = \'{4}\',
+			`CreatedBy` = \'{5}\',
+			`CreatedDate` = \'{6}\',
+			`ModifiedBy` = \'{7}\',
+			`ModifiedDate` = \'{8}\',
+			`DeletedBy` = \'{9}\',
+			`DeletedDate` = \'{10}\',
+			`IsDeleted` = \'{11}\',
+			`Status` = \'{12}\'
+		WHERE `CommentID` = \'{1}\'  ';
 		   
 
     const SQL_CREATE_TABLE_SL_COMMENT		= 'CREATE TABLE `{0}` (
