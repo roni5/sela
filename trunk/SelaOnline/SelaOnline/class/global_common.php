@@ -69,21 +69,21 @@ class global_common
 	const FOLDER_XML							= 'files/xml/';  
 	const FOLDER_SQL_CACHE						= 'files/sql_cache/';
 	const FOLDER_CONFIG							= 'config/';
-	const FOLDER_TEMP							= 'files/security/';
-	const FOLDER_SECURITY						= 'files/security/';
-	const FOLDER_FILES_MAXID					= 'files/maxid/';
-	const FOLDER_FILES_CONTENT					= 'files/content/';
-	const FOLDER_NEWS							= 'files/content/news/';
-	const FOLDER_HELP							= 'files/content/help/';
-	const FOLDER_FILES_OTHER					= 'files/other/';
-	const FOLDER_IMAGE_NEWS						= 'images/news/';
-	const FOLDER_IMAGE_NEWS_URL					= 'images/news/'; //'http://hellochao.com/images/news/';
-	const FOLDER_IMAGE_USERS_URL				= 'images/users/'; //'http://hellochao.com/images/users/';
-	const FOLDER_MAX_TEMPLATE					= 'files/other/mail_template/';
-	const FOLDER_FILES_USER_CHANGE_FRONT_END	= 'files/user_change/front_end/';	
+	const FOLDER_TEMP							= 'file/security/';
+	const FOLDER_SECURITY						= 'file/security/';
+	const FOLDER_FILES_MAXID					= 'file/maxid/';
+	const FOLDER_FILES_CONTENT					= 'filecontent/';
+	const FOLDER_NEWS							= 'file/content/news/';
+	const FOLDER_HELP							= 'file/content/help/';
+	const FOLDER_FILES_OTHER					= 'file/other/';
+	const FOLDER_IMAGE_NEWS						= 'image/news/';
+	const FOLDER_IMAGE_NEWS_URL					= 'image/news/'; //'http://hellochao.com/images/news/';
+	const FOLDER_IMAGE_USERS_URL				= 'image/users/'; //'http://hellochao.com/images/users/';
+	const FOLDER_MAX_TEMPLATE					= 'file/other/mail_template/';
+	const FOLDER_FILES_USER_CHANGE_FRONT_END	= 'file/user_change/front_end/';	
 	const FOLDER_USER_CHANGE_BACK_END			= 'config/user_change/back_end/';
-	const FOLDER_LOG							= 'files/log_10_/';
-	const FOLDER_BUSINESS_CACHE					= 'files/business_cache/';
+	const FOLDER_LOG							= 'file/log_10_/';
+	const FOLDER_BUSINESS_CACHE					= 'file/business_cache/';
 	
 	
 	const ENCODING								= 'utf-8';

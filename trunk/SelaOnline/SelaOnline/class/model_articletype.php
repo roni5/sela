@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 3/25/2012 6:16:24 PM
+ * Date Created 5/6/2012 12:46:27 PM
  *
  */
 
@@ -12,7 +12,7 @@
  * Implementations of slarticletypes represent a ArticleType
  * </summary>
  */
-class model_ArticleType
+class Model_ArticleType
 {		   
 	#region PRESERVE ExtraMethods For ArticleType
 	#endregion
@@ -75,6 +75,26 @@ class model_ArticleType
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
     #endregion   
+    
+    #region Variables
+	var $_objConnection;
+	#end region
+	
+	#region Contructors
+	/**
+	*  Phuong th?c kh?i t?o d?i tu?ng faq d?ng th?i t?o connection d?n db
+	*
+	* @param object $objConnection ??i tu?ng k?t n?i d?n db
+			
+	* @return void 
+	*
+	*/
+	public function  Model_ArticleType($objConnection)
+	{
+		$this->_objConnection = $objConnection;
+		
+	}
+    #region
     
     #region Public Functions
     
@@ -195,15 +215,6 @@ class model_ArticleType
 		return $strHTML;
 	}
     
-	public function DisplayAllCategory()
-	{
-		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
-					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
-		//echo 'sql:'.$strSQL;	
-		$arrResult = $this->_objConnection->selectCommand($strSQL);
-		print_r($arrResult);
-	}
-	
     #endregion   
 }
 ?>

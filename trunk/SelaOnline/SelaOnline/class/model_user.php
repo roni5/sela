@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 3/25/2012 6:16:24 PM
+ * Date Created 5/6/2012 12:46:28 PM
  *
  */
 
@@ -12,7 +12,7 @@
  * Implementations of slusers represent a User
  * </summary>
  */
-class model_User
+class Model_User
 {		   
 	#region PRESERVE ExtraMethods For User
 	#endregion
@@ -24,7 +24,10 @@ class model_User
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
     const NUM_PER_PAGE                      = 15;
-    
+	const ACT_LOGON							= 100;
+	const ACT_LOGOUT						= 101;
+	const ACT_CHANGE_PASS					= 102;
+	const ACT_REGISTER						= 103;
     const TBL_SL_USER			            = 'sl_user';
 
 	const SQL_INSERT_SL_USER		= 'INSERT INTO `{0}`
@@ -90,6 +93,26 @@ class model_User
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
     #endregion   
+    
+    #region Variables
+	var $_objConnection;
+	#end region
+	
+	#region Contructors
+	/**
+	*  Phuong th?c kh?i t?o d?i tu?ng faq d?ng th?i t?o connection d?n db
+	*
+	* @param object $objConnection ??i tu?ng k?t n?i d?n db
+			
+	* @return void 
+	*
+	*/
+	public function  Model_User($objConnection)
+	{
+		$this->_objConnection = $objConnection;
+		
+	}
+    #region
     
     #region Public Functions
     

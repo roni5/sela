@@ -2,7 +2,7 @@
 /**
  *  @package/@module: common
  *  Description: Db connection manager.
- *  @author TinhDoan added [20100414]
+ *  
  */
 
 class db_connection extends mysqli
@@ -78,6 +78,7 @@ class db_connection extends mysqli
 		// No empty queries
 		if (empty($query)) 
 		{
+			$this->writeLog("SQL is empty.", 0);
 			return;
 		}
 		// Connect if not already
@@ -85,6 +86,7 @@ class db_connection extends mysqli
 		{
 			if(!$this->createIConnection())
 			{
+				$this->writeLog("Create connection is failed", 0);
 				return;
 			}
 		}
