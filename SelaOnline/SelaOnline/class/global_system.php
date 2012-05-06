@@ -46,6 +46,7 @@ class global_system
 	 */
 	public function global_system($location)
 	{
+		
 		$this->_iLocation = $location;
 		// Khởi tạo các biến toàn cục
 		$this->_pName = $this->getPageName();

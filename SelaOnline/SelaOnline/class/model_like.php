@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 3/25/2012 6:16:24 PM
+ * Date Created 5/6/2012 12:46:28 PM
  *
  */
 
@@ -12,7 +12,7 @@
  * Implementations of sllikes represent a Like
  * </summary>
  */
-class model_Like
+class Model_Like
 {		   
 	#region PRESERVE ExtraMethods For Like
 	#endregion
@@ -60,6 +60,26 @@ class model_Like
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
     #endregion   
+    
+    #region Variables
+	var $_objConnection;
+	#end region
+	
+	#region Contructors
+	/**
+	*  Phuong th?c kh?i t?o d?i tu?ng faq d?ng th?i t?o connection d?n db
+	*
+	* @param object $objConnection ??i tu?ng k?t n?i d?n db
+			
+	* @return void 
+	*
+	*/
+	public function  Model_Like($objConnection)
+	{
+		$this->_objConnection = $objConnection;
+		
+	}
+    #region
     
     #region Public Functions
     
