@@ -4,7 +4,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 1:15:46 PM
+ * Date Created 5/6/2012
  *
  */
 
@@ -214,15 +214,7 @@ class Model_ArticleType
 				"_objMenu.changePage")."</div>";
 		return $strHTML;
 	}
-	public function DisplayAllCategory()
-	{
-		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
-					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
-		//echo 'sql:'.$strSQL;	
-		$arrResult = $this->_objConnection->selectCommand($strSQL);
-		//print_r($arrResult);
-	}
-	
+    
     #endregion   
 }
 ?>

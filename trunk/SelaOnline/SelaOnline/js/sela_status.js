@@ -3,7 +3,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created 5/6/2012 9:03:27 PM
+ * Date Created 5/6/2012
  *
  */
 
