@@ -11,10 +11,10 @@ body{color:#333;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:70%;
 a:hover{color:#f90}
 
 #main{width:100%;background-color:#C4C6C8;height:100%}
-.wrapper{width:100%;background-color:#C4C6C8;height:100%; overflow:auto}
+.wrapper{width:100%;background-color:#C4C6C8; display:block;}
 #header {height:120px;background-color:#996 ;margin-top:-7px}
 #slider-left {float:left; height:100%;width:15%;background-color:#090}
-#content {float:left; height:100%;width:75%; background-color:#EEF8FB}
+#content {float:left; min-height:400px;width:75%; background-color:#EEF8FB; display:block}
 #slider-right {float:left; height:650px;width:10%;background-color:red}
 #footer{position:relative;clear:both; height:100px;background-color:#036}
 

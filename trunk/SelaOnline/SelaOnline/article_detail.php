@@ -35,7 +35,6 @@ include_once('include/_menu.inc');
 	</div>
 </div>
 <div class="article-detail">
-	<div class="box"><div style="float:right;margin-left:6px;margin-bottom:6px;"><a target="_blank" href="http://imcreator.com/?utm_source=lipsum_vert&amp;utm_medium=banner&amp;utm_content=vert&amp;utm_campaign=design_your_website_2"><img width="100" height="400" border="0" alt="Design Your Website" src="/banners/lipsum_100_400.gif"></a><br><a href="http://www.cafepress.com/lipsum/" target="_blank"><img width="100" height="100" border="0" alt="Lipsum" src="/images/lipsum07.gif"></a><br></div><div id="lipsum">
 	<div class="content">
 					<div id="post_message_96937197">
 						<blockquote class="postcontent restore ">
