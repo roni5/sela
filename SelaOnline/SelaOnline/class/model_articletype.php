@@ -215,6 +215,14 @@ class Model_ArticleType
 		return $strHTML;
 	}
     
+	function DisplayAllCategory()
+	{
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
+		//echo 'sql:'.$strSQL;	
+		$arrResult = $this->_objConnection->selectCommand($strSQL);
+		print_r($arrResult);
+	}
     #endregion   
 }
 ?>
