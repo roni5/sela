@@ -88,6 +88,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "include\\_option_notification_type.inc"
+    {
+    "ProjRelPath" = "T"
+    }
     "admin\\admin_commentbad.php"
     {
     "ProjRelPath" = "T"
@@ -860,6 +864,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "include\\_cat_list.inc"
+    {
+    "ProjRelPath" = "T"
+    }
     "css\\themes\\base\\jquery.ui.dialog.css"
     {
     "ProjRelPath" = "T"
@@ -873,6 +881,10 @@
     "ProjRelPath" = "T"
     }
     "js\\ui\\jquery.ui.position.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_option_article_type.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -1148,6 +1160,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "class\\global_mapping.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "js\\ui\\i18n\\jquery.ui.datepicker-fa.js"
     {
     "ProjRelPath" = "T"
@@ -1173,6 +1189,10 @@
     "ProjRelPath" = "T"
     }
     "bg_user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_option_catelogue_type.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -1248,6 +1268,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "include\\_option_catalogue_type.inc"
+    {
+    "ProjRelPath" = "T"
+    }
     "class\\model_paymentmode.php"
     {
     "ProjRelPath" = "T"
@@ -1293,6 +1317,10 @@
     "ProjRelPath" = "T"
     }
     "cat_detail.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_option_section_type.inc"
     {
     "ProjRelPath" = "T"
     }

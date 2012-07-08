@@ -16,67 +16,67 @@ class Model_ArticleType
 {		   
 	#region PRESERVE ExtraMethods For ArticleType
 	#endregion
-    #region Contants	
-    const ACT_ADD							= 10;
-    const ACT_UPDATE						= 11;
-    const ACT_DELETE						= 12;
-    const ACT_CHANGE_PAGE					= 13;
-    const ACT_SHOW_EDIT                     = 14;
-    const ACT_GET                           = 15;
-    const NUM_PER_PAGE                      = 15;
-    
-    const TBL_SL_ARTICLE_TYPE			            = 'sl_article_type';
-
+	#region Contants	
+	const ACT_ADD							= 10;
+	const ACT_UPDATE						= 11;
+	const ACT_DELETE						= 12;
+	const ACT_CHANGE_PAGE					= 13;
+	const ACT_SHOW_EDIT                     = 14;
+	const ACT_GET                           = 15;
+	const NUM_PER_PAGE                      = 15;
+	
+	const TBL_SL_ARTICLE_TYPE			            = 'sl_article_type';
+	
 	const SQL_INSERT_SL_ARTICLE_TYPE		= 'INSERT INTO `{0}`
 		(
-			ArticleTypeID,
-			ArticleTypeName,
-			CreatedBy,
-			CreatedDate,
-			ModifiedBy,
-			ModifiedDate,
-			DeletedBy,
-			DeletedDate,
-			IsDeleted,
-			Status
-        )
-        VALUES (
-			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\'
-        );';
-        
+		ArticleTypeID,
+		ArticleTypeName,
+		CreatedBy,
+		CreatedDate,
+		ModifiedBy,
+		ModifiedDate,
+		DeletedBy,
+		DeletedDate,
+		IsDeleted,
+		Status
+		)
+		VALUES (
+		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\'
+		);';
+	
 	const SQL_UPDATE_SL_ARTICLE_TYPE		= 'UPDATE `{0}`
 		SET  
-			`ArticleTypeID` = \'{1}\',
-			`ArticleTypeName` = \'{2}\',
-			`CreatedBy` = \'{3}\',
-			`CreatedDate` = \'{4}\',
-			`ModifiedBy` = \'{5}\',
-			`ModifiedDate` = \'{6}\',
-			`DeletedBy` = \'{7}\',
-			`DeletedDate` = \'{8}\',
-			`IsDeleted` = \'{9}\',
-			`Status` = \'{10}\'
+		`ArticleTypeID` = \'{1}\',
+		`ArticleTypeName` = \'{2}\',
+		`CreatedBy` = \'{3}\',
+		`CreatedDate` = \'{4}\',
+		`ModifiedBy` = \'{5}\',
+		`ModifiedDate` = \'{6}\',
+		`DeletedBy` = \'{7}\',
+		`DeletedDate` = \'{8}\',
+		`IsDeleted` = \'{9}\',
+		`Status` = \'{10}\'
 		WHERE `ArticleTypeID` = \'{1}\'  ';
-		   
-
-    const SQL_CREATE_TABLE_SL_ARTICLE_TYPE		= 'CREATE TABLE `{0}` (
-
-			`ArticleTypeID` varchar(60),
-			`ArticleTypeName` varchar(150),
-			`CreatedBy` varchar(60),
-			`CreatedDate` datetime(0),
-			`ModifiedBy` varchar(60),
-			`ModifiedDate` datetime(0),
-			`DeletedBy` varchar(60),
-			`DeletedDate` datetime(0),
-			`IsDeleted` bit(0),
-			`Status` varchar(60),
-			PRIMARY KEY(ArticleTypeID)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
-    #endregion   
-    
-    #region Variables
+	
+	const SQL_CREATE_TABLE_SL_ARTICLE_TYPE		= 'CREATE TABLE `{0}` (
+		
+		`ArticleTypeID` varchar(60),
+		`ArticleTypeName` varchar(150),
+		`CreatedBy` varchar(60),
+		`CreatedDate` datetime(0),
+		`ModifiedBy` varchar(60),
+		`ModifiedDate` datetime(0),
+		`DeletedBy` varchar(60),
+		`DeletedDate` datetime(0),
+		`IsDeleted` bit(0),
+		`Status` varchar(60),
+		PRIMARY KEY(ArticleTypeID)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
+	
+	#endregion   
+	
+	#region Variables
 	var $_objConnection;
 	#end region
 	
@@ -94,11 +94,11 @@ class Model_ArticleType
 		$this->_objConnection = $objConnection;
 		
 	}
-    #region
-    
-    #region Public Functions
-    
-    public function insert( $articletypename,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	#region
+	
+	#region Public Functions
+	
+	public function insert( $articletypename,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		$intID = global_common::getMaxID(self::TBL_SL_ARTICLE_TYPE);
 		
@@ -115,8 +115,8 @@ class Model_ArticleType
 		return $intID;
 		
 	}
-    
-    public function update($articletypeid,$articletypename,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	
+	public function update($articletypeid,$articletypename,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		$strTableName = self::TBL_SL_ARTICLE_TYPE;
 		$strSQL = global_common::prepareQuery(self::SQL_UPDATE_SL_ARTICLE_TYPE,
@@ -130,8 +130,8 @@ class Model_ArticleType
 		}	
 		return $intNewID;		
 	}
-    
-    public function getArticleTypeByID($objID,$selectField='*') 
+	
+	public function getArticleTypeByID($objID,$selectField='*') 
 	{		
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE_TYPE ,							
@@ -146,12 +146,11 @@ class Model_ArticleType
 		//print_r($arrResult);
 		return $arrResult[0];
 	}
-    
-    public function getAllArticleType($selectField='*') 
+	
+	public function getAllArticleType($selectField='*') 
 	{		
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-				array($selectField, self::TBL_SL_ARTICLE_TYPE ,							
-					''));
+				array($selectField, self::TBL_SL_ARTICLE_TYPE ,''));
 		//echo '<br>SQL:'.$strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
@@ -162,51 +161,70 @@ class Model_ArticleType
 		//print_r($arrResult);
 		return $arrResult;
 	}
-    
-    public function getListArticleType($intPage,$orderBy='ArticleTypeID', $whereClause)
+	
+	public function getArticleTypeByFilter($whereClause, $selectField='*') 
 	{		
-        if($whereClause)
-        {
-            $whereClause='WHERE'+ $whereClause;						
-        }
-        if($orderBy)
-        {
-            $orderBy='ORDER BY'+ $orderBy;						
-        }
+		if($whereClause)
+		{
+			$whereClause=' WHERE '.$whereClause;						
+		}
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+				array($selectField, self::TBL_SL_ARTICLE_TYPE ,	$whereClause));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get All sl_article_type:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult;
+	}
+	
+	public function getListArticleType($intPage,$orderBy='ArticleTypeID', $whereClause)
+	{		
+		if($whereClause)
+		{
+			$whereClause=' WHERE '.$whereClause;						
+		}
+		if($orderBy)
+		{
+			$orderBy='ORDER BY'.$orderBy;						
+		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
-					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
+					self::TBL_SL_ARTICLE_TYPE,$whereClause.' '.$orderBy.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
 		//echo 'sql:'.$strSQL;	
 		$arrResult = $this->_objConnection->selectCommand($strSQL);
 		//print_r($arrResult);
 		$strHTML = '<table class="tbl-list">
-                    <thead>
-						<td>ArticleTypeID</td>
-						<td>ArticleTypeName</td>
-						<td>CreatedBy</td>
-						<td>CreatedDate</td>
-						<td>ModifiedBy</td>
-						<td>ModifiedDate</td>
-						<td>DeletedBy</td>
-						<td>DeletedDate</td>
-						<td>IsDeleted</td>
-						<td>Status</td>
-                    </thead>
-                    <tbody>';
+				<thead>
+				<td>ArticleTypeID</td>
+				<td>ArticleTypeName</td>
+				<td>CreatedBy</td>
+				<td>CreatedDate</td>
+				<td>ModifiedBy</td>
+				<td>ModifiedDate</td>
+				<td>DeletedBy</td>
+				<td>DeletedDate</td>
+				<td>IsDeleted</td>
+				<td>Status</td>
+				</thead>
+				<tbody>';
 		$icount = count($arrmenu);
 		for($i=0;$i<$icount;$i++)
 		{
 			$strHTML.='<tr class="'.($i%2==0?'even':'odd').'">
-						<td>'.$arrResult[$i]['ArticleTypeID'].'</td>
-						<td>'.$arrResult[$i]['ArticleTypeName'].'</td>
-						<td>'.$arrResult[$i]['CreatedBy'].'</td>
-						<td>'.$arrResult[$i]['CreatedDate'].'</td>
-						<td>'.$arrResult[$i]['ModifiedBy'].'</td>
-						<td>'.$arrResult[$i]['ModifiedDate'].'</td>
-						<td>'.$arrResult[$i]['DeletedBy'].'</td>
-						<td>'.$arrResult[$i]['DeletedDate'].'</td>
-						<td><input type="checkbox" onclick="_objArticleType.showHide(\''.$arrResult[$i]['ArticleTypeID'].'\',\''.$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
-						<td class="lastCell">'.$arrResult[$i]['Status'].'</td>
-					  </tr>';
+					<td>'.$arrResult[$i]['ArticleTypeID'].'</td>
+					<td>'.$arrResult[$i]['ArticleTypeName'].'</td>
+					<td>'.$arrResult[$i]['CreatedBy'].'</td>
+					<td>'.$arrResult[$i]['CreatedDate'].'</td>
+					<td>'.$arrResult[$i]['ModifiedBy'].'</td>
+					<td>'.$arrResult[$i]['ModifiedDate'].'</td>
+					<td>'.$arrResult[$i]['DeletedBy'].'</td>
+					<td>'.$arrResult[$i]['DeletedDate'].'</td>
+					<td><input type="checkbox" onclick="_objArticleType.showHide(\''.$arrResult[$i]['ArticleTypeID'].'\',\''.$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
+					<td class="lastCell">'.$arrResult[$i]['Status'].'</td>
+					</tr>';
 		}
 		$strHTML.='</tbody></table>';
 		
@@ -214,15 +232,15 @@ class Model_ArticleType
 				"_objMenu.changePage")."</div>";
 		return $strHTML;
 	}
-    
-	function DisplayAllCategory()
+	
+	function displayAllCategory()
 	{
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
 					self::TBL_SL_ARTICLE_TYPE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
 		//echo 'sql:'.$strSQL;	
 		$arrResult = $this->_objConnection->selectCommand($strSQL);
-		print_r($arrResult);
+		//print_r($arrResult);
 	}
-    #endregion   
+	#endregion   
 }
 ?>

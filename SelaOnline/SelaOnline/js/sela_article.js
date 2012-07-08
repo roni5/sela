@@ -35,16 +35,6 @@ function Article() {
         core.disableControl("btnOK", true);
         var isValid = true;
 
-        var articleID = core.trim(core.getObject("txtArticleID").val());
-        core.ValidateInputTextBox('txtArticleID', '');
-        if (articleID == '') {
-            core.ValidateInputTextBox('txtArticleID', 'ArticleID is required', isValid);
-            isValid = false;
-        } else if (articleID.length > 20) {
-            core.ValidateInputTextBox('txtArticleID', 'ArticleID must be less than 20', isValid);
-            isValid = false;
-        }
-
         var prefix = core.trim(core.getObject("txtPrefix").val());
         core.ValidateInputTextBox('txtPrefix', '');
         if (prefix == '') {
@@ -143,13 +133,14 @@ function Article() {
             core.ValidateInputTextBox('txtTags', 'Tags is required', isValid);
             isValid = false;
         }
-
-        //		var content = core.trim(core.getObject("txtContent").val());
-        //		core.ValidateInputTextBox('txtContent', '');
-        //		if (content == '') {
-        //		    core.ValidateInputTextBox('txtContent', 'Content is required', isValid);
-        //		    isValid = false;
-        //		}
+        var nicE = new nicEditors.findEditor('txtContent');
+        var content = nicE.getContent();
+        content = core.trim($(content).text());
+        core.ValidateInputTextBox('editor-txtContent div.nicEdit-main', '');
+        if (content == '') {
+            core.ValidateInputTextBox('editor-txtContent div.nicEdit-main', 'Content is required', isValid);
+            isValid = false;
+        }
 
         if (isValid == false) {
             core.disableControl("btnOK", false);
@@ -167,7 +158,6 @@ function Article() {
     this.edit = edit;
     function edit() {
 
-        var articleID = core.trim(core.getObject("txtArticleID").val());
         var prefix = core.trim(core.getObject("txtPrefix").val());
         var title = core.trim(core.getObject("txtTitle").val());
         var fileName = core.trim(core.getObject("txtFileName").val());
@@ -182,7 +172,6 @@ function Article() {
         var status = core.trim(core.getObject("txtStatus").val());
 
         strRequest = "?isAJ=1&act=" + ACT_UPDATE +
-            '&ArticleID=' + core.urlencode(articleID) +
 			'&Prefix=' + core.urlencode(prefix) +
 			'&Title=' + core.urlencode(title) +
 			'&FileName=' + core.urlencode(fileName) +
@@ -228,13 +217,12 @@ function Article() {
 
     this.insertNew = insertNew;
     function insertNew() {
-
-        var articleID = core.trim(core.getObject("txtArticleID").val());
         var prefix = core.trim(core.getObject("txtPrefix").val());
         var title = core.trim(core.getObject("txtTitle").val());
         var fileName = core.trim(core.getObject("txtFileName").val());
         var articleType = core.trim(core.getObject("txtArticleType").val());
-        var content = core.trim(core.getObject("txtContent").val());
+        var nicE = new nicEditors.findEditor('txtContent');
+        var content = nicE.getContent();
         var notificationType = core.trim(core.getObject("txtNotificationType").val());
         var tags = core.trim(core.getObject("txtTags").val());
         var catalogueID = core.trim(core.getObject("txtCatalogueID").val());
@@ -244,7 +232,6 @@ function Article() {
         var status = core.trim(core.getObject("txtStatus").val());
 
         strRequest = "?isAJ=1&act=" + ACT_ADD +
-            '&ArticleID=' + core.urlencode(articleID) +
 			'&Prefix=' + core.urlencode(prefix) +
 			'&Title=' + core.urlencode(title) +
 			'&FileName=' + core.urlencode(fileName) +
@@ -356,7 +343,6 @@ function Article() {
                     showInfoBar('success', MSG_RES_OPERATION_SUCCESS);
                     //alert(strRespond[1]['sens']);
                     // Add Doc && clear field
-                    core.getObject('txtArticleID').val(ArticleID);
                     core.getObject('txtPrefix').val(Prefix);
                     core.getObject('txtTitle').val(Title);
                     core.getObject('txtFileName').val(FileName);
@@ -384,7 +370,6 @@ function Article() {
     function showAddMode() {
         core.getObject("adddocmode")[0].value = ADD_MODE;
         core.getObject("status-add")[0].innerHTML = 'Add mode';
-        core.getObject('txtArticleID').val('');
         core.getObject('txtPrefix').val('');
         core.getObject('txtTitle').val('');
         core.getObject('txtFileName').val('');

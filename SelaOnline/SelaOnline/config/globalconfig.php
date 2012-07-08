@@ -12,6 +12,8 @@ require('class/application.php');
 require('class/global_system.php');
 //require('class/user_mobile_detect.php');
 require('class/global_common.php');
+require('class/global_mapping.php');
+
 //require('class/security.php');
 require('lib/log4php/LoggerManager.php');
 require('class/global_editor.php');
