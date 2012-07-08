@@ -16,11 +16,13 @@ chdir("..");
 /* TODO: Add code here */
 require('config/globalconfig.php');
 include_once('class/model_article.php');
+include_once('class/model_articletype.php');
 
 ?>
 <?php
 
 $objArticle = new Model_Article($objConnection);
+$objArticleType = new Model_ArticleType($objConnection);
 
 if ($_pgR["act"] == model_Article::ACT_ADD)
 {
@@ -63,7 +65,7 @@ if ($_pgR["act"] == model_Article::ACT_ADD)
 		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objArticle->insert($articleID,$prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status);
+		$resultID = $objArticle->insert($prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -208,6 +210,7 @@ elseif($_pgR['act'] == model_Article::ACT_DELETE)
 	
 	return;
 }
+
 ?>
 
 <?php
@@ -239,11 +242,6 @@ bkLib.onDomLoaded(function() {
 				    <table id="tblPopUp" style="width: 100%;" border="0" cellpadding="2" cellspacing="0">
                         <tbody>
 						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>ArticleID</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td ><input id='txtArticleID' name='txtArticleID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
-						</tr>
-						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>Prefix</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
 							<td ><input id='txtPrefix' name='txtPrefix' value='' style='width: 80%;'  maxlength='765' type='text'></td>
@@ -261,23 +259,31 @@ bkLib.onDomLoaded(function() {
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>ArticleType</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td ><input id='txtArticleType' name='txtArticleType' value='' style='width: 80%;'  maxlength='60' type='text'></td>
+							<td >
+								<?php include_once('include/_option_article_type.inc');  ?>
+							</td>
 						</tr>
 						
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>NotificationType</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td ><input id='txtNotificationType' name='txtNotificationType' value='' style='width: 80%;'  maxlength='60' type='text'></td>
-						</tr>						
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>CatalogueID</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td ><input id='txtCatalogueID' name='txtCatalogueID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
-						</tr>
+							<td >
+								<?php include_once('include/_option_notification_type.inc');  ?>
+							</td>
+						</tr>	
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>SectionID</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td ><input id='txtSectionID' name='txtSectionID' value='' style='width: 80%;'  maxlength='60' type='text'></td>
+							<td >
+								<?php include_once('include/_option_section_type.inc');  ?>
+							</td>
+						</tr>					
+						<tr>
+							<td width='110'><span style='cursor:default; font-family:inherit'>CatalogueID</span></td>
+							<td width='10'><span class='forceFillForm'></span></td>
+							<td >
+								<?php include_once('include/_option_catalogue_type.inc');  ?>
+							</td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>NumView</span></td>
@@ -303,8 +309,8 @@ bkLib.onDomLoaded(function() {
 							<td width='110'><span style='cursor:default; font-family:inherit'>Content</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
 							<td>
-							<div style="">
-							<textarea id='txtContent' name='txtContent'  style='width: 80.4%;height:400px'  maxlength='' ></textarea>
+							<div id="editor-txtContent">
+								<textarea id='txtContent' name='txtContent'  style='width: 80.4%;height:400px'  maxlength='' ></textarea>
 							</div>
 							</td>
 						</tr>
@@ -314,7 +320,8 @@ bkLib.onDomLoaded(function() {
 	
 
 				<div class="div_admin_group_content_inside" style="margin: 4px; display: block;" align="center">		
-				  <input id="btnOK" value="OK"  style="width: 50px;" onClick="_objArticle.btnSave_OnClick()" type="button" class="btn btn-oliver"> &nbsp;&nbsp;&nbsp;
+				 <input type="checkbox" />
+				 <input id="btnOK" value="OK"  style="width: 50px;" onClick="_objArticle.btnSave_OnClick()" type="button" class="btn btn-oliver"> &nbsp;&nbsp;&nbsp;
 				  <input id="btnClose" value="Cancel" align="center" style="width: 65px;" onClick="_objArticle.showAddMode()" type="button" class="btn btn-oliver">  
 			  </div>					
 		</div>	
