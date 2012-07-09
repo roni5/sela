@@ -1,0 +1,253 @@
+$color_header: #F31505;
+$size_header: 20px ;
+$color_sub_header: #8080C0;
+$size_sub_header: 16px ;
+$color_body: #c1cd23 ;
+$size_body: 12px ;
+$color_control: #0080C0;
+$color_link: #400040;
+
+@charset "utf-8";
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,code,del,dfn,em,img,q,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,nav,section{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;padding:0;vertical-align:baseline;list-style:none}
+article,aside,dialog,figure,footer,header,hgroup,nav,section{display:block}
+h1,h2,h3,h4,h5,h6{font-weight:bold}
+table{border-collapse:separate;border-spacing:0}
+caption,th,td{font-weight:400;text-align:left}
+table,td,th{vertical-align:middle}
+blockquote:before,blockquote:after,q:before,q:after{content:""}
+blockquote,q{quotes:""}
+body{color:#333;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:70%;margin:0;padding:0;line-height:1.5}
+a:hover{color:#f90}
+
+#main{width:100%;background-color:#C4C6C8;height:100%}
+.wrapper{width:100%;background-color:#C4C6C8; display:block;}
+#header {height:120px;background-color:#996 ;margin-top:-7px}
+#slider-left {float:left; height:100%;width:15%;background-color:#090}
+#content {float:left; min-height:400px;width:75%; background-color:#EEF8FB; display:block}
+#slider-right {float:left; height:650px;width:10%;background-color:red}
+#footer{position:relative;clear:both; height:100px;background-color:#036}
+
+/*********** common for font page *********/
+body{color: $color_body; font-size:$size_body;}
+/*********** end common for font page *********/
+
+a{ color:$color_link; text-decoration:none;cursor: pointer}  
+a:visited{ color:#000; text-decoration:none;}
+a:hover {color:#6200C4 !important; background-position:-9px 0; text-decoration:none}
+
+/*********** common for admin page *********/
+.div_admin_group_title {text-align:left}
+#admin-box {float:left; height:100%;width:100%; background-color:#EEF8FB}
+#admin-content {float:left; margin-left:220px; padding:0 5px}
+#admin-slider-left {float:left; min-height:400px;width:220px;margin-left:-100%; background-color:#090}
+/*********** end common for admin page ************/
+
+.input-text-invalid{border: 2px solid red}
+.clear{clear:both}
+.center{text-align:center}
+.floatLeft{float:left}
+.floatRight{float:right}
+.block{display:block}
+.relative{position:relative}
+.absolute{position:absolute}
+.alignRight {text-align:right}
+.tooltipBox{border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fffbe7;border:1px #ffb950 solid;padding:5px 25px 5px 10px;.display:inline-block}
+.tooltipBox{font-style:italic}
+.tooltipDown{height:11px;padding:0;margin:0;line-height:11px;display:block;float:left}
+span.tooltipDown{margin-left:20px}
+.tooltipIcon{background:url(http://images.vietnamworks.com/gen/sprite_icons.png) no-repeat;background-position:0 -1379px;height:8px;width:26px;padding-right:15px}
+.sprite_icon{background:url(http://images.vietnamworks.com/gen/sprite_icons.png) no-repeat;overflow:hidden}
+.sprite_icon.arrowDownIcon{background-position:0 -1379px;width:12px;padding-right:10px}
+.sectionHeader, .headerCor,.roundBox, .salesLogoBg, .employerList a.cusLogo {background:url(http://images.vietnamworks.com/js/home_box.png) no-repeat}
+.roundBoxBody{clear:both;overflow:hidden;border-left:1px #d6d6d6 solid;border-right:1px #d6d6d6 solid;padding:15px 15px 0px 15px}
+.roundBoxBody.smallBox{padding:0 5px}
+.sectionHeader{background-color:#7fdcf8;position:relative;height:38px;line-height:30px;color:#fff;font-size:1.2em;margin-top:10px}
+.sectionHeader .headerCor{display:block;background-position:right top;margin-left:15px}
+.roundBox.TL{position:relative;height:5px;background-position:0 -39px}
+.roundBox.TR{display:block;margin-left:15px;height:5px;background-position:100% -39px}
+.roundBox.BL{height:20px;background-position:0 -84px;position:relative}
+.roundBox.BR{display:block;height:20px;background-position:100% -84px;margin-left:15px}
+
+.hintText{color:#999!important}
+.mainContent{margin:auto;padding:5px 0 10px 0;overflow:auto}
+.content{width:690px;clear:both;float:left;margin-right:10px}
+.sideBar{width:250px;float:right;margin:0 auto;padding:0}
+.introContent{background:#e0f5fd url(http://images.vietnamworks.com/js/home_search_bg.png) repeat-x}
+.introWrap, .mainWrap, .footerWrap{width:960px;margin:0 auto}
+.introBox{background:url(http://images.vietnamworks.com/js/home_photo_dreammaker.png) no-repeat top right;height:191px}
+.introTagLine{color:#f60;font-size:1.4em;padding:15px 0 0 0}
+.introSlogan{color:#333;font-size:1.4em;font-weight:normal}
+.jobLink a{padding:8px; font-weight:bold; display:inline-block; color:#f90}
+
+/*Searchbox on Homepage*/
+.search-box {width:690px; padding:2px!important;margin:10px 0 0 0; overflow:auto}
+.search-box input.text{height:29px; line-height:25px; border:1px #ccc solid; border-top:1px #aaa solid; border-left:1px #aaa solid; padding:0 8px; margin:0; display:inline-block;color:#555; font-family:Verdana, Geneva, sans-serif; font-size:1.1em}
+.search-box input.text[type=text]:focus {font-weight:bold; outline:none}
+.search-criteria {width:530px; float:left}
+input.keyword {width:506px; float:left; margin-bottom:4px!important}
+input.category, input.location, input.level { background-color:#fff; float:left; width:127px; border-right:0!important; overflow:hidden;}
+button.select-icon {background:#fff url(http://images.vietnamworks.com/gen/sprite_icons.png) 3px -1452px no-repeat; width:28px; height:31px; float:left;border:1px #ccc solid; border-top:1px #aaa solid;border-left:0!important; margin:0 4px 0 0; cursor:pointer}
+button.select-icon:hover {background:#fff url(http://images.vietnamworks.com/gen/sprite_icons.png) 3px -1492px no-repeat;}
+
+.search-box .button-box{float:left; margin:0!important;}
+a.button{background:#fff url(http://images.vietnamworks.com/gen/form_button.png) no-repeat -9px -1px; border:1px #bd8124 solid;
+/*border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;*/}
+a.button span{line-height:25px; display:block; font-weight:bold;font-size: 1.2em; padding:1px 15px 3px 15px!important }
+a.button.search {width:130px; font-size:1em}
+a.button, a.button:visited{ color:#fff; text-align:center; text-decoration:none; display:inline-block}
+a.button:hover span{color:#333!important; background-position:-9px 0}
+
+.box-highlight, .company-info{border:1px #00b9f1 solid}
+.salesLogoBg{background-position:40px -110px;height:10px;width:600px}
+.salesLogoDesc{display:block}
+.promotionText{color:#666;font-size:1.2em;font-weight:bold;text-align:center;padding:10px}
+.promotionBtn{display:block;text-align:center}
+.salesLogo{padding:2px;margin:0 auto;text-align:center}
+a.salesLogoLink{border:1px #fff solid;border-bottom:2px #fff solid;display:inline-block;width:155px;text-align:center;margin:2px 0;padding:5px;text-decoration:none}
+a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
+.categoryList{text-align:left;overflow:auto;border-bottom:1px #e5e5e5 solid;margin:0 2px;}
+.categoryList a{color:#333;}
+.categoryList a:hover{
+	color:#000
+}
+.categoryList li{padding:5px;float:left;display:block;width:208px}
+.categoryList.altRow{background:#fff}
+.categoryList li em{color:#f90}
+.moreBtn{padding:10px 0 0 8px;display:block;clear:both;float:right}
+.topJobsList li{background:#fff;border-bottom:1px #ccc dotted;padding:3px 0;width:50%;_width:320px;float:left}
+.topJobsList a{font-weight:bold;color:#333}
+.topJobsList span{display:block;color:#666}
+.topJobsList.fixScroll{height:410px;overflow:auto}
+.employerList {margin:0 auto;width:230px}
+.employerList a.cusLogo {width:103px; height:60px; float:left;padding:4px; margin:3px 2px; background-position:-48px -133px}
+.employerList a.cusLogo:hover { background-image:none;}
+.moreLink {margin-top:15px; clear:both; display:block; text-align:center}
+.adBanner{margin:0 auto;text-align:center;padding-top:10px}
+.pollNAdvice h3{color:#f90;font-size:1.1em;margin:0 0 10px 0}
+.pollNAdvice h3 strong{color:#333}
+.checkPoll{clear:both;width:25px;float:left;margin:0 0 5px 20px}
+.labelPoll{float:left;width:600px;margin:3px}
+.resultBtn{clear:both;padding-top:10px;margin-left:15px}
+.resultBtn a{float:left;display:inline;margin:0 5px}
+.picBox{border:1px #ddd solid;margin-right:15px;float:left}
+.viewResult{text-align:right;font-weight:bold}
+.dialogBox .dialogContent{border:1px #999 solid;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0px 0px 10px #666;-moz-box-shadow:0px 0px 10px #666;-webkit-box-shadow:0px 0px 10px #666;background:#fff}
+.surveyResultList{margin:0 20px;font-size:1.1em;width:520px;padding:30px;background:#fff}
+.surveyResultList h3{margin:0;color:#f90}
+.surveyResultList table thead tr td, .surveyResultList tfoot tr td{padding:10px;font-weight:bold;border-bottom:2px #bbb solid}
+.surveyResultList table tbody tr td{border-bottom:1px #ccc dotted;padding:10px}
+
+/*Dropdown menu*/
+.dropdownMenu{background:#fff;border:1px #999 solid;font-size:1.1em;color:#666}
+.dropdownMenu a{color:#555;display:block;/*height:1%;*/padding:5px 10px;margin:0;border-bottom:1px #e9e9e9 solid;text-decoration:none}
+.dropdownMenu a strong{color:#666;font-weight:bold}
+.dropdownMenu a.current, .dropdownMenu a.current strong{background:#fff;color:#f90 !important}
+.dropdownMenu.fixHeight{height:320px;overflow:auto}
+.dropdownMenu a:hover, .dropdownMenu a:hover strong{background:#e9e9e9;color:#00aee1!important}
+.ui-autocomplete{cursor:default;position:absolute;}
+* html .ui-autocomplete{width:1px;}
+.ui-menu{display:block;float:left;list-style:none outside none;margin:0;padding:2px;}
+.ui-menu .ui-menu{margin-top:-3px;}
+.ui-menu .ui-menu-item{clear:left;float:left;margin:0;padding:0;width:100%;}
+.ui-menu .ui-menu-item a{display:block;line-height:1.5;padding:0.2em 0.4em;text-decoration:none;}
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active{font-weight:normal;margin:-1px;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{background:url("") repeat-x scroll 50% 50% #DADADA;color:#00aee1 !important;}
+
+/*********** User info ***********/
+.user-info{}
+/********** Emd User info ********/
+
+/*********** category ************/
+.article-memo{width:100%;min-height:150px;}
+.article-memo-user{float:left; width:120px; margin-left: -100%;padding:0 2px}
+.article-memo-detail{float:left;width: 100%; text-align:left}
+.article-memo-control{
+	width:98%; height:30px; background: $color_control; display: inline;
+	margin:0px 0px;
+	padding: 0 20px 0 0;
+	float: right;
+	.favourite{		
+		float: right;
+	}
+}
+.article-memo-content   
+{
+    height: 100px;
+    position: relative;
+    margin-left:125px;
+}
+.article-memo-content .article-short-info     
+{
+    float:left;
+    bottom: 1px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+}
+.item-article{
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("") repeat-x scroll left bottom #F2F6F8;
+    border-color: #FFFFFF #CCCCCC #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.threadbit .threadinfo {
+    min-width: 350px;
+    width: 62%;
+}
+
+.threadbit .threadstatus, .threadbit .threadinfo, .threadbit .threadinfo_withnotification, .threadbit .threadstats, .threadbit .threadlastpost, .threadbit .threaddeleted, .threadbit .threadnotification, .threadbit .nothreadstatus, .threadbit .threadthread, .threadbit img.statusicon {
+    clear: right;
+    display: inline-block;
+    float: left;
+}
+/*********** end category ************/
+
+
+/*********** paging ************/
+.paging{}
+.paging a {background: #493A3A; text-decoration:none; font-weight:bold; color:White; width:40px; padding:3px 5px 3px 5px; cursor:pointer}
+/*********** end paging ************/
+
+
+/* Css for Tooltip */
+#tooltip {position: absolute;	z-index: 3000;	border: 1px solid #111;*border: 1px solid #111;	background-color: #eee;	padding: 5px 10px 5px 10px;	opacity: 0.95;font-size: 10px;font-weight: normal;color: red; vertical-align: middle}
+#tooltip h3, #tooltip div {font-size: 12px; margin: 0;padding: 0; *margin: 0;*padding: 0; }
+/* End Css for Tooltip */
+
+/*category-page*/
+.category-page
+{	
+	.category-list{
+		.category-header{
+			color:$color_header;
+			font-size:$size_header;
+		}
+		.category-detail{
+			text-align:left;
+			.article-detail{
+				text-align:left;
+				.article-header{
+					color:$color_sub_header;
+					font-size:$size_sub_header;
+				}
+				.article-content{
+					color:$color_body;
+					font-size:$size_body;
+				}
+			}
+		}
+	}
+}
+/* end category-page*/
+

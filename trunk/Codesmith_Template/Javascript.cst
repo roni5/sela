@@ -32,7 +32,7 @@
  * Modifications will be overwritten when code smith is run
  *
  * PLEASE DO NOT MAKE MODIFICATIONS TO THIS FILE
- * Date Created <%= DateTime.Now %>
+ * Date Created 5/6/2012<%//= //DateTime.Now %>
  *
  */
 
@@ -42,11 +42,11 @@
 /// Implementations of <%= GetCollectionName(SourceTable) %> represent a <%= GetClassName(SourceTable) %>
 ///
 /// </summary>
-function <%= GetClassName(SourceTable) %>
+function <%= GetClassName(SourceTable) %>()
 {		   
-	#region PRESERVE ExtraMethods For <%= GetClassName(SourceTable) %>
-	#endregion
-    #region Contants	
+	//region PRESERVE ExtraMethods For <%= GetClassName(SourceTable) %>
+	//endregion
+    //region Contants	
     var ACT_ADD = 10;
     var ACT_UPDATE = 11;
     var ACT_DELETE = 12;
@@ -56,19 +56,18 @@ function <%= GetClassName(SourceTable) %>
     var _strPage = "admin_<%= GetPageName(SourceTable.Name) %>.php";
     
    
-    #endregion   
+    //endregion   
     
-    #region Public Functions
+    //region Public Functions
     
     this.btnSave_OnClick = btnSave_OnClick;
     function btnSave_OnClick() {
         core.disableControl("btnOK", true);
-        var strError = '';
+        var isValid = true;
         <% GenerateValidates(SourceTable.Columns, 2);%>
        
-        if (strError != "") {
-            popDiv.alert(strError, SYSTEM_TITLE_ERROR, 1);
-            core.disableControl("btnOK", false);
+        if (isValid == false) {
+         core.disableControl("btnOK", false);
             return;
         }
          
@@ -106,7 +105,7 @@ function <%= GetClassName(SourceTable) %>
                 if (parseInt(strRespond[1]['rs']) == 1) {
                     showInfoBar('success', strRespond[1]["inf"]);
                     showAddMode();
-                    changePage(core.getObject("txtPage").val());
+                    changePage(_strPage, ACT_CHANGE_PAGE, core.getObject("txtPage").val());
                 }
                 else {
                     //var popDiv = new PopDiv();
@@ -143,7 +142,7 @@ function <%= GetClassName(SourceTable) %>
                 if (parseInt(strRespond[1]['rs']) == 1) {
                     showInfoBar('success', strRespond[1]["inf"]);
                     showAddMode();
-                    changePage(core.getObject("txtPage").val());
+                    changePage(_strPage, ACT_CHANGE_PAGE, 1);
                 }
                 else {
                     //var popDiv = new PopDiv();
@@ -155,8 +154,8 @@ function <%= GetClassName(SourceTable) %>
     }
     
     var _cacheURL_pdoc;
-    this.delete = delete;
-    function delete(id, name) {
+    this.deleteObj = deleteObj;
+    function deleteObj(id, name) {
         //curRow = currentRowId;
         popDiv.alert('Do you want to delete ' + name + ' ?', SYSTEM_TITLE_ERROR, 2, "<%= GetGlobalVariable(SourceTable.Name)%>.delete_OK()", "<%= GetGlobalVariable(SourceTable.Name)%>.delete_Cancel()");
 
@@ -240,7 +239,7 @@ function <%= GetClassName(SourceTable) %>
         core.getObject("status-add")[0].innerHTML = 'Add mode';
         <% GenerateAddModes(SourceTable.Columns, 2);%>
     }
-    #endregion   
+    //endregion   
 }
 var <%= GetGlobalVariable(SourceTable.Name) %> = new  <%= GetClassName(SourceTable) %>();
 <script runat="template">
@@ -302,7 +301,7 @@ public static string GetPageName(string name)
     index = name.IndexOf("_");
     while(index != -1)
     {
-        name =  name.Substring(0,index)+ name[index+1].ToString().ToUpper() + name.Substring(index+2);
+        name =  name.Substring(0,index)+ name[index+1].ToString().ToLower() + name.Substring(index+2);
         index = name.IndexOf("_");
     }
    
@@ -537,50 +536,46 @@ public void GenerateValidate(ColumnSchema column, int indentLevel)
 	Response.Write(variable);
 	Response.WriteLine(" = core.trim(core.getObject(\"txt"+fieldName+"\").val());");
     GenerateIndent(indentLevel);
-    Response.WriteLine("if("+variable+") == ''{");
-    GenerateIndent(indentLevel+1);
-    Response.WriteLine("core.getObject('"+fieldName+"')[0].focus();");
-    GenerateIndent(indentLevel+1);
-    Response.WriteLine("strError += '<p>"+fieldName+" is required!</p>';");
+    Response.WriteLine("core.ValidateInputTextBox('txt"+fieldName+"','');");
     GenerateIndent(indentLevel);
-    Response.WriteLine("}");
+    Response.WriteLine("if("+variable+" == ''){");
+    GenerateIndent(indentLevel+1);
+    Response.WriteLine("core.ValidateInputTextBox('txt"+fieldName+"','"+fieldName+" is required"+"', isValid);");
+    GenerateIndent(indentLevel+1);
+    Response.WriteLine("isValid =  false;");
+    GenerateIndent(indentLevel);
+    Response.Write("}");
     if(column.NativeType == "varchar")
     {
+        Response.WriteLine("else if ("+variable+".length > "+column.Size / 3 +") {");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("else if ("+variable+".length > "+column.Size/3+") {");
+        Response.WriteLine("core.ValidateInputTextBox('txt"+fieldName+"','"+fieldName+" must be less than "+column.Size / 3 +"', isValid);");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("core.getObject('"+fieldName+"')[0].focus();");
-        GenerateIndent(indentLevel+1);
-        Response.WriteLine("strError += '<p>"+fieldName+" too long!</p>';");
+        Response.WriteLine("isValid =  false;");
         GenerateIndent(indentLevel);
         Response.WriteLine("}");
     }
     else if(column.NativeType == "int")
     {
-        GenerateIndent(indentLevel+1);
         Response.WriteLine("else if ("+variable+".length > 12) {");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("core.getObject('"+fieldName+"')[0].focus();");
+        Response.WriteLine("core.ValidateInputTextBox('txt"+fieldName+"','"+fieldName+" must be less than "+column.Size / 3 +"', isValid);");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("strError += '<p>"+fieldName+" is invalid!</p>';");
+        Response.WriteLine("isValid =  false;");
         GenerateIndent(indentLevel);
         Response.WriteLine("}");   
     
+        Response.WriteLine("else if (core.isInteger("+variable+")) {");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("else if (isNaN("+variable+")) {");
-        GenerateIndent(indentLevel+1);
-        Response.WriteLine("core.getObject('"+fieldName+"')[0].focus();");
-        GenerateIndent(indentLevel+1);
-        Response.WriteLine("strError += '<p>"+fieldName+" is invalid!</p>';");
+        Response.WriteLine("core.ValidateInputTextBox('txt"+fieldName+"','"+fieldName+" is invalid', isValid);");
         GenerateIndent(indentLevel);
         Response.WriteLine("}");
     }
     else if(column.NativeType == "datetime")
     {
-        GenerateIndent(indentLevel+1);
         Response.WriteLine("else if (core.ValidateDateTime("+variable+") == false) {");
         GenerateIndent(indentLevel+1);
-        Response.WriteLine("core.getObject('"+fieldName+"')[0].focus();");
+        Response.WriteLine("core.getObject('txt"+fieldName+"')[0].focus();");
         GenerateIndent(indentLevel+1);
         Response.WriteLine("strError += '<p>"+fieldName+" is invalid!</p>';");
         GenerateIndent(indentLevel);
@@ -616,7 +611,7 @@ public void GenerateGetValue(ColumnSchema column, int indentLevel)
 	GenerateIndent(indentLevel);
     Response.Write("var ");
 	Response.Write(variable);
-	Response.WriteLine(" = core.trim(core.getObject(\"txt"+fieldName+"\").val();");
+	Response.WriteLine(" = core.trim(core.getObject(\"txt"+fieldName+"\").val());");
 }
 
 public void GeneratePostValues(ColumnSchemaCollection columns, int indentLevel)
@@ -669,7 +664,7 @@ public void GenerateAddModes(ColumnSchemaCollection columns, int indentLevel)
         && filteredColumns[i].Name != "IsDeleted" )
         {
             GenerateIndent(indentLevel);
-            Response.WriteLine("core.getObject('txt"+filteredColumns[i].Name+"')val('');");
+            Response.WriteLine("core.getObject('txt"+filteredColumns[i].Name+"').val('');");
         }
 	}
 }
