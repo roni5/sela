@@ -83,26 +83,6 @@ a:hover {
   height: 100px;
   background-color: #036; }
 
-/*********** common for font page *********/
-body {
-  color: #c1cd23;
-  font-size: 12px; }
-
-/*********** end common for font page *********/
-a {
-  color: #400040;
-  text-decoration: none;
-  cursor: pointer; }
-
-a:visited {
-  color: #000;
-  text-decoration: none; }
-
-a:hover {
-  color: #6200C4 !important;
-  background-position: -9px 0;
-  text-decoration: none; }
-
 /*********** common for admin page *********/
 .div_admin_group_title {
   text-align: left; }
@@ -646,15 +626,9 @@ a:hover.salesLogoLink {
   text-align: left; }
 
 .article-memo-control {
-  width: 98%;
+  width: 100%;
   height: 30px;
-  background: #0080c0;
-  display: inline;
-  margin: 0px 0px;
-  padding: 0 20px 0 0;
-  float: right; }
-  .article-memo-control .favourite {
-    float: right; }
+  background: #C7C7FF; }
 
 .article-memo-content {
   height: 100px;
@@ -728,19 +702,3 @@ a:hover.salesLogoLink {
   *padding: 0; }
 
 /* End Css for Tooltip */
-/*category-page*/
-.category-page .category-list .category-header {
-  color: #f31505;
-  font-size: 20px; }
-.category-page .category-list .category-detail {
-  text-align: left; }
-  .category-page .category-list .category-detail .article-detail {
-    text-align: left; }
-    .category-page .category-list .category-detail .article-detail .article-header {
-      color: #8080c0;
-      font-size: 16px; }
-    .category-page .category-list .category-detail .article-detail .article-content {
-      color: #c1cd23;
-      font-size: 12px; }
-
-/* end category-page*/

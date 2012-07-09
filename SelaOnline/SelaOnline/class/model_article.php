@@ -16,97 +16,97 @@ class Model_Article
 {		   
 	#region PRESERVE ExtraMethods For Article
 	#endregion
-    #region Contants	
-    const ACT_ADD							= 10;
-    const ACT_UPDATE						= 11;
-    const ACT_DELETE						= 12;
-    const ACT_CHANGE_PAGE					= 13;
-    const ACT_SHOW_EDIT                     = 14;
-    const ACT_GET                           = 15;
-    const NUM_PER_PAGE                      = 15;
-    
-    const TBL_SL_ARTICLE			            = 'sl_article';
-
+	#region Contants	
+	const ACT_ADD							= 10;
+	const ACT_UPDATE						= 11;
+	const ACT_DELETE						= 12;
+	const ACT_CHANGE_PAGE					= 13;
+	const ACT_SHOW_EDIT                     = 14;
+	const ACT_GET                           = 15;
+	const NUM_PER_PAGE                      = 15;
+	
+	const TBL_SL_ARTICLE			            = 'sl_article';
+	
 	const SQL_INSERT_SL_ARTICLE		= 'INSERT INTO `{0}`
 		(
-			ArticleID,
-			Prefix,
-			Title,
-			FileName,
-			ArticleType,
-			Content,
-			NotificationType,
-			Tags,
-			CatalogueID,
-			SectionID,
-			NumView,
-			NumComment,
-			CreatedBy,
-			CreatedDate,
-			ModifiedBy,
-			ModifiedDate,
-			DeletedBy,
-			DeletedDate,
-			IsDeleted,
-			Status
-        )
-        VALUES (
-			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\'
-        );';
-        
+		ArticleID,
+		Prefix,
+		Title,
+		FileName,
+		ArticleType,
+		Content,
+		NotificationType,
+		Tags,
+		CatalogueID,
+		SectionID,
+		NumView,
+		NumComment,
+		CreatedBy,
+		CreatedDate,
+		ModifiedBy,
+		ModifiedDate,
+		DeletedBy,
+		DeletedDate,
+		IsDeleted,
+		Status
+		)
+		VALUES (
+		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\'
+		);';
+	
 	const SQL_UPDATE_SL_ARTICLE		= 'UPDATE `{0}`
 		SET  
-			`ArticleID` = \'{1}\',
-			`Prefix` = \'{2}\',
-			`Title` = \'{3}\',
-			`FileName` = \'{4}\',
-			`ArticleType` = \'{5}\',
-			`Content` = \'{6}\',
-			`NotificationType` = \'{7}\',
-			`Tags` = \'{8}\',
-			`CatalogueID` = \'{9}\',
-			`SectionID` = \'{10}\',
-			`NumView` = \'{11}\',
-			`NumComment` = \'{12}\',
-			`CreatedBy` = \'{13}\',
-			`CreatedDate` = \'{14}\',
-			`ModifiedBy` = \'{15}\',
-			`ModifiedDate` = \'{16}\',
-			`DeletedBy` = \'{17}\',
-			`DeletedDate` = \'{18}\',
-			`IsDeleted` = \'{19}\',
-			`Status` = \'{20}\'
+		`ArticleID` = \'{1}\',
+		`Prefix` = \'{2}\',
+		`Title` = \'{3}\',
+		`FileName` = \'{4}\',
+		`ArticleType` = \'{5}\',
+		`Content` = \'{6}\',
+		`NotificationType` = \'{7}\',
+		`Tags` = \'{8}\',
+		`CatalogueID` = \'{9}\',
+		`SectionID` = \'{10}\',
+		`NumView` = \'{11}\',
+		`NumComment` = \'{12}\',
+		`CreatedBy` = \'{13}\',
+		`CreatedDate` = \'{14}\',
+		`ModifiedBy` = \'{15}\',
+		`ModifiedDate` = \'{16}\',
+		`DeletedBy` = \'{17}\',
+		`DeletedDate` = \'{18}\',
+		`IsDeleted` = \'{19}\',
+		`Status` = \'{20}\'
 		WHERE `ArticleID` = \'{1}\'  ';
-		   
-
-    const SQL_CREATE_TABLE_SL_ARTICLE		= 'CREATE TABLE `{0}` (
-
-			`ArticleID` varchar(60),
-			`Prefix` varchar(765),
-			`Title` varchar(765),
-			`FileName` varchar(765),
-			`ArticleType` varchar(60),
-			`Content` text(65535),
-			`NotificationType` varchar(60),
-			`Tags` text(65535),
-			`CatalogueID` varchar(60),
-			`SectionID` varchar(60),
-			`NumView` bigint(0),
-			`NumComment` bigint(0),
-			`CreatedBy` varchar(60),
-			`CreatedDate` datetime(0),
-			`ModifiedBy` varchar(60),
-			`ModifiedDate` datetime(0),
-			`DeletedBy` varchar(60),
-			`DeletedDate` datetime(0),
-			`IsDeleted` bit(0),
-			`Status` varchar(60),
-			PRIMARY KEY(ArticleID)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
-    #endregion   
-    
-    #region Variables
+	
+	const SQL_CREATE_TABLE_SL_ARTICLE		= 'CREATE TABLE `{0}` (
+		
+		`ArticleID` varchar(60),
+		`Prefix` varchar(765),
+		`Title` varchar(765),
+		`FileName` varchar(765),
+		`ArticleType` varchar(60),
+		`Content` text(65535),
+		`NotificationType` varchar(60),
+		`Tags` text(65535),
+		`CatalogueID` varchar(60),
+		`SectionID` varchar(60),
+		`NumView` bigint(0),
+		`NumComment` bigint(0),
+		`CreatedBy` varchar(60),
+		`CreatedDate` datetime(0),
+		`ModifiedBy` varchar(60),
+		`ModifiedDate` datetime(0),
+		`DeletedBy` varchar(60),
+		`DeletedDate` datetime(0),
+		`IsDeleted` bit(0),
+		`Status` varchar(60),
+		PRIMARY KEY(ArticleID)
+		) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
+	
+	#endregion   
+	
+	#region Variables
 	var $_objConnection;
 	#end region
 	
@@ -124,11 +124,11 @@ class Model_Article
 		$this->_objConnection = $objConnection;
 		
 	}
-    #region
-    
-    #region Public Functions
-    
-    public function insert( $prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	#endregion
+	
+	#region Public Functions
+	
+	public function insert( $prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		$intID = global_common::getMaxID(self::TBL_SL_ARTICLE);
 		
@@ -145,8 +145,8 @@ class Model_Article
 		return $intID;
 		
 	}
-    
-    public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	
+	public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		$strTableName = self::TBL_SL_ARTICLE;
 		$strSQL = global_common::prepareQuery(self::SQL_UPDATE_SL_ARTICLE,
@@ -160,8 +160,8 @@ class Model_Article
 		}	
 		return $intNewID;		
 	}
-    
-    public function getArticleByID($objID,$selectField='*') 
+	
+	public function getArticleByID($objID,$selectField='*') 
 	{		
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE ,							
@@ -176,12 +176,53 @@ class Model_Article
 		//print_r($arrResult);
 		return $arrResult[0];
 	}
-    
-    public function getAllArticle($selectField='*') 
+	
+	
+	/**
+	 * This is method getTopArticleByType. For show article type list page
+	 *
+	 * @param mixed $listTypeID This is a description
+	 * @param mixed $limitRow This is a description
+	 * @param mixed $selectField This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	public function getTopArticleByType($listTypeID,$limitRow,$selectField='*') 
 	{		
+		$arrTypeID = global_common::splitString(',',$listTypeID);
+		$strSQL = '';
+		foreach($arrTypeID as $item)
+		{
+			$strSQL .='('. global_common::prepareQuery(global_common::SQL_SELECT_LIMIT_BY_CONDITION, 
+					array($selectField, self::TBL_SL_ARTICLE ,							
+						''.global_mapping::ArticleType.' = \''.$item.'\'','0', $limitRow)).')';
+			$strSQL.= ' UNION ';
+		}
+		$strSQL  = global_common::cutLast($strSQL,strlen(' UNION '));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get sl_article top ByType:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult;
+	}
+	
+	public function getAllArticle($selectField='*',$whereClause='',  $orderBy='') 
+	{		
+		if($whereClause)
+		{
+			$whereClause = ' WHERE '.$whereClause;
+		}
+		
+		if($orderBy)
+		{
+			$orderBy = ' ORDER BY '.$orderBy;
+		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-				array($selectField, self::TBL_SL_ARTICLE ,							
-					''));
+				array($selectField, self::TBL_SL_ARTICLE ,$whereClause.$orderBy));
 		//echo '<br>SQL:'.$strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
@@ -192,70 +233,70 @@ class Model_Article
 		//print_r($arrResult);
 		return $arrResult;
 	}
-    
-    public function getListArticle($intPage,$orderBy='ArticleID', $whereClause)
+	
+	public function getListArticle($intPage,$orderBy='ArticleID', $whereClause)
 	{		
-        if($whereClause)
-        {
-            $whereClause='WHERE'+ $whereClause;						
-        }
-        if($orderBy)
-        {
-            $orderBy='ORDER BY'+ $orderBy;						
-        }
+		if($whereClause)
+		{
+			$whereClause='WHERE'+ $whereClause;						
+		}
+		if($orderBy)
+		{
+			$orderBy='ORDER BY'+ $orderBy;						
+		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
 					self::TBL_SL_ARTICLE,$orderBy.' '.$whereClause.' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
 		//echo 'sql:'.$strSQL;	
 		$arrResult = $this->_objConnection->selectCommand($strSQL);
 		//print_r($arrResult);
 		$strHTML = '<table class="tbl-list">
-                    <thead>
-						<td>Prefix</td>
-						<td>Title</td>
-						<td>FileName</td>
-						<td>ArticleType</td>
-						<td>Content</td>
-						<td>NotificationType</td>
-						<td>Tags</td>
-						<td>CatalogueID</td>
-						<td>SectionID</td>
-						<td>NumView</td>
-						<td>NumComment</td>
-						<td>CreatedBy</td>
-						<td>CreatedDate</td>
-						<td>ModifiedBy</td>
-						<td>ModifiedDate</td>
-						<td>DeletedBy</td>
-						<td>DeletedDate</td>
-						<td>IsDeleted</td>
-						<td>Status</td>
-                    </thead>
-                    <tbody>';
+				<thead>
+				<td>Prefix</td>
+				<td>Title</td>
+				<td>FileName</td>
+				<td>ArticleType</td>
+				<td>Content</td>
+				<td>NotificationType</td>
+				<td>Tags</td>
+				<td>CatalogueID</td>
+				<td>SectionID</td>
+				<td>NumView</td>
+				<td>NumComment</td>
+				<td>CreatedBy</td>
+				<td>CreatedDate</td>
+				<td>ModifiedBy</td>
+				<td>ModifiedDate</td>
+				<td>DeletedBy</td>
+				<td>DeletedDate</td>
+				<td>IsDeleted</td>
+				<td>Status</td>
+				</thead>
+				<tbody>';
 		$icount = count($arrmenu);
 		for($i=0;$i<$icount;$i++)
 		{
 			$strHTML.='<tr class="'.($i%2==0?'even':'odd').'">
-						<td>'.$arrResult[$i]['ArticleID'].'</td>
-						<td>'.$arrResult[$i]['Prefix'].'</td>
-						<td>'.$arrResult[$i]['Title'].'</td>
-						<td>'.$arrResult[$i]['FileName'].'</td>
-						<td>'.$arrResult[$i]['ArticleType'].'</td>
-						<td>'.$arrResult[$i]['Content'].'</td>
-						<td>'.$arrResult[$i]['NotificationType'].'</td>
-						<td>'.$arrResult[$i]['Tags'].'</td>
-						<td>'.$arrResult[$i]['CatalogueID'].'</td>
-						<td>'.$arrResult[$i]['SectionID'].'</td>
-						<td>'.$arrResult[$i]['NumView'].'</td>
-						<td>'.$arrResult[$i]['NumComment'].'</td>
-						<td>'.$arrResult[$i]['CreatedBy'].'</td>
-						<td>'.$arrResult[$i]['CreatedDate'].'</td>
-						<td>'.$arrResult[$i]['ModifiedBy'].'</td>
-						<td>'.$arrResult[$i]['ModifiedDate'].'</td>
-						<td>'.$arrResult[$i]['DeletedBy'].'</td>
-						<td>'.$arrResult[$i]['DeletedDate'].'</td>
-						<td><input type="checkbox" onclick="_objArticle.showHide(\''.$arrResult[$i]['ArticleID'].'\',\''.$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
-						<td class="lastCell">'.$arrResult[$i]['Status'].'</td>
-					  </tr>';
+					<td>'.$arrResult[$i]['ArticleID'].'</td>
+					<td>'.$arrResult[$i]['Prefix'].'</td>
+					<td>'.$arrResult[$i]['Title'].'</td>
+					<td>'.$arrResult[$i]['FileName'].'</td>
+					<td>'.$arrResult[$i]['ArticleType'].'</td>
+					<td>'.$arrResult[$i]['Content'].'</td>
+					<td>'.$arrResult[$i]['NotificationType'].'</td>
+					<td>'.$arrResult[$i]['Tags'].'</td>
+					<td>'.$arrResult[$i]['CatalogueID'].'</td>
+					<td>'.$arrResult[$i]['SectionID'].'</td>
+					<td>'.$arrResult[$i]['NumView'].'</td>
+					<td>'.$arrResult[$i]['NumComment'].'</td>
+					<td>'.$arrResult[$i]['CreatedBy'].'</td>
+					<td>'.$arrResult[$i]['CreatedDate'].'</td>
+					<td>'.$arrResult[$i]['ModifiedBy'].'</td>
+					<td>'.$arrResult[$i]['ModifiedDate'].'</td>
+					<td>'.$arrResult[$i]['DeletedBy'].'</td>
+					<td>'.$arrResult[$i]['DeletedDate'].'</td>
+					<td><input type="checkbox" onclick="_objArticle.showHide(\''.$arrResult[$i]['ArticleID'].'\',\''.$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
+					<td class="lastCell">'.$arrResult[$i]['Status'].'</td>
+					</tr>';
 		}
 		$strHTML.='</tbody></table>';
 		
@@ -263,7 +304,34 @@ class Model_Article
 				"_objMenu.changePage")."</div>";
 		return $strHTML;
 	}
-    
-    #endregion   
+	
+	public function getArticleMemo($article)
+	{
+		$strHTML = '<div class="article-memo">
+				<div class="article-memo-detail">
+				<div class="article-memo-content">
+				<div class="article-memo-control">
+				<div class="favourite"> LIKE </div>
+				</div>
+				<h2><a href="article_detail.php?articleid='.$article[global_mapping::ArticleID].'"> '.$article['Title'].'</a></h2>
+				<div class="article-short-info">
+				<span><b>sukoi</b> Comment: 24-12-2012</span>
+				<span class="paging"> 
+				<a>1</a> <a> 2</a 
+				</span>
+				</div>
+				</div>
+				</div>
+				<div class="article-memo-user">
+				<div class="user-info">
+				<div><img src="/image/default/default_logo.jpg" width="120" height="100" /></div>
+				User info
+				</div>
+				</div>
+				</div>';
+		return $strHTML;
+	}
+	
+	#endregion   
 }
 ?>

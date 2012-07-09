@@ -3,9 +3,11 @@
 /* TODO: Add code here */
 require('config/globalconfig.php');
 include_once('class/model_articletype.php');
+include_once('class/model_article.php');
 include_once('class/model_user.php');
 
 $objArticleType = new model_ArticleType($objConnection);
+$objArticle = new model_Article($objConnection);
 $arrCategory =  $objArticleType->getAllArticleType();
 
 $objUser = new Model_User($objConnection);

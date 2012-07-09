@@ -15,7 +15,7 @@ Description: Run SubTemplates From This File And OutPut those templates to file
 <%--@ Property Name="_outputDirectory" Optional="True" Type="System.String" Category="1. Context" Description="Database that the stored procedures should be based on." --%>
 <%@ Register Name="Classes" Template="Classes.cst" %>
 <%@ Register Name="Javascript" Template="Javascript.cst" %>
-<%--@Register Name="View" Template="BUS.cst" %>
+<%@ Register Name="View" Template="View.cst" %>
 
 
 
@@ -55,7 +55,30 @@ public static string GetClassName(string name)
     name  = name.Replace(" ","");			
     return name[0].ToString().ToUpper() + name.Substring(1);;
 }
-
+public static string GetPageName(string name)
+{									
+	if(name.EndsWith("s") && !name.EndsWith("ss"))
+	{
+		//name = name.Substring(0,name.Length - 1);
+	}
+	if(name.EndsWith("sse"))
+	{
+		name = name.Substring(0,name.Length - 1);
+	}
+	int index = name.IndexOf("_");
+    name = name.Substring(index+1);
+    index = name.IndexOf("_");
+    while(index != -1)
+    {
+        name =  name.Substring(0,index)+ name[index+1].ToString().ToLower() + name.Substring(index+2);
+        index = name.IndexOf("_");
+    }
+   
+    //index = name.IndexOf("-");
+   // name = name.Substring(index+1);
+    name  = name.Replace(" ","");			
+    return name;
+}
 </script>
 
 <%
@@ -68,21 +91,23 @@ public static string GetClassName(string name)
 
 Classes objClass = this.Create<Classes>();
 Javascript objJs = this.Create<Javascript>();
+View objView = this.Create<View>();
 
 foreach(TableSchema table in SourceDatabase.Tables)
 {	
 	objClass.SourceTable = table;
     objJs.SourceTable = table;
+    objView.SourceTable = table;
 	//CodeSmith.Engine.PreserveRegionsMergeStrategy preserveRegionsMergeStrategy = new PreserveRegionsMergeStrategy();
 	//preserveRegionsMergeStrategy.Language = "PHP";
 	//preserveRegionsMergeStrategy.RegionNameRegex = "PRESERVE";
 	Response.WriteLine("Finished {0}",objClass);
 	objClass.RenderToFile(
-		_outputDirectory + "\\Classes\\" + GetClassName(table.Name) + ".php",
-	true);
+		_outputDirectory + "\\Classes\\model_" + GetPageName(table.Name) + ".php",	true);
 	objJs.RenderToFile(
-		_outputDirectory + "\\Javascript\\" + GetClassName(table.Name) + ".js",
-	true);
+		_outputDirectory + "\\Javascript\\sela_" + GetPageName(table.Name) + ".js",	true);
+    objView.RenderToFile(
+		_outputDirectory + "\\View\\admin_" + GetPageName(table.Name) + ".php",	true);
 	Response.WriteLine("Finished {0}",table);
 }
 %>

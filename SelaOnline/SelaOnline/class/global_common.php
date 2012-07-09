@@ -40,14 +40,14 @@ class global_common
 	
 	const SQL_SELECT_BY_CONDITION1				= "SELECT {0} FROM {1} WHERE {2}";
 	const SQL_SELECT_LIMIT						= "SELECT {0} FROM `{1}` LIMIT {2},{3}";
-	const SQL_SELECT_LIMIT_BY_CONDITION			= "SELECT {0} FROM `{1}` WHERE {2} LIMIT {3},{4};";
-	const SQL_SELECT_GROUP						= "SELECT {0} FROM `{1}` GROUP BY {2};";
-	const SQL_SELECT_GROUP_WHERE				= "SELECT {0} FROM `{1}` WHERE {2} GROUP BY {3};";
-	const SQL_SELECT_ORDER						= "SELECT {0} FROM `{1}` ORDER BY {2};";
+	const SQL_SELECT_LIMIT_BY_CONDITION			= "SELECT {0} FROM `{1}` WHERE {2} LIMIT {3},{4}";
+	const SQL_SELECT_GROUP						= "SELECT {0} FROM `{1}` GROUP BY {2}";
+	const SQL_SELECT_GROUP_WHERE				= "SELECT {0} FROM `{1}` WHERE {2} GROUP BY {3}";
+	const SQL_SELECT_ORDER						= "SELECT {0} FROM `{1}` ORDER BY {2}";
 	const SQL_SELECT_FREE                       = "SELECT {0} FROM {1} {2}";
-	const SQL_SELECT_MAX_ID						= "SELECT MAX(`{0}`) as maxid FROM `{1}`;";
+	const SQL_SELECT_MAX_ID						= "SELECT MAX(`{0}`) as maxid FROM `{1}`";
 	const SQL_SELECT_ALL_TABLES					= "SHOW TABLES;";
-	const SQL_SELECT_TABLE_NAME					= "SHOW TABLES LIKE '{0}';";
+	const SQL_SELECT_TABLE_NAME					= "SHOW TABLES LIKE '{0}'";
 	
 	//ThanhViet added[20101004] Delete with multi condition.
 	const SQL_DELETE_BY_MULTI_CONDITION				= "DELETE FROM `{0}` WHERE {1};";	
@@ -887,10 +887,8 @@ class global_common
 		return $arrKey;
 	}	
 	
-	
 	// Funtion : get maxid from an id by anphabet
 	// Return  : string
-	
 	/**
 	 * get maxid from an id by anphabet
 	 *
@@ -908,10 +906,6 @@ class global_common
 		return self::buildIDByAlphabet(substr($currentMaxID,2),$newContent,(substr($currentMaxID,1,1)==self::SYS_TABLE?self::SYS_TABLE:self::CLIENT_TABLE));
 		//return strtolower(substr($newContent,0,1)).substr($currentMaxID,1,strlen($currentMaxID)-1);		
 	}
-	
-	// Funtion : generate verfication/spam code
-	// Return  : string
-	// CLONE: DoNguyen [20100515] - TO user_capcha.php
 	
 	/**
 	 * generate verfication/spam code
@@ -935,7 +929,6 @@ class global_common
 	
 	// Funtion : cut number of last character
 	// Return  : string
-	
 	/**
 	 * thực hiện cắt một vài ký tự cuối của chuỗi
 	 *
@@ -953,8 +946,6 @@ class global_common
 		
 		return $string;
 	}
-	
-	
 	
 	/**
 	 * Dung de lay ve 1 chuoi ky tu thuong bat ky co do lai la $lengStr
@@ -977,8 +968,6 @@ class global_common
 		
 		return $returnString;
 	}
-	
-	
 	
 	/**
 	 * thực hiện phân trang cho dữ liệu ít
@@ -3237,7 +3226,6 @@ class global_common
 				"238"=>"Zimbabwe");
 	}	
 	
-	
 	/**
 	 * Lay ve danh sach cac para de LOAI TRU, duoc dung trong function editor:paraSafe(...) de filter nhung du lieu khong hop le
 	 *
@@ -3267,7 +3255,6 @@ class global_common
 			
 				);
 	}
-	
 	
 	/**
 	 * Lay tong so record cua 1 table
@@ -3300,7 +3287,6 @@ class global_common
 		}
 		
 	} 
-	
 	/**
 	 * Phương thức cập nhật delete_flag
 	 *
@@ -3352,7 +3338,6 @@ class global_common
 		}
 		return 1;
 	}
-	
 	/**
 	 * Phương thức cập nhật delete_flag
 	 *
@@ -3405,8 +3390,6 @@ class global_common
 		}	
 		return true;
 	}
-	
-	
 	/**
 	 * This is method deleteObjectByCondition
 	 *
@@ -3416,7 +3399,6 @@ class global_common
 	 * @return mixed This is the return value description
 	 *
 	 */
-
 	public function deleteObjectByCondition($strWhereClause,$strTableName,$objConnection)
 	{
 		//"DELETE FROM `{0}` {1}";
@@ -3430,13 +3412,45 @@ class global_common
 		}	
 		return true;
 	}
-	
-	
 	public function formatDateTimeVN($mySqlDateTime)
 	{
 		return substr($mySqlDateTime,8,2)."/".substr($mySqlDateTime,5,2)."/".substr($mySqlDateTime,0,4) .' '. substr($mySqlDateTime,11,2).":".substr($mySqlDateTime,14,2).":".substr($mySqlDateTime,17,2) ;
 	}
 	
+	
+	/**
+	 * This is method splitString
+	 *
+	 * @param string $delimiter This is a description
+	 * @param string $stringValue This is a description
+	 * @return array 
+	 *
+	 */
+	public function splitString($delimiter,$stringValue)
+	{
+		if(is_array($stringValue))
+		{
+			$stringValue = implode($delimiter,$stringValue);
+		}
+		return preg_split('/'.$delimiter.'/', $stringValue , -1, PREG_SPLIT_NO_EMPTY);
+	}
+	
+	
+	/**
+	 * This is method array_column to one column
+	 *
+	 * @param mixed $array This is a description
+	 * @param mixed $column This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	public function array_column($array, $column)
+	{
+		foreach ($array as $row) $ret[] = $row[$column];
+		return $ret;
+	}
+	
 	#end region
+	
 }
 ?>
