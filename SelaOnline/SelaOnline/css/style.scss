@@ -27,13 +27,17 @@ a:hover{color:#f90}
 #slider-right {float:left; height:650px;width:10%;background-color:red}
 #footer{position:relative;clear:both; height:100px;background-color:#036}
 
-/*********** common for font page *********/
-body{color: $color_body; font-size:$size_body;}
-/*********** end common for font page *********/
-
 a{ color:$color_link; text-decoration:none;cursor: pointer}  
 a:visited{ color:#000; text-decoration:none;}
 a:hover {color:#6200C4 !important; background-position:-9px 0; text-decoration:none}
+
+
+/*********** common for font page *********/
+body{color: $color_body; font-size:$size_body;}
+h1 a{ color:$color_header;}  
+h1 a:visited{ color:$color_header;}
+h1  a:hover {color:$color_header !important;}
+/*********** end common for font page *********/
 
 /*********** common for admin page *********/
 .div_admin_group_title {text-align:left}
@@ -154,11 +158,11 @@ a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{background:url("") repeat-x scroll 50% 50% #DADADA;color:#00aee1 !important;}
 
 /*********** User info ***********/
-.user-info{}
+.user-info{clear: both;}
 /********** Emd User info ********/
 
 /*********** category ************/
-.article-memo{width:100%;min-height:150px;}
+.article-memo{width:100%;min-height:100px;padding:0 0 10px 0;clear: both}
 .article-memo-user{float:left; width:120px; margin-left: -100%;padding:0 2px}
 .article-memo-detail{float:left;width: 100%; text-align:left}
 .article-memo-control{
@@ -184,6 +188,7 @@ a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
     text-align: right;
     width: 100%;
 }
+
 .item-article{
     -moz-border-bottom-colors: none;
     -moz-border-image: none;
@@ -251,3 +256,25 @@ a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
 }
 /* end category-page*/
 
+/* Start article-content*/
+.article-content{
+	.zone-content{
+		   float: left;
+			text-align: left;
+			width: 100%;
+		.content-detail{
+		    min-height: 100px;
+			margin-left: 125px;
+			position: relative;
+			.content-block{width:100%;}
+		}
+	}
+}
+/* End article-content*/
+
+/* Start font-end comment-zone*/
+.zone-comment{
+	width:100%;
+	#comment-editor{width:99%;}
+}
+/* End font-end comment-zone*/

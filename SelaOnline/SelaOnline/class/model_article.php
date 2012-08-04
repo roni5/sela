@@ -17,6 +17,7 @@ class Model_Article
 	#region PRESERVE ExtraMethods For Article
 	#endregion
 	#region Contants	
+	const TABLE_BY_MONTHS_ARTICLE			= 2;
 	const ACT_ADD							= 10;
 	const ACT_UPDATE						= 11;
 	const ACT_DELETE						= 12;
@@ -91,16 +92,17 @@ class Model_Article
 		`Tags` text(65535),
 		`CatalogueID` varchar(60),
 		`SectionID` varchar(60),
-		`NumView` bigint(0),
-		`NumComment` bigint(0),
+		`NumView` bigint,
+		`NumComment` bigint,
 		`CreatedBy` varchar(60),
-		`CreatedDate` datetime(0),
+		`CreatedDate` datetime,
 		`ModifiedBy` varchar(60),
-		`ModifiedDate` datetime(0),
+		`ModifiedDate` datetime,
 		`DeletedBy` varchar(60),
-		`DeletedDate` datetime(0),
-		`IsDeleted` bit(0),
+		`DeletedDate` datetime,
+		`IsDeleted` bit,
 		`Status` varchar(60),
+		`Comments` text(65535),
 		PRIMARY KEY(ArticleID)
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	
@@ -130,11 +132,32 @@ class Model_Article
 	
 	public function insert( $prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
-		$intID = global_common::getMaxID(self::TBL_SL_ARTICLE);
-		
-		$strTableName = self::TBL_SL_ARTICLE;
+		//$intID = global_common::getMaxID(self::TBL_SL_ARTICLE);
+		$date = global_common::getDateTime();
+		$intID = global_common::buildIDByMonth(global_common::getMaxID(Model_Article::TBL_SL_ARTICLE),
+													$date,Model_Article::TABLE_BY_MONTHS_ARTICLE);
+		$strTableName = global_common::builtTableName(
+				Model_Article::TBL_SL_ARTICLE, global_common::getTableSuffixByMonth($intID));
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_ARTICLE,
-				array(self::TBL_SL_ARTICLE,$intID,global_common::escape_mysql_string($prefix),global_common::escape_mysql_string($title),global_common::escape_mysql_string($filename),global_common::escape_mysql_string($articletype),global_common::escape_mysql_string($content),global_common::escape_mysql_string($notificationtype),global_common::escape_mysql_string($tags),global_common::escape_mysql_string($catalogueid),global_common::escape_mysql_string($sectionid),global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status)));
+				array($strTableName,$intID,global_common::escape_mysql_string($prefix),
+				global_common::escape_mysql_string($title),
+				global_common::escape_mysql_string($filename),
+				global_common::escape_mysql_string($articletype),
+				global_common::escape_mysql_string($content),
+				global_common::escape_mysql_string($notificationtype),
+				global_common::escape_mysql_string($tags),
+				global_common::escape_mysql_string($catalogueid),
+				global_common::escape_mysql_string($sectionid),
+				global_common::escape_mysql_string($numview),
+				global_common::escape_mysql_string($numcomment),
+				global_common::escape_mysql_string($createdby),
+				global_common::escape_mysql_string($createddate),
+				global_common::escape_mysql_string($modifiedby),
+				global_common::escape_mysql_string($modifieddate),
+				global_common::escape_mysql_string($deletedby),
+				global_common::escape_mysql_string($deleteddate),
+				global_common::escape_mysql_string($isdeleted),
+				global_common::escape_mysql_string($status)));
 		
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
@@ -142,8 +165,18 @@ class Model_Article
 			global_common::writeLog('Error add sl_article:'.$strSQL,1);
 			return false;
 		}	
+		else
+		{
+			$strSQL = 'CALL sp_update_article_summary(\''.$articletype.'\',\''.global_common::getTableSuffixByMonth($intID).'\',\''.$intID.'\');';
+			$arrResult = $this->_objConnection->selectMultiCommand($strSQL);
+			//common_functions::writeLog("updateUserLikeByID: ".$strSQL,0);
+			if (!$arrResult)
+			{
+				common_functions::writeLog('sp_update_article_summary: '.$strSQL,1);
+				return $intID;
+			}
+		}
 		return $intID;
-		
 	}
 	
 	public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
@@ -173,10 +206,27 @@ class Model_Article
 			global_common::writeLog('get sl_article ByID:'.$strSQL,1,$_mainFrame->pPage);
 			return null;
 		}
+		$arrResult = global_common::mergeUserInfo($arrResult);
 		//print_r($arrResult);
 		return $arrResult[0];
 	}
 	
+	public function updateComments($articleID, $commentID)
+	{
+		$strTableName = global_common::builtTableName(
+				Model_Article::TBL_SL_ARTICLE, global_common::getTableSuffixByMonth($intID));
+				
+		$strSQL = 'call sp_update_user_comment(1,\''.$strTableName.'\',\''.
+			global_mapping::ArticleID.'\',\''.$articleID.'\',\''.$commentID.'\')';	
+		$arrResult= $this->_objConnection->selectMultiCommand($strSQL);
+		//global_common::writeLog("updateComments: ".$strSQL,0);
+		if (!$arrResult)
+		{
+			global_common::writeLog("updateComments: ".$strSQL,1);
+			return false;
+		}
+		return $arrResult[0];			
+	}
 	
 	/**
 	 * This is method getTopArticleByType. For show article type list page
@@ -189,7 +239,7 @@ class Model_Article
 	 */
 	public function getTopArticleByType($listTypeID,$limitRow,$selectField='*') 
 	{		
-		$arrTypeID = global_common::splitString(',',$listTypeID);
+		$arrTypeID = global_common::splitString($listTypeID);
 		$strSQL = '';
 		foreach($arrTypeID as $item)
 		{
@@ -206,6 +256,9 @@ class Model_Article
 			global_common::writeLog('get sl_article top ByType:'.$strSQL,1,$_mainFrame->pPage);
 			return null;
 		}
+		
+		$arrResult = Model_Article::mergeUserInfo($arrResult);
+		
 		//print_r($arrResult);
 		return $arrResult;
 	}
@@ -230,9 +283,14 @@ class Model_Article
 			global_common::writeLog('get All sl_article:'.$strSQL,1,$_mainFrame->pPage);
 			return null;
 		}
+		 
+		$arrResult = Model_Article::mergeUserInfo($arrResult);
+		
 		//print_r($arrResult);
 		return $arrResult;
 	}
+	
+	
 	
 	public function getListArticle($intPage,$orderBy='ArticleID', $whereClause)
 	{		
@@ -307,6 +365,15 @@ class Model_Article
 	
 	public function getArticleMemo($article)
 	{
+		if($article[global_mapping::CreatedBy][global_mapping::Avatar])
+		{
+			$avatar = '/file/avatar/'.$article[global_mapping::CreatedBy][global_mapping::Avatar];
+		}
+		else
+		{
+			$avatar = '/image/default/default_logo.jpg';
+		}
+		//print_r($article);
 		$strHTML = '<div class="article-memo">
 				<div class="article-memo-detail">
 				<div class="article-memo-content">
@@ -315,7 +382,7 @@ class Model_Article
 				</div>
 				<h2><a href="article_detail.php?articleid='.$article[global_mapping::ArticleID].'"> '.$article['Title'].'</a></h2>
 				<div class="article-short-info">
-				<span><b>sukoi</b> Comment: 24-12-2012</span>
+				<span><b>Anonymous</b> Comment: 24-12-2012</span>
 				<span class="paging"> 
 				<a>1</a> <a> 2</a 
 				</span>
@@ -324,14 +391,32 @@ class Model_Article
 				</div>
 				<div class="article-memo-user">
 				<div class="user-info">
-				<div><img src="/image/default/default_logo.jpg" width="120" height="100" /></div>
-				User info
+				<div><img src="'.$avatar.'" width="120" height="100" /></div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::UserName].'</div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::CreatedDate].'</div>
 				</div>
 				</div>
+				<input type=hidden id="articleID" value="'.$article[global_mapping::ArticleID].'" />
 				</div>';
 		return $strHTML;
 	}
 	
 	#endregion   
+	
+	#region Private Functions
+	private function mergeUserInfo($arrResult)
+	{
+		$arrUsers =  global_common::getArrayColumn($arrResult,'CreatedBy');
+		$arrUserInfo = global_common::getUserInfo($arrUsers,$this->_objConnection);
+		//print_r($arrUserInfo);
+		$count = count($arrResult);
+		for($i=0; $i < $count; $i++)
+		{
+			//print_r($arrResult[$i]);
+			$arrResult[$i]['CreatedBy'] = $arrUserInfo[$arrResult[$i]['CreatedBy']];
+		}
+		return $arrResult;
+	}
+	#endregion
 }
 ?>

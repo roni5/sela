@@ -83,12 +83,6 @@ a:hover {
   height: 100px;
   background-color: #036; }
 
-/*********** common for font page *********/
-body {
-  color: #c1cd23;
-  font-size: 12px; }
-
-/*********** end common for font page *********/
 a {
   color: #400040;
   text-decoration: none;
@@ -103,6 +97,21 @@ a:hover {
   background-position: -9px 0;
   text-decoration: none; }
 
+/*********** common for font page *********/
+body {
+  color: #c1cd23;
+  font-size: 12px; }
+
+h1 a {
+  color: #f31505; }
+
+h1 a:visited {
+  color: #f31505; }
+
+h1 a:hover {
+  color: #f31505 !important; }
+
+/*********** end common for font page *********/
 /*********** common for admin page *********/
 .div_admin_group_title {
   text-align: left; }
@@ -628,11 +637,16 @@ a:hover.salesLogoLink {
   color: #00aee1 !important; }
 
 /*********** User info ***********/
+.user-info {
+  clear: both; }
+
 /********** Emd User info ********/
 /*********** category ************/
 .article-memo {
   width: 100%;
-  min-height: 150px; }
+  min-height: 100px;
+  padding: 0 0 10px 0;
+  clear: both; }
 
 .article-memo-user {
   float: left;
@@ -744,3 +758,23 @@ a:hover.salesLogoLink {
       font-size: 12px; }
 
 /* end category-page*/
+/* Start article-content*/
+.article-content .zone-content {
+  float: left;
+  text-align: left;
+  width: 100%; }
+  .article-content .zone-content .content-detail {
+    min-height: 100px;
+    margin-left: 125px;
+    position: relative; }
+    .article-content .zone-content .content-detail .content-block {
+      width: 100%; }
+
+/* End article-content*/
+/* Start font-end comment-zone*/
+.zone-comment {
+  width: 100%; }
+  .zone-comment #comment-editor {
+    width: 99%; }
+
+/* End font-end comment-zone*/

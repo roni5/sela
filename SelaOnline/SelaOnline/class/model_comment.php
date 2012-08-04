@@ -17,12 +17,14 @@ class Model_Comment
 	#region PRESERVE ExtraMethods For Comment
 	#endregion
     #region Contants	
+	const TABLE_BY_MONTHS_COMMENT			= 2;
     const ACT_ADD							= 10;
     const ACT_UPDATE						= 11;
     const ACT_DELETE						= 12;
     const ACT_CHANGE_PAGE					= 13;
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
+	const ACT_USER_COMMENT					= 16;
     const NUM_PER_PAGE                      = 15;
     
     const TBL_SL_COMMENT			            = 'sl_comment';
@@ -64,18 +66,17 @@ class Model_Comment
 		   
 
     const SQL_CREATE_TABLE_SL_COMMENT		= 'CREATE TABLE `{0}` (
-
 			`CommentID` varchar(60),
 			`CommentType` varchar(60),
 			`ArticleID` varchar(60),
 			`Content` text(65535),
 			`CreatedBy` varchar(60),
-			`CreatedDate` datetime(0),
+			`CreatedDate` datetime,
 			`ModifiedBy` varchar(60),
-			`ModifiedDate` datetime(0),
+			`ModifiedDate` datetime,
 			`DeletedBy` varchar(60),
-			`DeletedDate` datetime(0),
-			`IsDeleted` bit(0),
+			`DeletedDate` datetime,
+			`IsDeleted` bit,
 			`Status` varchar(60),
 			PRIMARY KEY(CommentID)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
@@ -104,22 +105,35 @@ class Model_Comment
     
     #region Public Functions
     
-    public function insert( $commenttype,$articleid,$content,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+    public function insert( $commenttype,$articleid,$content)
 	{
-		$intID = global_common::getMaxID(self::TBL_SL_COMMENT);
-		
-		$strTableName = self::TBL_SL_COMMENT;
-		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_COMMENT,
-				array(self::TBL_SL_COMMENT,$intID,global_common::escape_mysql_string($commenttype),global_common::escape_mysql_string($articleid),global_common::escape_mysql_string($content),global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status)));
-		
-		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_COMMENT,$this->_objConnection,$strTableName))
+		$date = global_common::getDateTime();
+		$intID = global_common::buildIDByMonth(global_common::getMaxID(self::TBL_SL_COMMENT),
+													$date,Model_Comment::TABLE_BY_MONTHS_COMMENT);
+		echo $intID;
+		//$intID = global_common::getMaxID(self::TBL_SL_COMMENT);
+		// lấy tên table c_comment_detail_ để lưu thông tin comment
+		$strTableName = global_common::builtTableName(
+				Model_Comment::TBL_SL_COMMENT, global_common::getTableSuffixByMonth($intID));
+		//$strTableName = self::TBL_SL_COMMENT;
+		$strSQL = global_common::prepareQuery(Model_Comment::SQL_INSERT_SL_COMMENT,
+				array($strTableName,$intID,global_common::escape_mysql_string($commenttype),
+				global_common::escape_mysql_string($articleid),global_common::escape_mysql_string($content),
+				global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),
+				global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
+				global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
+				global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status)));
+		echo $strSQL;
+		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,Model_Comment::SQL_CREATE_TABLE_SL_COMMENT,$this->_objConnection,$strTableName))
 		{
-			//echo $strSQL;
 			global_common::writeLog('Error add sl_comment:'.$strSQL,1);
 			return false;
 		}	
+		else
+		{
+				
+		}
 		return $intID;
-		
 	}
     
     public function update($commentid,$commenttype,$articleid,$content,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
@@ -153,11 +167,19 @@ class Model_Comment
 		return $arrResult[0];
 	}
     
-    public function getAllComment($selectField='*') 
+	public function getAllComment($intPage = 1, $selectField='*', $whereClause='',  $orderBy='') 
 	{		
+		if($whereClause)
+		{
+			$whereClause = ' WHERE '.$whereClause;
+		}
+		
+		if($orderBy)
+		{
+			$orderBy = ' ORDER BY '.$orderBy;
+		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-				array($selectField, self::TBL_SL_COMMENT ,							
-					''));
+				array($selectField, self::TBL_SL_COMMENT , $whereClause.$orderBy .' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
 		//echo '<br>SQL:'.$strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
@@ -165,11 +187,14 @@ class Model_Comment
 			global_common::writeLog('get All sl_comment:'.$strSQL,1,$_mainFrame->pPage);
 			return null;
 		}
+		
+		$arrResult = global_common::mergeUserInfo($arrResult);
+		
 		//print_r($arrResult);
 		return $arrResult;
 	}
     
-    public function getListComment($intPage,$orderBy='CommentID', $whereClause)
+    public function getListComment($intPage, $orderBy='CommentID', $whereClause)
 	{		
         if($whereClause)
         {
@@ -225,6 +250,39 @@ class Model_Comment
 		return $strHTML;
 	}
     
+	public function getCommentHTML($comment)
+	{
+		if($article[global_mapping::CreatedBy][global_mapping::Avatar])
+		{
+			$avatar = '/file/avatar/'.$comment[global_mapping::CreatedBy][global_mapping::Avatar];
+		}
+		else
+		{
+			$avatar = '/image/default/default_logo.jpg';
+		}
+		//print_r($article);
+		$strHTML = '<div class="article-memo">
+				<div class="article-memo-detail">
+				<div class="article-memo-content">
+				<div class="article-memo-control">
+				<div class="favourite"> LIKE </div>
+				</div>
+				'.$comment[global_mapping::Content].'
+				<div class="article-short-info">
+				<span><b>Anonymous</b> Comment: 24-12-2012</span>
+				</div>
+				</div>
+				</div>
+				<div class="article-memo-user">
+				<div class="user-info">
+				<div><img src="'.$avatar.'" width="120" height="100" /></div>
+				'.$article[global_mapping::CreatedBy][global_mapping::UserName].'
+				</div>
+				</div>
+				<input type=hidden id="CommentID" value="'.$article[global_mapping::CommentID].'" />
+				</div>';
+		return $strHTML;
+	}
     #endregion   
 }
 ?>

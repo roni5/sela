@@ -155,13 +155,13 @@ function User() {
             isValid = false;
         }
 
-        var avartar = core.trim(core.getObject("txtAvartar").val());
-        core.ValidateInputTextBox('txtAvartar', '');
-        if (avartar == '') {
-            core.ValidateInputTextBox('txtAvartar', 'Avartar is required', isValid);
+        var avatar = core.trim(core.getObject("txtAvatar").val());
+        core.ValidateInputTextBox('txtAvatar', '');
+        if (avatar == '') {
+            core.ValidateInputTextBox('txtAvatar', 'Avatar is required', isValid);
             isValid = false;
-        } else if (avartar.length > 255) {
-            core.ValidateInputTextBox('txtAvartar', 'Avartar must be less than 255', isValid);
+        } else if (avatar.length > 255) {
+            core.ValidateInputTextBox('txtAvatar', 'Avatar must be less than 255', isValid);
             isValid = false;
         }
 
@@ -210,7 +210,7 @@ function User() {
         var identity = core.trim(core.getObject("txtIdentity").val());
         var roleID = core.trim(core.getObject("txtRoleID").val());
         var userRankID = core.trim(core.getObject("txtUserRankID").val());
-        var avartar = core.trim(core.getObject("txtAvartar").val());
+        var avatar = core.trim(core.getObject("txtAvatar").val());
         var accountID = core.trim(core.getObject("txtAccountID").val());
         var isActived = core.trim(core.getObject("txtIsActived").val());
 
@@ -227,7 +227,7 @@ function User() {
 			'&Identity=' + core.urlencode(identity) +
 			'&RoleID=' + core.urlencode(roleID) +
 			'&UserRankID=' + core.urlencode(userRankID) +
-			'&Avartar=' + core.urlencode(avartar) +
+			'&Avatar=' + core.urlencode(avatar) +
 			'&AccountID=' + core.urlencode(accountID) +
 			'&IsActived=' + core.urlencode(isActived);
 
@@ -276,7 +276,7 @@ function User() {
         var identity = core.trim(core.getObject("txtIdentity").val());
         var roleID = core.trim(core.getObject("txtRoleID").val());
         var userRankID = core.trim(core.getObject("txtUserRankID").val());
-        var avartar = core.trim(core.getObject("txtAvartar").val());
+        var avatar = core.trim(core.getObject("txtAvatar").val());
         var accountID = core.trim(core.getObject("txtAccountID").val());
         var isActived = core.trim(core.getObject("txtIsActived").val());
 
@@ -293,7 +293,7 @@ function User() {
 			'&Identity=' + core.urlencode(identity) +
 			'&RoleID=' + core.urlencode(roleID) +
 			'&UserRankID=' + core.urlencode(userRankID) +
-			'&Avartar=' + core.urlencode(avartar) +
+			'&Avatar=' + core.urlencode(avatar) +
 			'&AccountID=' + core.urlencode(accountID) +
 			'&IsActived=' + core.urlencode(isActived);
 
@@ -407,7 +407,7 @@ function User() {
                     core.getObject('txtIdentity').val(Identity);
                     core.getObject('txtRoleID').val(RoleID);
                     core.getObject('txtUserRankID').val(UserRankID);
-                    core.getObject('txtAvartar').val(Avartar);
+                    core.getObject('txtAvatar').val(Avatar);
                     core.getObject('txtAccountID').val(AccountID);
                     core.getObject('txtIsActived').val(IsActived);
                     core.getObject("adddocmode")[0].value = EDIT_MODE;
@@ -437,7 +437,7 @@ function User() {
         core.getObject('txtIdentity').val('');
         core.getObject('txtRoleID').val('');
         core.getObject('txtUserRankID').val('');
-        core.getObject('txtAvartar').val('');
+        core.getObject('txtAvatar').val('');
         core.getObject('txtAccountID').val('');
         core.getObject('txtIsActived').val('');
     }
@@ -680,7 +680,7 @@ function User() {
             var identity = core.trim(core.getObject("txtIdentity").val());
             var roleID = core.trim(core.getObject("txtRoleID").val());
             var userRankID = core.trim(core.getObject("txtUserRankID").val());
-            var avartar = core.trim(core.getObject("txtAvartar").val());
+            var avatar = core.trim(core.getObject("txtAvatar").val());
             var accountID = core.trim(core.getObject("txtAccountID").val());
             var isActived = core.trim(core.getObject("txtIsActived").val());
 
@@ -697,7 +697,7 @@ function User() {
             //'&Identity=' + core.urlencode(identity) +
             //'&RoleID=' + core.urlencode(roleID) +
             //'&UserRankID=' + core.urlencode(userRankID) +
-            //'&Avartar=' + core.urlencode(avartar) +
+            //'&Avatar=' + core.urlencode(avatar) +
             //'&AccountID=' + core.urlencode(accountID) +
             //'&IsActived=' + core.urlencode(isActived);
 

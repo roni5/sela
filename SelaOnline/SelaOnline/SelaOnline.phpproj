@@ -56,11 +56,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\jquery.ui.base.css"
+    "css\\themes\\smoothness\\jquery.ui.theme.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\jquery.ui.theme.css"
+    "css\\themes\\smoothness\\jquery.ui.base.css"
     {
     "ProjRelPath" = "T"
     }
@@ -184,11 +184,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-icons_454545_256x240.png"
+    "js\\ui\\minified\\jquery.ui.slider.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\minified\\jquery.ui.slider.min.js"
+    "css\\themes\\smoothness\\images\\ui-icons_454545_256x240.png"
     {
     "ProjRelPath" = "T"
     }
@@ -300,11 +300,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\base.css"
+    "include\\_option_notification_type.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_option_notification_type.inc"
+    "css\\base.css"
     {
     "ProjRelPath" = "T"
     }
@@ -452,11 +452,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.autocomplete.css"
+    "class\\global_common.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\global_common.php"
+    "css\\themes\\base\\jquery.ui.autocomplete.css"
     {
     "ProjRelPath" = "T"
     }
@@ -480,11 +480,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "js\\ui\\i18n\\jquery.ui.datepicker-ml.js"
+    {
+    "ProjRelPath" = "T"
+    }
     "class\\model_shiptype.php"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\i18n\\jquery.ui.datepicker-ml.js"
+    "include\\_comment_editor.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -552,11 +556,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\i18n\\jquery.ui.datepicker-bg.js"
+    "config"
     {
     "ProjRelPath" = "T"
     }
-    "config"
+    "js\\ui\\i18n\\jquery.ui.datepicker-bg.js"
     {
     "ProjRelPath" = "T"
     }
@@ -624,6 +628,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "include\\_comment_list.inc"
+    {
+    "ProjRelPath" = "T"
+    }
     "js\\sela_district.js"
     {
     "ProjRelPath" = "T"
@@ -681,6 +689,10 @@
     "ProjRelPath" = "T"
     }
     "admin\\admin_property.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_article.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -800,11 +812,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\i18n\\jquery.ui.datepicker-eu.js"
+    "css\\content.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\content.css"
+    "js\\ui\\i18n\\jquery.ui.datepicker-eu.js"
     {
     "ProjRelPath" = "T"
     }
@@ -860,19 +872,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "image\\loading_6.gif"
-    {
-    "ProjRelPath" = "T"
-    }
     "class\\model_articletype.php"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\i18n\\jquery.ui.datepicker-pt-BR.js"
+    "image\\loading_6.gif"
     {
     "ProjRelPath" = "T"
     }
     "js\\sela_offer.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\ui\\i18n\\jquery.ui.datepicker-pt-BR.js"
     {
     "ProjRelPath" = "T"
     }
@@ -944,11 +956,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "image\\ui-icons_454545_256x240.png"
+    "js\\ui\\i18n\\jquery.ui.datepicker-ms.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\i18n\\jquery.ui.datepicker-ms.js"
+    "image\\ui-icons_454545_256x240.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1112,19 +1124,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_glass_65_ffffff_1x400.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "js\\sela_notificationtype.js"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_role.php"
+    "css\\themes\\smoothness\\images\\ui-bg_glass_65_ffffff_1x400.png"
     {
     "ProjRelPath" = "T"
     }
     "class\\model_numberaire.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "class\\model_role.php"
     {
     "ProjRelPath" = "T"
     }
@@ -1148,11 +1160,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
+    "js\\ui\\minified\\jquery.effects.clip.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\minified\\jquery.effects.clip.min.js"
+    "css\\themes\\base\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1200,11 +1212,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_article.js"
+    "image\\ui-bg_flat_0_aaaaaa_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "image\\ui-bg_flat_0_aaaaaa_40x100.png"
+    "js\\sela_article.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1424,11 +1436,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "include\\_option_catelogue_type.inc"
+    "js\\ui\\jquery.ui.resizable.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\ui\\jquery.ui.resizable.js"
+    "include\\_option_catelogue_type.inc"
     {
     "ProjRelPath" = "T"
     }

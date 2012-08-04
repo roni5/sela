@@ -84,7 +84,7 @@ if ($_pgR["act"] == model_Article::ACT_ADD)
 	}
 	else
 	{
-		echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_REQUIRE_LOGIN), array(0,1));
+		echo global_common::convertToXML($arrHeader, array("rs","info"), array(0,global_common::STRING_REQUIRE_LOGIN), array(0,1));
 	}
 	return;
 }
