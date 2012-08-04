@@ -21,11 +21,10 @@ include_once('class/model_comment.php');
 <?php
 
 $objComment = new Model_Comment($objConnection);
-
-if ($_pgR["act"] == model_Comment::ACT_ADD)
+if ($_pgR["act"] == Model_Comment::ACT_ADD || Model_Comment::ACT_USER_COMMENT)
 {
 	
-	if (global_common::isCLogin())
+	if (global_common::isCLogin() || true)
 	{
 		//get user info
 		//$c_userInfo = $_SESSION[consts::SES_C_USERINFO];
@@ -47,7 +46,7 @@ if ($_pgR["act"] == model_Comment::ACT_ADD)
 		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objComment->insert($commentID,$commentType,$articleID,$content,$status);
+		$resultID = $objComment->insert($commentType,$articleID,$content);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode

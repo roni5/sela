@@ -78,15 +78,15 @@ if($_pgR['act'] == Model_User::ACT_LOGIN)
 		$roleID = global_editor::rteSafe(html_entity_decode($roleID,ENT_COMPAT ,'UTF-8' ));
 		$userRankID = $_pgR['UserRankID'];
 		$userRankID = global_editor::rteSafe(html_entity_decode($userRankID,ENT_COMPAT ,'UTF-8' ));
-		$avartar = $_pgR['Avartar'];
-		$avartar = global_editor::rteSafe(html_entity_decode($avartar,ENT_COMPAT ,'UTF-8' ));
+		$avatar = $_pgR['Avatar'];
+		$avatar = global_editor::rteSafe(html_entity_decode($avatar,ENT_COMPAT ,'UTF-8' ));
 		$accountID = $_pgR['AccountID'];
 		$accountID = global_editor::rteSafe(html_entity_decode($accountID,ENT_COMPAT ,'UTF-8' ));
 		$isActived = $_pgR['IsActived'];
 		$isActived = global_editor::rteSafe(html_entity_decode($isActived,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objUser->insert($userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
+		$resultID = $objUser->insert($userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avatar,$accountID,$isActived);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -145,15 +145,15 @@ if($_pgR['act'] == Model_User::ACT_LOGIN)
 		$roleID = global_editor::rteSafe(html_entity_decode($roleID,ENT_COMPAT ,'UTF-8' ));
 		$userRankID = $_pgR['UserRankID'];
 		$userRankID = global_editor::rteSafe(html_entity_decode($userRankID,ENT_COMPAT ,'UTF-8' ));
-		$avartar = $_pgR['Avartar'];
-		$avartar = global_editor::rteSafe(html_entity_decode($avartar,ENT_COMPAT ,'UTF-8' ));
+		$avatar = $_pgR['Avatar'];
+		$avatar = global_editor::rteSafe(html_entity_decode($avatar,ENT_COMPAT ,'UTF-8' ));
 		$accountID = $_pgR['AccountID'];
 		$accountID = global_editor::rteSafe(html_entity_decode($accountID,ENT_COMPAT ,'UTF-8' ));
 		$isActived = $_pgR['IsActived'];
 		$isActived = global_editor::rteSafe(html_entity_decode($isActived,ENT_COMPAT ,'UTF-8' ));
 		//$strName = $_pgR['name'];
 		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objUser->insert($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
+		$resultID = $objUser->insert($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avatar,$accountID,$isActived);
 		if ($resultID)
 		{
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -208,8 +208,8 @@ elseif($_pgR['act'] == model_User::ACT_UPDATE)
 		$roleID = global_editor::rteSafe(html_entity_decode($roleID,ENT_COMPAT ,'UTF-8' ));
 		$userRankID = $_pgR['UserRankID'];
 		$userRankID = global_editor::rteSafe(html_entity_decode($userRankID,ENT_COMPAT ,'UTF-8' ));
-		$avartar = $_pgR['Avartar'];
-		$avartar = global_editor::rteSafe(html_entity_decode($avartar,ENT_COMPAT ,'UTF-8' ));
+		$avatar = $_pgR['Avatar'];
+		$avatar = global_editor::rteSafe(html_entity_decode($avatar,ENT_COMPAT ,'UTF-8' ));
 		$accountID = $_pgR['AccountID'];
 		$accountID = global_editor::rteSafe(html_entity_decode($accountID,ENT_COMPAT ,'UTF-8' ));
 		$isActived = $_pgR['IsActived'];
@@ -222,7 +222,7 @@ elseif($_pgR['act'] == model_User::ACT_UPDATE)
 		//}
 		//$strName = $_pgR['name'];
 		//$strDetail= $_pgR['detail'];
-		$resultID = $objUser->update($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avartar,$accountID,$isActived);
+		$resultID = $objUser->update($userID,$userName,$password,$fullname,$birthDate,$address,$phone,$email,$sex,$identity,$roleID,$userRankID,$avatar,$accountID,$isActived);
 		
 		if ($resultID)
 		{
@@ -261,7 +261,7 @@ elseif($_pgR['act'] == model_User::ACT_SHOW_EDIT)
 	$strUserID = $_pgR['id'];
 	$arrUser =  $objUser->getUserByID($strUserID);
 	
-	echo global_common::convertToXML($strMessageHeader, array('rs','UserID','UserName','Password','Fullname','BirthDate','Address','Phone','Email','Sex','Identity','RoleID','UserRankID','Avartar','AccountID','IsActived'), array(1,'UserID','UserName','Password','Fullname','BirthDate','Address','Phone','Email','Sex','Identity','RoleID','UserRankID','Avartar','AccountID','IsActived'),array(0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0));
+	echo global_common::convertToXML($strMessageHeader, array('rs','UserID','UserName','Password','Fullname','BirthDate','Address','Phone','Email','Sex','Identity','RoleID','UserRankID','Avatar','AccountID','IsActived'), array(1,'UserID','UserName','Password','Fullname','BirthDate','Address','Phone','Email','Sex','Identity','RoleID','UserRankID','Avatar','AccountID','IsActived'),array(0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0));
 	return ;
 }
 elseif ($_pgR["act"] == model_User::ACT_GET)
@@ -384,9 +384,9 @@ include_once('include/_admin_menu.inc');
 							<td width='567'><input id='txtUserRankID' name='txtUserRankID' value='' style='width: 49.5%;'  maxlength='60' type='text'></td>
 						</tr>
 						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Avartar</span></td>
+							<td width='110'><span style='cursor:default; font-family:inherit'>Avatar</span></td>
 							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><input id='txtAvartar' name='txtAvartar' value='' style='width: 49.5%;'  maxlength='765' type='text'></td>
+							<td width='567'><input id='txtAvatar' name='txtAvatar' value='' style='width: 49.5%;'  maxlength='765' type='text'></td>
 						</tr>
 						<tr>
 							<td width='110'><span style='cursor:default; font-family:inherit'>AccountID</span></td>

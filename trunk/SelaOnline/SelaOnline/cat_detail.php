@@ -4,11 +4,12 @@
 require('config/globalconfig.php');
 include_once('class/model_articletype.php');
 include_once('class/model_article.php');
+include_once('class/model_user.php');
 
-$objArticleType = new model_ArticleType($objConnection);
-$objArticle = new model_Article($objConnection);
+$objArticleType = new Model_ArticleType($objConnection);
+$objArticle = new Model_Article($objConnection);
+$objUser= new Model_User($objConnection);
 $htmlCategory =  $objArticleType->DisplayAllCategory();
-
 ?>
 
 <?php

@@ -135,7 +135,7 @@ function Article() {
         }
         var nicE = new nicEditors.findEditor('txtContent');
         var content = nicE.getContent();
-        content = core.trim($(content).text());
+        content = core.trim(core.stripHTML(content));
         core.ValidateInputTextBox('editor-txtContent div.nicEdit-main', '');
         if (content == '') {
             core.ValidateInputTextBox('editor-txtContent div.nicEdit-main', 'Content is required', isValid);

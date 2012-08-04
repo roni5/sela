@@ -18,7 +18,7 @@ class global_common
 	
 	const STRING_SEPARATE = 'abc123';
 	const STRING_SEPARATE_1 = 'def567';
-	
+	const SYS_TABLE			= "_";
 	const STRING_REQUIRE_LOGIN = 'Bạn chưa đăng nhập.';
 	const STRING_NAME_EXIST = 'Tên nhập vào đã tồn tại.';
 	/*****************************************************************************
@@ -87,6 +87,10 @@ class global_common
 	
 	
 	const ENCODING								= 'utf-8';
+	
+	const ANPHABET								= "abcdefghijklmnopqrstuvwxyz";
+	const TABLE_SEPERATE_CHAR					= "_";
+	const OTHER_PREFIX_CHAR						= "_";	
 	//end const for FOLDER
 	
 	#end region
@@ -1265,7 +1269,7 @@ class global_common
 	 */
 	public function builtTableName($oriName,$sufname)
 	{
-		return $oriName.$sufname;
+		return $oriName.global_common::TABLE_SEPERATE_CHAR.$sufname;
 	}
 	/**
 	 * lấy thời gian hiện tại tính bằng microtime
@@ -1567,13 +1571,12 @@ class global_common
 	 * @return string id được tạo thành
 	 *
 	 */
-	public function buildIDByMonth($maxId, $date, $months=1, $sepChar="~")
+	public function buildIDByMonth($maxId, $date, $months=1)
 	{
 		$mon = substr($date,5,2);
 		$m=str_pad(($mon%$months==0?(($mon/$months)-1)*$months:floor($mon/$months)*$months)+1,2,"0",STR_PAD_LEFT);
-		return substr($date,2,2).$m.$sepChar.$maxId;
+		return substr($date,0,4).$m.$maxId;
 	} 
-	
 	
 	/**
 	 * / lấy phần cuối của id
@@ -1582,21 +1585,20 @@ class global_common
 	 * @return mixed string
 	 *
 	 */
-	public function getTableSuffixByAlphabet($content)
+	public function getTableSuffixByAlphabet($contentID)
 	{
+		$prefix = global_common::convertIntToChar(substr($contentID,0,2));
 		//
-		if (strpos(self::ANPHABET,strtolower(substr($content,0,1)))===false)
+		if (strpos(global_common::ANPHABET,strtolower($prefix)) === false)
 		{
-			$strPreChar = self::OTHER_PREFIX_CHAR;
+			$strPreChar = global_common::OTHER_PREFIX_CHAR;
 		}
 		else
 		{
-			$strPreChar = strtolower(substr($content,0,1));
+			$strPreChar = strtolower($prefix);
 		}
 		
-		$strTableName = self::SYS_TABLE.$strPreChar;
-		
-		return $strTableName;
+		return $strPreChar;
 	} 
 	
 	// CLONE: TinhDoan [20100504] – TO appication.php
@@ -1610,7 +1612,7 @@ class global_common
 	 */
 	public function getTableSuffixByMonth($content)
 	{
-		return self::SYS_TABLE.substr($content,0,4);
+		return substr($content,0,6);
 	} 
 	
 	/**
@@ -2474,9 +2476,10 @@ class global_common
 		if ( $result1 == -1)
 		{
 			$errorCode = $objConnection->getErrorCode();
-			if ($errorCode==self::ERR_TABLE_NOT_EXIST || $errorCode==self::ERR_TABLE_UNKNOWN || $errorCode==self::ERR_INSERT_DUPLICATED || !self::isTableExisted($objConnection,$strCheckTable))
+			if ($errorCode==global_common::ERR_TABLE_NOT_EXIST || $errorCode==global_common::ERR_TABLE_UNKNOWN 
+			|| $errorCode==global_common::ERR_INSERT_DUPLICATED || !global_common::isTableExisted($objConnection,$strCheckTable))
 			{
-				$strCreateTable = self::prepareQuery($strCommand,array($strCheckTable));
+				$strCreateTable = global_common::prepareQuery($strCommand,array($strCheckTable));
 				if($objConnection->executeSQL($strCreateTable) == -1)
 				{
 					return false;
@@ -3426,7 +3429,7 @@ class global_common
 	 * @return array 
 	 *
 	 */
-	public function splitString($delimiter,$stringValue)
+	public function splitString($stringValue, $delimiter=',')
 	{
 		if(is_array($stringValue))
 		{
@@ -3444,10 +3447,102 @@ class global_common
 	 * @return mixed This is the return value description
 	 *
 	 */
-	public function array_column($array, $column)
+	public function getArrayColumn($array, $column)
 	{
 		foreach ($array as $row) $ret[] = $row[$column];
 		return $ret;
+	}
+	
+	public function convertIntToChar($asciiCode)
+	{
+		return chr($asciiCode);
+	}
+	
+	public function convertCharToInt($character)
+	{
+		return ord($input);
+	}
+	
+	public function mergeUserInfo($arrResult)
+	{
+		$arrUsers =  global_common::getArrayColumn($arrResult,'CreatedBy');
+		$arrUserInfo = global_common::getUserInfo($arrUsers,$this->_objConnection);
+		//print_r($arrUserInfo);
+		$count = count($arrResult);
+		for($i=0; $i < $count; $i++)
+		{
+			//print_r($arrResult[$i]);
+			$arrResult[$i]['CreatedBy'] = $arrUserInfo[$arrResult[$i]['CreatedBy']];
+		}
+		//print_r($arrResult);
+		return $arrResult;
+	}
+	
+	/**
+	 * Lấy danh sách thông tin user có trong danh sách comment
+	 *
+	 * @param array $$arrUserID danh sách userid
+	 * @return array mãng thông tin user
+	 *
+	 */
+	public function getUserInfo($arrUserID,$objConnection)
+	{		
+		//print_r($arrUserID);
+		$arrUserInfo = global_common::getUserDetailByMultiTable($arrUserID, $objConnection);
+		//print_r($arrUserInfo);
+		foreach($arrUserInfo as $key => $info)
+		{
+			$arrUserInfo[$info['UserID']]=$info;
+			unset($arrUserInfo[$key]);
+		}		
+		return $arrUserInfo;
+	}
+	
+	/**
+	 * lấy thông tin detail của một vài c_user,c_user_detail
+	 *
+	 * @param string $userList danh sách các id c_user
+	 * @param object $objConnection connect to db
+	 * @param string $selectField các cột sẽ lấy dữ liệu về
+	 * @return array thông tin các user
+	 * GiaTran
+	 */
+	private function getUserDetailByMultiTable($userList, $objConnection, $selectField='*')
+	{
+		// build group table - optimize select query
+		$userList = global_common::splitString($userList);
+		//print_r($userList);
+		$arrDocInTable = array();
+		foreach ($userList as $key)
+		{
+			$suffix = global_common::getTableSuffixByAlphabet($key);
+			$arrDocInTable[$suffix] .= '\''.$key.'\',';
+		}
+		
+		foreach ($arrDocInTable as $iDoc)
+		{
+			$key = global_common::getTableSuffixByAlphabet(substr($iDoc,1,2));
+			$arrDocInTable[$key] = global_common::cutLast($iDoc,1);
+			
+			$tbName			= global_common::builtTableName(Model_User::TBL_SL_USER,$key);
+			$selectField	= '*';
+			$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_BY_CONDITION1, array($selectField, 
+						$tbName,'`UserID` IN (' . $arrDocInTable[$key] . ')')).') UNION ALL ';		
+		}
+		if ($strSQL != '')
+		{
+			$strSQL = substr($strSQL,0,strlen($strSQL)- strlen(' UNION ALL '));
+		}
+		if ($selectField == '')
+		{
+			$strSQL ='(select * from ('.$strSQL.') as tbl_user)';
+		}
+		else
+		{
+			$strSQL ='(select '.$selectField.' from ('.$strSQL.') as tbl_user)';
+		}
+		//echo $strSQL;
+		return $objConnection->selectCommand($strSQL);
 	}
 	
 	#end region

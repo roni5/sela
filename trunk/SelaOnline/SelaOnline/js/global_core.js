@@ -59,7 +59,7 @@ function global_core() {
             $("#" + controlId).tooltip();
         }
     }
-    
+
     this.focusControl = focusControl;
     function focusControl(controlID) {
         try {
@@ -129,6 +129,9 @@ function global_core() {
     */
     this.trim = trim;
     function trim(str) {
+        if (str == null || typeof (str) == 'undefined')
+            return "";
+        str = core.stripHTML(str);
         return str.replace(/^[\s]+/, '').replace(/[\s]+$/, '').replace(/[\s]{2,}/, ' ');
     }
 
@@ -209,7 +212,7 @@ function global_core() {
         }
         return intWidth;
     }
-    
+
     // Retrieve the rendered height of an element
     this.getObjectHeight = getObjectHeight;
     function getObjectHeight(obj) {
@@ -226,7 +229,7 @@ function global_core() {
         }
         return parseInt(result);
     }
-    
+
     // Set the height for an element
     this.setObjectHeight = setObjectHeight;
     function setObjectHeight(obj, heightValue) {
@@ -271,7 +274,7 @@ function global_core() {
             elem.style.pixelWidth = valuePX;
         }
     }
-    
+
     this.getObjectScrollHieght = getObjectScrollHieght;
     function getObjectScrollHieght(obj) {
         var elem = document.getElementById(obj);
@@ -324,7 +327,7 @@ function global_core() {
 		    document.body ? document.body.scrollTop : 0
 	    );
     }
-    
+
     this.filterResults = filterResults;
     function filterResults(n_win, n_docel, n_body) {
         var n_result = n_win ? n_win : 0;
@@ -458,22 +461,11 @@ function global_core() {
         return iReturnValue;
     }
 
-    this.trim = trim;
-    function trim(str) {
-
-        if (str == null)
-
-            return "";
-
-        return str.replace(/^\s*|\s*$/g, "");
-
-    }
-
     this.getParentObject = getParentObject;
     function getParentObject(strObject) {
         return window.opener.document.getElementById(strObject);
     }
-    
+
     //get element from Parent Window
     this.getParentObjectToFrame = getParentObjectToFrame;
     function getParentObjectToFrame(strObjectID) {
@@ -501,12 +493,12 @@ function global_core() {
             }
         }
     }
-    
+
     this.getMilliseconds = getMilliseconds;
     function getMilliseconds() {
         return new Date().getTime();
     }
-    
+
     this.addElementInput = addElementInput;
     function addElementInput(parentid, type) {
         //Create an input type dynamically.
@@ -586,7 +578,7 @@ function global_core() {
 
         }
     }
-    
+
     this.disableLink = disableLink;
     function disableLink(idControl, isDisable, strFunc) {
         //@ThanhViet edited [20101223]
@@ -604,7 +596,7 @@ function global_core() {
             }
         }
     }
-    
+
     this.disableLink = disableLink;
     function disableLink(idControl, isDisable, strFunc) {
         //@ThanhViet edited [20101223]
@@ -622,7 +614,7 @@ function global_core() {
             }
         }
     }
-    
+
     // encode to escape special character
     this.urlencode = urlencode;
     function urlencode(str) {
@@ -706,19 +698,19 @@ function global_core() {
 
         var ajax = new Ajax();
     }
-    
+
     this.reload = reload;
     function reload() {
 
         window.location.reload();
     }
-    
+
     this.goHome = goHome;
     function goHome() {
 
         window.location = "index.php";
     }
-    
+
     // check valid ip address
     this.validateIP = validateIP;
     function validateIP(strIP) {
@@ -759,9 +751,10 @@ function global_core() {
 
         return [!!V];
     }
-    
+
     this.parserXML = parserXML;
     function parserXML(text) {
+        text = text.replace(/(\r\n|\n|\r)/gm, "");
         var xmlDoc;
         //debugger;
         if (window.DOMParser) {
@@ -835,7 +828,7 @@ function global_core() {
 
         return arrResult;
     }
-    
+
     this.checkNull = checkNull;
     function checkNull(varOject) {
         if (typeof (varOject) == 'undefined' && !varOject) {
@@ -870,7 +863,7 @@ function global_core() {
         moveTo(objDiv, posX, posY);
 
     }
-    
+
     this.adjustToTopCenterScreen = adjustToTopCenterScreen;
     function adjustToTopCenterScreen(objDiv, width, height) {
         var iWidthScreen, iHeightScreen, iWidthDiv, iHeightDiv, posX, posY;
@@ -921,7 +914,7 @@ function global_core() {
                 return false;
             }
         }
-     
+
         // Check for spamFailValue
         if (arrCheckHeader[2]) {
             if (arrHeader["h3"] == "1") {
@@ -944,11 +937,11 @@ function global_core() {
             return handleObject.textContent;
         }
     }
-    
+
     // public method for url encoding
     this.redirect = redirect;
     function redirect(url) {
-        window.location.href=url;
+        window.location.href = url;
     }
     /**
     *
@@ -1021,9 +1014,170 @@ function global_core() {
         }
         return string;
     }
+
+    //checks if browser supports placeholders
+    this.isSupportsPlaceholder = function() {
+        var test = document.createElement('input');
+        return 'placeholder' in test;
+    },
+
+    //activates placeholder on a field
+    this.placeholder = function(el) {
+        if (el.val() === '') {
+            el.val(el.attr('placeholder'));
+            el.attr('placedholder', (el.css('color') ? el.css('color') : ''));
+            el.css('color', '#ccc');
+        }
+    },
+
+    //this methods removes placeholder
+    this.removePlaceholder = function(el) {
+        if (el.attr('placedholder')) {
+            el.val('');
+            el.css('color', el.attr('placedholder'));
+            el.removeAttr('placedholder');
+        }
+    },
+
+    //this method has to be called when u submit a form in order to fix
+    //fields to submit properly
+    this.removePlaceholders = function() {
+        if (!isSupportsPlaceholder()) {
+            $("input[placeholder]").each(function() {
+                removePlaceholder($(this));
+            });
+        }
+    }
+
+    this.JumpToControl = JumpToControl;
+    function JumpToControl(controlID) {
+        var new_position = $("#" + controlID).offset();
+        window.scrollTo(new_position.left, new_position.top);
+    }
+    this.ScrollTop = function() {
+        $('html, body').animate({ scrollTop: 0 }, 0);
+    };
+    this.JumpToURL = JumpToURL;
+    function JumpToURL(urlVal) {
+        window.location.href = urlVal;
+    }
+
+    this.PrintElementByID = function(controlID) {
+        $('#' + controlID).jqprint();
+    };
+
+    this.CutLast = function(input, len) {
+        if (input.length < len) {
+            len = input.length;
+        }
+        return input.substring(0, input.length - len);
+    };
+    this.UpperFirstCharacter = function(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+
+    };
+
+    this.roundNumber = function(num, dec) {
+        var result = Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+        return result;
+    };
+
+    this.FocusFirstInputType = FocusFirstInputType;
+    function FocusFirstInputType() {
+        try {
+            //set focus input first
+            if (typeof ($("form :input[type='text']:enabled:first")[0]) != "undefined" && $("form :input[type='text']:enabled:first")[0] != null) {
+                $("form :input[type='text']:enabled:first").focus();
+                $("form :input[type='text']:enabled:first").select();
+            }
+            else {
+                if (typeof ($("form :input[type='password']:enabled:first")[0]) != "undefined" && $("form :input[type='password']:enabled:first")[0] != null) {
+                    $("form :input[type='password']:enabled:first").focus();
+                }
+                else {
+                    $("input:enabled:first").focus();
+                }
+            }
+        }
+        catch (err) {
+
+        }
+    };
+
+    var checked = true;
+    this.ResetCheckAll = ResetCheckAll;
+    function ResetCheckAll() {
+        checked = true;
+    };
+    this.CheckAll = CheckAll;
+    function CheckAll(name) {
+        $('input[name=' + name + ']').attr('checked', checked);
+        if (checked) checked = false; else checked = true;
+    };
+
+    this.CheckAllCheckBox = CheckAllCheckBox;
+    function CheckAllCheckBox(controlID, name) {
+        var check = IsChecked(controlID);
+        if (typeof (check) == 'undefined') {
+            check = false;
+        }
+        $('input[name=' + name + ']').attr('checked', check);
+    };
+
+    this.IsChecked = IsChecked;
+    function IsChecked(controlID) {
+        return $("#" + controlID).is(':checked');
+    }
+
+    this.CheckRadio = CheckRadio;
+    function CheckRadio(controlID, checked) {
+        if (typeof (checked) == 'undefined') {
+            checked = true;
+        }
+        $('#' + controlID).attr("checked", checked);
+    }
+
+    this.stripHTML = function(input) {
+        return input.replace(/(<([^>]+)>)/ig, "");
+    }
 }
 
 core = new global_core();
+
+$(document).ready(function() {
+
+    if (!core.isSupportsPlaceholder()) {
+        $("input[placeholder]").each(function() {
+            var $input = $(this);
+
+            //activate placeholder
+            core.placeholder($input);
+
+            $input.focus(function() {
+                core.removePlaceholder($input);
+            });
+
+            $input.blur(function() {
+                core.placeholder($input);
+            });
+
+        });
+    }
+});
+
+$.fn.outerHTML = function() {
+
+    // IE, Chrome & Safari will comply with the non-standard outerHTML, all others (FF) will have a fall-back for cloning
+    return (!this.length) ? this : (this[0].outerHTML || (
+        function(el) {
+            var div = document.createElement('div');
+            div.appendChild(el.cloneNode(true));
+            var contents = div.innerHTML;
+            div = null;
+            return contents;
+        })(this[0]));
+
+};
 
 function sessionExpireProcessing() {
 

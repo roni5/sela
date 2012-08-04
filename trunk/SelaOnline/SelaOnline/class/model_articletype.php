@@ -133,6 +133,10 @@ class Model_ArticleType
 	
 	public function getArticleTypeByID($objID,$selectField='*') 
 	{		
+		if ($selectField == '')
+		{
+			$selectField = '*';
+		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE_TYPE ,							
 					'WHERE ArticleTypeID = \''.$objID.'\' '));
