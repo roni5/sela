@@ -32,7 +32,7 @@ if($_pgR['act'] == Model_User::ACT_LOGIN)
 		$_SESSION[global_common::SES_C_USERINFO] = $result;
 		//print_r($_SESSION[user_common::SES_C_USERINFO]);
 		$_SESSION[global_common::SES_C_USERINFO]["active"] = 1;
-		echo global_common::convertToXML($strMessageHeader, array('rs'), array(1),array(0));
+		echo global_common::convertToXML($strMessageHeader, array("rs"), array(1),array(1));
 		return;
 	}
 	else

@@ -26,7 +26,7 @@ function User() {
     var ACT_LOGIN = 100;
     var ACT_LOGOUT = 101;
     var ACT_CHANGE_PASS = 102;
-    var ACT_REGISTER = 103; ;
+    var ACT_REGISTER = 103;
     var _strPage = "admin_user.php";
     var _strPageForFontEnd = "admin/admin_user.php";
 

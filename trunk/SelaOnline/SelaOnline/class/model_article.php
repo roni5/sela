@@ -27,6 +27,7 @@ class Model_Article
 	const NUM_PER_PAGE                      = 15;
 	
 	const TBL_SL_ARTICLE			            = 'sl_article';
+	const TBL_SL_ARTICLE_SUMMARY	            = 'sl_article_summary';
 	
 	const SQL_INSERT_SL_ARTICLE		= 'INSERT INTO `{0}`
 		(
@@ -135,29 +136,29 @@ class Model_Article
 		//$intID = global_common::getMaxID(self::TBL_SL_ARTICLE);
 		$date = global_common::getDateTime();
 		$intID = global_common::buildIDByMonth(global_common::getMaxID(Model_Article::TBL_SL_ARTICLE),
-													$date,Model_Article::TABLE_BY_MONTHS_ARTICLE);
+				$date,Model_Article::TABLE_BY_MONTHS_ARTICLE);
 		$strTableName = global_common::builtTableName(
 				Model_Article::TBL_SL_ARTICLE, global_common::getTableSuffixByMonth($intID));
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_ARTICLE,
 				array($strTableName,$intID,global_common::escape_mysql_string($prefix),
-				global_common::escape_mysql_string($title),
-				global_common::escape_mysql_string($filename),
-				global_common::escape_mysql_string($articletype),
-				global_common::escape_mysql_string($content),
-				global_common::escape_mysql_string($notificationtype),
-				global_common::escape_mysql_string($tags),
-				global_common::escape_mysql_string($catalogueid),
-				global_common::escape_mysql_string($sectionid),
-				global_common::escape_mysql_string($numview),
-				global_common::escape_mysql_string($numcomment),
-				global_common::escape_mysql_string($createdby),
-				global_common::escape_mysql_string($createddate),
-				global_common::escape_mysql_string($modifiedby),
-				global_common::escape_mysql_string($modifieddate),
-				global_common::escape_mysql_string($deletedby),
-				global_common::escape_mysql_string($deleteddate),
-				global_common::escape_mysql_string($isdeleted),
-				global_common::escape_mysql_string($status)));
+					global_common::escape_mysql_string($title),
+					global_common::escape_mysql_string($filename),
+					global_common::escape_mysql_string($articletype),
+					global_common::escape_mysql_string($content),
+					global_common::escape_mysql_string($notificationtype),
+					global_common::escape_mysql_string($tags),
+					global_common::escape_mysql_string($catalogueid),
+					global_common::escape_mysql_string($sectionid),
+					global_common::escape_mysql_string($numview),
+					global_common::escape_mysql_string($numcomment),
+					global_common::escape_mysql_string($createdby),
+					global_common::escape_mysql_string($createddate),
+					global_common::escape_mysql_string($modifiedby),
+					global_common::escape_mysql_string($modifieddate),
+					global_common::escape_mysql_string($deletedby),
+					global_common::escape_mysql_string($deleteddate),
+					global_common::escape_mysql_string($isdeleted),
+					global_common::escape_mysql_string($status)));
 		
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
@@ -215,7 +216,7 @@ class Model_Article
 	{
 		$strTableName = global_common::builtTableName(
 				Model_Article::TBL_SL_ARTICLE, global_common::getTableSuffixByMonth($intID));
-				
+		
 		$strSQL = 'call sp_update_user_comment(1,\''.$strTableName.'\',\''.
 			global_mapping::ArticleID.'\',\''.$articleID.'\',\''.$commentID.'\')';	
 		$arrResult= $this->_objConnection->selectMultiCommand($strSQL);
@@ -263,6 +264,67 @@ class Model_Article
 		return $arrResult;
 	}
 	
+	public function getArticleByType($typeID,$intPage,$selectField='*',$whereClause='',  $orderBy='')
+	{
+		$whereTemp ='WHERE ArticleTypeID=\''.$typeID.'\' ';		
+		$orderTemp ='ORDER BY PeriodTime DESC ';		
+		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					self::TBL_SL_ARTICLE_SUMMARY,$whereTemp.$orderTemp));
+		//echo $strSQL;
+		$arrSummary =$this->_objConnection->selectCommand($strSQL);	
+		//print_r($arrSummary);
+		if($arrSummary)
+		{
+			if($orderBy)
+			{
+				$orderBy = ' ORDER BY '.$orderBy;
+			}
+			$listArticleID='';
+			$totalResult = 0;
+			foreach($arrSummary as $item)
+			{
+				$listArticleID = $item[global_mapping::Articles].$listArticleID;
+				$totalResult+= $item[global_mapping::NumArticle];
+			}
+			$arrDocInTable =  global_common::getListTableName($listArticleID,global_common::SEPARATE_BY_MONTH);
+			$strSQL ='';
+			//print_r($arrDocInTable);
+			foreach ($arrDocInTable as $key=>$iDoc)
+			{		
+				//print_r($iDoc);				
+				//check endWith ',' and then remove it
+				if(global_common::endsWith($iDoc,','))
+				{
+					$strDocInTable = global_common::cutLast($iDoc,1);	
+				}
+				
+				$strTableName = Model_Article::TBL_SL_ARTICLE.'_'.$key;
+				if($whereClause)
+				{
+					$whereClause = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+						global_mapping::ArticleID.'` IN ('.$strDocInTable.') and '.$whereClause;	
+				}
+				else
+				{
+					$whereClause = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+						global_mapping::ArticleID.'` IN ('.$strDocInTable.')';	
+				}
+				
+				
+				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+						array($selectField, $strTableName, $whereClause.$orderBy ))." ) UNION ALL ";	
+				//echo $strSQL;
+			}
+			//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
+			$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
+			echo $strSQL;
+			
+			$arrResult = $this->_objConnection->selectCommand($strSQL);
+			return $arrResult;
+		}		
+		return null;
+	}
+	
 	public function getAllArticle($selectField='*',$whereClause='',  $orderBy='') 
 	{		
 		if($whereClause)
@@ -283,14 +345,12 @@ class Model_Article
 			global_common::writeLog('get All sl_article:'.$strSQL,1,$_mainFrame->pPage);
 			return null;
 		}
-		 
+		
 		$arrResult = Model_Article::mergeUserInfo($arrResult);
 		
 		//print_r($arrResult);
 		return $arrResult;
 	}
-	
-	
 	
 	public function getListArticle($intPage,$orderBy='ArticleID', $whereClause)
 	{		

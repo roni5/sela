@@ -91,6 +91,8 @@ class global_common
 	const ANPHABET								= "abcdefghijklmnopqrstuvwxyz";
 	const TABLE_SEPERATE_CHAR					= "_";
 	const OTHER_PREFIX_CHAR						= "_";	
+	
+	const SEPARATE_BY_MONTH					= 6;	
 	//end const for FOLDER
 	
 	#end region
@@ -726,7 +728,6 @@ class global_common
 		}
 	} 
 	
-	
 	/**
 	 * Hàm thực hiện chức năng kiểm tra thành viên có phải là supporter member hay không
 	 *
@@ -786,7 +787,6 @@ class global_common
 	{
 		return wordwrap($strString, $lengthWordWrap,"\n", true);
 	}
-	
 	
 	/**
 	 * thực hiện chèn giá trị cho mail mẫu
@@ -1187,6 +1187,7 @@ class global_common
 	{
 		return preg_replace('#<[^>]*>#imsU', ' ', $content);	
 	}
+	
 	/**
 	 * This is method cmsConvertDbToView
 	 *
@@ -1202,13 +1203,13 @@ class global_common
 		
 		return $text;
 	}
+	
 	/**
 	 * Tạo tên folder theo mỗi 4 giờ 
 	 *
 	 * @return folderName ex: 00 | 04 | 08....
 	 *
 	 */
-	
 	public function getFolderNameByHour()
 	{
 		$time =	(floor((date("H")/4))*4);
@@ -1216,6 +1217,7 @@ class global_common
 			$time='0'.$time;
 		return $time;			
 	}
+	
 	/**
 	 * tạo các folder (nếu chưa có) khi đưa vào đường dẫn
 	 *
@@ -1259,6 +1261,7 @@ class global_common
 		//neu da tao thanh cong se return TRUE
 		return true;
 	}
+	
 	/**
 	 * tạo một tên bảng
 	 *
@@ -1271,6 +1274,7 @@ class global_common
 	{
 		return $oriName.global_common::TABLE_SEPERATE_CHAR.$sufname;
 	}
+	
 	/**
 	 * lấy thời gian hiện tại tính bằng microtime
 	 *
@@ -1346,6 +1350,7 @@ class global_common
 		$xmldoc->save($strFileName) ;
 		
 	}
+	
 	/**
 	 * Hàm ghi file
 	 *
@@ -1389,7 +1394,6 @@ class global_common
 		}
 	}
 	
-	
 	/**
 	 * Hàm đọc nội dung từ một file
 	 *
@@ -1425,39 +1429,27 @@ class global_common
 		
 		return null;
 	}
+	
 	/**
 	* This is method parseListIDToArray with index correspond with suffix Table
 	 *
 	 * @param string $IDList List ID
-	 * @param int $iType Loại ID cần parse. 1->alphabet; 4->month.
+	 * @param int $iType Loại ID cần parse. 1->alphabet; 6->month.
 	 * @return array Array of ID with index correspond with suffix Table
 	 * @author ThanhViet edited [20110516]
 	 */
-	public function parseListIDToArray($IDList,$iType)
+	public function getListTableName($IDList,$iType)
 	{
 		$arrDocInTable=array();
 		if (!is_array($IDList))
 		{
-			$IDList = explode(",",$IDList);	
+			$IDList = global_common::splitString($IDList);
 		}
-		//self::writeLog("str - $iType:".substr($IDList[0],0,(strrpos($IDList[0], self::CLIENT_TABLE)) ),0,"common_fucntion");
-		//tránh trường hợp array ID không được sắp xếp theo index 0,1,2,...
-		$ID = array_pop($IDList);
-		//lấy vị trí ngăn cách loại phân trang và số id
-		$irpos = strrpos($ID, self::CLIENT_TABLE);
-		//nếu không phải là table của công động c_ thì lấy theo của hellochao
-		if (!$irpos) 
+		
+		foreach ($IDList as $key)
 		{
-			$irpos = strrpos($ID, self::SYS_TABLE);
+			$arrDocInTable[substr($key,0,$iType)] .= '\''.$key.'\',';
 		}
-		array_push($IDList,$ID);
-		if (strlen(substr($ID,0,$irpos) ) ==$iType)
-		{
-			foreach ($IDList as $key)
-			{
-				$arrDocInTable[substr($key,0,$iType)] .= "'$key',";
-			}
-		} 
 		return $arrDocInTable;
 	}
 	
@@ -1473,6 +1465,7 @@ class global_common
 		global $_HTitle;
 		$_HTitle =$prefix." | ".$subffix;
 	}
+	
 	/**
 	 * Set Descripttion for each page
 	 *
@@ -1532,6 +1525,7 @@ class global_common
 		}
 		return $strHeader;
 	}
+	
 	/**
 	 * tạo một id theo Alphabet
 	 *
@@ -2477,7 +2471,7 @@ class global_common
 		{
 			$errorCode = $objConnection->getErrorCode();
 			if ($errorCode==global_common::ERR_TABLE_NOT_EXIST || $errorCode==global_common::ERR_TABLE_UNKNOWN 
-			|| $errorCode==global_common::ERR_INSERT_DUPLICATED || !global_common::isTableExisted($objConnection,$strCheckTable))
+					|| $errorCode==global_common::ERR_INSERT_DUPLICATED || !global_common::isTableExisted($objConnection,$strCheckTable))
 			{
 				$strCreateTable = global_common::prepareQuery($strCommand,array($strCheckTable));
 				if($objConnection->executeSQL($strCreateTable) == -1)
@@ -3254,8 +3248,8 @@ class global_common
 				'txtEnContent'=>'','txtVnContent'=>'','txtDescription'=>'','txtSubDesc'=>'',
 				//Phongvuhong add profile
 				'msg'=>'','body'=>''
-			
-			
+				
+				
 				);
 	}
 	
@@ -3274,7 +3268,7 @@ class global_common
 		$intCountAll =$arrResult[0][0];
 		return $intCountAll;
 	}
-
+	
 	//lấy một đoạn văn bản đầu tiên trong một văn bản dài.
 	function getFirstWords($string, $num = 1) 
 	{ 
@@ -3422,7 +3416,7 @@ class global_common
 	
 	
 	/**
-	 * This is method splitString
+	 * This is method splitString to array, ignore empty value
 	 *
 	 * @param string $delimiter This is a description
 	 * @param string $stringValue This is a description
@@ -3543,6 +3537,22 @@ class global_common
 		}
 		//echo $strSQL;
 		return $objConnection->selectCommand($strSQL);
+	}
+	
+	function startsWith($haystack, $needle)
+	{
+		$length = strlen($needle);
+		return (substr($haystack, 0, $length) === $needle);
+	}
+	
+	function endsWith($haystack, $needle)
+	{
+		$length = strlen($needle);
+		if ($length == 0) {
+			return true;
+		}
+		
+		return (substr($haystack, -$length) === $needle);
 	}
 	
 	#end region
