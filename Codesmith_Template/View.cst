@@ -262,12 +262,20 @@ public static string GetClassName(string name)
 		name = name.Substring(0,name.Length - 1);
 	}
 	int index = name.IndexOf("_");
-    name = name.Substring(index+1);
-    index = name.IndexOf("_");
-    while(index != -1)
-    {
-        name =  name.Substring(0,index)+ name[index+1].ToString().ToUpper() + name.Substring(index+2);
+    if(name.Length >= index + 1){
+        name = name.Substring(index+1);
         index = name.IndexOf("_");
+        while(index != -1)
+        {
+            if(name.Length >= index + 2){
+                name =  name.Substring(0,index)+ name[index+1].ToString().ToUpper() + name.Substring(index+2);
+                index = name.IndexOf("_");
+            }
+            else
+            {
+                index = -1;
+            }
+        }
     }
    
     //index = name.IndexOf("-");
@@ -287,12 +295,20 @@ public static string GetPageName(string name)
 		name = name.Substring(0,name.Length - 1);
 	}
 	int index = name.IndexOf("_");
-    name = name.Substring(index+1);
-    index = name.IndexOf("_");
-    while(index != -1)
-    {
-        name =  name.Substring(0,index)+ name[index+1].ToString().ToLower() + name.Substring(index+2);
+    if(name.Length >= index + 1){
+        name = name.Substring(index+1);
         index = name.IndexOf("_");
+        while(index != -1)
+        {
+            if(name.Length >= index + 2){
+                name =  name.Substring(0,index)+ name[index+1].ToString().ToUpper() + name.Substring(index+2);
+                index = name.IndexOf("_");
+            }
+            else
+            {
+                index = -1;
+            }
+        }
     }
    
     //index = name.IndexOf("-");

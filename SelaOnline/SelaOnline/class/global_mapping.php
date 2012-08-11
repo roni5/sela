@@ -17,5 +17,8 @@ class global_mapping
 	const UserID					= 'UserID';
 	const CommentID					= 'CommentID';
 	const Title						= 'Title';
+	const Articles					= 'Articles';
+	const NumArticle				= 'NumArticle';
+	const IsDeleted					= 'IsDeleted';
 }
 ?>

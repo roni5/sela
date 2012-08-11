@@ -20,11 +20,11 @@ if ($_pgR["catid"])
 	$catID = $_pgR["catid"];
 	$condition = global_mapping::ArticleType. '=\''.$catID.'\'';
 	$orderBy = global_mapping::CreatedDate. ' DESC ';
-	$arrArticle = $objArticle->getAllArticle('*',$condition,$orderBy);
+	//$arrArticle = $objArticle->getAllArticle('*',$condition,$orderBy);
+	$arrArticle = $objArticle->getArticleByType('1',1);
 }
 include_once('include/_article_list.inc');
 ?>
-
 
 <?php 
 //footer
