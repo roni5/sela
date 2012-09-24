@@ -1438,14 +1438,14 @@ class global_common
 	 * @return array Array of ID with index correspond with suffix Table
 	 * @author ThanhViet edited [20110516]
 	 */
-	public function getListTableName($IDList,$iType)
+	public function getListTableName($IDList,$intPage,$pageSize,$iType)
 	{
 		$arrDocInTable=array();
 		if (!is_array($IDList))
 		{
 			$IDList = global_common::splitString($IDList);
 		}
-		
+		$IDList = global_common::getTopOfArray($IDList,($intPage-1)*$pageSize,$pageSize);
 		foreach ($IDList as $key)
 		{
 			$arrDocInTable[substr($key,0,$iType)] .= '\''.$key.'\',';
@@ -2233,7 +2233,7 @@ class global_common
 		$i = $intCurrPage;	
 		//$end = floor(($intCurrPage + $intMaxPages) / $intMaxPages)*$intMaxPages + 1;
 		$intTotalPage = ceil($intTotalResult / $intResultsInOnePage);
-		self::writeLog('totel paging search:'.$intTotalPage,0,$_mainFrame->pName);
+		//self::writeLog('totel paging search:'.$intTotalPage,0,$_mainFrame->pName);
 		
 		//nếu chưa đăng nhập thì chỉ hiển thị một kết quả thôi
 		/*if (!$_SESSION[self::SES_C_USERINFO])
@@ -2251,7 +2251,7 @@ class global_common
 		{
 			return "";
 		}
-		self::writeLog('totel paging search:'.$intTotalPage,0,$_mainFrame->pName);
+		//self::writeLog('totel paging search:'.$intTotalPage,0,$_mainFrame->pName);
 		
 		// get max page number
 		if($intCurrPage < $intTotalPage)
@@ -2308,9 +2308,11 @@ class global_common
 	 */
 	public function getPagingHTMLByNum($intCurrPage, $intResultsInOnePage, $intTotalResult, $jsFuncName)
 	{
+		//echo 'current: '.$intCurrPage;
 		if ($intTotalResult<=$intResultsInOnePage)
 			return "";
-		$strPages = "\n<b>Page &nbsp;&nbsp;</b>";
+		$strPages = "<input type=\"hidden\" id=\"txtPage\" name=\"txtPage\" value=\"".($intCurrPage?$intCurrPage:1)."\" />";
+		$strPages .= "\n<b>Page &nbsp;&nbsp;</b>";
 		$i = $intCurrPage;	
 		$intMaxPages = ceil($intTotalResult/$intResultsInOnePage);
 		
@@ -3445,6 +3447,10 @@ class global_common
 	{
 		foreach ($array as $row) $ret[] = $row[$column];
 		return $ret;
+	}
+	
+	public function getTopOfArray($array,$offset, $numElement) {
+		return array_slice($array, $offset, $numElement);  
 	}
 	
 	public function convertIntToChar($asciiCode)
