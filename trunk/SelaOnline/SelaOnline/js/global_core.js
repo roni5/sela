@@ -764,8 +764,8 @@ function global_core() {
             // DoNguyen editted [20100522] - Anh trim() no truoc khi dung cho chac an (vi khong biet co phai luon luon du 2 ky tu khong)
 
             // Anh cung chua biet nguyen nhan vi sao du 2 ky tu nay, anh nghi la do header, nhung anh doi roi van khong an thua gi
-            var text_temp = trim(text); //.substr(2);
-            xmlDoc = parser.parseFromString(text_temp, "text/xml");
+            //var text_temp = trim(text); //.substr(2);
+            xmlDoc = parser.parseFromString(text, "text/xml");
 
         }
 

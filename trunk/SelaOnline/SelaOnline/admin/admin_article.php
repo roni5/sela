@@ -17,6 +17,7 @@ chdir("..");
 require('config/globalconfig.php');
 include_once('class/model_article.php');
 include_once('class/model_articletype.php');
+include_once('class/model_user.php');
 
 ?>
 <?php
@@ -157,10 +158,14 @@ elseif($_pgR['act'] == model_Article::ACT_UPDATE)
 }
 elseif($_pgR['act'] == model_Article::ACT_CHANGE_PAGE)
 {
-	$intPage = $_pgR['p'];
-	
-	$outPutHTML =  $objArticle->getListArticle($intPage);
-	echo global_common::convertToXML($strMessageHeader, array('rs','inf'), array(1,$outPutHTML),array(0,1));
+	$catID = $_pgR["catid"];
+	$intPage = $_pgR['p']?$_pgR['p']:1;
+	$condition = global_mapping::ArticleType. '=\''.$catID.'\'';
+	$orderBy = global_mapping::CreatedDate. ' DESC ';
+	$arrArticle = $objArticle->getArticleByType($intPage,$total,$catID);
+	//print_r($arrArticle);
+	$outPutHTML = $objArticle->getHTMLArticles($arrArticle,$intPage,$total);
+	echo global_common::convertToXML($strMessageHeader, array('rs','inf'), array(1,$outPutHTML),array(1,1));
 	return ;
 }
 elseif($_pgR['act'] == model_Article::ACT_SHOW_EDIT)

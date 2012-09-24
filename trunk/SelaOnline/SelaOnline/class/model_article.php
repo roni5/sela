@@ -24,7 +24,7 @@ class Model_Article
 	const ACT_CHANGE_PAGE					= 13;
 	const ACT_SHOW_EDIT                     = 14;
 	const ACT_GET                           = 15;
-	const NUM_PER_PAGE                      = 15;
+	const NUM_PER_PAGE                      = 3;
 	
 	const TBL_SL_ARTICLE			            = 'sl_article';
 	const TBL_SL_ARTICLE_SUMMARY	            = 'sl_article_summary';
@@ -264,8 +264,12 @@ class Model_Article
 		return $arrResult;
 	}
 	
-	public function getArticleByType($typeID,$intPage,$selectField='*',$whereClause='',  $orderBy='')
+	public function getArticleByType(&$intPage,&$total, $typeID,$selectField='*',$whereClause='',  $orderBy='')
 	{
+		if(!$intPage)
+		{
+			$intPage = 1 ;
+		}
 		$whereTemp ='WHERE ArticleTypeID=\''.$typeID.'\' ';		
 		$orderTemp ='ORDER BY PeriodTime DESC ';		
 		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
@@ -284,9 +288,12 @@ class Model_Article
 			foreach($arrSummary as $item)
 			{
 				$listArticleID = $item[global_mapping::Articles].$listArticleID;
-				$totalResult+= $item[global_mapping::NumArticle];
+				$totalResult += $item[global_mapping::NumArticle];
 			}
-			$arrDocInTable =  global_common::getListTableName($listArticleID,global_common::SEPARATE_BY_MONTH);
+			$IDList = global_common::splitString($listArticleID);
+			$total = count($IDList);
+			//echo $total;
+			$arrDocInTable =  global_common::getListTableName($listArticleID,$intPage,Model_Article::NUM_PER_PAGE,global_common::SEPARATE_BY_MONTH);
 			$strSQL ='';
 			//print_r($arrDocInTable);
 			foreach ($arrDocInTable as $key=>$iDoc)
@@ -317,12 +324,28 @@ class Model_Article
 			}
 			//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
 			$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
-			echo $strSQL;
+			//echo $strSQL;
 			
 			$arrResult = $this->_objConnection->selectCommand($strSQL);
+			$arrResult = Model_Article::mergeUserInfo($arrResult);
+			//print_r($arrResult);
+			
 			return $arrResult;
 		}		
 		return null;
+	}
+	
+	public function getHTMLArticles($articles,$intPage, $total)
+	{
+		if($articles && count($articles)>0)
+		{
+			foreach($articles as $item)
+			{
+				$strHTML .= $this->getArticleMemo($item);
+			}
+			$strHTML .= global_common::getPagingHTMLByNum($intPage,Model_Article::NUM_PER_PAGE,$total,'_objArticle.changePage');
+		}
+		return $strHTML;
 	}
 	
 	public function getAllArticle($selectField='*',$whereClause='',  $orderBy='') 

@@ -310,6 +310,7 @@ function Auction()
 		core.getObject('txtNumOffer').val('');
 		core.getObject('txtStatus').val('');
     }
+       
     //endregion   
 }
 var _objAuction = new  Auction();

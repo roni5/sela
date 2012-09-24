@@ -25,7 +25,6 @@ function Article() {
     var ACT_GET = 15;
     var _strPage = "admin_article.php";
 
-
     //endregion   
 
     //region Public Functions
@@ -383,7 +382,49 @@ function Article() {
         core.getObject('txtNumComment').val('');
         core.getObject('txtStatus').val('');
     }
-   
+
+    /*
+    *	Đổi trang
+    */
+    var p;
+    this.changePage = changePage;
+    function changePage(intPage) {
+        var keyword = '';
+        if (core.getObject("txtGet")) {
+            keyword = core.getObject("txtGet").val();
+        }
+        var catID = "";
+        if (core.getObject("catID")) {
+            catID = core.getObject("catID").val();
+        }
+        
+        var strRequest = "isAJ=1&act=" + ACT_CHANGE_PAGE + "&catid=" + catID + "&p=" + intPage + "&kw=" + keyword ;
+        var ajax = new Ajax();
+        p = intPage;
+        ajax.SendRequestToServerWithCustomMsgCache('admin/'+_strPage+ '?uptime=' + core.getMilliseconds(), strRequest, changePage_OnCallBack, true, MSG_AJAX_SENDING_VN);
+    }
+
+    function changePage_OnCallBack(xmlHTTPRequest) {
+
+        if (xmlHTTPRequest.readyState == 4) {
+            if (xmlHTTPRequest.status == 200) {
+                var strRespond = core.parserXML(xmlHTTPRequest.responseText);
+
+                if (!core.headerProcessingArr(strRespond[0], Array(true, false, false))) {
+                    //show fail
+                    popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
+                    return;
+                }
+                if (parseInt(strRespond[1]["rs"]) == 1) {
+                    showInfoBar('success', "Thao tác thành công.");
+
+                    // alert(strRespond[1]["inf"]);
+                    core.getObject('list-content').html(strRespond[1]["inf"]);
+                    core.getObject("txtPage")[0].value = p;
+                }
+            }
+        }
+    }
     //endregion   
 }
 var _objArticle = new Article();
