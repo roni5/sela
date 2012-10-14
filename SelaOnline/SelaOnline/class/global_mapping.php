@@ -20,5 +20,9 @@ class global_mapping
 	const Articles					= 'Articles';
 	const NumArticle				= 'NumArticle';
 	const IsDeleted					= 'IsDeleted';
+	const ContentID					= 'ContentID';
+	const SubContents				= 'SubContents';
+	const PeriodTime				= 'PeriodTime';
+	const Type						= 'Type';
 }
 ?>

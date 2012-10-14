@@ -25,7 +25,7 @@ class Model_Comment
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
 	const ACT_USER_COMMENT					= 16;
-    const NUM_PER_PAGE                      = 15;
+    const NUM_PER_PAGE                      = 5;
     
     const TBL_SL_COMMENT			            = 'sl_comment';
 
@@ -123,7 +123,7 @@ class Model_Comment
 				global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
 				global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
 				global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status)));
-		echo $strSQL;
+		//echo $strSQL;
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,Model_Comment::SQL_CREATE_TABLE_SL_COMMENT,$this->_objConnection,$strTableName))
 		{
 			global_common::writeLog('Error add sl_comment:'.$strSQL,1);
@@ -131,7 +131,11 @@ class Model_Comment
 		}	
 		else
 		{
-				
+			$arrResult = global_common::updateContents($this->_objConnection,$articleid,$intID,global_common::COMMENT_TYPE);
+			if (!$arrResult)
+			{
+				global_common::writeLog('sp_update_content_summary: '.$strSQL,1);
+			}
 		}
 		return $intID;
 	}
@@ -180,7 +184,7 @@ class Model_Comment
 		}
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_COMMENT , $whereClause.$orderBy .' limit '.(($intPage-1)* self::NUM_PER_PAGE).','.self::NUM_PER_PAGE));
-		//echo '<br>SQL:'.$strSQL;
+		echo '<br>SQL:'.$strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
 		{
@@ -194,6 +198,60 @@ class Model_Comment
 		return $arrResult;
 	}
     
+	public function getCommentByArticle(&$intPage , &$total, $articleID,$selectField='*',$whereClause='',  $orderBy='') 
+	{		
+		$arrSummary = global_common::getContentIDs($this->_objConnection,$intPage,$articleID,global_common::COMMENT_TYPE);
+		if($arrSummary)
+		{
+			if($orderBy)
+			{
+				$orderBy = ' ORDER BY '.$orderBy;
+			}
+			$listCommentID='';
+			
+			foreach($arrSummary as $item)
+			{
+				$listCommentID = $item[global_mapping::SubContents].$listCommentID;
+			}
+			$IDList = global_common::splitString($listCommentID);
+			$total = count($IDList);
+			$arrDocInTable =  global_common::getListTableName($listCommentID,$intPage,Model_Comment::NUM_PER_PAGE,global_common::SEPARATE_BY_MONTH);
+			$strSQL ='';
+			$condition = '';
+			foreach ($arrDocInTable as $key=>$iDoc)
+			{		
+				//check endWith ',' and then remove it
+				if(global_common::endsWith($iDoc,','))
+				{
+					$strDocInTable = global_common::cutLast($iDoc,1);	
+				}
+				
+				$strTableName = Model_Comment::TBL_SL_COMMENT.'_'.$key;
+				if($whereClause)
+				{
+					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+						global_mapping::CommentID.'` IN ('.$strDocInTable.') and '.$whereClause;	
+				}
+				else
+				{
+					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+						global_mapping::CommentID.'` IN ('.$strDocInTable.')';	
+				}
+								
+				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+						array($selectField, $strTableName, $condition.$orderBy ))." ) UNION ALL ";	
+			}
+			//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
+			$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
+			
+			$arrResult = $this->_objConnection->selectCommand($strSQL);
+			$arrResult = global_common::mergeUserInfo($arrResult);
+			//print_r($arrResult);
+			return $arrResult;
+		}
+		return null;
+	}
+	
     public function getListComment($intPage, $orderBy='CommentID', $whereClause)
 	{		
         if($whereClause)

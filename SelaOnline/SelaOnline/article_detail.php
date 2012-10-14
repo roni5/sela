@@ -14,8 +14,9 @@ if ($_pgR["articleid"])
 {
 	$articleID = $_pgR["articleid"];
 	$article = $objArticle->getArticleByID($articleID);
-	$comments = $objComment->getAllComment(1,'*','ArticleID=\''.$articleID.'\'',' CreatedDate DESC');
-	
+	$intPage = 1;
+	$total = 0;
+	$comments = $objComment->getCommentByArticle($intPage,$total,$articleID,'*','',' CreatedDate DESC');
 }
 ?>
 
