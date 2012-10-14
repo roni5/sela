@@ -176,7 +176,7 @@ a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
 }
 .article-memo-content   
 {
-    height: 100px;
+    /*height: 100px;*/
     position: relative;
     margin-left:125px;
 }
@@ -258,6 +258,7 @@ a:hover.salesLogoLink{border:1px #ddd solid;border-bottom:2px #999 solid}
 
 /* Start article-content*/
 .article-content{
+	display: block;
 	.zone-content{
 		   float: left;
 			text-align: left;

@@ -92,7 +92,12 @@ class global_common
 	const TABLE_SEPERATE_CHAR					= "_";
 	const OTHER_PREFIX_CHAR						= "_";	
 	
-	const SEPARATE_BY_MONTH					= 6;	
+	const SEPARATE_BY_MONTH						= 6;	
+	
+	const ARTICLE_TYPE							= 1;	
+	const COMMENT_TYPE							= 2;	
+	const TBL_SL_CONTENT_SUMMARY	            = 'sl_content_summary';
+	
 	//end const for FOLDER
 	
 	#end region
@@ -3561,6 +3566,27 @@ class global_common
 		return (substr($haystack, -$length) === $needle);
 	}
 	
+	
+	public function getContentIDs($objConnection,&$intPage,$contentID,$type) {
+		if(!$intPage)
+		{
+			$intPage = 1 ;
+		}
+		$whereTemp ='WHERE '.global_mapping::ContentID.'=\''.$contentID.'\' and '.global_mapping::Type.'=\''.$type.'\'';		
+		$orderTemp ='ORDER BY '.global_mapping::PeriodTime.' DESC ';		
+		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					global_common::TBL_SL_CONTENT_SUMMARY,$whereTemp.$orderTemp));
+		//echo $strSQL;
+		return $objConnection->selectCommand($strSQL);	
+	}
+	
+	public function updateContents($objConnection,$contentID,$subContentID,$type)
+	{
+		$strSQL = 'CALL sp_update_content_summary(\''.$contentID.'\',\''.$subContentID.'\',\''.
+			global_common::getTableSuffixByMonth($subContentID).'\',\''.$type.'\');';
+		//echo $strSQL;
+		return $objConnection->selectMultiCommand($strSQL);	
+	}
 	#end region
 	
 }

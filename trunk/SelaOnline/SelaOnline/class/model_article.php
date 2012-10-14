@@ -27,7 +27,6 @@ class Model_Article
 	const NUM_PER_PAGE                      = 3;
 	
 	const TBL_SL_ARTICLE			            = 'sl_article';
-	const TBL_SL_ARTICLE_SUMMARY	            = 'sl_article_summary';
 	
 	const SQL_INSERT_SL_ARTICLE		= 'INSERT INTO `{0}`
 		(
@@ -162,25 +161,25 @@ class Model_Article
 		
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
-			//echo $strSQL;
+			echo $strSQL;
 			global_common::writeLog('Error add sl_article:'.$strSQL,1);
 			return false;
 		}	
 		else
 		{
-			$strSQL = 'CALL sp_update_article_summary(\''.$articletype.'\',\''.global_common::getTableSuffixByMonth($intID).'\',\''.$intID.'\');';
-			$arrResult = $this->_objConnection->selectMultiCommand($strSQL);
-			//common_functions::writeLog("updateUserLikeByID: ".$strSQL,0);
+			
+			$arrResult = global_common::updateContents($this->_objConnection,$articletype,$intID,global_common::ARTICLE_TYPE);
 			if (!$arrResult)
 			{
-				common_functions::writeLog('sp_update_article_summary: '.$strSQL,1);
-				return $intID;
+				global_common::writeLog('sp_update_content_summary: '.$strSQL,1);
 			}
 		}
 		return $intID;
 	}
 	
-	public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,
+		$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,
+		$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		$strTableName = self::TBL_SL_ARTICLE;
 		$strSQL = global_common::prepareQuery(self::SQL_UPDATE_SL_ARTICLE,
@@ -197,8 +196,10 @@ class Model_Article
 	
 	public function getArticleByID($objID,$selectField='*') 
 	{		
+		$strTableName = global_common::builtTableName(
+				Model_Article::TBL_SL_ARTICLE, global_common::getTableSuffixByMonth($objID));
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-				array($selectField, self::TBL_SL_ARTICLE ,							
+				array($selectField, $strTableName ,							
 					'WHERE ArticleID = \''.$objID.'\' '));
 		//echo '<br>SQL:'.$strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
@@ -258,7 +259,7 @@ class Model_Article
 			return null;
 		}
 		
-		$arrResult = Model_Article::mergeUserInfo($arrResult);
+		$arrResult = global_common::mergeUserInfo($arrResult);
 		
 		//print_r($arrResult);
 		return $arrResult;
@@ -266,16 +267,8 @@ class Model_Article
 	
 	public function getArticleByType(&$intPage,&$total, $typeID,$selectField='*',$whereClause='',  $orderBy='')
 	{
-		if(!$intPage)
-		{
-			$intPage = 1 ;
-		}
-		$whereTemp ='WHERE ArticleTypeID=\''.$typeID.'\' ';		
-		$orderTemp ='ORDER BY PeriodTime DESC ';		
-		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
-					self::TBL_SL_ARTICLE_SUMMARY,$whereTemp.$orderTemp));
-		//echo $strSQL;
-		$arrSummary =$this->_objConnection->selectCommand($strSQL);	
+		
+		$arrSummary = global_common::getContentIDs($this->_objConnection, $intPage, $typeID, global_common::ARTICLE_TYPE);
 		//print_r($arrSummary);
 		if($arrSummary)
 		{
@@ -284,11 +277,10 @@ class Model_Article
 				$orderBy = ' ORDER BY '.$orderBy;
 			}
 			$listArticleID='';
-			$totalResult = 0;
+			
 			foreach($arrSummary as $item)
 			{
-				$listArticleID = $item[global_mapping::Articles].$listArticleID;
-				$totalResult += $item[global_mapping::NumArticle];
+				$listArticleID = $item[global_mapping::SubContents].$listArticleID;
 			}
 			$IDList = global_common::splitString($listArticleID);
 			$total = count($IDList);
@@ -296,6 +288,7 @@ class Model_Article
 			$arrDocInTable =  global_common::getListTableName($listArticleID,$intPage,Model_Article::NUM_PER_PAGE,global_common::SEPARATE_BY_MONTH);
 			$strSQL ='';
 			//print_r($arrDocInTable);
+			$condition = '';
 			foreach ($arrDocInTable as $key=>$iDoc)
 			{		
 				//print_r($iDoc);				
@@ -308,26 +301,25 @@ class Model_Article
 				$strTableName = Model_Article::TBL_SL_ARTICLE.'_'.$key;
 				if($whereClause)
 				{
-					$whereClause = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
 						global_mapping::ArticleID.'` IN ('.$strDocInTable.') and '.$whereClause;	
 				}
 				else
 				{
-					$whereClause = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
 						global_mapping::ArticleID.'` IN ('.$strDocInTable.')';	
 				}
 				
 				
 				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-						array($selectField, $strTableName, $whereClause.$orderBy ))." ) UNION ALL ";	
-				//echo $strSQL;
+						array($selectField, $strTableName, $condition.$orderBy ))." ) UNION ALL ";	
 			}
 			//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
 			$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
 			//echo $strSQL;
 			
 			$arrResult = $this->_objConnection->selectCommand($strSQL);
-			$arrResult = Model_Article::mergeUserInfo($arrResult);
+			$arrResult = global_common::mergeUserInfo($arrResult);
 			//print_r($arrResult);
 			
 			return $arrResult;
@@ -337,6 +329,7 @@ class Model_Article
 	
 	public function getHTMLArticles($articles,$intPage, $total)
 	{
+		$strHTML = '';
 		if($articles && count($articles)>0)
 		{
 			foreach($articles as $item)
@@ -369,7 +362,7 @@ class Model_Article
 			return null;
 		}
 		
-		$arrResult = Model_Article::mergeUserInfo($arrResult);
+		$arrResult = global_common::mergeUserInfo($arrResult);
 		
 		//print_r($arrResult);
 		return $arrResult;
@@ -483,23 +476,11 @@ class Model_Article
 				</div>';
 		return $strHTML;
 	}
-	
+			
 	#endregion   
 	
 	#region Private Functions
-	private function mergeUserInfo($arrResult)
-	{
-		$arrUsers =  global_common::getArrayColumn($arrResult,'CreatedBy');
-		$arrUserInfo = global_common::getUserInfo($arrUsers,$this->_objConnection);
-		//print_r($arrUserInfo);
-		$count = count($arrResult);
-		for($i=0; $i < $count; $i++)
-		{
-			//print_r($arrResult[$i]);
-			$arrResult[$i]['CreatedBy'] = $arrUserInfo[$arrResult[$i]['CreatedBy']];
-		}
-		return $arrResult;
-	}
+	
 	#endregion
 }
 ?>

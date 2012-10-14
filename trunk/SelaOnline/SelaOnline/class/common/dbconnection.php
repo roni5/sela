@@ -229,12 +229,12 @@ class db_connection extends mysqli
 			$pureURL = $pageURL;
 		}
 		$sessionID  =session_id();
-		//common_functions::writeLog("session ID1:".$sessionID,1,$pageURL);
+		//global_common::writeLog("session ID1:".$sessionID,1,$pageURL);
 		
 		
-		//common_functions::writeLogConnection($sessionID,$pureURL,$strSQL,$_SESSION["request"],$pageURL);
+		//global_common::writeLogConnection($sessionID,$pureURL,$strSQL,$_SESSION["request"],$pageURL);
 		
-		//common_functions::writeLog("Once time access DB:".$strSQL,1,$pageURL);
+		//global_common::writeLog("Once time access DB:".$strSQL,1,$pageURL);
 		
 		return $arrRows;
 	}

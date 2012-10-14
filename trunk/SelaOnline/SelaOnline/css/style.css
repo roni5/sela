@@ -671,7 +671,7 @@ a:hover.salesLogoLink {
     float: right; }
 
 .article-memo-content {
-  height: 100px;
+  /*height: 100px;*/
   position: relative;
   margin-left: 125px; }
 
@@ -759,16 +759,18 @@ a:hover.salesLogoLink {
 
 /* end category-page*/
 /* Start article-content*/
-.article-content .zone-content {
-  float: left;
-  text-align: left;
-  width: 100%; }
-  .article-content .zone-content .content-detail {
-    min-height: 100px;
-    margin-left: 125px;
-    position: relative; }
-    .article-content .zone-content .content-detail .content-block {
-      width: 100%; }
+.article-content {
+  display: block; }
+  .article-content .zone-content {
+    float: left;
+    text-align: left;
+    width: 100%; }
+    .article-content .zone-content .content-detail {
+      min-height: 100px;
+      margin-left: 125px;
+      position: relative; }
+      .article-content .zone-content .content-detail .content-block {
+        width: 100%; }
 
 /* End article-content*/
 /* Start font-end comment-zone*/
