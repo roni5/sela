@@ -8,8 +8,7 @@ if($arrCategory && count($arrCategory)>0)
 	echo '	<div class="category-list">';
 	
 	foreach($arrCategory as $item )
-	{
-		
+	{		
 		echo '	<div class="category-detail">';
 		echo '		<h1 class="category-header">';
 		echo			'<a href="cat_detail.php?catid='.$item[global_mapping::ArticleTypeID].'">'.$item[global_mapping::ArticleTypeName].'</a>';
@@ -23,11 +22,6 @@ if($arrCategory && count($arrCategory)>0)
 				echo $objArticle->getArticleMemo($article);	
 			}
 		}
-		/*echo '		<div class="article-detail">';
-		echo '			<div class="article-content">';
-		echo				'Chuyên HDD, Đầu HD, các loại Loa, Âm Ly cao cấp: Denon, Jamo, Yamaha, system HD, 3D';
-		echo '			</div>';
-		echo '		</div>';*/
 		echo '	</div>';
 	}
 	echo '	</div>';

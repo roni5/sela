@@ -25,7 +25,7 @@ class Model_Comment
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
 	const ACT_USER_COMMENT					= 16;
-    const NUM_PER_PAGE                      = 5;
+    const NUM_PER_PAGE                      = 10;
     
     const TBL_SL_COMMENT			            = 'sl_comment';
 
@@ -110,7 +110,7 @@ class Model_Comment
 		$date = global_common::getDateTime();
 		$intID = global_common::buildIDByMonth(global_common::getMaxID(self::TBL_SL_COMMENT),
 													$date,Model_Comment::TABLE_BY_MONTHS_COMMENT);
-		echo $intID;
+		//echo 'Comment id:'.$intID;
 		//$intID = global_common::getMaxID(self::TBL_SL_COMMENT);
 		// lấy tên table c_comment_detail_ để lưu thông tin comment
 		$strTableName = global_common::builtTableName(
@@ -318,7 +318,7 @@ class Model_Comment
 		{
 			$avatar = '/image/default/default_logo.jpg';
 		}
-		//print_r($article);
+		/*//print_r($article);
 		$strHTML = '<div class="article-memo">
 				<div class="article-memo-detail">
 				<div class="article-memo-content">
@@ -339,6 +339,25 @@ class Model_Comment
 				</div>
 				<input type=hidden id="CommentID" value="'.$article[global_mapping::CommentID].'" />
 				</div>';
+		return $strHTML;*/
+		
+		$strHTML = '<div class="article-memo">
+						<div class="article-memo-user">
+							<div class="user-info">
+								<div><img src="'.$avatar.'" /></div>
+								<div>'.$comment[global_mapping::CreatedBy][global_mapping::UserName].'</div>
+								<div>'.$comment[global_mapping::CreatedBy][global_mapping::CreatedDate].'</div>
+							</div>
+						</div>
+						<div class="article-memo-detail">						
+							<div class="article-memo-control">
+							<div class="favourite"> LIKE </div>
+							</div>
+							<div class="article-memo-content">
+							<p>'.$comment[global_mapping::Content].'</p>
+							</div>							
+						</div>						
+					</div>';
 		return $strHTML;
 	}
     #endregion   

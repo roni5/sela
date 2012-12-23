@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Home-Call Center</title>
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('style.css');?>">
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('base.css');?>">
+
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('themes/base/jquery.ui.all.css');?>">
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('jquery-1.7.2.min.js');?>"></script>
