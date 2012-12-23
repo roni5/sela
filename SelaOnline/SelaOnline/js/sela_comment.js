@@ -310,6 +310,24 @@ function Comment() {
 
     function addUserComment_OnCallBack() {
         core.disableControl("btnPostComment", false);
+        if (xmlHTTPRequest.readyState == 4) {
+            if (xmlHTTPRequest.status == 200) {
+                var strRespond = core.parserXML(xmlHTTPRequest.responseText);
+
+                if (!core.headerProcessingArr(strRespond[0], Array(true, true, false))) {
+                    popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
+                    return;
+                }
+                if (parseInt(strRespond[1]['rs']) == 1) {
+                    parent.window.showInfoBar('success', strRespond[1]['inf']);
+                    core.getObject("comment-list")[0].innerHTML = strRespond[1]['list'];
+                }
+                else //if(parseInt(strRespond[3]) == -1)
+                {
+                    popDiv.alert(MSG_RES_OPERATION_FAIL, SYSTEM_TITLE_ERROR, 1);
+                }
+            }
+        }
     }
     function addUserComment_Fail_OnCallBack() {
         core.disableControl("btnPostComment", false);

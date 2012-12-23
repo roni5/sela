@@ -35,7 +35,7 @@ blockquote, q {
 body {
   color: #333;
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 70%;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   line-height: 1.5; }
@@ -73,7 +73,7 @@ a:hover {
 
 #slider-right {
   float: left;
-  height: 650px;
+  height: 100%;
   width: 10%;
   background-color: red; }
 
@@ -98,10 +98,6 @@ a:hover {
   text-decoration: none; }
 
 /*********** common for font page *********/
-body {
-  color: #c1cd23;
-  font-size: 12px; }
-
 h1 a {
   color: #f31505; }
 
@@ -646,7 +642,53 @@ a:hover.salesLogoLink {
   width: 100%;
   min-height: 100px;
   padding: 0 0 10px 0;
-  clear: both; }
+  clear: both;
+  position: relative;
+  display: inline-block; }
+  .article-memo .article-memo-content-detail {
+    /*height: 100px;*/ }
+  .article-memo .article-memo-user {
+    float: left;
+    width: 10%;
+    margin-left: 0px;
+    padding: 0px; }
+    .article-memo .article-memo-user .user-info {
+      clear: both; }
+      .article-memo .article-memo-user .user-info img {
+        width: 100%; }
+  .article-memo .article-memo-detail {
+    float: right;
+    width: 89.8%;
+    text-align: left;
+    overflow: hidden; }
+    .article-memo .article-memo-detail .article-memo-control {
+      width: 100%%;
+      height: 30px;
+      background: #0080c0;
+      display: inline;
+      margin: 0px 0px;
+      padding: 0 20px 0 0;
+      float: right; }
+      .article-memo .article-memo-detail .article-memo-control .favourite {
+        float: right; }
+    .article-memo .article-memo-detail .article-memo-content {
+      /*height: 100px;*/
+      position: relative;
+      margin-left: 0px;
+      width: 85%;
+      clear: both; }
+      .article-memo .article-memo-detail .article-memo-content h2.title {
+        width: 70%;
+        position: relative;
+        width: 70%;
+        z-index: 10; }
+    .article-memo .article-memo-detail .article-short-info {
+      float: left;
+      top: 33px;
+      right: 1px;
+      position: absolute;
+      text-align: right;
+      width: 100%; }
 
 .article-memo-user {
   float: left;
@@ -710,14 +752,25 @@ a:hover.salesLogoLink {
 
 /*********** end category ************/
 /*********** paging ************/
-.paging a {
-  background: #493A3A;
-  text-decoration: none;
-  font-weight: bold;
-  color: White;
-  width: 40px;
-  padding: 3px 5px 3px 5px;
-  cursor: pointer; }
+.paging {
+  clear: both; }
+  .paging a {
+    background: #493A3A;
+    text-decoration: none;
+    font-weight: bold;
+    color: White;
+    width: 40px;
+    padding: 3px 5px 3px 5px;
+    cursor: pointer; }
+
+.paging-dropdown {
+  clear: both; }
+  .paging-dropdown a {
+    text-decoration: none;
+    font-weight: bold;
+    width: 40px;
+    padding: 3px 5px 3px 5px;
+    cursor: pointer; }
 
 /*********** end paging ************/
 /* Css for Tooltip */

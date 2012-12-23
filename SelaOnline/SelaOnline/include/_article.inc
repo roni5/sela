@@ -19,8 +19,9 @@
 //print_r($article);
 if($article)
 {	
+	echo $objArticle->getArticleDetail($article);
 	//print_r($article);
-	if($article[global_mapping::CreatedBy][global_mapping::Avatar])
+	/*if($article[global_mapping::CreatedBy][global_mapping::Avatar])
 	{
 		$avatar = '/file/avatar/'.$article[global_mapping::CreatedBy][global_mapping::Avatar];
 	}
@@ -41,8 +42,7 @@ if($article)
 	echo					$article[global_mapping::Content];
 	echo '				</div>';	
 	echo '			</div>';
-	echo '			</div>';
-	
+	echo '			</div>';	
 	echo '		</div>';
 	echo '		<div class="article-memo-user">';
 	echo '			<div class="user-info">';
@@ -56,7 +56,7 @@ if($article)
 	echo '	<div class="zone-content">';
 	
 	echo '	</div>';
-	echo '</div>';
+	echo '</div>';*/
 	
 }
 ?>

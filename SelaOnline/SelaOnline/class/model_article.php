@@ -52,7 +52,8 @@ class Model_Article
 		Status
 		)
 		VALUES (
-		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\'
+		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', 
+		\'{11}\', \'{12}\', \'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\'
 		);';
 	
 	const SQL_UPDATE_SL_ARTICLE		= 'UPDATE `{0}`
@@ -130,7 +131,8 @@ class Model_Article
 	
 	#region Public Functions
 	
-	public function insert( $prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
+	public function insert( $prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,$catalogueid,$sectionid,
+		$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,$status)
 	{
 		//$intID = global_common::getMaxID(self::TBL_SL_ARTICLE);
 		$date = global_common::getDateTime();
@@ -161,7 +163,7 @@ class Model_Article
 		
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
-			echo $strSQL;
+			//echo $strSQL;
 			global_common::writeLog('Error add sl_article:'.$strSQL,1);
 			return false;
 		}	
@@ -183,9 +185,19 @@ class Model_Article
 	{
 		$strTableName = self::TBL_SL_ARTICLE;
 		$strSQL = global_common::prepareQuery(self::SQL_UPDATE_SL_ARTICLE,
-				array($strTableName,global_common::escape_mysql_string($articleid),global_common::escape_mysql_string($prefix),global_common::escape_mysql_string($title),global_common::escape_mysql_string($filename),global_common::escape_mysql_string($articletype),global_common::escape_mysql_string($content),global_common::escape_mysql_string($notificationtype),global_common::escape_mysql_string($tags),global_common::escape_mysql_string($catalogueid),global_common::escape_mysql_string($sectionid),global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status) ));
+				array($strTableName,global_common::escape_mysql_string($articleid),global_common::escape_mysql_string($prefix),
+					global_common::escape_mysql_string($title),global_common::escape_mysql_string($filename),
+					global_common::escape_mysql_string($articletype),global_common::escape_mysql_string($content),
+					global_common::escape_mysql_string($notificationtype),global_common::escape_mysql_string($tags),
+					global_common::escape_mysql_string($catalogueid),global_common::escape_mysql_string($sectionid),
+					global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),
+					global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),
+					global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
+					global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
+					global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status) ));
 		
-		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
+		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,
+					self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
 			//echo $strSQL;
 			global_common::writeLog('Error add sl_article:'.$strSQL,1);
@@ -239,89 +251,33 @@ class Model_Article
 	 * @return mixed This is the return value description
 	 *
 	 */
-	public function getTopArticleByType($listTypeID,$limitRow,$selectField='*') 
+	public function getTopArticleByType($listTypeID,$limitRow, $selectField='*',$whereClause='',$orderBy='') 
 	{		
 		$arrTypeID = global_common::splitString($listTypeID);
-		$strSQL = '';
-		foreach($arrTypeID as $item)
+		$strQueryIN = global_common::convertToQueryIN($arrTypeID);
+		$arrSummary = global_common::getContentInfoByIDs($this->_objConnection, $strQueryIN,global_common::ARTICLE_TYPE);
+		//print_r($arrSummary);
+		if($arrSummary == null)
 		{
-			$strSQL .='('. global_common::prepareQuery(global_common::SQL_SELECT_LIMIT_BY_CONDITION, 
-					array($selectField, self::TBL_SL_ARTICLE ,							
-						''.global_mapping::ArticleType.' = \''.$item.'\'','0', $limitRow)).')';
-			$strSQL.= ' UNION ';
-		}
-		$strSQL  = global_common::cutLast($strSQL,strlen(' UNION '));
-		//echo '<br>SQL:'.$strSQL;
-		$arrResult =$this->_objConnection->selectCommand($strSQL);		
-		if(!$arrResult)
-		{
-			global_common::writeLog('get sl_article top ByType:'.$strSQL,1,$_mainFrame->pPage);
+			global_common::writeLog('Can not get content from table summary');
 			return null;
 		}
-		
-		$arrResult = global_common::mergeUserInfo($arrResult);
-		
+												
+		$strSQL = Model_Article::getSQLSelectByTableName($arrSummary,-1,$limitRow,$selectField, $whereClause, $orderBy);
+		$arrResult = self::getArticlesFromDB($strSQL);
 		//print_r($arrResult);
 		return $arrResult;
 	}
 	
 	public function getArticleByType(&$intPage,&$total, $typeID,$selectField='*',$whereClause='',  $orderBy='')
-	{
-		
+	{		
 		$arrSummary = global_common::getContentIDs($this->_objConnection, $intPage, $typeID, global_common::ARTICLE_TYPE);
 		//print_r($arrSummary);
 		if($arrSummary)
 		{
-			if($orderBy)
-			{
-				$orderBy = ' ORDER BY '.$orderBy;
-			}
-			$listArticleID='';
-			
-			foreach($arrSummary as $item)
-			{
-				$listArticleID = $item[global_mapping::SubContents].$listArticleID;
-			}
-			$IDList = global_common::splitString($listArticleID);
-			$total = count($IDList);
-			//echo $total;
-			$arrDocInTable =  global_common::getListTableName($listArticleID,$intPage,Model_Article::NUM_PER_PAGE,global_common::SEPARATE_BY_MONTH);
-			$strSQL ='';
-			//print_r($arrDocInTable);
-			$condition = '';
-			foreach ($arrDocInTable as $key=>$iDoc)
-			{		
-				//print_r($iDoc);				
-				//check endWith ',' and then remove it
-				if(global_common::endsWith($iDoc,','))
-				{
-					$strDocInTable = global_common::cutLast($iDoc,1);	
-				}
-				
-				$strTableName = Model_Article::TBL_SL_ARTICLE.'_'.$key;
-				if($whereClause)
-				{
-					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
-						global_mapping::ArticleID.'` IN ('.$strDocInTable.') and '.$whereClause;	
-				}
-				else
-				{
-					$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
-						global_mapping::ArticleID.'` IN ('.$strDocInTable.')';	
-				}
-				
-				
-				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
-						array($selectField, $strTableName, $condition.$orderBy ))." ) UNION ALL ";	
-			}
-			//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
-			$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
-			//echo $strSQL;
-			
-			$arrResult = $this->_objConnection->selectCommand($strSQL);
-			$arrResult = global_common::mergeUserInfo($arrResult);
-			//print_r($arrResult);
-			
+			$strSQL = self::getSQLSelectByTableName($arrSummary,$intPage,0,$selectField,$whereClause, $orderBy);
+			$arrResult = self::getArticlesFromDB($strSQL);
+			//print_r($arrResult);			
 			return $arrResult;
 		}		
 		return null;
@@ -428,13 +384,15 @@ class Model_Article
 					<td>'.$arrResult[$i]['ModifiedDate'].'</td>
 					<td>'.$arrResult[$i]['DeletedBy'].'</td>
 					<td>'.$arrResult[$i]['DeletedDate'].'</td>
-					<td><input type="checkbox" onclick="_objArticle.showHide(\''.$arrResult[$i]['ArticleID'].'\',\''.$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
+					<td><input type="checkbox" onclick="_objArticle.showHide(\''.$arrResult[$i]['ArticleID'].'\',\''.
+				$arrResult[$i]['name'].'\',this)" '.($arrResult[$i]['IsDeleted']?'':'checked=checked').' /></td>
 					<td class="lastCell">'.$arrResult[$i]['Status'].'</td>
 					</tr>';
 		}
 		$strHTML.='</tbody></table>';
 		
-		$strHTML .= "<div>".global_common::getPagingHTMLByNum($intPage,self::NUM_PER_PAGE,global_common::getTotalRecord(self::TBL_SL_ARTICLE,$this->_objConnection),
+		$strHTML .= "<div>".global_common::getPagingHTMLByNum($intPage,self::NUM_PER_PAGE,
+				global_common::getTotalRecord(self::TBL_SL_ARTICLE,$this->_objConnection),
 				"_objMenu.changePage")."</div>";
 		return $strHTML;
 	}
@@ -451,12 +409,23 @@ class Model_Article
 		}
 		//print_r($article);
 		$strHTML = '<div class="article-memo">
+				<div class="article-memo-user">
+				<div class="user-info">
+				<div><img src="'.$avatar.'" /></div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::UserName].'</div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::CreatedDate].'</div>
+				</div>
+				</div>
 				<div class="article-memo-detail">
-				<div class="article-memo-content">
+				
 				<div class="article-memo-control">
 				<div class="favourite"> LIKE </div>
 				</div>
-				<h2><a href="article_detail.php?articleid='.$article[global_mapping::ArticleID].'"> '.$article['Title'].'</a></h2>
+				<div class="article-memo-content">
+				<h2 class="title"><a href="article_detail.php?articleid='.
+			$article[global_mapping::ArticleID].'"> '.$article['Title'].'</a></h2>
+				<p>'.$article[global_mapping::Content].'</p>
+				</div>	
 				<div class="article-short-info">
 				<span><b>Anonymous</b> Comment: 24-12-2012</span>
 				<span class="paging"> 
@@ -464,23 +433,127 @@ class Model_Article
 				</span>
 				</div>
 				</div>
-				</div>
-				<div class="article-memo-user">
-				<div class="user-info">
-				<div><img src="'.$avatar.'" width="120" height="100" /></div>
-				<div>'.$article[global_mapping::CreatedBy][global_mapping::UserName].'</div>
-				<div>'.$article[global_mapping::CreatedBy][global_mapping::CreatedDate].'</div>
-				</div>
-				</div>
+				
 				<input type=hidden id="articleID" value="'.$article[global_mapping::ArticleID].'" />
 				</div>';
 		return $strHTML;
 	}
-			
+	
+	public function getArticleDetail($article)
+	{
+		if($article[global_mapping::CreatedBy][global_mapping::Avatar])
+		{
+			$avatar = '/file/avatar/'.$article[global_mapping::CreatedBy][global_mapping::Avatar];
+		}
+		else
+		{
+			$avatar = '/image/default/default_logo.jpg';
+		}
+		//print_r($article);
+		$strHTML = '<div class="article-memo">
+				<div class="article-memo-user">
+				<div class="user-info">
+				<div><img src="'.$avatar.'" /></div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::UserName].'</div>
+				<div>'.$article[global_mapping::CreatedBy][global_mapping::CreatedDate].'</div>
+				</div>
+				</div>
+				<div class="article-memo-detail">						
+				<div class="article-memo-control">
+				<div class="favourite"> LIKE </div>
+				</div>
+				<div class="article-memo-content">
+				<h2 class="title"><a href="article_detail.php?articleid='.
+			$article[global_mapping::ArticleID].'"> '.$article['Title'].'</a></h2>
+				<p>'.$article[global_mapping::Content].'</p>
+				</div>							
+				</div>						
+				<input type=hidden id="articleID" value="'.$article[global_mapping::ArticleID].'" />
+				</div>';
+		return $strHTML;
+	}	
 	#endregion   
 	
 	#region Private Functions
 	
+	/**
+	 * get sql select articles from multi tables
+	 *
+	 * @param mixed $arrSummary This is a description
+	 * @param mixed $intPage This is a description
+	 * @param mixed $topRow top of article, 0: get all
+	 * @param mixed $selectField This is a description
+	 * @param mixed $whereClause This is a description
+	 * @param mixed $orderBy This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	private function getSQLSelectByTableName($arrSummary, $intPage, $topRow,$selectField, $whereClause,$orderBy) 
+	{
+		if($orderBy)
+		{
+			$orderBy = ' ORDER BY '.$orderBy;
+		}
+		$listArticleID='';
+		
+		foreach($arrSummary as $item)
+		{
+			$listArticleID = $item[global_mapping::SubContents].$listArticleID;
+		}
+		$arrDocInTable =  global_common::getListTableName($listArticleID,$intPage,
+				Model_Article::NUM_PER_PAGE,global_common::SEPARATE_BY_MONTH);
+				
+		$strSQL='';
+		$condition = '';
+		foreach ($arrDocInTable as $key=>$iDoc)
+		{		
+			//print_r($iDoc);				
+			//check endWith ',' and then remove it
+			if(global_common::endsWith($iDoc,','))
+			{
+				$strDocInTable = global_common::cutLast($iDoc,1);	
+			}
+			
+			$strTableName = Model_Article::TBL_SL_ARTICLE.'_'.$key;
+			if($whereClause)
+			{
+				$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+					global_mapping::ArticleID.'` IN ('.$strDocInTable.') and '.$whereClause;	
+			}
+			else
+			{
+				$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+					global_mapping::ArticleID.'` IN ('.$strDocInTable.')';	
+			}
+			
+			if($topRow>0)
+			{
+				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE_LIMIT, 
+						array($selectField, $strTableName, $condition.$orderBy,0,$topRow ))." ) UNION ALL ";	
+				
+			}
+			else
+			{
+				$strSQL .= "(".global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+						array($selectField, $strTableName, $condition.$orderBy ))." ) UNION ALL ";	
+			}
+		}
+		//xóa bỏ đoạn text UNION ALL cuối chuỗi $strSQL
+		$strSQL = global_common::cutLast($strSQL,strlen('UNION ALL '));
+		//echo $strSQL;
+		return $strSQL;
+	}
+	
+	private function getArticlesFromDB($strSQL)
+	{
+		$arrResult = $this->_objConnection->selectCommand($strSQL);
+		if(!$arrResult)
+		{
+			global_common::writeLog('get sl_article from DB:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		return global_common::mergeUserInfo($arrResult);	
+	}
 	#endregion
 }
 ?>

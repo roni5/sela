@@ -23,7 +23,6 @@ include_once('class/model_comment.php');
 $objComment = new Model_Comment($objConnection);
 if ($_pgR["act"] == Model_Comment::ACT_ADD || Model_Comment::ACT_USER_COMMENT)
 {
-	
 	if (global_common::isCLogin() || true)
 	{
 		//get user info
@@ -49,11 +48,20 @@ if ($_pgR["act"] == Model_Comment::ACT_ADD || Model_Comment::ACT_USER_COMMENT)
 		$resultID = $objComment->insert($commentType,$articleID,$content);
 		if ($resultID)
 		{
+			$intPage = 1;
+			$total = 0;
+			$comments = $objComment->getCommentByArticle($intPage,$total,$articleID,'*','',' CreatedDate DESC');
+			$path = 'include/_comment_list.inc';
+			ob_start();
+			include($path);
+			$contents = ob_get_contents();
+			ob_end_clean();
+			
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
 			echo global_common::convertToXML(
-					$arrHeader, array("rs", "inf"), 
-					array(1, $result), 
-					array( 0, 1 )
+					$arrHeader, array('rs', 'inf','list'), 
+					array(1,'Your comment was posted successfully',$contents), 
+					array( 0, 1,1)
 					);
 			return;
 		}

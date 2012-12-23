@@ -24,8 +24,11 @@ if ($_pgR["articleid"])
 include_once('include/_header.inc');
 include_once('include/_menu.inc');
 include_once('include/_article.inc');
+echo '<div id= "comment-list">';
 include_once('include/_comment_list.inc');
+echo '</div>';
 include_once('include/_comment_editor.inc');
+
 ?>
 
 <?php 

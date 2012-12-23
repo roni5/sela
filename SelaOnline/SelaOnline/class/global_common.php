@@ -45,6 +45,7 @@ class global_common
 	const SQL_SELECT_GROUP_WHERE				= "SELECT {0} FROM `{1}` WHERE {2} GROUP BY {3}";
 	const SQL_SELECT_ORDER						= "SELECT {0} FROM `{1}` ORDER BY {2}";
 	const SQL_SELECT_FREE                       = "SELECT {0} FROM {1} {2}";
+	const SQL_SELECT_FREE_LIMIT                 = "SELECT {0} FROM {1} {2} LIMIT {3},{4}";
 	const SQL_SELECT_MAX_ID						= "SELECT MAX(`{0}`) as maxid FROM `{1}`";
 	const SQL_SELECT_ALL_TABLES					= "SHOW TABLES;";
 	const SQL_SELECT_TABLE_NAME					= "SHOW TABLES LIKE '{0}'";
@@ -722,6 +723,7 @@ class global_common
 	 */
 	public function isCLogin()
 	{		
+		return true;
 		// is authenticated
 		if(isset($_SESSION[self::SES_C_USERINFO]) && $_SESSION[self::SES_C_USERINFO]["active"]==1)
 		{	
@@ -1439,8 +1441,9 @@ class global_common
 	* This is method parseListIDToArray with index correspond with suffix Table
 	 *
 	 * @param string $IDList List ID
+	 * @param int $intPage page index, <=0: get all
+	 * @param int $pageSize List ID
 	 * @param int $iType Loại ID cần parse. 1->alphabet; 6->month.
-	 * @return array Array of ID with index correspond with suffix Table
 	 * @author ThanhViet edited [20110516]
 	 */
 	public function getListTableName($IDList,$intPage,$pageSize,$iType)
@@ -1450,7 +1453,11 @@ class global_common
 		{
 			$IDList = global_common::splitString($IDList);
 		}
-		$IDList = global_common::getTopOfArray($IDList,($intPage-1)*$pageSize,$pageSize);
+		if($intPage >= 1)
+		{
+			$IDList = global_common::getTopOfArray($IDList,($intPage-1)*$pageSize,$pageSize);	
+		}
+		
 		foreach ($IDList as $key)
 		{
 			$arrDocInTable[substr($key,0,$iType)] .= '\''.$key.'\',';
@@ -1628,6 +1635,7 @@ class global_common
 			$out.= bin2hex(mb_substr($text,$i,1,'UTF-16'));
 		return $out;
 	}
+	
 	/**
 	 * xác định ngôn ngữ trong một chuỗi (tiếng anh hoặc tiếng việt)
 	 *
@@ -1655,6 +1663,7 @@ class global_common
 			return 0;
 		}
 	}
+	
 	/**
 	 * Công thêm 1 đơn vị cho ký tự vd: ('a'+1->b)
 	 *
@@ -1770,7 +1779,8 @@ class global_common
 	 */
 	public function getMessageHeaderArr($banCode,$ssExpire)
 	{
-		$arrHeader = array();
+		return array(0,0,0);
+		
 		// check ban user
 		$arrHeader[0] = (empty($banCode))?0:$banCode;
 		// check session expire
@@ -2106,6 +2116,7 @@ class global_common
 				return $seconds;
 		}
 	}
+	
 	/**
 	 * Hàm cắt chuỗi với nhiều delimiter
 	 *
@@ -2137,6 +2148,7 @@ class global_common
 		}
 		return $return_array; // Return the exploded elements
 	}
+	
 	/**
 	 *Hàm Convert from UTF8 to Ascii
 	 *
@@ -2180,6 +2192,7 @@ class global_common
 		}
 		return $str;
 	}
+	
 	/**
 	 * Kiểm tra chuối đưa vào có phải là chuỗi unicode ko?
 	 *
@@ -2316,8 +2329,9 @@ class global_common
 		//echo 'current: '.$intCurrPage;
 		if ($intTotalResult<=$intResultsInOnePage)
 			return "";
-		$strPages = "<input type=\"hidden\" id=\"txtPage\" name=\"txtPage\" value=\"".($intCurrPage?$intCurrPage:1)."\" />";
-		$strPages .= "\n<b>Page &nbsp;&nbsp;</b>";
+		$strPages = "<div class='paging-dropdown'>";
+		$strPages .= "<input type=\"hidden\" id=\"txtPage\" name=\"txtPage\" value=\"".($intCurrPage?$intCurrPage:1)."\" />";
+		//$strPages .= "\n<b>Page &nbsp;&nbsp;</b>";
 		$i = $intCurrPage;	
 		$intMaxPages = ceil($intTotalResult/$intResultsInOnePage);
 		
@@ -2358,6 +2372,7 @@ class global_common
 		{
 			$strPages.= "Next &nbsp;&nbsp; Last &nbsp;&nbsp;";
 		}
+		$strPages .= "</div>";
 		/*
 		$strPages.= "<b> Of Total Page: $intMaxPages &nbsp;&nbsp;Start Row: ";
 		$strPages.= ((($intCurrPage-1)*$intResultsInOnePage)+1)."&nbsp;====>&nbsp;";
@@ -2366,6 +2381,7 @@ class global_common
 		*/
 		return $strPages;
 	}
+	
 	public function getPagingHTMLByNumWithType($intCurrPage, $intResultsInOnePage, $intTotalResult, $jsFuncName,$object_id,$type)
 	{
 		if ($intTotalResult<=$intResultsInOnePage)
@@ -2419,6 +2435,7 @@ class global_common
 		*/
 		return $strPages;
 	}
+	
 	/**
 	 * Phương thức phần trang chỉ có next,prev and first
 	 *
@@ -2661,6 +2678,7 @@ class global_common
 		$arrList = explode($sepChar, $strDecode);
 		return $arrList;
 	}
+	
 	/**
 	 * lấy con số id lớn nhất tiếp theo của một bảng
 	 *
@@ -2669,8 +2687,7 @@ class global_common
 	 * @param object $readonly nếu được truyền và true thì chỉ đọc lên rồi trả về, ngược lại thì tăng lên 1
 	 * @return int id lớn nhất
 	 *	@@author PhongHong edited[20110426]
-	 */
-	
+	 */	
 	public function getMaxID($strTableName, $intReserveId=1, $readonly)
 	{
 		$strFileName = self::FOLDER_FILES_MAXID.$strTableName;
@@ -2701,6 +2718,7 @@ class global_common
 		return false;
 		
 	}
+	
 	public function getCharsMD5()
 	{
 		$arrMD5 = array(" " =>"7215ee9c7d9dc229d2921a40e899ec5f",
@@ -3291,6 +3309,7 @@ class global_common
 		}
 		
 	} 
+	
 	/**
 	 * Phương thức cập nhật delete_flag
 	 *
@@ -3311,6 +3330,7 @@ class global_common
 		}
 		return 1;
 	}
+	
 	/**
 	 * Phương thức cập nhật delete_flag
 	 *
@@ -3342,6 +3362,7 @@ class global_common
 		}
 		return 1;
 	}
+	
 	/**
 	 * Phương thức cập nhật delete_flag
 	 *
@@ -3372,6 +3393,7 @@ class global_common
 		}
 		return 1;
 	}
+	
 	/**
 	 * This is method deleteObject
 	 *
@@ -3394,6 +3416,7 @@ class global_common
 		}	
 		return true;
 	}
+	
 	/**
 	 * This is method deleteObjectByCondition
 	 *
@@ -3416,6 +3439,7 @@ class global_common
 		}	
 		return true;
 	}
+	
 	public function formatDateTimeVN($mySqlDateTime)
 	{
 		return substr($mySqlDateTime,8,2)."/".substr($mySqlDateTime,5,2)."/".substr($mySqlDateTime,0,4) .' '. substr($mySqlDateTime,11,2).":".substr($mySqlDateTime,14,2).":".substr($mySqlDateTime,17,2) ;
@@ -3438,8 +3462,7 @@ class global_common
 		}
 		return preg_split('/'.$delimiter.'/', $stringValue , -1, PREG_SPLIT_NO_EMPTY);
 	}
-	
-	
+		
 	/**
 	 * This is method array_column to one column
 	 *
@@ -3452,6 +3475,32 @@ class global_common
 	{
 		foreach ($array as $row) $ret[] = $row[$column];
 		return $ret;
+	}
+	
+	
+	/**
+	 * Convert array, string ids to query where IN. ex: 1,2,3=> '1','2','3'
+	 *
+	 * @param mixed $stringValue This is a description
+	 * @param mixed $delimiter This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	public function convertToQueryIN($stringValue,$delimiter=',') {
+		if(!is_array($stringValue))
+		{
+			$stringValue = implode($delimiter,$stringValue);
+		}
+		$strQueryIDs = '';
+		foreach($stringValue as $item)
+		{
+			$strQueryIDs .= '\''.$item.'\',';
+		}
+		if(strlen($strQueryIDs)>0)
+		{
+			$strQueryIDs = global_common::cutLast($strQueryIDs,1);	
+		}
+		return $strQueryIDs;
 	}
 	
 	public function getTopOfArray($array,$offset, $numElement) {
@@ -3566,7 +3615,16 @@ class global_common
 		return (substr($haystack, -$length) === $needle);
 	}
 	
-	
+	/**
+	 * get lits articles form table summary by contentID (articleID, article type ID,...) and type (article, category)
+	 *
+	 * @param object $objConnection connect to db
+	 * @param string $intPage for paging
+	 * @param string $contentID 
+	 * @param string $type value of type: article, category
+	 * @return array 
+	 * GiaTran
+	 */
 	public function getContentIDs($objConnection,&$intPage,$contentID,$type) {
 		if(!$intPage)
 		{
@@ -3580,12 +3638,43 @@ class global_common
 		return $objConnection->selectCommand($strSQL);	
 	}
 	
+	/**
+	 * get lits articles form table summary by contentID (articleID, article type ID,...) and type (article, category) by multi IDs
+	 *
+	 * @param object $objConnection connect to db
+	 * @param string $contentIDs
+	 * @param string $type value of type: article, category
+	 * @return array 
+	 * GiaTran
+	 */
+	public function getContentInfoByIDs($objConnection,$contentIDs,$type) 
+	{
+		$whereTemp ='WHERE '.global_mapping::ContentID.' IN('.$contentIDs.') and '.global_mapping::Type.'=\''.$type.'\'';		
+		$orderTemp ='ORDER BY '.global_mapping::PeriodTime.' DESC ';		
+		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					global_common::TBL_SL_CONTENT_SUMMARY,$whereTemp.$orderTemp));
+		//echo $strSQL;
+		return $objConnection->selectCommand($strSQL);	
+	}
+	
 	public function updateContents($objConnection,$contentID,$subContentID,$type)
 	{
 		$strSQL = 'CALL sp_update_content_summary(\''.$contentID.'\',\''.$subContentID.'\',\''.
 			global_common::getTableSuffixByMonth($subContentID).'\',\''.$type.'\');';
 		//echo $strSQL;
 		return $objConnection->selectMultiCommand($strSQL);	
+	}
+	
+	public function getContentIncludeFile($path) 
+	{
+		/*$fileInclude = include $path;
+		echo $fileInclude;
+		return $fileInclude; // This outputs 'somevalue'.*/
+		ob_start();
+		include($path);
+		$contents = ob_get_contents();
+		ob_end_clean();
+		return $contents;
 	}
 	#end region
 	

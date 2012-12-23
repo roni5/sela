@@ -1,5 +1,4 @@
 <?php
-
 /* TODO: Add code here */
 foreach($comments as $item)
 {
