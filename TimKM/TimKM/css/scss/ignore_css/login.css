@@ -1,0 +1,10 @@
+#login-page {
+  min-height: 500px;
+  text-aign: center; }
+  #login-page form {
+    padding: 90px 0; }
+    #login-page form table.table-login {
+      width: 50%;
+      margin: auto; }
+      #login-page form table.table-login tr td input.remember {
+        margin: 0 5px; }

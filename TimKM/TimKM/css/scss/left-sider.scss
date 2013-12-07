@@ -1,0 +1,22 @@
+#left-sider{
+	float: left;
+    min-width: 280px;
+	>ul
+	{
+		color: $color_header_menu;	
+		line-height: 33px;	
+		font-size: 14px;
+		margin-left: 55px;
+		font-weight: bold;
+		li
+		{		
+			color: $color_body;
+			font-size: 12px;			
+			height: 31px;
+			list-style: circle outside none;
+			margin-left: 15px;
+			padding: 2px 1px;
+			text-align: left;
+		}		
+	}
+}

@@ -1,0 +1,101 @@
+#search-box
+{	
+    border:none;
+    display:inline-block;
+	margin-left: 52px;
+	width: 100%;
+	input[type='text']
+	{
+		background: none repeat scroll 0 0 gray;
+		border: medium none;
+		color: $color_body;
+		font-weight: bold;
+		opacity: 0.7;
+		padding: 10px;
+		width: 350px;
+		margin-bottom: 0;
+	}
+	::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $color_body;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color:    $color_body;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color:    $color_body;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color:    $color_body;
+	}
+	input[type='button'] {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		position: relative;
+		left: -41px;
+		top: 3px;
+		background: url("../images/search25.png") right top repeat;
+		border: none;
+		cursor:pointer;
+		
+	}
+	select#optlocation
+	{
+		padding:9px;
+		margin: 0;
+		-webkit-border-radius:0px;
+		-moz-border-radius:0px;
+		border-radius:0px;
+		-webkit-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
+		-moz-box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
+		box-shadow: 0 0px 0 #ccc, 0 0px #fff inset;
+		background: gray;
+		color:$color_body;
+		border:none;
+		outline:none;
+		display: inline-block;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+		cursor:pointer;		
+		width:150px;
+		height: 40px;
+		
+	}
+	/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		select {padding-right:18px}
+	}
+
+	label 
+	{
+		position:relative;opacity:0.8;
+		display: inline;
+	}
+	label:after {
+		content:'<>';
+		font:11px "Consolas", monospace;
+		color:#aaa;
+		-webkit-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		transform:rotate(90deg);
+		right:8px; top:2px;
+		padding:0 0 2px;
+		border-bottom:1px solid #ddd;
+		position:absolute;
+		pointer-events:none;
+	}
+	label:before {
+		background: none repeat scroll 0 0 gray;
+		content: "";
+		display: block;
+		height: 24px;
+		pointer-events: none;
+		position: absolute;
+		right: 6px;
+		top: -6px;
+		width: 24px;
+		height: 35px;
+	}
+}

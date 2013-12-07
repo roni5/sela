@@ -1,0 +1,162 @@
+#article
+{
+	clear:both;	
+	margin-top:20px;
+	#article-detail
+	{		
+		width: 60%;
+		display: inline-block;		
+		margin: 0px 14px 0px 16px;
+		#article-content
+		{			
+			padding: 10px;
+			vertical-align: top;
+			margin-bottom:20px;
+			border: 5px solid $color_border;		
+			border: 5px solid $color_border_rbga;
+			-webkit-background-clip: padding-box; /* for Safari */
+			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */	
+			.name		
+			{
+				color:$color_header_menu;
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+			.title
+			{
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+			.content
+			{
+				font-size: 1.1em;
+				padding:15px;
+				text-align:justify;
+			}
+		}	
+		#comment-content
+		{
+			#comment-editor
+			{		
+				background: none repeat scroll 0 0 $color_border_rbga;
+				padding:10px;
+				.title
+				{	
+					
+					display: inline-block;
+					font-size: 15px;
+					font-weight: bolder;
+					height: 26px;
+					padding: 4px;
+					text-transform: uppercase;	
+					margin-bottom:10px;					
+					.icon
+					{
+						vertical-align: middle;	
+					}
+				}	
+				.avatar
+				{
+					vertical-align: top;
+					display: inline-block;
+					margin-right:10px;
+					margin-left: 8px;
+					img
+					{
+						height:65px;
+						vertical-align: top;
+					}
+				}
+				.comment_box
+				{
+					width:507px;
+					display: inline-block;
+					text-align:right;
+					textarea
+					{
+						vertical-align: top;
+						border:none;
+						height:45px;
+						width:99%;
+					}
+					input.btn
+					{
+						margin-top:4px;
+						margin-right:0px;
+					}
+				}
+			}
+			#comment-list
+			{
+				.item
+				{
+					vertical-align: top;
+					margin-top: 4px;	
+					padding:8px;
+					background: none repeat scroll 0 0 $color_border_rbga;
+					.avatar
+					{
+						display:inline-block;
+					}
+					.comment-detail
+					{
+						vertical-align: top;
+						display:inline-block;
+						width:530px;
+						.username
+						{		
+							line-height:10px;
+							a
+							{
+								
+							}
+						}
+						.comment-detail-content
+						{	
+							
+						}
+					}					
+				}
+			}
+		}
+	}
+	#company-info
+	{
+		display: inline-block;
+		text-align: right;
+		vertical-align: top;
+		margin-right:5px;
+		width: 33%;
+		
+		#company_address
+		{		
+			text-align:center;
+			font-weight: bold;
+			border: 5px solid $color_border;		
+			border: 5px solid $color_border_rbga;
+			-webkit-background-clip: padding-box; /* for Safari */
+			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+			.name{}
+			.address{}
+			.mobile{}
+			.website{}		
+		}
+		#company_map
+		{
+			.map-address
+			{
+				margin-top: 11px;
+				width: 100%;
+			}
+		}
+			
+		#company_partner
+		{
+			.partner
+			{
+				margin-top: 11px;
+				width: 100%;
+			}
+		}			
+	}	
+} 

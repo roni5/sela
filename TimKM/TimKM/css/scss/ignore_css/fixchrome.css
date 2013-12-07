@@ -1,0 +1,4 @@
+/* css for chorme */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #search-box input[type='button'] {
+    top: 8px; } }

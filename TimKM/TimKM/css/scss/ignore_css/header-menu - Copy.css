@@ -1,0 +1,12 @@
+#header-menu > ul li {
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+  border-right: 2px solid #FFFFFF;
+  color: black;
+  float: left;
+  font-size: 1.2em;
+  font-weight: bolder;
+  height: 31px;
+  padding: 21px 9px;
+  text-align: center; }
+#header-menu > ul li:last-child {
+  border-right: none; }
