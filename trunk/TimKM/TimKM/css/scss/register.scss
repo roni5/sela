@@ -1,0 +1,35 @@
+#register-page
+{
+	min-height: 500px;  
+	
+	text-aign:center;	
+	form
+	{
+		padding:0px 0;
+		div.table-register
+		{
+			margin: auto;
+			padding: 15px;
+			width: 70%;
+			margin:auto;
+			tr >td:first-child 
+			{
+				width:30%;
+			}
+			tr 
+			{
+				td
+				{	
+					.title
+					{
+						margin: 0 0 30px 0px;
+					}
+					.text
+					{
+						width: 250px;
+					}
+				}
+			}
+		}
+	}
+} 

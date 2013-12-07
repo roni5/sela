@@ -1,0 +1,16 @@
+#register-page {
+  min-height: 500px;
+  text-aign: center; }
+  #register-page form {
+    padding: 0px 0; }
+    #register-page form div.table-register {
+      margin: auto;
+      padding: 15px;
+      width: 70%;
+      margin: auto; }
+      #register-page form div.table-register tr > td:first-child {
+        width: 30%; }
+      #register-page form div.table-register tr td .title {
+        margin: 0 0 30px 0px; }
+      #register-page form div.table-register tr td .text {
+        width: 250px; }

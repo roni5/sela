@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "TimKM", "TimKM\TimKM.phpproj", "{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Local|PHP 5 = Local|PHP 5
+		Production|PHP 5 = Production|PHP 5
+		Staging|PHP 5 = Staging|PHP 5
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Local|PHP 5.ActiveCfg = Local|PHP 5
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Local|PHP 5.Deploy.0 = Local|PHP 5
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Production|PHP 5.ActiveCfg = Production|PHP 5
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Production|PHP 5.Deploy.0 = Production|PHP 5
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Staging|PHP 5.ActiveCfg = Staging|PHP 5
+		{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}.Staging|PHP 5.Deploy.0 = Staging|PHP 5
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

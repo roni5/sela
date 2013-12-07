@@ -1,0 +1,16 @@
+Note Photoshop:
+
+Resize box:
+- Select the layer you created your rectangle on
+- Click Edit -> Free Transform
+- Use the guides to resize your rectangle
+(Ctrl+T)
+
+Apply color to selection:
+Alt + Backspace
+
+Replace color:
+ Image > Adjustments > Replace 
+ 
+Select color:
+ Select > Color Range

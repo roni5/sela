@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<log4php:configuration xmlns:log4php="http://www.vxr.it/log4php/" threshold="all" debug="false">
+  <appender name="FILE_OUTPUT" class="LoggerAppenderFile">
+    <!--layout class = "LoggerLayoutHtml" />
+    <param name="file" value="files/log_10_/hellochao_fulltext.htm"/>
+    <param name="MaxFileSize" value="250KB"/>
+    <param name="MaxBackupIndex" value="100"/-->
+    <param name="file" value="file/logs_2012/fulltext.log"/>
+    <layout class="LoggerPatternLayout">
+      <param name="conversionPattern" value="%d [%t] %-5p %c %m%n"/> 
+    </layout>
+    <!--param name="MaxFileSize" value="250KB"/>
+    <param name="MaxBackupIndex" value="100"/-->
+  </appender>
+  <root>
+    <level value="debug" />
+    <appender_ref ref="FILE_OUTPUT" />
+  </root>
+</log4php:configuration>

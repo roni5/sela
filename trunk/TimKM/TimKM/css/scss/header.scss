@@ -1,0 +1,49 @@
+#header
+{
+	height:45px;
+	margin-top:0px;
+	border-bottom: 1px solid #2F1D35;
+	margin-bottom: 18px;
+	padding-bottom: 4px;
+	#header-menu
+	{
+		line-height: 14px;
+		>ul
+		{
+			li
+			{
+				/*background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+				border-right: 2px solid $color_body;
+				color: $color_header;
+				float: left;
+				font-size: 1em; 
+				font-weight: bolder; 
+				height: 24px;
+				padding: 10px 9px; 
+				text-align: center;*/
+				
+				border-right: 1px dotted white;
+				color: white;
+				float: left;
+				font-size: 1em;
+				font-weight: bolder;
+				height: 24px;
+				padding: 10px 9px;
+				text-align: center;
+				line-height:12px;
+				
+			}
+			li:last-child
+			{
+				border-right: none;
+			}
+		}		
+	}
+	#div-login
+	{
+		label
+		{
+			display: inline;
+		}
+	}
+}

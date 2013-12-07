@@ -1,0 +1,9 @@
+#right-slider {
+  float: left;
+  width: 650px; }
+  #right-slider .slider .flexslider .flex-direction-nav a {
+    height: 48px; }
+  #right-slider .slider .flexslider .flex-control-paging {
+    bottom: -18px; }
+    #right-slider .slider .flexslider .flex-control-paging li a {
+      background: none repeat scroll 0 0 rgba(240, 255, 255, 0.5); }

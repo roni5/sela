@@ -1,0 +1,504 @@
+2012-12-22 17:58:39,082 [7440] DEBUG dbconnection.php Execute SQL=(SELECT  FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120735') LIMIT 0,3 ) UNION ALL (SELECT  FROM sl_article_201209 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120945','20120946','20120947') LIMIT 0,3 ) 
+2012-12-22 17:58:39,082 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `Article' at line 1
+2012-12-22 17:58:39,082 [7440] FATAL  get sl_article from DB:(SELECT  FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120735') LIMIT 0,3 ) UNION ALL (SELECT  FROM sl_article_201209 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120945','20120946','20120947') LIMIT 0,3 ) 
+2012-12-22 17:59:03,935 [7440] DEBUG dbconnection.php Execute SQL=(SELECT  FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120735') LIMIT 0,3 ) UNION ALL (SELECT  FROM sl_article_201209 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120945','20120946','20120947') LIMIT 0,3 ) 
+2012-12-22 17:59:03,935 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `Article' at line 1
+2012-12-22 17:59:03,935 [7440] FATAL  get sl_article from DB:(SELECT  FROM sl_article_201207 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120735') LIMIT 0,3 ) UNION ALL (SELECT  FROM sl_article_201209 WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN ('20120945','20120946','20120947') LIMIT 0,3 ) 
+2012-12-22 18:07:18,805 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:07:18,805 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:07:47,428 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:07:47,428 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:08:32,293 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:08:32,293 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:08:58,043 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:08:58,043 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:05,822 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:05,822 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:08,192 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:08,192 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:09,235 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:09,235 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:09,457 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:09,457 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:09,603 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:09,603 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:09,920 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:09,920 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:10,213 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:10,213 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:09:10,561 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:09:10,561 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:10:01,717 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:10:01,717 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:10:45,407 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:10:45,407 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 18:12:17,351 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 18:12:17,351 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 20:21:33,266 [7440] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-22 20:21:33,266 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-22 21:05:35,917 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 21:05:35,917 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 21:05:42,129 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 21:05:42,129 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 21:56:27,246 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 21:56:27,246 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 21:56:29,498 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 21:56:29,498 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 21:56:33,250 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 21:56:33,250 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:00:16,622 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:00:16,622 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:00:42,934 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:00:42,934 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:01:09,675 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:01:09,675 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:01:17,266 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:01:17,266 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:01:50,331 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:01:50,331 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:04:33,099 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:04:33,099 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:04:38,928 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:04:38,928 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:05:06,443 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:05:06,443 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:05:10,068 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:05:10,068 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:05:27,405 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:05:27,405 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:05:58,991 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:05:58,991 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:06:01,657 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:06:01,657 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:06:19,611 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:06:19,611 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:06:29,640 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:06:29,640 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:06:32,735 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:06:32,735 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:06:50,031 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:06:50,031 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:07:20,563 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:07:20,563 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:07:27,218 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:07:27,218 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:07:30,116 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:07:30,116 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:07:48,728 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:07:48,728 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:09:09,336 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:09:09,336 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:09:47,179 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:09:47,179 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:10:35,498 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:10:35,498 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:11:33,066 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:11:33,066 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:17:33,965 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:17:33,965 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:17:38,340 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:17:38,340 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:18:14,889 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:18:14,889 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:18:19,627 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:18:19,627 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:18:36,480 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:18:36,480 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:18:44,680 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:18:44,680 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:19:09,678 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:19:09,678 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:19:17,738 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:19:17,738 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:19:59,749 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:19:59,749 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:20:22,765 [7300] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:20:22,765 [7300] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:20:33,463 [7300] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:20:33,463 [7300] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:21:03,327 [7300] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:21:03,327 [7300] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:22:19,928 [7300] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:22:19,928 [7300] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:22:48,355 [7300] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:22:48,355 [7300] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:25:17,123 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:25:17,123 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:26:25,035 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:26:25,035 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:26:32,265 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:26:32,265 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:28:31,162 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:28:31,162 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:29:59,410 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:29:59,410 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:30:07,757 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:30:07,757 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:35:27,637 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:35:27,637 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:35:44,216 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:35:44,216 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:36:22,839 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:36:22,839 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:36:23,104 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:36:23,104 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:37:19,230 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:37:19,230 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:37:35,632 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:37:35,632 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:39:33,103 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:39:33,103 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:43:58,344 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:43:58,344 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:44:04,217 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:44:04,217 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:44:48,915 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:44:48,915 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:44:52,337 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:44:52,337 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:47:26,936 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:47:26,936 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:48:09,546 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:48:09,546 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:52:57,352 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:52:57,352 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:52:57,658 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:52:57,658 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:04,222 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:04,222 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:16,785 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:16,785 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:18,470 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:18,470 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:23,788 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:23,788 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:28,568 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:28,568 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:31,267 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:31,267 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:46,019 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:46,019 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:53:50,578 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:53:50,578 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:54:23,237 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:54:23,237 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:54:28,005 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:54:28,005 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:54:35,425 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:54:35,425 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:56:29,222 [7440] DEBUG dbconnection.php SQL is empty.
+2012-12-22 22:56:29,222 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:56:29,222 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:56:32,908 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:56:32,908 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 22:59:57,385 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 22:59:57,385 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-22 23:00:02,441 [7440] DEBUG dbconnection.php Execute SQL=(select * from () as tbl_user)
+2012-12-22 23:00:02,441 [7440] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as tbl_user)' at line 1
+2012-12-24 00:36:33,177 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:36:33,177 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 00:36:47,941 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,3
+2012-12-24 00:36:47,941 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,3' at line 1
+2012-12-24 00:41:08,556 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,3
+2012-12-24 00:41:08,556 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,3' at line 1
+2012-12-24 00:42:14,767 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:42:14,767 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 00:42:35,442 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:42:35,442 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 00:42:57,370 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:42:57,370 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 00:45:40,867 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,3
+2012-12-24 00:45:40,867 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,3' at line 1
+2012-12-24 00:46:20,777 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,3
+2012-12-24 00:46:20,777 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,3' at line 1
+2012-12-24 00:50:37,749 [6944] DEBUG dbconnection.php Execute SQL=INSERT INTO `sl_article_201211`
+		(
+		ArticleID,
+		Prefix,
+		Title,
+		FileName,
+		ArticleType,
+		Content,
+		NotificationType,
+		Tags,
+		CatalogueID,
+		SectionID,
+		NumView,
+		NumComment,
+		CreatedBy,
+		CreatedDate,
+		ModifiedBy,
+		ModifiedDate,
+		DeletedBy,
+		DeletedDate,
+		IsDeleted,
+		Status
+		)
+		VALUES (
+		'20121148', '1', 'Bán các loại máy dụng cụ cầm tay giá thanh lý cực rẽ!!! 1', '1', '1', '<img src=\"http://www.5giay.vn/images/smilies/animated/85.gif\" alt=\"\" title=\"85\" class=\"inlineimg\" border=\"0\"><b>TH</b><b>ÔNG BÁO</b><img src=\"http://www.5giay.vn/images/smilies/animated/85.gif\" alt=\"\" title=\"85\" class=\"inlineimg\" border=\"0\"><br> <b>HÀNG ĐÃ VỀ ĐẦY ĐỦ NGÀY 30/11/2012</b><br> <b>CẤU TRÚC TOPIC</b><br> <ol class=\"decimal\"><li style=\"text-align: left\"><b>POST #1</b>THÔNG BÁO THÔNG TIN TOPIC, CHUYÊN DỤNG CỤ ĐIỆN CẦM TAY OZITO <br></li><li style=\"text-align: left\"><b>POST #2  </b>CHUYÊN CÁC LOẠI MÁY XỊT RỬA XE, MÁY BƠM NƯỚC, MÁY NÉN KHÍ <br></li><li style=\"text-align: left\"><b>POST #3  </b>CHUYÊN CÁC THIẾT BỊ APPLE, ĐIỆN TỬ CÁC LOẠI , LCD, ĐỒ CHƠI XE HƠI, ĐỒ CHƠI IPHONE IPOD <br></li><li style=\"text-align: left\"><b>POST #4 </b>CHUYÊN CÁC DỤNG CỤ ĐIỆN LÀM VƯỜN OZITO <br></li><li style=\"text-align: left\"><b>POST #5</b>CHUYÊN CÁC SẢN PHẨM NỘI THẤT  <br></li><li style=\"text-align: left\"><b>POST #6</b> CHUYÊN THIẾT BỊ ĐIỆN LẠNH, ĐIỆN GIA DỤNG<br>  </li></ol><br> <br> <b>THÔNG TIN KHUYẾN MÃI:</b><br> <img src=\"http://www.5giay.vn/images/smilies/animated/32_002.gif\" alt=\"\" title=\"32 002\" class=\"inlineimg\" border=\"0\"><b>SẢN PHẨM XUẤT HIỆN LẦN ĐẦU TIÊN TRÊN TOPIC</b><img src=\"http://www.5giay.vn/images/smilies/animated/32_002.gif\" alt=\"\" title=\"32 002\" class=\"inlineimg\" border=\"0\"><b>  <br> BÀN TRÀ GỖ ĐA NĂNG, CÁC THIẾT BỊ APPLE</b><br> <b>***BÁN TẤT CẢ CÁC LOẠI MŨI KHOAN NHẤP VÀO <a href=\"http://www.5giay.vn/noi-xay-dung/4251832-thanh-ly-ban-si-va-le-cac-loai-mui-khoan-gia-cuc-soc-cuc-re.html\" target=\"_blank\">ĐÂY</a> ***<br> ***THANH LÝ MÁY CẮT MÀI 2200W ĐĨA 230MM NẶNG HƠN 8KG<br> GIÁ CỰC SỐC: 500K-600k/MÁY***<br> </b><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/IMG_0131-1.jpg\" alt=\"\" border=\"0\"><br> <br>  Xin chào tất quý khách!!!<br> Hiện tại Cty mình mới nhập về lô hàng các loại máy dụng cụ cầm tay dùng   trong công nghiệp, nhà ở v.v... Các máy móc dụng cụ cầm tay này được  sản  xuất theo tiêu chuẩn của nước Úc hàng nhập khẩu trực tiếp từ Úc về  Việt  Nam. Máy mang thương hiệu OZITO được sử dụng rộng rãi khắp nước  Úc.<br> Các loại máy dụng cụ cầm tay tình trạng mới có cũ có hàng đã qua sử dụng cũng có nên giá sẽ chi ra từng loại:<br> THÔNG TIN GIÁ BÁN: NHẰM PHỤC VỤ ANH EM ĐAM MÊ DỤNG CỤ ĐIỆN CẦM TAY TỐT HƠN KỂ TỪ NGÀY 12/12/2012.<br> ANH EM NÀO CÓ NHU CẦU BÁO GIÁ  XIN ĐỂ LẠI NỘI DUNG VÀ ĐỊA CHỈ EMAIL MÌNH SẼ TRẢ LỜI ĐẦY ĐỦ THÔNG TIN  CHI TIẾT KỸ THUẬT GIÁ CẢ VÀ TÌNH TRẠNG CỤ THỂ TRONG THỜI GIAN SỚM NHẤT  HOẶC CALL TRỰC TIẾP ĐỂ BIẾT CHI TIẾT HƠN.<br> Do bên mình có rất nhiều loại máy cũng như tình trạng mới hay cũ mà có giá riêng biệt khác nhau:<br> Những loại máy được bên mình quy định bán giá theo KG có giá từ: TP.HCM 100-120k/kg, HÀ NỘI 110-130k/kg<img src=\"http://www.5giay.vn/images/smilies/animated/16_002.gif\" alt=\"\" title=\"16 002\" class=\"inlineimg\" border=\"0\"><br> Những loại máy được bên mình quy định bán giá theo cái sẽ có giá từ: TPHCM 300-2.000k/cái, HÀ NỘI 400k-2.100k/cái<img src=\"http://www.5giay.vn/images/smilies/animated/16_002.gif\" alt=\"\" title=\"16 002\" class=\"inlineimg\" border=\"0\"><br> <br> <b>Ngoài ra có những máy đặc  chủng máy mới còn trong thùng sẽ có giá khác nhau xin vui lòng call để  biết giá chính xác nhất tốt nhất.<br> </b><br> Các loại máy mới đều fullbox hết nha các bro đầy đủ phụ kiện.<br> Sau đây mình xin giới thiệu tính năng cũng như mục đích sử dụng của từng   loại máy. Do có quá nhiều loại máy nên mình chỉ xin giới thiệu một số   máy tiêu biều còn bro nào có nhu cầu thì alo cho mình nhé vơí phương   chăm máy gì cũng có.<br> <br>  1: Máy khoan  cầm tay mini sử dụng bằng pin 12V-14.4V-18V (PIN NIKEN) :  Dùng để khoan  những vật liệu mỏng, làm tua-vít để mở ốc các thiết bị  khác.<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/pin12v.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/maykhoanpin3.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/maykhoanpin4.jpg\" alt=\"\" border=\"0\"><br> 1A: Máy khoan vặn vít mini sử dụng pin 3.6V-12V-14.4V-18V (PIN LITIUM) : SẢN PHẨM MỚI <b>bộ Kits 02 món 18v, bộ Kits 04 món 18v</b><br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/C-SCREWDRIVER-SDR-036.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/LIR-144-ADVERT.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/LIR-144-ADVERT.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/CDL-018.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/CKL-182-HERO-GROUP-ed3-LR-2.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/CKL-018-GROUP-1.jpg\" alt=\"\" border=\"0\"><br>  2: Máy khoan điện cầm tay từ 280W-1100w: Dùng để khoan tường, sắt, nhôm, kim loại, bê tông.v.v....<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/DRILL-DRIVER-DDG-560V-CMYKmaykhoancamtay-1.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/ozhd710wamaykhoan.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/HAMMER-DRIll-OZHD1050WA.jpg\" alt=\"\" border=\"0\"><br> 3: Máy khoan búa từ 850W-1700W: chuyên khoan đục bê tông<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/maykhoanbetong.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/mykhoanbetong1500.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/DEMO-BREAKER-OZDB45JA-1maykhoandanag.jpg\" alt=\"\" border=\"0\"><br> <br> 4: Máy cắt cầm tay từ 850W-2200W: dùng cắt mài gạch, cắt mài sắt v.v...<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/ANGLE-GRINDER-AGG-100A-001-300dpi.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/agg-042k-1.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/SANDER-POLISHER-SPG-160VK.jpg\" alt=\"\" border=\"0\"><br> 5: Máy chà<b>nhám </b>máy đánh bóng 180W-1000W: dùng để chà sơn nước, dánh bóng đồ gỗ máy có túi tự đóng hút bụi khi làm việc.<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/OZRO450A-RANDOM-ORBITAL-SANDER-450Wmaydanhbong.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/osg-120k.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/BELT-SANDER-BSR-800.jpg\" alt=\"\" border=\"0\"><br> 6: Máy cưa hoa văn ( cưa lọng):<br> <br>  <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/JIGSAW-OZJS400Amaybanghim-1.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/RECIP-SAW-RSR-850.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/cuakiem.jpg\" alt=\"\" border=\"0\"><br> <br> 7: Máy sấy 2000W: <br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/kho2000w.jpg\" alt=\"\" border=\"0\"><br> <br> 8. Máy hút công nghiệp: hút được khô và nước 1100w-1200w<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/hutbui1200.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/hutbui1100.jpg\" alt=\"\" border=\"0\"><br> 9: Máy cắt để bàn 600w-1200w-1500w-1600w: cắt chủ yếu nhôm gỗ, gạch<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/CMS-210-ADVERTmaycathopkim.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/MITRE-SAW-OZSCMS1600WA.jpg\" alt=\"\" border=\"0\"><br>  <br> 10: Máy hàn điện lõi cuộn dùng que 130A - max 3.2li, mig 90A<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/hanmig.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/hanque.jpg\" alt=\"\" border=\"0\"><br> <br> 11: Máy bào gỗ: chỉ có 70,000-80,000đ/kg thôi<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/THICKNESSER-OZT1500WA-1.jpg\" alt=\"\" border=\"0\"><br> 12. Máy cưa xích bằng xăng hoặc điện:<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/maycudien.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/maycuaxang.jpg\" alt=\"\" border=\"0\"><br> <br> <b>13. Máy sắn gốc cạnh đa 250w hoặc 18v đa năng dùng cắt thạch cao, sắn gỗ, cắt sắt nhỏ nhôm mỏng</b><br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/catmaigoc.jpg\" alt=\"\" border=\"0\"><img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/MFT-012-HERO-ed3-LR-2.jpg\" alt=\"\" border=\"0\"><br>  <br>  Quý khách có nhu cầu xin gọi:<br> <img src=\"http://i779.photobucket.com/albums/yy80/quangthinhgt/BANERCTY-1.gif\" alt=\"\" border=\"0\"><br>  <img src=\"http://www.5giay.vn/images/smilies/animated/82.gif\" alt=\"\" title=\"82\" class=\"inlineimg\" border=\"0\">TP.HCM<b><a href=\"tel:0902805151\" target=\"_blank\"> 0902805151</a></b><b>(Thịnh)</b><br>  <b>Địa chỉ 1: 7/3 Nguyễn Văn Quỳ, P.Phú Thuận, Q.7, TP.HCM</b><b>(làm việc giờ hành chánh các ngày trong tuần Chủ Nhật nghỉ)    </b><b><br>  Địa chỉ 2: </b><b><a href=\"tel:0902805151\" target=\"_blank\">0902805151</a></b><b>(Thịnh)</b><br> <b>134 Hồ Văn Tư, P.Trường Thọ, Q. Thủ Đức, TP.HCM (làm việc 24/24 các ngày trong tuần kể cả T7, CN)-->Vùi lòng call trước khi đến.</b><br> <img src=\"http://www.5giay.vn/images/smilies/animated/82.gif\" alt=\"\" title=\"82\" class=\"inlineimg\" border=\"0\">HÀ NỘI: <b>0983548845 (Chị Nga)(Vui lòng call đặt hàng trước nhé)</b><br> <b>Địa chỉ: Số 8, Ngõ 281/89, P.Thanh Nh</b><b>àn</b><b>, Q. Hai Bà Trưng, Hà Nội.</b><b><br> </b><br> <a rel=\"nofollow\" href=\"http://images.diadiem.com/Profiles/snapshot/2011/9/14/020119142046475994464.jpeg\" target=\"_blank\"><img src=\"http://images.diadiem.com/Profiles/snapshot/2011/9/14/020119142046475994464.jpeg\" alt=\"\" border=\"0\"></a><br> <a rel=\"nofollow\" href=\"http://images.diadiem.com/Profiles/snapshot/2011/8/18/63683520118181627149894914.jpeg\" target=\"_blank\"><img src=\"http://images.diadiem.com/Profiles/snapshot/2011/8/18/63683520118181627149894914.jpeg\" alt=\"\" border=\"0\"></a>', '1', '1', '10', '1', 
+		'1', '1', '1', '', '', '', '', '', '', ''
+		);
+2012-12-24 00:50:37,749 [6944] FATAL dbconnection.php Execute SQL error=Table 'selaonline.sl_article_201211' doesn't exist
+2012-12-24 00:50:45,469 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:50:45,469 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 00:51:23,654 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 00:51:23,654 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:00:32,296 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:00:32,296 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:02:09,065 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:02:09,065 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:03:03,552 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:03:03,552 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:04:47,522 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:04:47,522 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:05:29,949 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:05:29,949 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:06:09,690 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:06:09,690 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:07:11,745 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2012-12-24 01:07:11,745 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2012-12-24 01:07:42,902 [6944] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,10
+2012-12-24 01:07:42,902 [6944] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,10' at line 1
+2013-01-02 20:25:24,752 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 20:25:24,752 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 20:25:56,894 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,10
+2013-01-02 20:25:56,894 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,10' at line 1
+2013-01-02 20:55:50,116 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 20:55:50,116 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 20:59:00,048 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 20:59:00,048 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 21:06:07,641 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 21:06:07,641 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 21:07:32,450 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 21:07:32,450 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 21:07:43,736 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 21:07:43,736 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-01-02 21:07:53,190 [7600] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-01-02 21:07:53,190 [7600] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:12:36,783 [5356] FATAL dbconnection.php Connect failed: Access denied for user 'userdev'@'localhost' (using password: YES)
+2013-10-20 20:31:28,285 [11424] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:31:28,285 [11424] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:31:28,285 [11424] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:14,460 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:14,460 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:14,460 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:14,683 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:14,683 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:14,683 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:16,418 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:16,418 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:16,506 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:16,506 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:18,903 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:18,903 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:18,903 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:18,993 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:18,993 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:18,993 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:20,684 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:20,684 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:20,773 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:20,773 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:21,871 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:21,871 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:21,871 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:21,961 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:21,961 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:21,961 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:22,686 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:22,686 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:22,766 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:22,766 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:23,625 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:23,625 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:23,625 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:23,713 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:23,713 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:23,713 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:24,546 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:24,546 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:24,624 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:24,624 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:25,599 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:25,599 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:25,599 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:25,688 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:25,688 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:25,688 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:26,573 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:26,573 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:26,649 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type   limit -15,15
+2013-10-20 20:40:26,649 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-15,15' at line 1
+2013-10-20 20:40:27,654 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:27,654 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:27,654 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:27,735 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:40:27,735 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-10-20 20:40:27,735 [17592] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-10-20 20:41:08,081 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-10-20 20:41:08,081 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-10-20 20:41:08,287 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-10-20 20:41:08,287 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-10-20 20:45:07,069 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-10-20 20:45:07,069 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-10-20 20:47:34,503 [17592] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-10-20 20:47:34,503 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-10-20 20:47:55,475 [17592] DEBUG dbconnection.php Execute SQL=INSERT INTO `sl_article`
+		(
+			ArticleID,
+			Prefix,
+			Title,
+			FileName,
+			ArticleType,
+			Content,
+			NotificationType,
+			Tags,
+			CatalogueID,
+			SectionID,
+			NumView,
+			NumComment,
+			CreatedBy,
+			CreatedDate,
+			ModifiedBy,
+			ModifiedDate,
+			DeletedBy,
+			DeletedDate,
+			IsDeleted,
+			Status,
+			comments,
+			RenewedDate,
+			RenewedNum
+        )
+        VALUES (
+			'49', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', ''
+        );
+2013-10-20 20:47:55,475 [17592] FATAL dbconnection.php Execute SQL error=Duplicate entry '49' for key 'PRIMARY'
+2013-10-20 20:47:55,475 [17592] DEBUG dbconnection.php Execute SQL=CREATE TABLE `sl_article` (
+
+			`ArticleID` varchar(20),
+			`Prefix` varchar(255),
+			`Title` varchar(255),
+			`FileName` varchar(255),
+			`ArticleType` varchar(20),
+			`Content` ,
+			`NotificationType` varchar(20),
+			`Tags` ,
+			`CatalogueID` varchar(20),
+			`SectionID` varchar(20),
+			`NumView` ,
+			`NumComment` ,
+			`CreatedBy` varchar(20),
+			`CreatedDate` ,
+			`ModifiedBy` varchar(20),
+			`ModifiedDate` ,
+			`DeletedBy` varchar(20),
+			`DeletedDate` ,
+			`IsDeleted` ,
+			`Status` varchar(20),
+			`comments` ,
+			`RenewedDate` ,
+			`RenewedNum` ,
+			PRIMARY KEY(ArticleID)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+2013-10-20 20:47:55,475 [17592] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '
+			`NotificationType` varchar(20),
+			`Tags` ,
+			`CatalogueID` varchar(20),' at line 8
+2013-10-20 20:47:55,475 [17592] FATAL  Error add sl_article:INSERT INTO `sl_article`
+		(
+			ArticleID,
+			Prefix,
+			Title,
+			FileName,
+			ArticleType,
+			Content,
+			NotificationType,
+			Tags,
+			CatalogueID,
+			SectionID,
+			NumView,
+			NumComment,
+			CreatedBy,
+			CreatedDate,
+			ModifiedBy,
+			ModifiedDate,
+			DeletedBy,
+			DeletedDate,
+			IsDeleted,
+			Status,
+			comments,
+			RenewedDate,
+			RenewedNum
+        )
+        VALUES (
+			'49', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '', '', '', '', '', ''
+        );
+2013-11-03 09:52:29,618 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 09:52:29,618 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 09:52:29,618 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 09:52:30,129 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 09:52:30,129 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 09:52:30,129 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:18:20,446 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:18:20,446 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:18:20,446 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:18:20,598 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:18:20,598 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:18:20,598 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:19:55,106 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:19:55,106 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:19:55,106 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:19:55,236 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:19:55,236 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:19:55,236 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:20:05,619 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:20:05,619 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:20:05,619 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:31:56,437 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:31:56,437 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:31:56,437 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:32:54,682 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:32:54,682 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:32:54,682 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:34:48,564 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:34:48,564 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:34:48,564 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:38:03,539 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:38:03,539 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:38:03,539 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:21,029 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:21,029 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:39:21,029 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:28,865 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:28,865 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:39:28,865 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:30,098 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:30,098 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:39:30,098 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:43,303 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:39:43,303 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:39:43,303 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:44:40,249 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:44:40,249 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:44:40,249 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:46:05,528 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:46:05,528 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:46:05,528 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:48:07,791 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 10:48:07,791 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 10:48:07,791 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 11:05:04,473 [6088] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-03 11:05:04,473 [6088] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-03 11:05:04,473 [6088] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-10 16:06:39,993 [8132] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-11-10 16:06:39,993 [8132] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-11-10 16:07:27,617 [8132] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-11-10 16:07:27,617 [8132] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-11-10 16:07:27,759 [8132] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article 0  limit 0,15
+2013-11-10 16:07:27,759 [8132] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0  limit 0,15' at line 1
+2013-11-15 00:40:14,183 [6348] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-15 00:40:14,183 [6348] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-15 00:40:14,183 [6348] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-15 00:40:14,308 [6348] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
+2013-11-15 00:40:14,308 [6348] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+2013-11-15 00:40:14,308 [6348] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleType` IN (Array) LIMIT 0,
