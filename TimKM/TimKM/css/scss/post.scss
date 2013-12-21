@@ -1,4 +1,47 @@
 #post-page
 {
 	min-height: 500px;
+	.table-post
+	{
+		.zone
+		{
+			margin: 10px 0 0 0 ;
+			.zone-title
+			{
+				color: $color_header_menu;
+				font-size: 1.1em;
+			}
+			
+		}		
+		.ad-value
+		{			
+			margin-top: 3px;
+			vertical-align: top;
+		}
+		.address-article
+		{
+			.btn-add
+			{
+				vertical-align: top;
+				padding: 4px 20px;
+				margin: 0;
+			}			
+		}
+	
+		.controls.row-item
+		{
+			margin-bottom:0px;				
+			border-top: 1px solid #e5e5e5;
+			padding-top:5px;
+			padding-bottom:5px;
+			
+			label.lbl-address
+			{
+				min-height:15px;
+				margin:0;
+				cursor: text;
+			}				
+		}
+		
+	}	
 } 

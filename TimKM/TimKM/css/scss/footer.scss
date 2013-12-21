@@ -8,6 +8,7 @@
 	img.border
 	{
 		height:5px;
+		border: none;
 	}
 	ul
 	{
@@ -17,9 +18,14 @@
 			display: inline;
 			border-right: 2px solid $color_body;
 			padding: 0 17px;
-			a{ color:$color_body; text-decoration:none;cursor: pointer}  
-			a:visited{ color:$color_body; text-decoration:none;}
-			a:hover {color:$color_body !important; background-position:-9px 0; text-decoration:none}
+			a, a:visited
+			{ 
+				color:$color_body; text-decoration:none;cursor: pointer
+			}  
+			a:hover
+			{
+				color:$color_hover;
+			}			
 		}
 		li:last-child
 		{

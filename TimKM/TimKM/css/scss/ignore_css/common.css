@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$color_body".
-        on line 17 of ./common.scss
+        on line 23 of ./common.scss
 
-12: 	border-radius: 0px;
-13: }
-14: 
-15: .btn
-16: {
-17: 	color: $color_body;
-18: 	border:1px solid #15aeec; 
-19: 	-webkit-border-radius: 3px; 
-20: 	-moz-border-radius: 3px;
-21: 	border-radius: 3px;
-22: 	font-size:12px;
+18: 	vertical-align: top !important;
+19: }
+20: 
+21: .btn
+22: {
+23: 	color: $color_body;
+24: 	border:1px solid #15aeec; 
+25: 	-webkit-border-radius: 0px; 
+26: 	-moz-border-radius: 0px;
+27: 	border-radius: 0px;
+28: 	font-size:12px;
 
 Backtrace:
-./common.scss:17
+./common.scss:23
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
@@ -60,4 +60,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color_body\".\A         on line 17 of ./common.scss\A \A 12: 	border-radius: 0px;\A 13: }\A 14: \A 15: .btn\A 16: {\A 17: 	color: $color_body;\A 18: 	border:1px solid #15aeec; \A 19: 	-webkit-border-radius: 3px; \A 20: 	-moz-border-radius: 3px;\A 21: 	border-radius: 3px;\A 22: 	font-size:12px;"; }
+  content: "Syntax error: Undefined variable: \"$color_body\".\A         on line 23 of ./common.scss\A \A 18: 	vertical-align: top !important;\A 19: }\A 20: \A 21: .btn\A 22: {\A 23: 	color: $color_body;\A 24: 	border:1px solid #15aeec; \A 25: 	-webkit-border-radius: 0px; \A 26: 	-moz-border-radius: 0px;\A 27: 	border-radius: 0px;\A 28: 	font-size:12px;"; }

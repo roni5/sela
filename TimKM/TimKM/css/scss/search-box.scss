@@ -27,7 +27,7 @@
 	:-ms-input-placeholder { /* Internet Explorer 10+ */
 		color:    $color_body;
 	}
-	input[type='button'] {
+	input[type='button'].btnSearch {
 		display: inline-block;
 		width: 25px;
 		height: 25px;
@@ -41,7 +41,7 @@
 	}
 	select#optlocation
 	{
-		padding:9px;
+		padding: 11px 9px; 
 		margin: 0;
 		-webkit-border-radius:0px;
 		-moz-border-radius:0px;

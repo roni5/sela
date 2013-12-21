@@ -22,6 +22,8 @@
 $(window).load(function(){
 	$('.flexslider').flexslider({
 		animation: "slide",
+		prevText: "",
+		nextText: "",
 		start: function(slider){
 		  $('body').removeClass('loading');
 		}

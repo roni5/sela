@@ -1,4 +1,10 @@
 <div id="article">
+	<div id="advertises">
+		<?php 
+		//article
+		include_once('_advertises.inc');
+		?>	
+	</div>
 	<div id="article-detail">
 		<div id="article-content">	
 			<div class="name">Quan an van Aiya</div>	

@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$color_border".
-        on line 15 of ./article.scss
+        on line 36 of ./article.scss
 
-10: 		#article-content
-11: 		{			
-12: 			padding: 10px;
-13: 			vertical-align: top;
-14: 			margin-bottom:20px;
-15: 			border: 5px solid $color_border;		
-16: 			border: 5px solid $color_border_rbga;
-17: 			-webkit-background-clip: padding-box; /* for Safari *\/
-18: 			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome *\/	
-19: 			.name		
-20: 			{
+31: 		#article-content
+32: 		{			
+33: 			padding: 10px;
+34: 			vertical-align: top;
+35: 			margin-bottom:20px;
+36: 			border: 5px solid $color_border;		
+37: 			border: 5px solid $color_border_rbga;
+38: 			-webkit-background-clip: padding-box; /* for Safari *\/
+39: 			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome *\/	
+40: 			.name		
+41: 			{
 
 Backtrace:
-./article.scss:15
+./article.scss:36
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/lib/sass/script/list.rb:71:in `block in _perform'
@@ -84,4 +84,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color_border\".\A         on line 15 of ./article.scss\A \A 10: 		#article-content\A 11: 		{			\A 12: 			padding: 10px;\A 13: 			vertical-align: top;\A 14: 			margin-bottom:20px;\A 15: 			border: 5px solid $color_border;		\A 16: 			border: 5px solid $color_border_rbga;\A 17: 			-webkit-background-clip: padding-box; /* for Safari */\A 18: 			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */	\A 19: 			.name		\A 20: 			{"; }
+  content: "Syntax error: Undefined variable: \"$color_border\".\A         on line 36 of ./article.scss\A \A 31: 		#article-content\A 32: 		{			\A 33: 			padding: 10px;\A 34: 			vertical-align: top;\A 35: 			margin-bottom:20px;\A 36: 			border: 5px solid $color_border;		\A 37: 			border: 5px solid $color_border_rbga;\A 38: 			-webkit-background-clip: padding-box; /* for Safari */\A 39: 			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */	\A 40: 			.name		\A 41: 			{"; }

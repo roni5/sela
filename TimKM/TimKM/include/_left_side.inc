@@ -1,24 +1,24 @@
 <div id="left-sider">
 	<ul>
-	Ăn uống- Giải trí
-	<li>
-		Cafe/Kem/Bánh
-	</li>
-	<li>
-		Quán ăn
-	</li>
-	<li>
-		Bar/Pub
-	</li>
-	<li>
-		Karaoke
-	</li>
-	<li>
-		Phim/Nhạc/Kịch
-	</li>
-	<li>
-		Nhà hàng
-	</li>
+		Ăn uống- Giải trí
+		<li>
+			<a href="article_list">	Cafe/Kem/Bánh</a>
+		</li>
+		<li>
+			<a href="article_list">	Quán ăn</a>
+		</li>
+		<li>
+			<a href="article_list">	Bar/Pub</a>
+		</li>
+		<li>
+			<a href="article_list">	Karaoke</a>
+		</li>
+		<li>
+			<a href="article_list">	Phim/Nhạc/Kịch</a>
+		</li>
+		<li>
+			<a href="article_list">	Nhà hàng</a>
+		</li>
 	</ul>
 	
 </div>

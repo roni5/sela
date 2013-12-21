@@ -23,10 +23,10 @@ class Model_User
     const ACT_CHANGE_PAGE					= 13;
     const ACT_SHOW_EDIT                     = 14;
     const ACT_GET                           = 15;
-	const ACT_LOGIN							= 100;
-	const ACT_LOGOUT						= 101;
-	const ACT_CHANGE_PASS					= 102;
-	const ACT_REGISTER						= 103;
+	const ACT_LOGIN							= 16;
+	const ACT_LOGOUT						= 17;
+	const ACT_CHANGE_PASS					= 18;
+	const ACT_REGISTER						= 19;
 	
 	const NUM_PER_PAGE                      = 15;
     
@@ -118,13 +118,30 @@ class Model_User
     
     #region Public Functions
     
+	public function register($userName,$password,$fullname,$birthDate,$email,$sex)
+	{
+		return $this->insert($userName,$password,$fullname,$birthDate,null,null,$email,$sex,null,null,null,null,null,null);
+	}
+	
     public function insert( $username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avatar,$accountid,$isactived)
 	{
-		$intID = global_common::getMaxID(self::TBL_SL_USER);
-		
 		$strTableName = self::TBL_SL_USER;
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_USER,
-				array(self::TBL_SL_USER,$intID,global_common::escape_mysql_string($username),global_common::escape_mysql_string($password),global_common::escape_mysql_string($fullname),global_common::escape_mysql_string($birthdate),global_common::escape_mysql_string($address),global_common::escape_mysql_string($phone),global_common::escape_mysql_string($email),global_common::escape_mysql_string($sex),global_common::escape_mysql_string($identity),global_common::escape_mysql_string($roleid),global_common::escape_mysql_string($userrankid),global_common::escape_mysql_string($avatar),global_common::escape_mysql_string($accountid),global_common::escape_mysql_string($isactived)));
+				array(self::TBL_SL_USER,null,
+				global_common::escape_mysql_string($username),
+				global_common::escape_mysql_string($password),
+				global_common::escape_mysql_string($fullname),
+				global_common::escape_mysql_string($birthdate),
+				global_common::escape_mysql_string($address),
+				global_common::escape_mysql_string($phone),
+				global_common::escape_mysql_string($email),
+				global_common::escape_mysql_string($sex),
+				global_common::escape_mysql_string($identity),
+				global_common::escape_mysql_string($roleid),
+				global_common::escape_mysql_string($userrankid),
+				global_common::escape_mysql_string($avatar),
+				global_common::escape_mysql_string($accountid),
+				global_common::escape_mysql_string($isactived)));
 		
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_USER,$this->_objConnection,$strTableName))
 		{

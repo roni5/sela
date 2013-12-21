@@ -31,7 +31,14 @@
 				padding: 10px 9px;
 				text-align: center;
 				line-height:12px;
-				
+				a
+				{
+					color: $color_body;
+				}
+				a:hover
+				{
+					color:$color_hover;
+				}				
 			}
 			li:last-child
 			{

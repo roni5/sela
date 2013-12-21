@@ -24,8 +24,6 @@ include_once('include/_header.inc');
 include_once('include/_menu.inc');
 
 ?>
-<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('FlexSlider/flexslider.css');?>">
-<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('FlexSlider/jquery.flexslider-min.js');?>"></script>
 
 <script type="text/javascript"> 
 

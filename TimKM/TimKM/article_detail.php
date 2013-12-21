@@ -25,9 +25,6 @@ include_once('include/_menu.inc');
 //include_once('include/_cat_list.inc');
 
 ?>
-<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('flexslider.css');?>">
-
-<script type="text/javascript" src="<?php echo $_objSystem->locateJs('jquery.flexslider-min.js');?>"></script>
 <script type="text/javascript"> 
 
 </script>
