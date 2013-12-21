@@ -8,11 +8,11 @@ Syntax error: Undefined variable: "$color_header_menu".
 4: 	>ul
 5: 	{
 6: 		color: $color_header_menu;	
-7: 		line-height: 33px;	
-8: 		font-size: 14px;
-9: 		margin-left: 55px;
-10: 		font-weight: bold;
-11: 		li
+7: 		
+8: 		line-height: 33px;	
+9: 		font-size: 14px;
+10: 		margin-left: 55px;
+11: 		font-weight: bold;
 
 Backtrace:
 ./left-sider.scss:6
@@ -70,4 +70,4 @@ C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.12/vendor/listen/lib/listen/adapter
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color_header_menu\".\A         on line 6 of ./left-sider.scss\A \A 1: #left-sider{\A 2: 	float: left;\A 3:     min-width: 280px;\A 4: 	>ul\A 5: 	{\A 6: 		color: $color_header_menu;	\A 7: 		line-height: 33px;	\A 8: 		font-size: 14px;\A 9: 		margin-left: 55px;\A 10: 		font-weight: bold;\A 11: 		li"; }
+  content: "Syntax error: Undefined variable: \"$color_header_menu\".\A         on line 6 of ./left-sider.scss\A \A 1: #left-sider{\A 2: 	float: left;\A 3:     min-width: 280px;\A 4: 	>ul\A 5: 	{\A 6: 		color: $color_header_menu;	\A 7: 		\A 8: 		line-height: 33px;	\A 9: 		font-size: 14px;\A 10: 		margin-left: 55px;\A 11: 		font-weight: bold;"; }

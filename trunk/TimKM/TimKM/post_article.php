@@ -226,85 +226,179 @@ elseif($_pgR['act'] == model_Article::ACT_DELETE)
 include_once('include/_header.inc');
 ?>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('sela_Article.js');?>"></script>
-<script type="text/javascript" src="<?php echo $_objSystem->locateJs('tinymce/tinymce.min.js');?>"></script>
-	
-<!--Begin Form Input -->
-<input type="hidden" id="adddocmode" name="adddocmode" value="1<?php //echo $intMode;?>" />
-<input type="hidden" id="txtPage" name="txtPage" value="<?php echo $_pgR["p"]?$intPage:1;?>" />
-<input type="hidden" id="txtID" name="txtID" value="" />
- <center>
-<br><h2 align="center">Đăng tin mới</h2>
-		<div class="input-field-border input-field-content" >
-				<div id="lgTitle" class="div_admin_group_title" style="">
-				<span style="cursor:default; font-family:inherit; display:none" id='status-add' name='status-add'>Nội dung tin</span></div>
-				
-				<div class="div_admin_group_content_inside" style="width: 100%; top: -20px;">
-				    <table id="tblPopUp" style="width: 100%;" border="0" cellpadding="2" cellspacing="0">
-                        <tbody>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Lĩnh vực</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'>
-								<select>
-									<option>
-										Ăn-Uống-Giải trí
-									</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Chuyên mục</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'>
-								<select>
-									<option>
-										Nhà hàng
-									</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Loại tin</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'>
-								<select>
-									<option>
-										Giảm %
-									</option>
-									<option>
-										Giảm tiền
-									</option>
-									<option>
-										Tặng quà
-									</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Nội dung</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><textarea id='txtContent' name='txtContent'  style='width: 49.5%;'  maxlength='65535' ></textarea></td>
-						</tr>
-						<tr>
-							<td width='110'><span style='cursor:default; font-family:inherit'>Tags</span></td>
-							<td width='10'><span class='forceFillForm'></span></td>
-							<td width='567'><textarea id='txtTags' name='txtTags'  style='width: 49.5%;'  maxlength='65535' ></textarea></td>
-						</tr>
-                        </tbody>
-                    </table>
-				</div>				
-				<div class="div_admin_group_content_inside" style="margin: 4px; display: block;" align="center">		
-				  <input id="btnOK" value="OK"  style="width: 50px;" onClick="_objArticle.btnSave_OnClick()" type="button" class="btn btn-oliver"> &nbsp;&nbsp;&nbsp;
-				  <input id="btnClose" value="Cancel" align="center" style="width: 65px;" onClick="_objArticle.showAddMode()" type="button" class="btn btn-oliver">  
-			  </div>					
-		</div>	
-	
-		</center>
+<div id="post-page" class="span10">
+	<form method="POST" class="form-horizontal">
+		<!--Begin Form Input -->
+		<input type="hidden" id="adddocmode" name="adddocmode" value="1<?php //echo $intMode;?>" />
+		<input type="hidden" id="txtPage" name="txtPage" value="<?php echo $_pgR["p"]?$intPage:1;?>" />
+		<input type="hidden" id="txtID" name="txtID" value="" />
+		<div class="table-post">
+			<div class="control-group">
+				<div class="controls">
+					<h1 class="m-wrap title">Đăng tin khuyến mãi</h1>
+				</div>
+			</div>
+			<div class="control-group margin-auto">
+				<div class="controls">
+					<label class="m-wrap">(*) là thông tin bắt buộc</label>
+					<label class="m-wrap">KM: Khuyến mãi</label>
+				</div>
+			</div>
+			<div class="control-group zone">
+				<div class="controls">
+					<h2 class="m-wrap zone-title">Thông tin đơn vị kinh doanh</h2>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Tên đơn vị *</label>
+				<div class="controls">
+					<input type="text" name="txtCompanyName" id="txtCompanyName" class="text m-wrap span6" maxlength="250" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Địa chỉ *</label>
+				<div class="controls">
+					<input type="text" name="txtCompanyAddress" id="txtCompanyAddress" class="text m-wrap span6" maxlength="250" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Web/Facebook</label>
+				<div class="controls">
+					<input type="text" name="txtCompanySite" id="txtCompanySite" class="text m-wrap" maxlength="250" />
+					<label class="m-wrap inline">Điện thoại *</label>
+					<input type="text" name="txtCompanyPhone" id="txtCompanyPhone" class="text m-wrap span3" placeholder="Vd: 0123456789, 0123-456-789,..." maxlength="250" />
+				</div>
+			</div>
+			<div class="control-group zone">
+				<div class="controls">
+					<h2 class="m-wrap zone-title">Thông tin khuyễn mãi</h2>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Lĩnh vực *</label>
+				<div class="controls">	
+					<select class="span6 chosen" name="cmArea" id="cmArea" data-placeholder="Chọn lĩnh vực" multiple="multiple" tabindex="1">
+						<option value="1">Ăn uống/ Giải trí</option>
+						<option value="2">Thời trang/ Làm đẹp</option>
+					</select>
+				</div>
+			</div>	
+			<div class="control-group">	
+				<label class="control-label">Chuyên Mục *</label>
+				<div class="controls">	
+					<select class="span6 chosen" name="cmCategory" id="cmCategory" data-placeholder="Chọn chuyên mục" multiple="multiple" tabindex="1">
+						<option value="1">Nhà hàng</option>
+						<option value="2">Ăn vặt</option>
+					</select>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Loại khuyến mãi *</label>
+				<div class="controls">
+					<input type="text" name="txtAdTypeValue" id="txtAdTypeValue" class="text ad-value" placeholder="Mua 1 tặng 1" maxlength="15" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Từ *</label>
+				<div class="controls">
+					<div class="input-append date date-picker text " data-date="21/12/2012"   data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
+						<input name="txtBirthday" id="txtBirthday" class="m-wrap m-ctrl-medium date-picker input-mask" mask-data="d/m/y" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+							<span class="add-on"><i class="icon-calendar"></i></span>
+					</div>
+					<label class="m-wrap inline">Đến * </label>
+					<div class="input-append date date-picker text " data-date="21/12/2012"   data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
+						<input name="txtBirthday" id="txtBirthday" class="m-wrap m-ctrl-medium date-picker input-mask" mask-data="d/m/y" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+							<span class="add-on"><i class="icon-calendar"></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Happy days</label>
+				<div class="controls">
+					<select class="span3 chosen" data-placeholder="Chọn ngày trong tuần" multiple="multiple" tabindex="1">
+						<option value="Monday">Monday</option>
+						<option value="Tuesday">Tuesday</option>
+						<option value="Wednesday">Wednesday</option>
+						<option value="Thursday">Thursday</option>
+						<option value="Friday">Friday</option>
+						<option value="Saturday">Saturday</option>
+						<option value="Sunday">Sunday</option>
+					</select>
+				</div>
+			</div>
+				<div class="control-group">
+				<label class="control-label">Happy hours</label>
+				<div class="controls">
+					<input type="text" name="txtHappyFrom" id="txtHappyFrom" class="input-mask" mask-data="##:##" class="text" placeholder="Vd: 12:35" maxlength="20" />
+					<label class="m-wrap inline">Đến * </label>
+					<input type="text" name="txtHappyTo" id="txtHappyTo" class="input-mask" mask-data="##:##" class="text" placeholder="Vd: 13:35" maxlength="20" />
+					
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Tên chương trình KM *</label>
+				<div class="controls">
+					<input type="text" name="txtName" id="txtName" class="text span6 maxlength="250" />
+				</div>
+			</div>
+			<div class="control-group address-article">
+				<label class="control-label">Địa điểm *</label>
+				<div class="controls">
+					<input type="text" name="txtAddressArticle" id="txtAddressArticle" class="text m-wrap  span3" maxlength="250" placeholder="vd: 1A Trần Hưng Đạo" />
+					
+					<select id="optCity" name="optCity" class="chosen span2 m-wrap " single="single" data-placeholder="Chọn TP/Tỉnh" tabindex="1">
+						<option value="HCM">HCM</option>
+						<option value="HCM">HN</option>
+					</select>
+					<select id="optDistrict" name="optDistrict"  class="chosen span2 m-wrap " data-placeholder="Chọn Quận/Huyện" tabindex="1">
+						<option value="Quan1">Quận 1</option>
+					</select>	
+					<a href="javascript:void()" class="btn btn-add"/><i class="icon-plus"></i> Thêm</a>
+				</div>	
+				<div class="controls row-item" style="border:none">
+					<label class="m-wrap inline span6 lbl-address"> 1A Trần Hưng Đạo, Bến Nghé, Quận 1, HCM</label>
+					<a href="javascript:void()" class="btn btn-add"/><i class="icon-pencil"></i> Sửa</a>
+					<a href="javascript:void()" class="btn btn-add"/><i class="icon-icon-remove"></i> Xóa</a>
+				</div>	
+				<div class="controls row-item">
+					<label class="m-wrap inline span6 lbl-address"> 1A Hoang Dieu, Phuong 1, Quận 4, HCM</label>
+					<a href="javascript:void()" class="btn btn-add"/><i class="icon-pencil"></i> Sửa</a>
+					<a href="javascript:void()" class="btn btn-add"/><i class="icon-icon-remove"></i> Xóa</a>
+				</div>		
+			</div>
+			<div class="control-group">
+				<label class="control-label">Nội dung *</label>
+				<div class="controls">
+					<textarea class="span6 ckeditor m-wrap" name="txtContent" id="txtContent" rows="6"></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Tags </label>
+				<div class="controls">
+					<textarea id='txtTags' name='txtTags' class="m-wrap span6" rows="2"></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+						<label class="checkbox">
+						<input type="checkbox" value="" /> Tôi đã đọc và đồng ý với <a href="#" class="link">điều khoản đăng tin</a>  của hệ thống timkm.com
+					</label>
+				</div>
+			</div>
+			<div class="control-group">				
+				<div class="controls">
+					<input type="submit" name="btnOK" id="btnOK" class="btn" value="Đăng tin"/>
+					<input type="reset" name="btnReset" id="btnReset" class="btn" value="Nhập lại"/>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
 <!--End Form Input -->
 <?php 
 //footer
 include_once('include/_footer.inc');
 ?>
 <script>
-        tinymce.init({selector:'#txtContent'});
+        //tinymce.init({selector:'#txtContent'});
 </script>

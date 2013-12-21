@@ -5,6 +5,7 @@
 <title>TIMKM</title>
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-1.10.1.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-migrate-1.2.1.min.js');?>"></script>
 
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('jquery-ui/jquery-ui-1.10.3.custom.min.css');?>">
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-ui/jquery-ui-1.10.3.custom.min.js');?>"></script>
@@ -28,7 +29,33 @@
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-inputmask/jquery.inputmask.bundle.min.js');?>"></script>
 
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('jquery-multi-select/css/multi-select-metro.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-multi-select/js/jquery.multi-select.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('chosen-bootstrap/chosen/chosen.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('chosen-bootstrap/chosen/chosen.jquery.min.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-fileupload/bootstrap-fileupload.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-fileupload/bootstrap-fileupload.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-fileupload/bootstrap-fileupload.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-fileupload/bootstrap-fileupload.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('data-tables/DT_bootstrap.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('data-tables/jquery.dataTables.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('data-tables/DT_bootstrap.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('FlexSlider/flexslider.css');?>">
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('FlexSlider/jquery.flexslider-min.js');?>"></script>
+
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/ckeditor.js');?>"></script>
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('theme/css/style.css');?>">
+
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('style.css');?>">
+
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('ChromeSafariFix.css');?>">
+
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('ajax.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('global_config.js');?>"></script>
@@ -41,7 +68,6 @@
 			// initiate layout and plugins
 			App.init();
 			FormComponents.init();
-		
 		});
 	</script>
 </head>
@@ -52,38 +78,59 @@
     <div id="header" align="">
 		<div id="header-menu">
 			<ul>
-			<li>Logo</li>
-			<li>Ăn uống <br> Giải trí</li>
-			<li>Thời trang<br>Làm đẹp</li>
-			<li>Điện thoại<br>Máy tính</li>
-			<li>Đồ gia đình<br>Văn phòng</li>			
-			<li>Nhà cửa<br>Xe cộ</li>			
-			<li>Du lịch-Tài chính<br>Dịch vụ</li>			
+			<li>
+				<a href="index.php">Logo</a>
+			</li>
+			<li>
+				<a href="article_list.php">Ăn uống <br> Giải trí</a>
+			</li>
+			<li>
+				<a href="article_list.php">Thời trang<br>Làm đẹp</a>			
+			</li>
+			<li>
+				<a href="article_list.php">Điện thoại<br>Máy tính</a>
+			</li>
+			<li>
+				<a href="article_list.php">Đồ gia đình<br>Văn phòng</a>
+			</li>			
+			<li>
+				<a href="article_list.php">Nhà cửa<br>Xe cộ</a>
+			</li>			
+			<li>
+				<a href="article_list.php">Du lịch-Tài chính<br>Dịch vụ</a>
+			</li>			
 			</ul>
 		</div>
-		 <div id="div-login" align="right" style="">
-			 <?php
-				 if(!global_common::isCLogin() ){ ?>
-						<!--form>
-						  <label for="username" >Tên đăng nhập</label> <input id="username"  type="text"/>
-						  <br />
-						   <label for="password" >Mật khẩu</label> <input id="password" type="password"/>
-						   <br />
-							  <label for="remember" >Nhớ</label> <input id="remember" type="checkbox"/>
-							  <input id="btnlogin" type="submit" class="btn btn-oliver" value="Đăng nhập" class="btn btn-oliver" onclick='_objUser.login();return false;'/>
-							<div class="error" id="error" name="error"></div>
-				 </form-->
-				<?php 
-			}
-				else
-					{
-				echo '<label >Chào mừng '.$_SESSION[global_common::SES_C_USERINFO]['UserName'].'</label>
-					<input id="btnChangePass" type="button" class="btn btn-oliver" class="btn btn-oliver" value="Đổi mật khẩu" onclick="core.redirect(\'index.php\');"/>
-					<input id="btnlogin" type="button" class="btn btn-oliver" class="btn btn-oliver" value="Đăng xuất" onclick="_objUser.logout();"/>
-					
-				';
-			}
-			?>
+		 <div id="div-login" align="right" style=""  class="navbar navbar-inverse navbar-fixed-top">
+			<ul class="nav pull-right">		
+				
+				<!-- END  DROPDOWN -->	
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<li>
+					<a href="login.php" class="btn btn-mini inline">
+						Đăng nhập
+					</a>	
+					<a href="register.php" class="btn btn-mini inline">
+						Đăng ký
+					</a>				
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<li class="dropdown user">
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<img src="/images/avatar1_small.jpg" alt="">
+						<span class="username">Bob Nilson</span>
+						<i class="icon-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="profile.php"><i class="icon-user"></i> Thông tin cá nhân</a></li>
+						<li><a href="profile_article.php"><i class="icon-reorder"></i> Quản lý khuyến mãi</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html"><i class="icon-signout"></i> Đăng xuất</a></li>
+					</ul>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+				</ul>
 		 </div>
 		<p></p>
     </div>

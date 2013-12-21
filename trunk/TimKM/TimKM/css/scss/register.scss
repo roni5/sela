@@ -12,24 +12,24 @@
 			padding: 15px;
 			width: 70%;
 			margin:auto;
-			tr >td:first-child 
+			.control-group
 			{
-				width:30%;
-			}
-			tr 
-			{
-				td
-				{	
-					.title
+				.controls
+				{
+					.radio
 					{
-						margin: 0 0 30px 0px;
-					}
-					.text
-					{
-						width: 250px;
+						width: 50px;
+						display: inline-block;
+						input[type="radio"]
+						{
+							display: inline;
+							float: none;
+							vertical-align: top;
+							margin-left: 0px;
+						}
 					}
 				}
-			}
+			}			
 		}
 	}
 } 

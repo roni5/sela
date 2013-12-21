@@ -1,0 +1,40 @@
+#myinfo_page .page_header .content .list-category ul > li span { font-size:13px;}
+.recipe-detail .recipe-text h2 { width:280px;}
+.jspHorizontalBar { display:none;}
+#coupon_page .coupon-header div.coupon-paging { margin-right:-40px;}
+#coupon_page .coupon-header div.coupon-paging .list-paging a{ float:left;}
+.vertical-line { left:391px;}
+.catering-product-list .catering-product-list-padding .catering-product-list-header .copy-paging .list-paging { width:auto;}
+#main-body #giftcards_page .list-paging { padding-top:0px;}
+.catering-product-list .catering-product-list-padding .catering-product-list-content .gird-view-catering hr { width:715px; margin-left:-10px; }
+#shopping_list_page .page_content .list-view .shopping-list-footer input.addnote { padding-right:15px; padding-bottom:10px;}
+#main-menu nav > ul.sf-menu > li > a { height:61px;}
+#main-body #recipe_page  .list-paging { 
+	padding-top:0px; 
+	padding-bottom:5px;
+	padding-right:0px;
+	float:right;
+	margin-top:-5px;
+	margin-right:-10px;
+}
+#header #bg-control-panel {
+	background-color:#b4b4b4;
+}
+#navigation #action-list #shopping-search INPUT#shopping-search-button{
+	margin:0px;
+	position:relative;
+	top:5px;
+}
+#myinfo_page div.account-summary div#content_detail table.confirm-info b{   
+    font-weight: bold;
+	font-weight: bold\9;
+}
+#myinfo_page div#content_detail table.confirm-info b{   
+    font-weight: bold;
+	font-weight: bold\9;
+}
+.catering-product-list .catering-product-list-padding .catering-product-list-content .gird-view-catering TABLE.order-table .form-enter-address { width:280px; max-width:280px; min-width:320px;}
+.SmartCouponView { width:auto;}
+
+.my-smartreward .my-smartreward-body .single-reward .reward-hind { font-size:10px;}
+#pharmacy-page #payment-process .catering-product-list .catering-product-list-padding .catering-product-list-content table.account-summary tr td.space-arrow, #pharmacy-page #payment-process .catering-product-list .catering-product-list-padding .catering-product-list-content table.register-info tr td.space-arrow {padding-left:30px}

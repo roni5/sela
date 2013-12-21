@@ -1,8 +1,146 @@
 .date-picker
 {
 	color: black;
+	margin-top: 0;
+    padding-top: 0;
+}
+.chzn-container
+{
+	color: black;
 }
 .datepicker 
 {
-	color: black;
+	color: black;	
+}
+a:hover
+{
+	color:$color_hover;
+}
+a, a:focus, a:hover, a:active,a:visited {
+  text-decoration: none;
+}
+.input-icon.left i 
+{
+	color: #ccc;
+	display: block !important;
+	position: absolute !important;
+	z-index: 1;
+	margin: 9px 2px 4px 10px;
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.input-icon.left input {
+    padding-left: 33px !important;
+}
+
+table.table
+{
+	color: $color_header;	
+}
+
+.tabbable-custom .nav-tabs , *.nav-tabs
+{	
+	>li
+	{
+		border-top: none;
+		>a, > a:hover, > a:focus
+		{
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+			color: $color_header_menu;	
+		}
+	}
+	>li.active > a, >li.active > a:hover, > li.active > a:focus
+	{
+		color: $color_header_menu;
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		border-right: medium none;
+		border-left: medium none;
+		border-top: medium none;
+		border-bottom: 1px solid;
+	}
+}
+
+.pagination ul > li > a, .pagination ul > li > span
+{
+	i
+	{
+		line-height: 20px;
+	}
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom
+{
+	  position: relative;
+}
+
+.navbar-fixed-top
+{
+	.nav.pull-right
+	{
+		margin-top: 10px;
+		> li > a
+		{
+			color: inherit;
+			padding: 2px 4px;
+			text-shadow: inherit;
+		}
+	}
+}
+.dropdown-toggle
+{
+	img{  vertical-align: middle;}
+}
+.dropdown-menu {
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    float: left;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    left: 0;
+    list-style: none outside none;
+    margin: 0;
+    padding: 2px 9px;
+    position: absolute;
+    text-shadow: none;
+    top: 100%;
+    z-index: 1000;
+	li
+	{
+		text-align: left;
+		> a {
+			clear: both;
+			color: #333333;
+			display: block;
+			font-weight: normal;
+			line-height: 18px;
+			padding: 6px 0 6px 3px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+	}
+}
+
+.form-horizontal .control-group 
+{
+    margin-bottom: 10px;
+}
+.flex-direction-nav 
+{
+	a
+	{
+		width: 54px;
+		content:"";
+	}
+	a:before 
+	{    
+		font-size: 24px;
+	}
+}
+.chzn-container
+{
+	display: inline-block;
 }

@@ -5,6 +5,7 @@ $color_header_menu: #0099FF;
 $color_border_rbga: rgba(113,108,104,.3);  
 $color_border: #716C68;  
 
+$color_hover: #FFBC00;  
 
 $size_header: 20px ;
 $size_sub_header: 16px ;
@@ -26,8 +27,6 @@ body{
 		background: url("../images/bg-page.jpg") right top repeat;
 		
 	}
-a:hover{color:#f90}
-
 #main{
 		width:1024px;
 		/*background-color:#C4C6C8;*/
@@ -42,10 +41,6 @@ a:hover{color:#f90}
 #content {float:left; min-height:583px;width:75%;  display:block}
 #slider-right {float:left; height:100%;width:10%;}
 */
-
-a{ color:$color_header_menu; text-decoration:none;cursor: pointer}  
-a:visited{ color:$color_body; text-decoration:none;}
-a:hover {color:#3E3EEA; background-position:-9px 0; text-decoration:none}
 
 /*********** font ************/
 @import "font.scss";
@@ -100,6 +95,11 @@ h1  a:hover {color:$color_header !important;}
 @import "post.scss";
 /*********** end post ************/
 
+/*********** profile ************/
+@import "profile.scss";
+/*********** end profile ************/
+
+
 /*********** seach box ************/
 @import "search-box.scss";
 /*********** end seach box ************/
@@ -117,15 +117,7 @@ h1  a:hover {color:$color_header !important;}
 /*********** end article ************/
 
 
-.input-text-invalid{border: 2px solid red} 
-.clear{clear:both}
-.center{text-align:center}
-.floatLeft{float:left}
-.floatRight{float:right}
-.block{display:block}
-.relative{position:relative}
-.absolute{position:absolute}
-.alignRight {text-align:right}
+
 .tooltipBox{border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fffbe7;border:1px #ffb950 solid;padding:5px 25px 5px 10px;.display:inline-block}
 .tooltipBox{font-style:italic}
 .tooltipDown{height:11px;padding:0;margin:0;line-height:11px;display:block;float:left}
@@ -162,21 +154,6 @@ a.button, a.button:visited{ color:#fff; text-align:center; text-decoration:none;
 a.button:hover span{color:#333!important; background-position:-9px 0}
 
 
-/*Dropdown menu*/
-.dropdownMenu{background:#fff;border:1px #999 solid;font-size:1.1em;color:#666}
-.dropdownMenu a{color:#555;display:block;/*height:1%;*/padding:5px 10px;margin:0;border-bottom:1px #e9e9e9 solid;text-decoration:none}
-.dropdownMenu a strong{color:#666;font-weight:bold}
-.dropdownMenu a.current, .dropdownMenu a.current strong{background:#fff;color:#f90 !important}
-.dropdownMenu.fixHeight{height:320px;overflow:auto}
-.dropdownMenu a:hover, .dropdownMenu a:hover strong{background:#e9e9e9;color:#00aee1!important}
-.ui-autocomplete{cursor:default;position:absolute;}
-* html .ui-autocomplete{width:1px;}
-.ui-menu{display:block;float:left;list-style:none outside none;margin:0;padding:2px;}
-.ui-menu .ui-menu{margin-top:-3px;}
-.ui-menu .ui-menu-item{clear:left;float:left;margin:0;padding:0;width:100%;}
-.ui-menu .ui-menu-item a{display:block;line-height:1.5;padding:0.2em 0.4em;text-decoration:none;}
-.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active{font-weight:normal;margin:-1px;}
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{background:url("") repeat-x scroll 50% 50% #DADADA;color:#00aee1 !important;}
 
 /*********** User info ***********/
 .user-info{clear: both;}

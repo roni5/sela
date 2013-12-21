@@ -3,8 +3,13 @@
   text-aign: center; }
   #login-page form {
     padding: 90px 0; }
-    #login-page form table.table-login {
-      width: 50%;
-      margin: auto; }
-      #login-page form table.table-login tr td input.remember {
-        margin: 0 5px; }
+    #login-page form div.table-login {
+      margin: auto;
+      width: 50%; }
+      #login-page form div.table-login .l-remember {
+        display: inline;
+        vertical-align: middle;
+        padding: 0 5px; }
+      #login-page form div.table-login input.remember {
+        margin: 0 0 3px;
+        vertical-align: middle; }

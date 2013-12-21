@@ -1,0 +1,15 @@
+#main-body input[type=password] { width:146px; height:16px;}
+.vertical-line { left:402px;} 
+.SmartCouponView { width:auto;}
+
+#myinfo_page div.account-summary div#content_detail table.confirm-info b{   
+    font-weight: bold;
+	font-weight: bold\9;
+}
+#myinfo_page div#content_detail table.confirm-info b{   
+    font-weight: bold;
+	font-weight: bold\9;
+}
+div.coupon-paging{padding-right: 50px;}
+
+#pharmacy-page #payment-process .catering-product-list .catering-product-list-padding .catering-product-list-content table.account-summary tr td.space-arrow, #pharmacy-page #payment-process .catering-product-list .catering-product-list-padding .catering-product-list-content table.register-info tr td.space-arrow {padding-left:30px}

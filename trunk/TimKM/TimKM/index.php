@@ -63,7 +63,7 @@ include_once('include/_cat_list.inc');
 <div id="content">	
 	<div class="gallery">
 	  <div class="item">
-		<img align="left" src="images/data//c2NAjXD.jpg">
+		<a href="article_list.php"><img align="left" src="images/data//c2NAjXD.jpg"></a>		
 		<span class="caption">
 		  <h1>
 			Tim KM
@@ -74,7 +74,7 @@ include_once('include/_cat_list.inc');
 		</span>
 	  </div>
 	  <div class="item">
-		<img align="left" src="images/data//FeCziip.png">
+		<a href="article_list.php"><img align="left" src="images/data//FeCziip.png"></a>	
 		<span class="caption">
 		  <h1>
 			Tim KM

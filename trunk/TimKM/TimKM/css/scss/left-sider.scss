@@ -4,6 +4,7 @@
 	>ul
 	{
 		color: $color_header_menu;	
+		
 		line-height: 33px;	
 		font-size: 14px;
 		margin-left: 55px;
@@ -17,6 +18,14 @@
 			margin-left: 15px;
 			padding: 2px 1px;
 			text-align: left;
+			a
+			{
+				color: $color_body;
+			}
+			a:hover
+			{
+				color:$color_hover;
+			}
 		}		
 	}
 }

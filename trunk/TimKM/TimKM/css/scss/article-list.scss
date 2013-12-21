@@ -1,52 +1,79 @@
 #article-list
 {
 	margin-top:30px;
-	.item
+	#articles
 	{
-		width: 181px;
 		display: inline-block;
+		background-clip: padding-box;
+		border: 5px solid rgba(113, 108, 104, 0.3);
+		margin: 5px;
 		vertical-align: top;
-		margin: 10px;
-		.info
-		{	
-			position:relative;
-		}
-		.name
-		{	
-			color:$color_header_menu;
-			font-size: 1.2em;
-			font-weight: bold;
-		}
-		.artcile-title
-		{				
-			font-weight: bold;
-		}
-		.price
+		width:80%;
+		.item
 		{
-			float:right;
-			margin-right: 6px;
-			margin-top: -24px; 
-			background: red;			
-			a:hover {color:$color_body !important;}
+			width: 181px;
+			display: inline-block;
+			vertical-align: top;
+			margin: 10px;
+			.info
+			{	
+				position:relative;
+			}
+			.name
+			{	
+				color:$color_header_menu;
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+			.artcile-title
+			{				
+				font-weight: bold;
+			}
+			.price
+			{
+				float:right;
+				margin-right: 6px;
+				margin-top: -24px; 
+				background: red;			
+				a, a:focus, a:hover ,a:active, a:visited
+				{
+					color:$color_body !important;
+				}
 
+			}
+			.article-thumbnail
+			{			
+				border: 5px solid;				
+			}
+			img 
+			{	
+				-webkit-transition: box-shadow 0.5s ease; 
+				-moz-transition: box-shadow 0.5s ease;
+				-o-transition: box-shadow 0.5s ease;
+				-ms-transition: box-shadow 0.5s ease;
+				transition: box-shadow 0.5s ease;
+				width:100%;
+			}
+			a
+			{
+				
+				
+			}
+			
 		}
-		.article-thumbnail
-		{			
-			border: 5px solid;				
-		}
-		img 
-		{	
-			-webkit-transition: box-shadow 0.5s ease; 
-			-moz-transition: box-shadow 0.5s ease;
-			-o-transition: box-shadow 0.5s ease;
-			-ms-transition: box-shadow 0.5s ease;
-			transition: box-shadow 0.5s ease;
-			width:100%;
-		}
-		a
+	}
+	#advertises
+	{
+		display: inline-block;
+		width: 16%;
+		.advertise
 		{
-			
-			
+			img.partner
+			{
+				height: 100px;
+				margin: 5px 0;
+				width: 160px;
+			}
 		}
 		
 	}

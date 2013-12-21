@@ -7,16 +7,20 @@
 	form
 	{
 		padding:90px 0;
-		table.table-login
-		{
-			width: 50%;
+		div.table-login
+		{			
 			margin:auto;
-			tr td
+			width:50%;
+			.l-remember
 			{
-				input.remember
-				{
-					margin: 0 5px;
-				}
+				display:inline;
+				vertical-align: middle;
+				padding: 0 5px;
+			}
+			input.remember
+			{
+				margin: 0 0 3px;				
+				vertical-align: middle;
 			}
 		}
 	}

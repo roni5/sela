@@ -2,11 +2,32 @@
 {
 	clear:both;	
 	margin-top:20px;
+	#advertises
+	{
+		display: inline-block;
+		vertical-align: top;
+		width: 16%;
+		margin-left: 6px;
+		.advertise
+		{
+			img.partner:first-child
+			{
+				margin: 0; 
+			}
+			img.partner
+			{
+				height: 100px;
+				margin: 5px 0;
+				width: 160px;
+			}
+		}
+		
+	}
 	#article-detail
 	{		
+		display: inline-block;
+		margin: 0 0px;
 		width: 60%;
-		display: inline-block;		
-		margin: 0px 14px 0px 16px;
 		#article-content
 		{			
 			padding: 10px;
@@ -93,10 +114,19 @@
 					vertical-align: top;
 					margin-top: 4px;	
 					padding:8px;
+					padding-right: 22px;
 					background: none repeat scroll 0 0 $color_border_rbga;
+					display: inline-block;
+					margin-bottom: 0px;
+					overflow: hidden;
 					.avatar
 					{
+						
 						display:inline-block;
+						img
+						{
+							height:65px;
+						}
 					}
 					.comment-detail
 					{
@@ -125,8 +155,7 @@
 		display: inline-block;
 		text-align: right;
 		vertical-align: top;
-		margin-right:5px;
-		width: 33%;
+		width: 22%;
 		
 		#company_address
 		{		

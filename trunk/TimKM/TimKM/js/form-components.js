@@ -173,7 +173,8 @@ var FormComponents = function () {
         });
 
         $(".input-mask").each(function(){
-            $(this).inputmask($(this).attr("mask-data"), { "placeholder": "dd/mm/yyyy" }); 
+            //$(this).inputmask($(this).attr("mask-data"), { "placeholder": $(this).attr("placeholder") }); 
+            $(this).inputmask($(this).attr("mask-data")); 
         });
         /*
         $("#mask_date1").inputmask("d/m/y",{ "placeholder": "*"}); //change the placeholder
@@ -188,7 +189,14 @@ var FormComponents = function () {
         $("#mask_ssn").inputmask("999-99-9999", {placeholder:" ", clearMaskOnLostFocus: true }); //default
         */
     }
-
+    var handleMultiSelect = function () {
+        if(typeof( $('.multi_select'))!= 'undefined' &&  $('.multi_select').length > 0)
+        {
+            $('.multi_select').multiSelect({
+                selectableOptgroup: true
+            });    
+        }    
+    }
     /*
     var handleWysihtml5 = function () {
         if (!jQuery().wysihtml5) {
@@ -756,6 +764,7 @@ var FormComponents = function () {
             handleDatetimePicker();
             handleDateRangePickers();
             handleInputMasks();
+            handleMultiSelect
             /*
             handleWysihtml5();
             handleToggleButtons();
@@ -770,7 +779,6 @@ var FormComponents = function () {
             handleSelect2Modal();
             handleInputMasks();
             handleIPAddressInput();
-            handleMultiSelect();
             handlePasswordStrengthChecker();
             handleUsernameAvailabilityChecker1();
             handleUsernameAvailabilityChecker2();

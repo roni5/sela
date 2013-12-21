@@ -2732,6 +2732,11 @@ class global_common
 		
 	}
 	
+	function zerofill ($num, $zerofill = 10)
+	{
+		return str_pad($num, $zerofill, '0', STR_PAD_LEFT);
+	}
+
 	public function getCharsMD5()
 	{
 		$arrMD5 = array(" " =>"7215ee9c7d9dc229d2921a40e899ec5f",

@@ -8,9 +8,11 @@
       padding: 15px;
       width: 70%;
       margin: auto; }
-      #register-page form div.table-register tr > td:first-child {
-        width: 30%; }
-      #register-page form div.table-register tr td .title {
-        margin: 0 0 30px 0px; }
-      #register-page form div.table-register tr td .text {
-        width: 250px; }
+      #register-page form div.table-register .control-group .controls .radio {
+        width: 50px;
+        display: inline-block; }
+        #register-page form div.table-register .control-group .controls .radio input[type="radio"] {
+          display: inline;
+          float: none;
+          vertical-align: top;
+          margin-left: 0px; }
