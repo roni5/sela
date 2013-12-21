@@ -14,6 +14,7 @@ class global_mapping
 	const Content					= 'Content';
 	const Avatar					= 'Avatar';
 	const UserName					= 'UserName';
+	const Email						= 'Email';
 	const UserID					= 'UserID';
 	const CommentID					= 'CommentID';
 	const Title						= 'Title';
