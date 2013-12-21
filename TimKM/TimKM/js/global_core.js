@@ -12,11 +12,13 @@
 * 
 
 * ************************************************************/
-var CLASS_INPUT_INVALID = "input-text-invalid";
+//var CLASS_INPUT_INVALID = "input-text-invalid";
+//var CLASS_PARENT_ERROR = "input-error";
 var core = {};
 
 core.constant = {
     ClassInvalid: "input-text-invalid",
+    ClassInputError: "input-error",
 	// text strings
 	MsgSearch: "Tìm kiếm...",
 	MsgProcessing: "Đang xử lý...",
@@ -46,17 +48,23 @@ core.request = {
                 core.ui.showInfoBar(0, core.constant.MsgProcessing);
             },
             success: function(data, textStatus, jqXHR) {
-                fx(data, { textStatus: textStatus, jqXHR: jqXHR });
-				core.ui.showInfoBar(1, core.constant.MsgSuccess);
+				if (!core.util.isNull(fxFail)) {
+                     fx(data, { textStatus: textStatus, jqXHR: jqXHR });	
+                }
+                else {
+                   core.ui.showInfoBar(1, core.constant.MsgSuccess);	
+                }
+               			
             },
-            error: function(xhr, ajaxOptions, thrownError) {
-                if (fxFail) {
+            error: function(data, ajaxOptions, thrownError) {
+                if (!core.util.isNull(fxFail)) {
                     fxFail();
                 }
                 else {
                     //console.log('fail connection');
+					core.ui.showInfoBar(2, core.constant.MsgProcessError);
                 }
-				core.ui.showInfoBar(2, core.constant.MsgProcessError);
+				
             },
             complete: function() {
                 //core.ui.hideInfoBar();
@@ -297,17 +305,23 @@ core.util = {
         return "";
     },
     validateInputTextBox: function(controlId, msg, isFocus) {
+		
         var control = this.getObjectByID(controlId);
+		
         if (this.trim(msg) != "") {
             control.addClass(core.constant.ClassInvalid);
             control.tooltip();
             if (isFocus) this.focusControl(controlId);
             control.attr("title", msg);
+			control.closest(".controls").addClass(core.constant.ClassInputError);
+			control.closest(".controls").find('.message').html(msg);
+			
         }
         else {
-            $("#" + controlId).removeClass(CLASS_INPUT_INVALID);
-            $("#" + controlId).attr("title", msg);
-            $("#" + controlId).tooltip();
+            control.removeClass(core.constant.ClassInvalid);
+            control.attr("title", msg);
+            control.tooltip();
+			control.closest(".controls").removeClass(core.constant.ClassInputError);
         }
     },
 
@@ -358,6 +372,94 @@ core.util = {
 	
     isChecked: function (controlID) {
         return $("#" + controlID).is(':checked');
+    },
+	
+	parserXML: function(text) {
+        text = text.replace(/(\r\n|\n|\r)/gm, "");
+        var xmlDoc;
+        //debugger;
+        if (window.DOMParser) {
+            parser = new DOMParser();
+            // TODO: TinhDoan edited [20100522] - can phai xem lai cho nay
+
+            // DoNguyen editted [20100522] - Anh trim() no truoc khi dung cho chac an (vi khong biet co phai luon luon du 2 ky tu khong)
+
+            // Anh cung chua biet nguyen nhan vi sao du 2 ky tu nay, anh nghi la do header, nhung anh doi roi van khong an thua gi
+            //var text_temp = trim(text); //.substr(2);
+            xmlDoc = parser.parseFromString(text, "text/xml");
+
+        }
+
+        else // Internet Explorer
+        {
+            //var text_temp = trim(text);//.substr(2);
+            xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+            xmlDoc.async = "false";
+            xmlDoc.loadXML(text);
+
+        }
+
+        var root = xmlDoc.getElementsByTagName("r")[0];
+        var intArray = root.childNodes.length;
+        var arrResult = new Array(intArray);
+        var i, j;
+        var node, intNode, nodeValue;
+
+        // TODO: DoNguyen reviewed - O day co mot vai diem khong hop ly lam
+
+        // 1. O server truyen vao la KEY-VALUE, nhung o client lai parse ra la INDEX-VALUE, anh muon van la KEY-VALUE
+
+        //    (tuc la se khong dung "arrValue.push" ma se la arrValue[ten cua node]=...)
+
+        //    de coder luc su dung lay gia tri cho de.
+
+        // 2. Khong nen dung "arrResult.push" ma hay kiem tra neu la con cua node "h" thi gan vao arrResult[0],
+
+        //    neu la con cua node "c" thi gan vao arrResult[1].
+
+        //    Nhu vay minh chac chan chay dung, minh push kieu nay anh so no khong giong nhau giua cac browser.
+
+        // => Khi su dung ket qua function nay, chung ta se goi nhu sau: 
+
+        //    - Doi voi Header: arrResult[0]["h1"], arrResult[0]["h2"], arrResult[0]["h3"]
+
+        //    - Doi voi noi dung: arrResult[1]["rs"], arrResult[1]["inf"],...
+
+        for (i = 0; i < intArray; i++) {
+            node = root.childNodes[i];
+            intNode = node.childNodes.length;
+            var arrValue = new Array(intNode);
+
+            for (j = 0; j < intNode; j++) {
+                nodeValue = node.childNodes[j];
+                arrValue[nodeValue.nodeName] = nodeValue.childNodes[0] == null ? "" : nodeValue.childNodes[0].nodeValue;
+            }
+
+            switch (node.nodeName) {
+                case "h":
+                    arrResult[0] = arrValue;
+                    break;
+                case "c":
+                    arrResult[1] = arrValue;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return arrResult;
+    },
+	
+    isNull: function(varOject) {
+        if (typeof (varOject) == 'undefined' && !varOject) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    },
+	goTo: function(url) {
+        window.location.href = url;
     }
 };
 

@@ -149,7 +149,7 @@ class Model_User
 			global_common::writeLog('Error add sl_user:'.$strSQL,1);
 			return false;
 		}	
-		return $intID;
+		return global_common::getMaxID(self::TBL_SL_USER);
 		
 	}
     
@@ -184,6 +184,56 @@ class Model_User
 		return $arrResult[0];
 	}
     
+	public function getUserByName($userName,$selectField='*') 
+	{		
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+				array($selectField, self::TBL_SL_USER ,							
+					'WHERE UserName = \''.$userName.'\' '));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get sl_user ByName:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult[0];
+	}
+	
+	public function getUserByField($fieldName,$fieldValue, $selectField='*') 
+	{		
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+				array($selectField, self::TBL_SL_USER ,							
+					'WHERE '.$fieldName.' = \''.$fieldValue.'\' '));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get sl_user ByName:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult[0];
+	}
+	
+	public function checkExistUserName($userName) 
+	{		
+		$obj = $this->getUserByName($userName);
+		if($obj){
+			return true;	
+		}
+		return false;
+	}
+	
+	public function checkExistEmail($email) 
+	{		
+		$obj = $this->getUserByField(global_mapping::Email,$email);
+		if($obj){
+			return true;	
+		}
+		return false;
+	}
+	
     public function getAllUser($intPage = 0,$selectField='*',$whereClause='',$orderBy='') 
 	{		
         if($whereClause)

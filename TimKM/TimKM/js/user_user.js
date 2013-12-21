@@ -30,57 +30,76 @@ var user = {
     Page : "bg_user.php",
 
     getRegisterInfo: function() {
-		/*
+		
         core.util.disableControl("btnOK", true);
         var isValid = true;
         
         var userName = core.util.getObjectValueByID("txtUserName");
         core.util.validateInputTextBox('txtUserName', '');
         if (userName == '') {
-            core.util.validateInputTextBox('txtUserName', 'UserName is required', isValid);
+            core.util.validateInputTextBox('txtUserName', 'Tên đăng nhập không được rỗng', isValid);
             isValid = false;
         } else if (userName.length > 50) {
-            core.util.validateInputTextBox('txtUserName', 'UserName must be less than 50', isValid);
+            core.util.validateInputTextBox('txtUserName', 'Tên đăng nhập phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
 
         var password = core.util.getObjectValueByID("txtPassword");
         core.util.validateInputTextBox('txtPassword', '');
         if (password == '') {
-            core.util.validateInputTextBox('txtPassword', 'Password is required', isValid);
+            core.util.validateInputTextBox('txtPassword', 'Mật khẩu không được rỗng', isValid);
             isValid = false;
-        } else if (password.length > 255) {
-            core.util.validateInputTextBox('txtPassword', 'Password must be less than 255', isValid);
+        } 
+		else if (password.length < 6 ) {
+            core.util.validateInputTextBox('txtPassword', 'Mật khẩu phải tối thiều 6 ký tự', isValid);
             isValid = false;
         }
-
+		else if (password.length > 255) {
+            core.util.validateInputTextBox('txtPassword', 'Mật khẩu phải ngắn hơn 255 ký tự', isValid);
+            isValid = false;
+        }
+		
+		var txtRepassword = core.util.getObjectValueByID("txtRepassword");
+        core.util.validateInputTextBox('txtRepassword', '');
+		if (txtRepassword != password) {
+            core.util.validateInputTextBox('txtRepassword', 'Mật khẩu không trùng nhau', isValid);
+            isValid = false;
+        } 
         var fullname = core.util.getObjectValueByID("txtFullname");
         core.util.validateInputTextBox('txtFullname', '');
         if (fullname == '') {
-            core.util.validateInputTextBox('txtFullname', 'Fullname is required', isValid);
+            core.util.validateInputTextBox('txtFullname', 'Họ tên không được rỗng', isValid);
             isValid = false;
         } else if (fullname.length > 255) {
-            core.util.validateInputTextBox('txtFullname', 'Fullname must be less than 255', isValid);
+            core.util.validateInputTextBox('txtFullname', 'Họ tên phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
 
         var birthDate = core.util.getObjectValueByID("txtBirthDate");
         core.util.validateInputTextBox('txtBirthDate', '');
+		
+		var validDate = new Date();
+		validDate.setFullYear(validDate.getFullYear()-5);
+		
         if (birthDate == '') {
-            core.util.validateInputTextBox('txtBirthDate', 'BirthDate is required', isValid);
+            core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không được rỗng', isValid);
             isValid = false;
         } else if (core.util.validateDateTime(birthDate) == false) {
-			 core.util.validateInputTextBox('txtBirthDate', 'BirthDate is invalid!', isValid);
+			 core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không hợp lệ', isValid);
+			 isValid = false;
+        }
+		else if (new Date(birthDate) >= validDate ) {
+			 core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không hợp lệ', isValid);
 			 isValid = false;
         }
 
         var email = core.util.getObjectValueByID("txtEmail");
         core.util.validateInputTextBox('txtEmail', '');
         if (email == '') {
-            core.util.validateInputTextBox('txtEmail', 'Email is required', isValid);
+            core.util.validateInputTextBox('txtEmail', 'Email không được rỗng', isValid);
             isValid = false;
         } else if (email.length > 255) {
-            core.util.validateInputTextBox('txtEmail', 'Email must be less than 255', isValid);
+            core.util.validateInputTextBox('txtEmail', 'Email phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
 		var sex ;
@@ -94,16 +113,28 @@ var user = {
 		}
        
         if (typeof(sex) == 'undefined') {
-            core.util.validateInputTextBox('rdMale', 'Sex is required', isValid);
+            core.util.validateInputTextBox('rdMale', 'Bạn chưa chọn giới tính', isValid);
             isValid = false;
         }
         
+		 if(!core.util.isChecked("chkTerm")){		 
+            core.util.validateInputTextBox('chkTerm', 'Bạn cần phải đồng ý điều khoản sử dụng', isValid);
+            isValid = false;
+        }
+		
 		 if (isValid == false) {
             core.util.disableControl("btnOK", false);
             return;
         }
-		*/
-       return {
+		return {
+			username:userName,
+			password: password,
+			fullname: fullname,
+			email: email,
+			sex: sex,
+			birthdate: birthDate
+	   }
+       /*return {
 			username:'vle1',
 			password: 'abcd1234',
 			fullname:'viet le',
@@ -111,7 +142,7 @@ var user = {
 			sex: 1,
 			birthdate: '12/12/2013'
 	   }
-       
+       */
     },
     register: function() {  
 		var regiserInfo = this.getRegisterInfo();
@@ -121,12 +152,30 @@ var user = {
 		}
 		regiserInfo.act = this.ACT_REGISTER;
         core.request.post(this.Page,regiserInfo,
-            function(){
-                console.log('success');
+            function(respone, info){
+				 var strRespond = core.util.parserXML(respone);
+				if (parseInt(strRespond[1]['rs']) == 1) {
+					core.ui.showInfoBar(1, strRespond[1]["inf"]);	
+					core.util.goTo("login.php");
+                }
+                else{
+					//existed username
+					if(parseInt(strRespond[1]['rs']) == 2)
+					{
+						 core.util.validateInputTextBox('txtUserName', strRespond[1]["inf"], true);
+					}
+					else if(parseInt(strRespond[1]['rs']) == 3)
+					{
+						 core.util.validateInputTextBox('txtEmail', strRespond[1]["inf"], true);
+					}
+                    core.ui.showInfoBar(2, strRespond[1]["inf"]);	
+					core.util.disableControl("btnOK", false);
+                }
             },
             function()
             {
-                console.log('failed');
+				core.ui.showInfoBar(2, core.constant.MsgProcessError);	
+				core.util.disableControl("btnOK", false);
             }
         );
     },

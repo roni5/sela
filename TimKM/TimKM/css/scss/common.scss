@@ -152,7 +152,7 @@ label
 /* End Info Bar */
 /* Begin Validate */
 
-.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline,.error .control-label, .error .help-block, .error .help-inline {
+.control-group.input-error .help-block.message, .control-group.input-error .help-inline.message,.input-error .help-block.message, .input-error .help-inline.message {
     color: #FF0000;
 }
 
@@ -160,7 +160,7 @@ label
 {
 	display: none;
 }
-.error
+.input-error
 {
 	.help-inline.message
 	{

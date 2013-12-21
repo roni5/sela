@@ -253,13 +253,13 @@ label {
 
 /* End Info Bar */
 /* Begin Validate */
-.control-group.error .control-label, .control-group.error .help-block, .control-group.error .help-inline, .error .control-label, .error .help-block, .error .help-inline {
+.control-group.input-error .help-block.message, .control-group.input-error .help-inline.message, .input-error .help-block.message, .input-error .help-inline.message {
   color: #FF0000; }
 
 .help-inline.message {
   display: none; }
 
-.error .help-inline.message {
+.input-error .help-inline.message {
   display: inline-block; }
 
 /* End Validate */
@@ -366,6 +366,9 @@ table.table {
 
 .chzn-container {
   display: inline-block; }
+
+.help-inline {
+  margin-top: 0px; }
 
 /*********** end custom plugin ************/
 /*********** header ************/
