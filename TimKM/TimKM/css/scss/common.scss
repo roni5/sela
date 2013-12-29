@@ -25,7 +25,7 @@ label
 	-webkit-border-radius: 0px; 
 	-moz-border-radius: 0px;
 	border-radius: 0px;
-	font-size:12px;
+	font-size:13px;
 	cursor: pointer;
 	 margin: 3px 5px;
 	font-family:arial, helvetica, sans-serif; 
@@ -35,7 +35,8 @@ label
 	display:inline-block;	
 	font-weight:bold; 
 	color: #FFFFFF;
-	background-color: #49c0f0; background-image: -webkit-gradient(linear, left top, left bottom, from(#49c0f0), to(#2CAFE3));
+	background-color: #49c0f0; 
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#49c0f0), to(#2CAFE3));
 	background-image: -webkit-linear-gradient(top, #49c0f0, #2CAFE3);
 	background-image: -moz-linear-gradient(top, #49c0f0, #2CAFE3);
 	background-image: -ms-linear-gradient(top, #49c0f0, #2CAFE3);
@@ -47,8 +48,8 @@ label
 
 .btn-mini
 {	
-	font-size:11px;		
-	padding: 2px 4px;
+	font-size:10px;		
+	padding: 1px 4px;
 }
 
 .btn-large
@@ -57,6 +58,22 @@ label
 	padding: 8px 20px;
 	font-size: 17px;
 	margin: 0;
+}
+.btn.gray 
+{
+	color: #333333;
+	text-shadow: none;
+	background-color: #e5e5e5;
+	background-image: none;
+	border: none;
+}
+.btn.gray:hover,.btn.gray:focus
+{
+	background-image: none; 
+	color: #333333;
+	background-color: #d8d8d8 !important;
+	border: none;
+	outline: none;
 }
 
 .btn:hover, 
@@ -135,12 +152,7 @@ label
 	box-shadow: 0 2px 40px rgba(0,0,0,.9);
     -moz-box-shadow: 0 2px 40px -moz-rgba(0,0,0,.9);
     -webkit-box-shadow: 0 2px 40px rgba(0,0,0,.9);
-    *filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=180, Strength=8);
-	.no-shadow{
-		box-shadow:none; 
-		-moz-box-shadow:none; 
-		-webkit-box-shadow:none; 		
-	}
+    *filter: progid:DXImageTransform.Microsoft.Shadow(color='#000', Direction=180, Strength=8);	
 	.icon{margin-right:15px; vertical-align:baseline; top:2px;}
 	span{_position:relative; _top:3px;}
 	.processing{background:#fff url(../images/loading.gif) 20px 7px no-repeat;} 
@@ -148,6 +160,27 @@ label
 	{
 		.icon{background:none !important; width:20px;}
 	}
+}
+
+.no-shadow{
+		box-shadow:none; 
+		-moz-box-shadow:none; 
+		-webkit-box-shadow:none; 	 	
+}
+
+.no-border
+{
+	border: medium none !important;
+}
+
+.no-display
+{
+	display: none;
+}
+
+.display
+{
+	display: inline-block;
 }
 /* End Info Bar */
 /* Begin Validate */

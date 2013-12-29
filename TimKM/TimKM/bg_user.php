@@ -10,7 +10,7 @@ if ($_pgR["act"] == Model_User::ACT_REGISTER)
 	$userName = global_editor::rteSafe(html_entity_decode($userName,ENT_COMPAT ,'UTF-8' ));
 	$password = $_pgR['password'];
 	$password = global_editor::rteSafe(html_entity_decode($password,ENT_COMPAT ,'UTF-8' ));
-	$password = md5($strUserId.md5($password));
+	
 	$fullname = $_pgR['fullname'];
 	$fullname = global_editor::rteSafe(html_entity_decode($fullname,ENT_COMPAT ,'UTF-8' ));
 	$birthDate = $_pgR['birthdate'];

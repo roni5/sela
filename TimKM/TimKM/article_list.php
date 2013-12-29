@@ -12,14 +12,13 @@ $arrCategory =  $objArticleType->getAllArticleType();
 
 $objUser = new Model_User($objConnection);
 
-if ($_pgR["act"] == Model_User::ACT_LOGIN)
-{
-	
-}
+$articles = $objArticle->getTopArticleByType('1',10);
+print_r($articles);
 
 ?>
 
 <?php
+$_SESSION[global_common::SES_C_CUR_PAGE] = "article_list.php";
 include_once('include/_header.inc');
 include_once('include/_menu.inc');
 

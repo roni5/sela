@@ -27,6 +27,7 @@ class global_common
 	 * 
 	 *****************************************************************************/
 	const SES_C_USERINFO						= 'CUSER_INFO';
+	const SES_C_CUR_PAGE						= 'CCUR_PAGE';
 	const SES_CHANGE_PASS						= 'CHANGE_PASS_CODE'; // check vercode for forgot pass
 	const SES_IS_AUTHENTICATED_CODE				= 'IS_AUTHENTICATED_CODE';
 	const SES_SIMILAR_SEARCH_CONTENT			= 'SIMILAR_SEARCH_CONTENT';
@@ -250,6 +251,14 @@ class global_common
 		echo "window.setTimeout(\"window.location.href=\\\"".$url."\\\"\", $timeout);"; 
 		echo "</script>";
 	}	
+	
+	/**
+	 * Redirect to URL
+	 * 
+	 * */
+	function redirect($url){
+		header ("Location: $url");
+	}
 	
 	/**
 	* remove multi space in string
@@ -2702,7 +2711,8 @@ class global_common
 	 *	@@author PhongHong edited[20110426]
 	 */	
 	public function getMaxID($strTableName, $intReserveId=1, $readonly)
-	{
+	{		
+		
 		$strFileName = self::FOLDER_FILES_MAXID.$strTableName;
 		
 		if(!file_exists($strFileName.'.app'))
@@ -2728,9 +2738,26 @@ class global_common
 			return $firstId;
 		}
 		
-		return false;
+		return false;	
 		
 	}
+	
+	public function getMaxValueofField($fieldName,$strTableName)
+	{
+		
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_MAX_ID, 
+				array($fieldName, $strTableName ));
+		//echo '<br>SQL:'.$strSQL;
+		$arrResult =$this->_objConnection->selectCommand($strSQL);		
+		if(!$arrResult)
+		{
+			global_common::writeLog('get getMaxValueofField:'.$strSQL,1,$_mainFrame->pPage);
+			return null;
+		}
+		//print_r($arrResult);
+		return $arrResult[0]['maxid'];
+	}
+	
 	
 	function zerofill ($num, $zerofill = 10)
 	{
@@ -3458,11 +3485,32 @@ class global_common
 		return true;
 	}
 	
+	/**
+	 * Input exampale: 2013-12-21 00:00:00
+	 * Output: 21/12/2013
+	 **/
 	public function formatDateTimeVN($mySqlDateTime)
 	{
 		return substr($mySqlDateTime,8,2)."/".substr($mySqlDateTime,5,2)."/".substr($mySqlDateTime,0,4) .' '. substr($mySqlDateTime,11,2).":".substr($mySqlDateTime,14,2).":".substr($mySqlDateTime,17,2) ;
 	}
 	
+	/**
+	 * Input exampale: 21/12/2013
+	 * Output: 12/21/2013
+	 **/
+	public function formatDateTime($inputTime)
+	{
+		return substr($inputTime,3,2)."/".substr($inputTime,0,2)."/".substr($inputTime,6,4);
+	}
+	
+	/**
+	 * Input exampale: 21/12/2013
+	 * Output: 2013-12-21 00:00:00
+	 **/
+	public function formatDateTimeSQL($inputTime)
+	{
+		return date('Y-m-d H:i:s',strtotime(self::formatDateTime($inputTime)));
+	}
 	
 	/**
 	 * This is method splitString to array, ignore empty value

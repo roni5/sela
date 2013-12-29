@@ -26,6 +26,8 @@
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-daterangepicker/daterangepicker.css');?>"/>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js');?>"></script>
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-datetimepicker/css/datetimepicker.css');?>"/>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-timepicker/js/bootstrap-timepicker.js');?>"></script>
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-timepicker/compiled/timepicker.css');?>"/>
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('jquery-inputmask/jquery.inputmask.bundle.min.js');?>"></script>
 
@@ -49,6 +51,7 @@
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('FlexSlider/jquery.flexslider-min.js');?>"></script>
 
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/ckeditor.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/adapters/jquery.js');?>"></script>
 
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('theme/css/style.css');?>">
 
@@ -118,8 +121,8 @@
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown user">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						<img src="/images/avatar1_small.jpg" alt="">
-						<span class="username">Bob Nilson</span>
+						<img class="avatar" src="/images/default/default-avatar-male.png" alt="">
+						<span class="username">Aiya Quan</span>
 						<i class="icon-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">

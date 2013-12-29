@@ -123,15 +123,30 @@ class Model_User
 		return $this->insert($userName,$password,$fullname,$birthDate,null,null,$email,$sex,null,null,null,null,null,null);
 	}
 	
+	public function login($userName,$password)
+	{
+		$userInfo = $this->getUserByName($userName);
+		$userID = $userInfo[global_mapping::UserID];
+		$sysPassword = $userInfo[global_mapping::Password];
+		$userpassword = md5($userID.md5($password));
+		if($userpassword == $sysPassword){
+			return $userInfo;
+		}
+		return null;
+	}
+	
     public function insert( $username,$password,$fullname,$birthdate,$address,$phone,$email,$sex,$identity,$roleid,$userrankid,$avatar,$accountid,$isactived)
 	{
 		$strTableName = self::TBL_SL_USER;
+		$intID = global_common::getMaxValueofField(global_mapping::UserID, $strTableName) + 1;
+		$password = md5($intID.md5($password));
+		
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_USER,
 				array(self::TBL_SL_USER,null,
 				global_common::escape_mysql_string($username),
 				global_common::escape_mysql_string($password),
 				global_common::escape_mysql_string($fullname),
-				global_common::escape_mysql_string($birthdate),
+				global_common::formatDateTimeSQL($birthdate),
 				global_common::escape_mysql_string($address),
 				global_common::escape_mysql_string($phone),
 				global_common::escape_mysql_string($email),
@@ -149,7 +164,7 @@ class Model_User
 			global_common::writeLog('Error add sl_user:'.$strSQL,1);
 			return false;
 		}	
-		return global_common::getMaxID(self::TBL_SL_USER);
+		return $this->getUserByName($username);
 		
 	}
     
