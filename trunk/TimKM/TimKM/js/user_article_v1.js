@@ -13,205 +13,249 @@
 /// Implementations of slarticles represent a Article
 ///
 /// </summary>
-function Article()
-{		   
+var article = {		   
 	//region PRESERVE ExtraMethods For Article
 	//endregion
     //region Contants	
-    var ACT_ADD = 10;
-    var ACT_UPDATE = 11;
-    var ACT_DELETE = 12;
-    var ACT_CHANGE_PAGE = 13;
-    var ACT_SHOW_EDIT = 14;
-    var ACT_GET = 15;
-    var _strPage = "admin_article.php";
+    ACT_ADD : 10,
+    ACT_UPDATE : 11,
+    ACT_DELETE : 12,
+    ACT_CHANGE_PAGE : 13,
+    ACT_SHOW_EDIT : 14,
+    ACT_GET : 15,
+    Page : "bg_article.php",
     
    
     //endregion   
     
     //region Public Functions
     
-    this.btnSave_OnClick = btnSave_OnClick;
-    function btnSave_OnClick() {
-        core.disableControl("btnOK", true);
+    getArticleInfo: function() {
+        core.util.disableControl("btnOK", true);
         var isValid = true;
-
-		var articleID = core.trim(core.getObject("txtArticleID").val());
-		core.ValidateInputTextBox('txtArticleID','');
-		if(articleID == ''){
-			core.ValidateInputTextBox('txtArticleID','ArticleID is required', isValid);
+		var controlID = 'txtCompanyName';		
+		var companyName = core.util.getObjectValueByID(controlID);
+		 core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(companyName)){
+			 core.util.validateInputTextBox(controlID,'Tên đơn vị không được rỗng', isValid);
 			isValid =  false;
-		}else if (articleID.length > 20) {
-			core.ValidateInputTextBox('txtArticleID','ArticleID must be less than 20', isValid);
-			isValid =  false;
-		}
-
-		var prefix = core.trim(core.getObject("txtPrefix").val());
-		core.ValidateInputTextBox('txtPrefix','');
-		if(prefix == ''){
-			core.ValidateInputTextBox('txtPrefix','Prefix is required', isValid);
-			isValid =  false;
-		}else if (prefix.length > 255) {
-			core.ValidateInputTextBox('txtPrefix','Prefix must be less than 255', isValid);
+		}else if (companyName.length > 255) {
+			 core.util.validateInputTextBox(controlID,'Tên đơn vị phải ngắn hơn 255 ký tự', isValid);
 			isValid =  false;
 		}
-
-		var title = core.trim(core.getObject("txtTitle").val());
-		core.ValidateInputTextBox('txtTitle','');
-		if(title == ''){
-			core.ValidateInputTextBox('txtTitle','Title is required', isValid);
+		
+		controlID = 'txtCompanyAddress';		
+		var companyAddress = core.util.getObjectValueByID(controlID);
+		 core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(companyAddress)){
+			 core.util.validateInputTextBox(controlID,'Địa chỉ không được rỗng', isValid);
 			isValid =  false;
-		}else if (title.length > 255) {
-			core.ValidateInputTextBox('txtTitle','Title must be less than 255', isValid);
-			isValid =  false;
-		}
-
-		var fileName = core.trim(core.getObject("txtFileName").val());
-		core.ValidateInputTextBox('txtFileName','');
-		if(fileName == ''){
-			core.ValidateInputTextBox('txtFileName','FileName is required', isValid);
-			isValid =  false;
-		}else if (fileName.length > 255) {
-			core.ValidateInputTextBox('txtFileName','FileName must be less than 255', isValid);
+		}else if (companyAddress.length > 255) {
+			 core.util.validateInputTextBox(controlID,'Địa chỉ phải ngắn hơn 255 ký tự', isValid);
 			isValid =  false;
 		}
-
-		var articleType = core.trim(core.getObject("txtArticleType").val());
-		core.ValidateInputTextBox('txtArticleType','');
-		if(articleType == ''){
-			core.ValidateInputTextBox('txtArticleType','ArticleType is required', isValid);
+		
+		controlID = 'txtCompanyPhone';		
+		var companyPhone = core.util.getObjectValueByID(controlID);
+		 core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(companyPhone)){
+			core.util.validateInputTextBox(controlID,'Số điện thoại không được rỗng', isValid);
 			isValid =  false;
-		}else if (articleType.length > 20) {
-			core.ValidateInputTextBox('txtArticleType','ArticleType must be less than 20', isValid);
+		}else if (!core.util.isPhoneNumber(companyPhone)) {
+			core.util.validateInputTextBox(controlID,'Số điện thoại không hợp lệ', isValid);
 			isValid =  false;
-		}
-
-		var content = core.trim(core.getObject("txtContent").val());
-		core.ValidateInputTextBox('txtContent','');
-		if(content == ''){
-			core.ValidateInputTextBox('txtContent','Content is required', isValid);
+		}else if (companyPhone.length > 50) {
+			core.util.validateInputTextBox(controlID,'Số điện thoại phải ngắn hơn 50 ký tự', isValid);
 			isValid =  false;
 		}
-		var notificationType = core.trim(core.getObject("txtNotificationType").val());
-		core.ValidateInputTextBox('txtNotificationType','');
-		if(notificationType == ''){
-			core.ValidateInputTextBox('txtNotificationType','NotificationType is required', isValid);
-			isValid =  false;
-		}else if (notificationType.length > 20) {
-			core.ValidateInputTextBox('txtNotificationType','NotificationType must be less than 20', isValid);
-			isValid =  false;
-		}
-
-		var tags = core.trim(core.getObject("txtTags").val());
-		core.ValidateInputTextBox('txtTags','');
-		if(tags == ''){
-			core.ValidateInputTextBox('txtTags','Tags is required', isValid);
+		
+		controlID = 'cmArea';		
+		var areas = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(areas)){
+			 core.util.validateInputTextBox(controlID,'Bạn chưa chọn lĩnh vực', isValid);
 			isValid =  false;
 		}
-		var catalogueID = core.trim(core.getObject("txtCatalogueID").val());
-		core.ValidateInputTextBox('txtCatalogueID','');
-		if(catalogueID == ''){
-			core.ValidateInputTextBox('txtCatalogueID','CatalogueID is required', isValid);
-			isValid =  false;
-		}else if (catalogueID.length > 20) {
-			core.ValidateInputTextBox('txtCatalogueID','CatalogueID must be less than 20', isValid);
-			isValid =  false;
-		}
-
-		var sectionID = core.trim(core.getObject("txtSectionID").val());
-		core.ValidateInputTextBox('txtSectionID','');
-		if(sectionID == ''){
-			core.ValidateInputTextBox('txtSectionID','SectionID is required', isValid);
-			isValid =  false;
-		}else if (sectionID.length > 20) {
-			core.ValidateInputTextBox('txtSectionID','SectionID must be less than 20', isValid);
+		
+		controlID = 'cmCategory';		
+		var categories = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(categories)){
+			 core.util.validateInputTextBox(controlID,'Bạn chưa chọn danh mục', isValid);
 			isValid =  false;
 		}
-
-		var numView = core.trim(core.getObject("txtNumView").val());
-		core.ValidateInputTextBox('txtNumView','');
-		if(numView == ''){
-			core.ValidateInputTextBox('txtNumView','NumView is required', isValid);
+		
+		controlID = 'txtAdTypeValue';		
+		var adType = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(adType)){
+			core.util.validateInputTextBox(controlID,'Loại khuyến mãi không được rỗng', isValid);
 			isValid =  false;
 		}
-		var numComment = core.trim(core.getObject("txtNumComment").val());
-		core.ValidateInputTextBox('txtNumComment','');
-		if(numComment == ''){
-			core.ValidateInputTextBox('txtNumComment','NumComment is required', isValid);
+		
+		controlID = 'txtStartDate';		
+		var startDate = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		
+		if (core.util.isNull(startDate)) {
+            core.util.validateInputTextBox(controlID, 'Ngày bắt đầu không được rỗng', isValid);
+            isValid = false;
+        } else if (core.util.validateDateTime(startDate) == false) {
+			 core.util.validateInputTextBox(controlID, 'Ngày bắt đầu không hợp lệ', isValid);
+			 isValid = false;
+        }		
+		
+		controlID = 'txtEndDate';		
+		var endDate = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		
+		if (core.util.isNull(endDate)) {
+            core.util.validateInputTextBox(controlID, 'Ngày kết thúc không được rỗng', isValid);
+            isValid = false;
+        } else if (core.util.validateDateTime(endDate) == false) {
+			 core.util.validateInputTextBox(controlID, 'Ngày kết thúc không hợp lệ', isValid);
+			 isValid = false;
+        }else if (new Date(startDate) >= new Date(endDate) ) {
+			 core.util.validateInputTextBox(controlID, 'Ngày kết thúc phải sau ngày bắt đầu', isValid);
+			 isValid = false;
+        }		
+		
+		controlID = 'txtName';		
+		var adName = core.util.getObjectValueByID(controlID);
+		core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(adName)){
+			core.util.validateInputTextBox(controlID,'Tên khuyến mãi không được rỗng', isValid);
+			isValid =  false;
+		}else if (adName.length > 255) {
+			 core.util.validateInputTextBox(controlID,'Tên khuyến mãi phải ngắn hơn 255', isValid);
 			isValid =  false;
 		}
-		var status = core.trim(core.getObject("txtStatus").val());
-		core.ValidateInputTextBox('txtStatus','');
-		if(status == ''){
-			core.ValidateInputTextBox('txtStatus','Status is required', isValid);
-			isValid =  false;
-		}else if (status.length > 20) {
-			core.ValidateInputTextBox('txtStatus','Status must be less than 20', isValid);
+		
+		if(core.util.getObjectByClass('location-district').length <1)
+		{
+			core.util.validateInputTextBox('txtAddressArticle','Phải có ít nhất một địa điểm', isValid);
 			isValid =  false;
 		}
-
-		var comments = core.trim(core.getObject("txtcomments").val());
-		core.ValidateInputTextBox('txtcomments','');
-		if(comments == ''){
-			core.ValidateInputTextBox('txtcomments','comments is required', isValid);
+		
+		var addresses='';
+		var disctricts = '';
+		var cities = '';
+		core.util.getObjectByClass('location-address').each(function(){
+			var text = ($(this).text()+"").replace(';',',');
+			addresses += text + ";";
+		})
+		
+		core.util.getObjectByClass('location-district').each(function(){
+			var text = ($(this).text()+"").replace(';',',');
+			disctricts += text + ";";
+		})
+		
+		core.util.getObjectByClass('location-city').each(function(){
+			var text = ($(this).text()+"").replace(';',',');
+			cities += text + ";";
+		})
+		
+		controlID = 'txtContent';		
+		var content = CKEDITOR.instances[controlID].getData()
+		core.util.validateInputTextBox(controlID,'');
+		if(core.util.isNull(controlID)){
+			core.util.validateInputTextBox(controlID,'Nội dung khuyến mãi không được rỗng', isValid);
 			isValid =  false;
 		}
-		var renewedDate = core.trim(core.getObject("txtRenewedDate").val());
-		core.ValidateInputTextBox('txtRenewedDate','');
-		if(renewedDate == ''){
-			core.ValidateInputTextBox('txtRenewedDate','RenewedDate is required', isValid);
-			isValid =  false;
-		}else if (core.ValidateDateTime(renewedDate) == false) {
-			core.getObject('txtRenewedDate')[0].focus();
-			strError += '<p>RenewedDate is invalid!</p>';
-		}
-
-		var renewedNum = core.trim(core.getObject("txtRenewedNum").val());
-		core.ValidateInputTextBox('txtRenewedNum','');
-		if(renewedNum == ''){
-			core.ValidateInputTextBox('txtRenewedNum','RenewedNum is required', isValid);
-			isValid =  false;
-		}else if (renewedNum.length > 12) {
-			core.ValidateInputTextBox('txtRenewedNum','RenewedNum must be less than 0', isValid);
-			isValid =  false;
-		}
-        else if (!core.isInteger(renewedNum)) {
-			core.ValidateInputTextBox('txtRenewedNum','RenewedNum is invalid', isValid);
-		}
-
-	       
+			       
         if (isValid == false) {
-         core.disableControl("btnOK", false);
+			core.util.disableControl("btnOK", false);
             return;
         }
-         
-        if (core.getObject("adddocmode")[0].value == ADD_MODE) {
-            insertNew();
-        }
-        else {
-            edit();
-        }
-    }
-    
+       
+    },
+	
+	postArticle: function() {  
+		//var articleInfo = this.getArticleInfo();
+		var articleInfo = 
+		{
+			 //Prefix:'prefix',
+			 Title:'title',
+			 //filename:'filename',
+			 //articletype:'articletype',
+			 Content:'content',
+			 //NotificationType:'notificationtype',
+			 Tags:'tags',
+			 CatalogueID:'1',
+			 SectionID:'1',
+			 //NumView:'numview',
+			 //NumComment:'numcomment',
+			 CreatedBy:'createdby',
+			 //CreatedDate:'createddate',
+			 //ModifiedBy:'modifiedby',
+			 //ModifiedDate:'modifieddate',
+			 //DeletedBy:'deletedby',
+			 //DeletedDate:'deleteddate',
+			 //IsDeleted:'isdeleted',
+			 //Status:'status',
+			 //Comments:'comments',
+			 //RenewedDate:'reneweddate',
+			 //RenewedNum:'renewednum',
+			 CompanyName:'companyname',
+			 CompanyAddress:'companyAddress',
+			 CompanyWebsite:'companyWebsite',
+			 CompanyPhone:'companyPhone',
+			 AdType:'adType',
+			 StartDate:'21/12/2013',
+			 EndDate:'21/01/2013',
+			 HappyDays:'happyDays',
+			 StartHappyHour:'10:00',
+			 EndHappyHour:'11:00',
+			 Addresses:'addresses',
+			 Dictricts:'dictricts',
+			 Cities:'cities'
+		};
+		if(core.util.isNull(articleInfo))
+		{
+			return false;
+		}
+		
+		//return false;;
+		articleInfo.act = this.ACT_ADD;
+        core.request.post(this.Page,articleInfo,
+            function(respone, info){
+				var strRespond = core.util.parserXML(respone);
+				if (parseInt(strRespond[1]['rs']) == 1) {
+					core.ui.showInfoBar(1, strRespond[1]["inf"]);	
+					//core.util.goTo("PostSucess.php");
+                }
+                else{
+                    core.ui.showInfoBar(2, strRespond[1]["inf"]);	
+					core.util.disableControl("btnOK", false);
+                }
+            },
+            function()
+            {
+				core.ui.showInfoBar(2, core.constant.MsgProcessError);	
+				core.util.disableControl("btnOK", false);
+            }
+        );
+    },
+    /*
     this.edit = edit;
     function edit() {
 
-		var articleID = core.trim(core.getObject("txtArticleID").val());
-		var prefix = core.trim(core.getObject("txtPrefix").val());
-		var title = core.trim(core.getObject("txtTitle").val());
-		var fileName = core.trim(core.getObject("txtFileName").val());
-		var articleType = core.trim(core.getObject("txtArticleType").val());
-		var content = core.trim(core.getObject("txtContent").val());
-		var notificationType = core.trim(core.getObject("txtNotificationType").val());
-		var tags = core.trim(core.getObject("txtTags").val());
-		var catalogueID = core.trim(core.getObject("txtCatalogueID").val());
-		var sectionID = core.trim(core.getObject("txtSectionID").val());
-		var numView = core.trim(core.getObject("txtNumView").val());
-		var numComment = core.trim(core.getObject("txtNumComment").val());
-		var status = core.trim(core.getObject("txtStatus").val());
-		var comments = core.trim(core.getObject("txtcomments").val());
-		var renewedDate = core.trim(core.getObject("txtRenewedDate").val());
-		var renewedNum = core.trim(core.getObject("txtRenewedNum").val());
+		var articleID = core.util.getObjectValueByID("txtArticleID");
+		var prefix = core.util.getObjectValueByID("txtPrefix");
+		var title = core.util.getObjectValueByID("txtTitle");
+		var fileName = core.util.getObjectValueByID("txtFileName");
+		var articleType = core.util.getObjectValueByID("txtArticleType");
+		var content = core.util.getObjectValueByID("txtContent");
+		var notificationType = core.util.getObjectValueByID("txtNotificationType");
+		var tags = core.util.getObjectValueByID("txtTags");
+		var catalogueID = core.util.getObjectValueByID("txtCatalogueID");
+		var sectionID = core.util.getObjectValueByID("txtSectionID");
+		var numView = core.util.getObjectValueByID("txtNumView");
+		var numComment = core.util.getObjectValueByID("txtNumComment");
+		var status = core.util.getObjectValueByID("txtStatus");
+		var comments = core.util.getObjectValueByID("txtcomments");
+		var renewedDate = core.util.getObjectValueByID("txtRenewedDate");
+		var renewedNum = core.util.getObjectValueByID("txtRenewedNum");
 	                
         strRequest = "?isAJ=1&act=" + ACT_UPDATE +  
             '&ArticleID='+ core.urlencode(articleID)+
@@ -236,7 +280,7 @@ function Article()
     }
 
     function edit_OnCallBack(xmlHTTPRequest) {
-        core.disableControl("btnOK", false);
+        core.util.disableControl("btnOK", false);
         if (xmlHTTPRequest.readyState == 4) {
             if (xmlHTTPRequest.status == 200) {
                 var strRespond = core.parserXML(xmlHTTPRequest.responseText);
@@ -250,7 +294,7 @@ function Article()
                 if (parseInt(strRespond[1]['rs']) == 1) {
                     showInfoBar('success', strRespond[1]["inf"]);
                     showAddMode();
-                    changePage(_strPage, ACT_CHANGE_PAGE, core.getObject("txtPage").val());
+                    changePage(_strPage, ACT_CHANGE_PAGE, core.getObject("txtPage");
                 }
                 else {
                     //var popDiv = new PopDiv();
@@ -264,22 +308,22 @@ function Article()
     this.insertNew = insertNew;
     function insertNew() {
 
-		var articleID = core.trim(core.getObject("txtArticleID").val());
-		var prefix = core.trim(core.getObject("txtPrefix").val());
-		var title = core.trim(core.getObject("txtTitle").val());
-		var fileName = core.trim(core.getObject("txtFileName").val());
-		var articleType = core.trim(core.getObject("txtArticleType").val());
-		var content = core.trim(core.getObject("txtContent").val());
-		var notificationType = core.trim(core.getObject("txtNotificationType").val());
-		var tags = core.trim(core.getObject("txtTags").val());
-		var catalogueID = core.trim(core.getObject("txtCatalogueID").val());
-		var sectionID = core.trim(core.getObject("txtSectionID").val());
-		var numView = core.trim(core.getObject("txtNumView").val());
-		var numComment = core.trim(core.getObject("txtNumComment").val());
-		var status = core.trim(core.getObject("txtStatus").val());
-		var comments = core.trim(core.getObject("txtcomments").val());
-		var renewedDate = core.trim(core.getObject("txtRenewedDate").val());
-		var renewedNum = core.trim(core.getObject("txtRenewedNum").val());
+		var articleID = core.util.getObjectValueByID("txtArticleID");
+		var prefix = core.util.getObjectValueByID("txtPrefix");
+		var title = core.util.getObjectValueByID("txtTitle");
+		var fileName = core.util.getObjectValueByID("txtFileName");
+		var articleType = core.util.getObjectValueByID("txtArticleType");
+		var content = core.util.getObjectValueByID("txtContent");
+		var notificationType = core.util.getObjectValueByID("txtNotificationType");
+		var tags = core.util.getObjectValueByID("txtTags");
+		var catalogueID = core.util.getObjectValueByID("txtCatalogueID");
+		var sectionID = core.util.getObjectValueByID("txtSectionID");
+		var numView = core.util.getObjectValueByID("txtNumView");
+		var numComment = core.util.getObjectValueByID("txtNumComment");
+		var status = core.util.getObjectValueByID("txtStatus");
+		var comments = core.util.getObjectValueByID("txtcomments");
+		var renewedDate = core.util.getObjectValueByID("txtRenewedDate");
+		var renewedNum = core.util.getObjectValueByID("txtRenewedNum");
 	        
         strRequest = "?isAJ=1&act=" + ACT_ADD +  
             '&ArticleID='+ core.urlencode(articleID)+
@@ -304,7 +348,7 @@ function Article()
     }
 
     function insertNew_OnCallBack(xmlHTTPRequest) {
-        core.disableControl("btnOK", false);
+        core.util.disableControl("btnOK", false);
         if (xmlHTTPRequest.readyState == 4) {
             if (xmlHTTPRequest.status == 200) {
                 var strRespond = core.parserXML(xmlHTTPRequest.responseText);
@@ -446,5 +490,5 @@ function Article()
 		core.getObject('txtRenewedNum').val('');
     }
     //endregion   
+	*/
 }
-var _objArticle = new  Article();

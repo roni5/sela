@@ -142,7 +142,7 @@ core.ui = {
 	    $('.info-bar').stop().animate(
 		    {top : '-30px'},
 		    {duration: _speed, easing: 'easeOutCubic', complete:function(){$('.info-bar').addClass('no-shadow');}}
-	    );
+	    );		
     },
     getWindowDimensions: function() {
         var wind = $(window);
@@ -451,7 +451,7 @@ core.util = {
     },
 	
     isNull: function(varOject) {
-        if (typeof (varOject) == 'undefined' && !varOject) {
+        if (typeof (varOject) == 'undefined' || !varOject || core.util.trim(varOject) == '' ) {
             return true;
         }
         else {
@@ -460,7 +460,36 @@ core.util = {
     },
 	goTo: function(url) {
         window.location.href = url;
-    }
+    },
+	
+	isPhoneNumber: function(sText){
+        var ValidChars = "0123456789.() +";
+        var isPhone = true;
+        var Char;
+		//sText += ";"
+		var phones = sText.split(';');
+		$.each(phones, function(key,value){
+			if(value.length>0 && value.length <7)
+			{
+				return false;
+			}
+			for (i = 0; i < value.length && isPhone == true; i++) 
+			{
+				Char = value.charAt(i);
+				if (ValidChars.indexOf(Char) == -1) {
+					isPhone = false;
+				}
+			}	
+		});
+       
+        return isPhone;
+	},
+	compareTime: function(start, end){
+		if(Date.parse("1-1-2000 " + start) < Date.parse("1-1-2000 " + end)) {
+			return true;
+		}
+		return false;
+	},
 };
 
 core.init = function() {

@@ -15,217 +15,15 @@
 
 /* TODO: Add code here */
 require('config/globalconfig.php');
-include_once('class/model_article.php');
+
 
 ?>
-<?php
 
-$objArticle = new Model_Article($objConnection);
-
-if ($_pgR["act"] == model_Article::ACT_ADD)
-{
-	
-	if (global_common::isCLogin())
-	{
-		//get user info
-		//$c_userInfo = $_SESSION[consts::SES_C_USERINFO];
-		
-		//if ($objMenu->getMenuByName($_pgR['name'])) {
-		//	echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_NAME_EXIST), array(0,1));
-		//	return;
-		//}
-		
-		$articleID = $_pgR['ArticleID'];
-		$articleID = global_editor::rteSafe(html_entity_decode($articleID,ENT_COMPAT ,'UTF-8' ));
-		$prefix = $_pgR['Prefix'];
-		$prefix = global_editor::rteSafe(html_entity_decode($prefix,ENT_COMPAT ,'UTF-8' ));
-		$title = $_pgR['Title'];
-		$title = global_editor::rteSafe(html_entity_decode($title,ENT_COMPAT ,'UTF-8' ));
-		$fileName = $_pgR['FileName'];
-		$fileName = global_editor::rteSafe(html_entity_decode($fileName,ENT_COMPAT ,'UTF-8' ));
-		$articleType = $_pgR['ArticleType'];
-		$articleType = global_editor::rteSafe(html_entity_decode($articleType,ENT_COMPAT ,'UTF-8' ));
-		$content = $_pgR['Content'];
-		$content = global_editor::rteSafe(html_entity_decode($content,ENT_COMPAT ,'UTF-8' ));
-		$notificationType = $_pgR['NotificationType'];
-		$notificationType = global_editor::rteSafe(html_entity_decode($notificationType,ENT_COMPAT ,'UTF-8' ));
-		$tags = $_pgR['Tags'];
-		$tags = global_editor::rteSafe(html_entity_decode($tags,ENT_COMPAT ,'UTF-8' ));
-		$catalogueID = $_pgR['CatalogueID'];
-		$catalogueID = global_editor::rteSafe(html_entity_decode($catalogueID,ENT_COMPAT ,'UTF-8' ));
-		$sectionID = $_pgR['SectionID'];
-		$sectionID = global_editor::rteSafe(html_entity_decode($sectionID,ENT_COMPAT ,'UTF-8' ));
-		$numView = $_pgR['NumView'];
-		$numView = global_editor::rteSafe(html_entity_decode($numView,ENT_COMPAT ,'UTF-8' ));
-		$numComment = $_pgR['NumComment'];
-		$numComment = global_editor::rteSafe(html_entity_decode($numComment,ENT_COMPAT ,'UTF-8' ));
-		$status = $_pgR['Status'];
-		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
-		$comments = $_pgR['comments'];
-		$comments = global_editor::rteSafe(html_entity_decode($comments,ENT_COMPAT ,'UTF-8' ));
-		$renewedDate = $_pgR['RenewedDate'];
-		$renewedDate = global_editor::rteSafe(html_entity_decode($renewedDate,ENT_COMPAT ,'UTF-8' ));
-		$renewedNum = $_pgR['RenewedNum'];
-		$renewedNum = global_editor::rteSafe(html_entity_decode($renewedNum,ENT_COMPAT ,'UTF-8' ));
-		//$strName = $_pgR['name'];
-		//$strName = global_editor::rteSafe(html_entity_decode($strName,ENT_COMPAT ,'UTF-8' ));
-		$resultID = $objArticle->insert($articleID,$prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status,$comments,$renewedDate,$renewedNum);
-		if ($resultID)
-		{
-			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
-			echo global_common::convertToXML(
-					$arrHeader, array("rs", "inf"), 
-					array(1, $result), 
-					array( 0, 1 )
-					);
-			return;
-		}
-		else
-		{
-			echo global_common::convertToXML($arrHeader, array("rs","info"), array(0,"Input data is invalid"), array(0,1));
-			return;
-		}
-	}
-	else
-	{
-		echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_REQUIRE_LOGIN), array(0,1));
-	}
-	return;
-}
-elseif($_pgR['act'] == model_Article::ACT_UPDATE)
-{
-	if (global_common::isCLogin())
-	{
-		//l?y th?ng tin user
-		//$c_userInfo = $_SESSION[consts::SES_C_USERINFO];
-		
-		
-		$articleID = $_pgR['ArticleID'];
-		$articleID = global_editor::rteSafe(html_entity_decode($articleID,ENT_COMPAT ,'UTF-8' ));
-		$prefix = $_pgR['Prefix'];
-		$prefix = global_editor::rteSafe(html_entity_decode($prefix,ENT_COMPAT ,'UTF-8' ));
-		$title = $_pgR['Title'];
-		$title = global_editor::rteSafe(html_entity_decode($title,ENT_COMPAT ,'UTF-8' ));
-		$fileName = $_pgR['FileName'];
-		$fileName = global_editor::rteSafe(html_entity_decode($fileName,ENT_COMPAT ,'UTF-8' ));
-		$articleType = $_pgR['ArticleType'];
-		$articleType = global_editor::rteSafe(html_entity_decode($articleType,ENT_COMPAT ,'UTF-8' ));
-		$content = $_pgR['Content'];
-		$content = global_editor::rteSafe(html_entity_decode($content,ENT_COMPAT ,'UTF-8' ));
-		$notificationType = $_pgR['NotificationType'];
-		$notificationType = global_editor::rteSafe(html_entity_decode($notificationType,ENT_COMPAT ,'UTF-8' ));
-		$tags = $_pgR['Tags'];
-		$tags = global_editor::rteSafe(html_entity_decode($tags,ENT_COMPAT ,'UTF-8' ));
-		$catalogueID = $_pgR['CatalogueID'];
-		$catalogueID = global_editor::rteSafe(html_entity_decode($catalogueID,ENT_COMPAT ,'UTF-8' ));
-		$sectionID = $_pgR['SectionID'];
-		$sectionID = global_editor::rteSafe(html_entity_decode($sectionID,ENT_COMPAT ,'UTF-8' ));
-		$numView = $_pgR['NumView'];
-		$numView = global_editor::rteSafe(html_entity_decode($numView,ENT_COMPAT ,'UTF-8' ));
-		$numComment = $_pgR['NumComment'];
-		$numComment = global_editor::rteSafe(html_entity_decode($numComment,ENT_COMPAT ,'UTF-8' ));
-		$status = $_pgR['Status'];
-		$status = global_editor::rteSafe(html_entity_decode($status,ENT_COMPAT ,'UTF-8' ));
-		$comments = $_pgR['comments'];
-		$comments = global_editor::rteSafe(html_entity_decode($comments,ENT_COMPAT ,'UTF-8' ));
-		$renewedDate = $_pgR['RenewedDate'];
-		$renewedDate = global_editor::rteSafe(html_entity_decode($renewedDate,ENT_COMPAT ,'UTF-8' ));
-		$renewedNum = $_pgR['RenewedNum'];
-		$renewedNum = global_editor::rteSafe(html_entity_decode($renewedNum,ENT_COMPAT ,'UTF-8' ));
-		
-		//$checkProduct = $objMenu->getMenuByName($_pgR['name']);
-		//if ($checkProduct && $checkProduct['menu_id']!= $strID) {
-		//	echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_NAME_EXIST), array(0,1));
-		//	return;
-		//}
-		//$strName = $_pgR['name'];
-		//$strDetail= $_pgR['detail'];
-		$resultID = $objArticle->update($articleID,$prefix,$title,$fileName,$articleType,$content,$notificationType,$tags,$catalogueID,$sectionID,$numView,$numComment,$status,$comments,$renewedDate,$renewedNum);
-		
-		if ($resultID)
-		{
-			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
-			
-			echo global_common::convertToXML(
-					$arrHeader, array("rs", "inf"), 
-					array(1, $result ), 
-					array( 0, 1 )
-					);
-			return;
-		}
-		else
-		{
-			echo global_common::convertToXML($arrHeader, array("rs"), array(0), array(0));
-			return;
-		}
-	}
-	else
-	{
-		echo global_common::convertToXML($arrHeader, array("rs",'info'), array(0,global_common::STRING_REQUIRE_LOGIN), array(0,1));
-	}
-	return;
-}
-elseif($_pgR['act'] == model_Article::ACT_CHANGE_PAGE)
-{
-	$intPage = $_pgR['p'];
-	
-	$outPutHTML =  $objArticle->getListArticle($intPage);
-	echo global_common::convertToXML($strMessageHeader, array('rs','inf'), array(1,$outPutHTML),array(0,1));
-	return ;
-}
-elseif($_pgR['act'] == model_Article::ACT_SHOW_EDIT)
-{
-	
-	$strArticleID = $_pgR['id'];
-	$arrArticle =  $objArticle->getArticleByID($strArticleID);
-	
-	echo global_common::convertToXML($strMessageHeader, array('rs','ArticleID','Prefix','Title','FileName','ArticleType','Content','NotificationType','Tags','CatalogueID','SectionID','NumView','NumComment','Status','comments','RenewedDate','RenewedNum'), array(1,'ArticleID','Prefix','Title','FileName','ArticleType','Content','NotificationType','Tags','CatalogueID','SectionID','NumView','NumComment','Status','comments','RenewedDate','RenewedNum'),array(0,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0));
-	return ;
-}
-elseif ($_pgR["act"] == model_Article::ACT_GET)
-{		
-	$sectionID = $_pgR["sect"];
-	$arrSection= $objMenu->getAllMenuBySection($sectionID);
-	if($arrSection)
-	{
-		$strHTML = $objMenu->outputHTMLMenu($arrSection);
-		echo global_common::convertToXML($arrHeader, array("rs", "inf"), 
-				array(1, $strHTML), array(0, 1));
-		return;	
-	}
-	else
-	{
-		echo global_common::convertToXML($arrHeader, array("rs",'inf'),array(0,'Kh?ng c? nh?m h?ng'),array(0,0));
-		return ;
-	}
-}
-elseif($_pgR['act'] == model_Article::ACT_DELETE)
-{
-	
-	$IDName = "menu_id";
-	$contentID = $_pgR["id"];
-	$strTableName = user_menu::TBL_T_MENU;
-	$result = global_common::updateDeleteFlag($contentID,$IDName,$strTableName ,$_pgR["status"],$objConnection);
-	if($result)
-	{
-		$IDName = "content_id";
-		$strTableName = user_faq::TBL_T_FAQ;
-		$result = global_common::updateDeleteFlag($contentID,$IDName,$strTableName ,$_pgR["status"],$objConnection);
-	}
-	$arrHeader = global_common::getMessageHeaderArr($banCode=0,0);
-	$arrKey = array("rs","id");
-	$arrValue = array($result?1:0,$contentID);
-	$arrIsMetaData = array(0, 1);
-	echo global_common::convertToXML($arrHeader, $arrKey, $arrValue, $arrIsMetaData);
-	
-	return;
-}
-?>
 
 <?php
 include_once('include/_header.inc');
 ?>
-<script type="text/javascript" src="<?php echo $_objSystem->locateJs('sela_Article.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJs('user_article.js');?>"></script>
 <div id="post-page" class="span10">
 	<form method="POST" class="form-horizontal">
 		<!--Begin Form Input -->
@@ -252,21 +50,21 @@ include_once('include/_header.inc');
 			<div class="control-group">
 				<label class="control-label">Tên đơn vị *</label>
 				<div class="controls">
-					<input type="text" name="txtCompanyName" id="txtCompanyName" class="text m-wrap span6" maxlength="250" />
+					<input type="text" name="txtCompanyName" id="txtCompanyName" class="text m-wrap span6" maxlength="255" />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Địa chỉ *</label>
 				<div class="controls">
-					<input type="text" name="txtCompanyAddress" id="txtCompanyAddress" class="text m-wrap span6" maxlength="250" />
+					<input type="text" name="txtCompanyAddress" id="txtCompanyAddress" class="text m-wrap span6" maxlength="255" />
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Web/Facebook</label>
 				<div class="controls">
-					<input type="text" name="txtCompanySite" id="txtCompanySite" class="text m-wrap" maxlength="250" />
+					<input type="text" name="txtCompanySite" id="txtCompanySite" class="text m-wrap" maxlength="255" />
 					<label class="m-wrap inline">Điện thoại *</label>
-					<input type="text" name="txtCompanyPhone" id="txtCompanyPhone" class="text m-wrap span3" placeholder="Vd: 0123456789, 0123-456-789,..." maxlength="250" />
+					<input type="text" name="txtCompanyPhone" id="txtCompanyPhone" class="text m-wrap span3" placeholder="Vd: 0123456789, 0123-456-789,..." maxlength="50" />
 				</div>
 			</div>
 			<div class="control-group zone">
@@ -278,44 +76,48 @@ include_once('include/_header.inc');
 				<label class="control-label">Lĩnh vực *</label>
 				<div class="controls">	
 					<select class="span6 chosen" name="cmArea" id="cmArea" data-placeholder="Chọn lĩnh vực" multiple="multiple" tabindex="1">
-						<option value="1">Ăn uống/ Giải trí</option>
+						<option value="1" >Ăn uống/ Giải trí</option>
 						<option value="2">Thời trang/ Làm đẹp</option>
 					</select>
+					<div class="help-inline message"></div>
 				</div>
 			</div>	
 			<div class="control-group">	
 				<label class="control-label">Chuyên Mục *</label>
 				<div class="controls">	
 					<select class="span6 chosen" name="cmCategory" id="cmCategory" data-placeholder="Chọn chuyên mục" multiple="multiple" tabindex="1">
-						<option value="1">Nhà hàng</option>
+						<option value="1" >Nhà hàng</option>
 						<option value="2">Ăn vặt</option>
 					</select>
+					<div class="help-inline message"></div>					
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Loại khuyến mãi *</label>
 				<div class="controls">
 					<input type="text" name="txtAdTypeValue" id="txtAdTypeValue" class="text ad-value" placeholder="Mua 1 tặng 1" maxlength="15" />
+					<div class="help-inline message"></div>			
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Từ *</label>
 				<div class="controls">
-					<div class="input-append date date-picker text " data-date="21/12/2012"   data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
-						<input name="txtBirthday" id="txtBirthday" class="m-wrap m-ctrl-medium date-picker input-mask" mask-data="d/m/y" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+					<div class="input-append date date-picker text" data-date="" readonly="readonly"  data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
+						<input name="txtStartDate" id="txtStartDate" class="m-wrap m-ctrl-medium date-picker "size="16" type="text" value="" placeholder="dd/mm/yyyy" />
 							<span class="add-on"><i class="icon-calendar"></i></span>
 					</div>
 					<label class="m-wrap inline">Đến * </label>
-					<div class="input-append date date-picker text " data-date="21/12/2012"   data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
-						<input name="txtBirthday" id="txtBirthday" class="m-wrap m-ctrl-medium date-picker input-mask" mask-data="d/m/y" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+					<div class="input-append date date-picker text " data-date=""  data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
+						<input name="txtEndDate" id="txtEndDate" class="m-wrap m-ctrl-medium date-picker" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
 							<span class="add-on"><i class="icon-calendar"></i></span>
 					</div>
+					<div class="help-inline message"></div>			
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Happy days</label>
 				<div class="controls">
-					<select class="span3 chosen" data-placeholder="Chọn ngày trong tuần" multiple="multiple" tabindex="1">
+					<select class="span3 chosen" name="cmHappyDays" id="cmHappyDays" data-placeholder="Chọn ngày trong tuần" multiple="multiple" tabindex="1">
 						<option value="Monday">Monday</option>
 						<option value="Tuesday">Tuesday</option>
 						<option value="Wednesday">Wednesday</option>
@@ -329,47 +131,54 @@ include_once('include/_header.inc');
 				<div class="control-group">
 				<label class="control-label">Happy hours</label>
 				<div class="controls">
-					<input type="text" name="txtHappyFrom" id="txtHappyFrom" class="input-mask" mask-data="##:##" class="text" placeholder="Vd: 12:35" maxlength="20" />
-					<label class="m-wrap inline">Đến * </label>
-					<input type="text" name="txtHappyTo" id="txtHappyTo" class="input-mask" mask-data="##:##" class="text" placeholder="Vd: 13:35" maxlength="20" />
-					
+					<div class="input-append bootstrap-timepicker-component">
+						<input name="txtHappyFrom" id="txtHappyFrom" class="m-wrap m-ctrl-small timepicker-24" type="text" />
+						<span class="add-on"><i class="icon-time"></i></span>
+					</div>
+					<label class="m-wrap inline">Đến  </label>
+					<div class="input-append bootstrap-timepicker-component">
+						<input name="txtHappyTo" id="txtHappyTo"  class="m-wrap m-ctrl-small timepicker-24" type="text" />
+						<span class="add-on"><i class="icon-time"></i></span>
+					</div>
+					<div class="help-inline message"></div>
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Tên chương trình KM *</label>
 				<div class="controls">
-					<input type="text" name="txtName" id="txtName" class="text span6 maxlength="250" />
+					<input type="text" name="txtName" id="txtName" class="text span6 maxlength="255"  />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label">Hình minh họa</label>
+				<div class="controls">
+					<input type="text" name="txtImage" id="txtImage" class="text span6 maxlength="255"  placeholder="vd: http://i134.photobucket.com/albums/q99/45748_0_square_1a.jpg"  />
 				</div>
 			</div>
 			<div class="control-group address-article">
 				<label class="control-label">Địa điểm *</label>
 				<div class="controls">
-					<input type="text" name="txtAddressArticle" id="txtAddressArticle" class="text m-wrap  span3" maxlength="250" placeholder="vd: 1A Trần Hưng Đạo" />
+					<input type="text" name="txtAddressArticle" id="txtAddressArticle" class="text m-wrap  span3" maxlength="255" placeholder="vd: 1A Trần Hưng Đạo" />
 					
 					<select id="optCity" name="optCity" class="chosen span2 m-wrap " single="single" data-placeholder="Chọn TP/Tỉnh" tabindex="1">
 						<option value="HCM">HCM</option>
 						<option value="HCM">HN</option>
 					</select>
 					<select id="optDistrict" name="optDistrict"  class="chosen span2 m-wrap " data-placeholder="Chọn Quận/Huyện" tabindex="1">
-						<option value="Quan1">Quận 1</option>
+						<option value="Quận 1">Quận 1</option>
+						<option value="Quận 2">Quận 2</option>
+						<option value="Quận 3">Quận 3</option>
 					</select>	
-					<a href="javascript:void()" class="btn btn-add"/><i class="icon-plus"></i> Thêm</a>
+					<a href="javascript:void(0);" class="btn btn-mini btn-add" onclick="article.addLocation(this)"/><i class="icon-plus"></i> Thêm</a>
+					<a href="javascript:void(0);" class="btn btn-mini btn-update no-display" onclick="article.updateLocation(this)"/><i class="icon-ok"></i> Cập nhật</a>
+					<a href="javascript:void(0);" class="btn  btn-mini btn-cancel no-display" onclick="article.cancelLocation(this)"/></i> Hủy bỏ</a>
 				</div>	
-				<div class="controls row-item" style="border:none">
-					<label class="m-wrap inline span6 lbl-address"> 1A Trần Hưng Đạo, Bến Nghé, Quận 1, HCM</label>
-					<a href="javascript:void()" class="btn btn-add"/><i class="icon-pencil"></i> Sửa</a>
-					<a href="javascript:void()" class="btn btn-add"/><i class="icon-icon-remove"></i> Xóa</a>
-				</div>	
-				<div class="controls row-item">
-					<label class="m-wrap inline span6 lbl-address"> 1A Hoang Dieu, Phuong 1, Quận 4, HCM</label>
-					<a href="javascript:void()" class="btn btn-add"/><i class="icon-pencil"></i> Sửa</a>
-					<a href="javascript:void()" class="btn btn-add"/><i class="icon-icon-remove"></i> Xóa</a>
-				</div>		
 			</div>
 			<div class="control-group">
 				<label class="control-label">Nội dung *</label>
 				<div class="controls">
 					<textarea class="span6 ckeditor m-wrap" name="txtContent" id="txtContent" rows="6"></textarea>
+					<div class="help-inline message"></div>					
 				</div>
 			</div>
 			<div class="control-group">
@@ -387,8 +196,8 @@ include_once('include/_header.inc');
 			</div>
 			<div class="control-group">				
 				<div class="controls">
-					<input type="submit" name="btnOK" id="btnOK" class="btn" value="Đăng tin"/>
-					<input type="reset" name="btnReset" id="btnReset" class="btn" value="Nhập lại"/>
+					<input type="button" name="btnOK" id="btnOK" class="btn" value="Đăng tin"/>
+					<input type="reset" name="btnReset" id="btnReset" class="btn gray" value="Nhập lại"/>
 				</div>
 			</div>
 		</div>
@@ -399,6 +208,19 @@ include_once('include/_header.inc');
 //footer
 include_once('include/_footer.inc');
 ?>
-<script>
-        //tinymce.init({selector:'#txtContent'});
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+			
+			core.util.getObjectByID("btnOK").click(function(){
+				 article.postArticle();			
+			});
+			
+			/*
+			core.util.getObjectByID("form-register").submit(function () {
+               user.register();				
+				return false;				
+            });
+			*/
+			
+    });
 </script>

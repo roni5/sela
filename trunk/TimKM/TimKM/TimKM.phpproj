@@ -24,11 +24,11 @@
 }
 "Files"
 {
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\svg"
+    "plugins\\ckeditor\\samples\\sample.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\sample.js"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\svg"
     {
     "ProjRelPath" = "T"
     }
@@ -48,11 +48,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap\\test\\index.html"
+    "plugins\\bootstrap-wizard\\bootstrap\\img\\glyphicons-halflings.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\bootstrap\\img\\glyphicons-halflings.png"
+    "plugins\\jquery.pwstrength.bootstrap\\test\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -68,11 +68,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones\\date.js"
+    "plugins\\ckeditor\\lang\\mk.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\mk.js"
+    "plugins\\flot\\examples\\axes-time-zones\\date.js"
     {
     "ProjRelPath" = "T"
     }
@@ -80,11 +80,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-knob\\README.md"
+    "lib\\log4php\\helpers\\LoggerTransform.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\helpers\\LoggerTransform.php"
+    "plugins\\jquery-knob\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -92,7 +92,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\tinymce\\themes\\simple\\img\\icons.gif"
+    "plugins\\bootstrap-tree\\bootstrap-tree\\img\\bstree-halflings-rtl.png"
     {
     "ProjRelPath" = "T"
     }
@@ -100,7 +100,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\bootstrap-tree\\img\\bstree-halflings-rtl.png"
+    "plugins\\jquery-validation\\demo\\tinymce\\themes\\simple\\img\\icons.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -108,11 +108,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\scss\\_icons.scss"
+    "file\\avatar\\651 (18).jpg"
     {
     "ProjRelPath" = "T"
     }
-    "file\\avatar\\651 (18).jpg"
+    "plugins\\font-awesome\\scss\\_icons.scss"
     {
     "ProjRelPath" = "T"
     }
@@ -120,11 +120,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js"
+    "plugins\\bootstrap-tag\\js\\bootstrap-tag.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tag\\js\\bootstrap-tag.js"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js"
     {
     "ProjRelPath" = "T"
     }
@@ -148,19 +148,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\.gitignore"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-toggle-buttons\\static\\js\\jquery.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.errorbars.min.js"
+    "plugins\\jquery-multi-select\\.gitignore"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\fancybox\\demo\\ajax.txt"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\jquery.flot.errorbars.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -184,11 +184,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_ua.js"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\login-sprite.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\login-sprite.gif"
+    "plugins\\select2\\select2_locale_ua.js"
     {
     "ProjRelPath" = "T"
     }
@@ -208,11 +208,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\demos\\json.html"
+    "admin\\admin_menu.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_menu.php"
+    "plugins\\fullcalendar\\demos\\json.html"
     {
     "ProjRelPath" = "T"
     }
@@ -232,11 +232,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.slider.min.js"
+    "class\\model_contentsummary.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_contentsummary.php"
+    "plugins\\jquery-ui\\components\\jquery.ui.slider.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -248,11 +248,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\fonts\\glyphicons-regular.svg"
+    "plugins\\bootstrap-fileupload\\bootstrap-fileupload.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-fileupload\\bootstrap-fileupload.js"
+    "plugins\\glyphicons\\fonts\\glyphicons-regular.svg"
     {
     "ProjRelPath" = "T"
     }
@@ -360,11 +360,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-menu-arrow-right.png"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js"
+    "plugins\\theme\\img\\sidebar-menu-arrow-right.png"
     {
     "ProjRelPath" = "T"
     }
@@ -376,11 +376,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_fi.js"
+    "plugins\\flot\\examples\\categories"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\categories"
+    "plugins\\jquery-validation\\localization\\messages_fi.js"
     {
     "ProjRelPath" = "T"
     }
@@ -388,11 +388,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\radio-checkbox-select-demo.html"
+    "lib\\log4php\\spi\\LoggerLocationInfo.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\spi\\LoggerLocationInfo.php"
+    "plugins\\jquery-validation\\demo\\radio-checkbox-select-demo.html"
     {
     "ProjRelPath" = "T"
     }
@@ -400,11 +400,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.autocomplete.js"
+    "admin\\admin_comment.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_comment.php"
+    "plugins\\jquery-ui\\components\\jquery.ui.autocomplete.js"
     {
     "ProjRelPath" = "T"
     }
@@ -424,11 +424,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\captcha\\captcha.js"
+    "plugins\\bootstrap-tree\\README.md"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\README.md"
+    "plugins\\jquery-validation\\demo\\captcha\\captcha.js"
     {
     "ProjRelPath" = "T"
     }
@@ -436,11 +436,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-search-close-purple.png"
+    "plugins\\bootstrap-modal\\params.json"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-modal\\params.json"
+    "plugins\\theme\\img\\sidebar-search-close-purple.png"
     {
     "ProjRelPath" = "T"
     }
@@ -460,11 +460,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\image\\index.html"
+    "plugins\\FlexSlider\\demo\\thumbnail-slider.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\thumbnail-slider.html"
+    "plugins\\flot\\examples\\image\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -500,11 +500,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\js"
+    "include\\_comment_list.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_comment_list.inc"
+    "plugins\\jcrop\\js"
     {
     "ProjRelPath" = "T"
     }
@@ -524,11 +524,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-zh-CN.js"
+    "plugins\\bootstrap-datepicker\\tests\\suites\\data-api.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\suites\\data-api.js"
+    "plugins\\countdown\\plugin\\jquery.countdown-zh-CN.js"
     {
     "ProjRelPath" = "T"
     }
@@ -536,11 +536,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\dialog\\assets\\my_dialog.js"
+    "css\\themes\\smoothness\\jquery.ui.progressbar.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\jquery.ui.progressbar.css"
+    "plugins\\ckeditor\\samples\\plugins\\dialog\\assets\\my_dialog.js"
     {
     "ProjRelPath" = "T"
     }
@@ -548,11 +548,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.time.js"
+    "images\\150x150.gif"
     {
     "ProjRelPath" = "T"
     }
-    "images\\150x150.gif"
+    "plugins\\flot\\jquery.flot.time.js"
     {
     "ProjRelPath" = "T"
     }
@@ -616,11 +616,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\selects"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium\\eot\\1110FC_0.eot"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium\\eot\\1110FC_0.eot"
+    "plugins\\jquery-validation\\test\\selects"
     {
     "ProjRelPath" = "T"
     }
@@ -640,11 +640,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\search-icon-brown.png"
+    "plugins\\bootstrap-wizard\\bootstrap\\css\\bootstrap.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\bootstrap\\css\\bootstrap.css"
+    "plugins\\theme\\img\\search-icon-brown.png"
     {
     "ProjRelPath" = "T"
     }
@@ -680,11 +680,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\layers.html"
+    "css\\style-non-responsive.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\style-non-responsive.css"
+    "plugins\\gmaps\\examples\\layers.html"
     {
     "ProjRelPath" = "T"
     }
@@ -700,11 +700,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-kn.js"
+    "plugins\\ckeditor\\styles.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\styles.js"
+    "plugins\\countdown\\plugin\\jquery.countdown-kn.js"
     {
     "ProjRelPath" = "T"
     }
@@ -748,11 +748,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\component.json"
+    "plugins\\fancybox\\demo\\1_s.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\demo\\1_s.jpg"
+    "plugins\\select2\\component.json"
     {
     "ProjRelPath" = "T"
     }
@@ -796,11 +796,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\bootstrap\\img"
+    "js\\sela_status.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_status.js"
+    "plugins\\bootstrap-tree\\bootstrap\\img"
     {
     "ProjRelPath" = "T"
     }
@@ -816,19 +816,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-toggler.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\gritter\\js\\jquery.gritter.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.fillbetween.js"
+    "plugins\\theme\\img\\sidebar-toggler.jpg"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\jquery.input-ip-address-control-1.0.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\jquery.flot.fillbetween.js"
     {
     "ProjRelPath" = "T"
     }
@@ -860,11 +860,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_ro.js"
+    "plugins\\font-awesome\\scss\\font-awesome-ie7.scss"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\scss\\font-awesome-ie7.scss"
+    "plugins\\select2\\select2_locale_ro.js"
     {
     "ProjRelPath" = "T"
     }
@@ -872,11 +872,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\gl.js"
+    "plugins\\bootstrap-colorpicker\\css\\colorpicker.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-colorpicker\\css\\colorpicker.css"
+    "plugins\\ckeditor\\lang\\gl.js"
     {
     "ProjRelPath" = "T"
     }
@@ -908,11 +908,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\remove-icon-small.png"
+    "plugins\\jquery-validation\\localization\\messages_hr.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_hr.js"
+    "plugins\\theme\\img\\remove-icon-small.png"
     {
     "ProjRelPath" = "T"
     }
@@ -924,11 +924,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\main.js"
+    "plugins\\ckeditor\\samples\\tabindex.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\tabindex.html"
+    "plugins\\jquery-file-upload\\js\\main.js"
     {
     "ProjRelPath" = "T"
     }
@@ -936,11 +936,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\server\\node\\public\\files"
+    "plugins\\bootstrap-wizard\\bootstrap\\js\\bootstrap.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\bootstrap\\js\\bootstrap.min.js"
+    "plugins\\jquery-file-upload\\server\\node\\public\\files"
     {
     "ProjRelPath" = "T"
     }
@@ -976,7 +976,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\overlay-icon-white.png"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-slide.js"
     {
     "ProjRelPath" = "T"
     }
@@ -984,7 +984,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-slide.js"
+    "plugins\\theme\\img\\overlay-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -992,11 +992,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-editable\\LICENSE-MIT"
+    "images\\data\\c2NAjXD.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "images\\data\\c2NAjXD.jpg"
+    "plugins\\bootstrap-editable\\LICENSE-MIT"
     {
     "ProjRelPath" = "T"
     }
@@ -1004,11 +1004,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\nested.html"
+    "plugins\\flot\\examples\\annotating\\index.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\annotating\\index.html"
+    "plugins\\jquery-slimscroll\\examples\\nested.html"
     {
     "ProjRelPath" = "T"
     }
@@ -1032,15 +1032,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\outputforflash.swf"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\themes\\base\\images\\ui-icons_2e83ff_256x240.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.1.custom.min.js"
+    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\outputforflash.swf"
     {
     "ProjRelPath" = "T"
     }
@@ -1048,11 +1044,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components"
+    "plugins\\jquery-ui\\jquery-ui-1.10.1.custom.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\milk\\left_white.png"
+    "plugins\\jquery-ui\\components"
     {
     "ProjRelPath" = "T"
     }
@@ -1060,15 +1056,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\jquery-validation\\demo\\milk\\left_white.png"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\ckeditor\\lang\\ar.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-sq.js"
+    "plugins\\bootstrap-wizard\\examples\\basic-custombuttonsfirstlast.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\examples\\basic-custombuttonsfirstlast.html"
+    "plugins\\countdown\\plugin\\jquery.countdown-sq.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1104,11 +1104,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples"
+    "plugins\\ckeditor\\lang\\sk.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\sk.js"
+    "plugins\\flot\\examples"
     {
     "ProjRelPath" = "T"
     }
@@ -1116,11 +1116,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap\\GPL-LICENSE.txt"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\favicon.ico"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\favicon.ico"
+    "plugins\\jquery.pwstrength.bootstrap\\GPL-LICENSE.txt"
     {
     "ProjRelPath" = "T"
     }
@@ -1168,7 +1168,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_sr.js"
+    "plugins\\bootstrap-datepicker\\tests\\assets\\jquery-1.7.1.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1176,7 +1176,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\assets\\jquery-1.7.1.min.js"
+    "plugins\\jquery-validation\\localization\\messages_sr.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1228,11 +1228,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.resize.min.js"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js"
+    "plugins\\flot\\jquery.flot.resize.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1256,11 +1256,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\skins\\moono\\images\\close.png"
+    "plugins\\bootstrap\\css\\bootstrap.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap\\css\\bootstrap.css"
+    "plugins\\ckeditor\\skins\\moono\\images\\close.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1272,11 +1272,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\css"
+    "images\\ui-bg_flat_75_ffffff_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "images\\ui-bg_flat_75_ffffff_40x100.png"
+    "plugins\\jcrop\\css"
     {
     "ProjRelPath" = "T"
     }
@@ -1312,19 +1312,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.position.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\scss\\ignore_css\\left-sider.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\demo\\3_b.jpg"
+    "plugins\\jquery-ui\\components\\jquery.ui.position.min.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\inputs-ext\\wysihtml5\\bootstrap-wysihtml5-0.0.2"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\fancybox\\demo\\3_b.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -1468,11 +1468,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.mouse.min.js"
+    "plugins\\backstretch\\jquery.backstretch.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\backstretch\\jquery.backstretch.js"
+    "plugins\\jquery-ui\\components\\jquery.ui.mouse.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1508,19 +1508,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\series-toggle\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "lib\\log4php\\spi\\LoggerFactory.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui-touch-punch\\jquery.ui.touch-punch.min.js"
+    "plugins\\flot\\examples\\series-toggle\\index.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\ckeditor\\plugins\\tabletools\\dialogs"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-ui-touch-punch\\jquery.ui.touch-punch.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1548,11 +1548,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\portlet-expand-icon-white.png"
+    "plugins\\countdown\\plugin\\jquery.countdown-uz.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-uz.js"
+    "plugins\\theme\\img\\portlet-expand-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1560,11 +1560,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\icon-comment.png"
+    "css\\flexslider.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\flexslider.css"
+    "images\\icon-comment.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1600,11 +1600,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\back_nav_blue.gif"
+    "plugins\\countdown\\plugin\\jquery.countdown-sl.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-sl.js"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\back_nav_blue.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -1636,11 +1636,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-icons_454545_256x240.png"
+    "plugins\\fancybox\\.gitattributes"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\.gitattributes"
+    "plugins\\jquery-ui\\images\\ui-icons_454545_256x240.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1688,19 +1688,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.ua-UA.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\scss\\ignore_css\\style.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\qunit"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.ua-UA.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap\\css\\bootstrap-responsive.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-validation\\test\\qunit"
     {
     "ProjRelPath" = "T"
     }
@@ -1724,11 +1724,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\search-icon-white.png"
+    "css\\themes\\smoothness\\images\\ui-icons_888888_256x240.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-icons_888888_256x240.png"
+    "plugins\\theme\\img\\search-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1736,11 +1736,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\overlays.html"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js"
+    "plugins\\gmaps\\examples\\overlays.html"
     {
     "ProjRelPath" = "T"
     }
@@ -1764,7 +1764,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\fonts"
+    "plugins\\bootstrap-datetimepicker\\screenshot\\standard_year.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1772,15 +1772,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\screenshot\\standard_year.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-slimscroll\\examples\\programmatic-scrolling.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.nb-NB.js"
+    "plugins\\FlexSlider\\fonts"
     {
     "ProjRelPath" = "T"
     }
@@ -1788,11 +1780,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\tab_green.gif"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.nb-NB.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-slimscroll\\examples\\programmatic-scrolling.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-ui\\components\\jquery.ui.tooltip.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-validation\\demo\\marketo\\images\\tab_green.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -1840,11 +1840,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\demos\\tutorial3.html"
+    "css\\.sass-cache\\746b98eefedd62119ff2b8f26d1a2e34d8f2fcd5"
     {
     "ProjRelPath" = "T"
     }
-    "css\\.sass-cache\\746b98eefedd62119ff2b8f26d1a2e34d8f2fcd5"
+    "plugins\\jcrop\\demos\\tutorial3.html"
     {
     "ProjRelPath" = "T"
     }
@@ -1868,11 +1868,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\portlet-remove-icon.png"
+    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\outputforflash.fla"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\outputforflash.fla"
+    "plugins\\theme\\img\\portlet-remove-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1888,11 +1888,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_lt.js"
+    "plugins\\jquery-file-upload\\js\\cors"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\cors"
+    "plugins\\jquery-validation\\localization\\messages_lt.js"
     {
     "ProjRelPath" = "T"
     }
@@ -1904,7 +1904,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-icons_ffffff_256x240.png"
+    "css\\fonts\\flexslider-icon.svg"
     {
     "ProjRelPath" = "T"
     }
@@ -1912,7 +1912,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\fonts\\flexslider-icon.svg"
+    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-icons_ffffff_256x240.png"
     {
     "ProjRelPath" = "T"
     }
@@ -1928,11 +1928,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\routes.html"
+    "plugins\\glyphicons_halflings\\fonts\\glyphiconshalflings-regular.ttf"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\fonts\\glyphiconshalflings-regular.ttf"
+    "plugins\\gmaps\\examples\\routes.html"
     {
     "ProjRelPath" = "T"
     }
@@ -1956,11 +1956,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\bg-white.png"
+    "js\\OLD\\jquery.flexslider-min.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\OLD\\jquery.flexslider-min.js"
+    "plugins\\theme\\img\\bg-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -2016,11 +2016,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-fi.js"
+    "css\\scss\\fixchrome.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\fixchrome.scss"
+    "plugins\\countdown\\plugin\\jquery.countdown-fi.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2044,11 +2044,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-fold.js"
+    "plugins\\jquery-file-upload\\server\\php\\files\\thumbnail"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\server\\php\\files\\thumbnail"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-fold.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2060,15 +2060,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.pl.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-daterangepicker\\README.md"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\select-caret.png"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.pl.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "include\\_search_box - Copy.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -2076,7 +2076,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "include\\_search_box - Copy.inc"
+    "plugins\\theme\\img\\select-caret.png"
     {
     "ProjRelPath" = "T"
     }
@@ -2096,11 +2096,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\en-au.js"
+    "images\\insertimage.GIF"
     {
     "ProjRelPath" = "T"
     }
-    "images\\insertimage.GIF"
+    "plugins\\ckeditor\\lang\\en-au.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2108,11 +2108,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\de.js"
+    "images\\loading_6.gif"
     {
     "ProjRelPath" = "T"
     }
-    "images\\loading_6.gif"
+    "plugins\\ckeditor\\lang\\de.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2128,11 +2128,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\clockface\\README.md"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.et.js"
+    "js\\global_config.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2140,15 +2136,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\global_config.js"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.et.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\icon-color.png"
+    "plugins\\clockface\\README.md"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-file-upload\\js\\cors\\jquery.xdr-transport.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\theme\\img\\icon-color.png"
     {
     "ProjRelPath" = "T"
     }
@@ -2160,11 +2160,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\fonts\\glyphicons-regular.ttf"
+    "lib\\log4php\\LoggerLevel.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\LoggerLevel.php"
+    "plugins\\glyphicons\\fonts\\glyphicons-regular.ttf"
     {
     "ProjRelPath" = "T"
     }
@@ -2232,11 +2232,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang"
+    "plugins\\ckeditor\\skins"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\skins"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang"
     {
     "ProjRelPath" = "T"
     }
@@ -2248,19 +2248,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\stylesheets\\bootstrap-switch-metro.css"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datepicker\\tests\\suites\\keyboard_navigation\\2011.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js"
+    "plugins\\bootstrap-switch\\static\\stylesheets\\bootstrap-switch-metro.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.sk-SK.js"
+    "class\\model_menu.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2268,7 +2264,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_menu.php"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.sk-SK.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2340,11 +2340,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js"
+    "plugins\\bootstrap-tag\\css\\bootstrap-tag.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tag\\css\\bootstrap-tag.css"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2368,11 +2368,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-hover-dropdown\\twitter-bootstrap-hover-dropdown.min.js"
+    "images\\demo-spindown-closed.gif"
     {
     "ProjRelPath" = "T"
     }
-    "images\\demo-spindown-closed.gif"
+    "plugins\\bootstrap-hover-dropdown\\twitter-bootstrap-hover-dropdown.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2384,11 +2384,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-ko.js"
+    "plugins\\jquery-1.10.1.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-1.10.1.min.js"
+    "plugins\\countdown\\plugin\\jquery.countdown-ko.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2412,7 +2412,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\login\\images\\bg.gif"
+    "plugins\\bootstrap-timepicker\\js"
     {
     "ProjRelPath" = "T"
     }
@@ -2420,7 +2420,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-timepicker\\js"
+    "plugins\\jquery-validation\\demo\\login\\images\\bg.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -2476,11 +2476,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-bg_flat_10_000000_40x100.png"
+    "plugins\\countdown\\plugin\\jquery.countdown-hr.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-hr.js"
+    "plugins\\jquery-ui\\images\\ui-bg_flat_10_000000_40x100.png"
     {
     "ProjRelPath" = "T"
     }
@@ -2492,11 +2492,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.image.min.js"
+    "css\\scss\\login.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\login.scss"
+    "plugins\\flot\\jquery.flot.image.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2504,7 +2504,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_ja.js"
+    "plugins\\ckeditor\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -2512,7 +2512,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\README.md"
+    "plugins\\jquery-validation\\localization\\messages_ja.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2536,11 +2536,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\demos\\tutorial4.html"
+    "file\\maxid\\sl_user.app"
     {
     "ProjRelPath" = "T"
     }
-    "file\\maxid\\sl_user.app"
+    "plugins\\jcrop\\demos\\tutorial4.html"
     {
     "ProjRelPath" = "T"
     }
@@ -2556,11 +2556,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui-touch-punch\\README.md"
+    "plugins\\jquery-slimscroll\\examples\\scrollbar.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\scrollbar.html"
+    "plugins\\jquery-ui-touch-punch\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -2584,11 +2584,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js"
+    "lib\\log4php\\or\\LoggerObjectRenderer.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\or\\LoggerObjectRenderer.php"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2604,11 +2604,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\scripts\\modernizr_license.txt"
+    "css\\themes\\smoothness\\images\\ui-bg_flat_75_ffffff_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_flat_75_ffffff_40x100.png"
+    "plugins\\glyphicons_halflings\\scripts\\modernizr_license.txt"
     {
     "ProjRelPath" = "T"
     }
@@ -2620,11 +2620,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\lib\\gmaps.overlays.js"
+    "plugins\\bootstrap-datetimepicker\\tests\\assets\\mock.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\tests\\assets\\mock.js"
+    "plugins\\gmaps\\lib\\gmaps.overlays.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2660,11 +2660,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\index.html"
+    "plugins\\ckeditor\\skins\\moono\\icons.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\skins\\moono\\icons.png"
+    "plugins\\jquery-validation\\demo\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -2708,11 +2708,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\.gitignore"
+    "css\\themes\\smoothness\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
+    "plugins\\bootstrap-switch\\.gitignore"
     {
     "ProjRelPath" = "T"
     }
@@ -2720,11 +2720,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-sr.js"
+    "plugins\\bootstrap-tree\\bootstrap-tree\\css\\bootstrap-tree-rtl.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\bootstrap-tree\\css\\bootstrap-tree-rtl.css"
+    "plugins\\countdown\\plugin\\jquery.countdown-sr.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2744,7 +2744,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gritter\\css"
+    "css\\themes\\base\\images\\ui-icons_cd0a0a_256x240.png"
     {
     "ProjRelPath" = "T"
     }
@@ -2752,7 +2752,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\images\\ui-icons_cd0a0a_256x240.png"
+    "plugins\\gritter\\css"
     {
     "ProjRelPath" = "T"
     }
@@ -2804,7 +2804,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-bounce.js"
+    "plugins\\bootstrap-switch\\static\\less"
     {
     "ProjRelPath" = "T"
     }
@@ -2812,7 +2812,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\less"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-bounce.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2880,7 +2880,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\excanvas.min.js"
+    "admin\\admin_request.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2888,7 +2888,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_request.php"
+    "plugins\\excanvas.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2900,11 +2900,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\jqvmap\\maps\\jquery.vmap.world.js"
+    "plugins\\bootstrap-datepicker\\component.json"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\component.json"
+    "plugins\\jqvmap\\jqvmap\\maps\\jquery.vmap.world.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2916,11 +2916,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_commentbad.php"
+    "profile_article.php"
     {
     "ProjRelPath" = "T"
     }
-    "profile_article.php"
+    "class\\model_commentbad.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2960,11 +2960,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_my.js"
+    "plugins\\jquery-ui\\images\\ui-bg_gloss-wave_35_f6a828_500x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-bg_gloss-wave_35_f6a828_500x100.png"
+    "plugins\\jquery-validation\\localization\\messages_my.js"
     {
     "ProjRelPath" = "T"
     }
@@ -2984,7 +2984,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\events.html"
+    "css\\scss\\.sass-cache"
     {
     "ProjRelPath" = "T"
     }
@@ -2992,7 +2992,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\.sass-cache"
+    "plugins\\jquery-validation\\test\\events.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3004,11 +3004,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\README.md"
+    "plugins\\fullcalendar\\demos\\json-events.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\demos\\json-events.php"
+    "plugins\\jcrop\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -3020,15 +3020,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples\\world.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-ui\\components\\jquery.ui.mouse.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\stylesheets"
+    "plugins\\jqvmap\\samples\\world.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3036,11 +3032,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor"
+    "plugins\\bootstrap-switch\\static\\stylesheets"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\bootstrap-datepicker.js"
+    "plugins\\ckeditor"
     {
     "ProjRelPath" = "T"
     }
@@ -3048,11 +3044,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-editable\\inputs-ext\\wysihtml5\\bootstrap-wysihtml5-0.0.2\\wysihtml5-0.3.0.min.js"
+    "plugins\\bootstrap-datepicker\\js\\bootstrap-datepicker.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\fonts\\glyphiconshalflings-regular.woff"
+    "plugins\\bootstrap-editable\\inputs-ext\\wysihtml5\\bootstrap-wysihtml5-0.0.2\\wysihtml5-0.3.0.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3060,11 +3056,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\glyphicons_halflings\\fonts\\glyphiconshalflings-regular.woff"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\jquery-validation\\README.md"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\README.md"
+    "plugins\\bootstrap-tree\\htmlexample.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3072,7 +3072,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\htmlexample.html"
+    "plugins\\select2\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -3120,7 +3120,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.core.min.js"
+    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\css\\bootstrap-editable.css"
     {
     "ProjRelPath" = "T"
     }
@@ -3128,7 +3128,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\css\\bootstrap-editable.css"
+    "plugins\\jquery-ui\\components\\jquery.ui.core.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3144,19 +3144,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples\\multi.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-validation\\demo\\login\\images\\required_star.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\fi.js"
+    "plugins\\jqvmap\\samples\\multi.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-editable\\inputs-ext\\wysihtml5\\bootstrap-wysihtml5-0.0.2\\bootstrap-wysihtml5-0.0.2.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\lang\\fi.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3204,11 +3204,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-da.js"
+    "plugins\\ckeditor\\plugins\\wsc"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\wsc"
+    "plugins\\countdown\\plugin\\jquery.countdown-da.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3228,11 +3228,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\changelog.txt"
+    "plugins\\chosen-bootstrap\\chosen\\chosen.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap\\chosen\\chosen.css"
+    "plugins\\jquery-validation\\changelog.txt"
     {
     "ProjRelPath" = "T"
     }
@@ -3276,7 +3276,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\changelog.txt"
+    "upload"
     {
     "ProjRelPath" = "T"
     }
@@ -3284,7 +3284,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "upload"
+    "plugins\\fullcalendar\\changelog.txt"
     {
     "ProjRelPath" = "T"
     }
@@ -3296,11 +3296,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.lv.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.lv.js"
+    "plugins\\ckeditor\\plugins\\wsc\\dialogs\\wsc.css"
     {
     "ProjRelPath" = "T"
     }
@@ -3312,7 +3312,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_cs.js"
+    "plugins\\bootstrap-timepicker\\compiled\\timepicker.css"
     {
     "ProjRelPath" = "T"
     }
@@ -3320,7 +3320,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-timepicker\\compiled\\timepicker.css"
+    "plugins\\jquery-validation\\localization\\messages_cs.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3376,7 +3376,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\images\\unchecked.gif"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.sw.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3384,7 +3384,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.sw.js"
+    "plugins\\jquery-validation\\demo\\images\\unchecked.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -3404,11 +3404,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\lib\\jasmine-1.2.0"
+    "lib\\log4php\\config\\LoggerPropertySetter.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\config\\LoggerPropertySetter.php"
+    "plugins\\jquery-multi-select\\test\\lib\\jasmine-1.2.0"
     {
     "ProjRelPath" = "T"
     }
@@ -3432,11 +3432,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_ro.js"
+    "plugins\\font-awesome\\font\\fontawesome-webfont.svg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\font\\fontawesome-webfont.svg"
+    "plugins\\jquery-validation\\localization\\messages_ro.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3448,11 +3448,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\tabs\\index.html"
+    "plugins\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
+    "plugins\\jquery-validation\\demo\\tabs\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3488,11 +3488,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time\\index.html"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.zh-TW.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.zh-TW.js"
+    "plugins\\flot\\examples\\axes-time\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3504,11 +3504,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gritter\\README.markdown"
+    "plugins\\ckeditor\\lang\\nl.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\nl.js"
+    "plugins\\gritter\\README.markdown"
     {
     "ProjRelPath" = "T"
     }
@@ -3520,11 +3520,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-toggler.png"
+    "plugins\\bootstrap-tree\\example.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\example.js"
+    "plugins\\theme\\img\\sidebar-toggler.png"
     {
     "ProjRelPath" = "T"
     }
@@ -3560,11 +3560,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-lt.js"
+    "plugins\\bootstrap-wizard\\examples\\basic-custombuttons.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\examples\\basic-custombuttons.html"
+    "plugins\\countdown\\plugin\\jquery.countdown-lt.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3596,11 +3596,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\static_polylines.html"
+    "admin\\admin_currency.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_currency.php"
+    "plugins\\gmaps\\examples\\static_polylines.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3612,7 +3612,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\tinymce\\themes\\simple\\img"
+    "plugins\\jquery-multi-select\\test\\lib\\jasmine-jquery.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3620,7 +3620,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\lib\\jasmine-jquery.js"
+    "plugins\\jquery-validation\\demo\\tinymce\\themes\\simple\\img"
     {
     "ProjRelPath" = "T"
     }
@@ -3640,15 +3640,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\firebug"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-ui\\components\\jquery.ui.button.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\lib\\jquery-1.7.2.js"
+    "plugins\\jquery-validation\\test\\firebug"
     {
     "ProjRelPath" = "T"
     }
@@ -3656,11 +3652,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\server\\php"
+    "plugins\\jquery-validation\\lib\\jquery-1.7.2.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\font-awesome\\less\\path.less"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-file-upload\\server\\php"
     {
     "ProjRelPath" = "T"
     }
@@ -3672,19 +3672,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\less"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-toggle-buttons\\static\\js\\jquery.toggle.buttons.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap"
+    "plugins\\glyphicons_halflings\\less"
     {
     "ProjRelPath" = "T"
     }
     "file\\sphinx"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery.pwstrength.bootstrap"
     {
     "ProjRelPath" = "T"
     }
@@ -3728,11 +3728,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\login\\images\\page.gif"
+    "plugins\\flot\\jquery.flot.categories.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.categories.min.js"
+    "plugins\\jquery-validation\\demo\\login\\images\\page.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -3740,11 +3740,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\dist"
+    "plugins\\ckeditor\\samples\\assets\\outputxhtml\\outputxhtml.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\assets\\outputxhtml\\outputxhtml.css"
+    "plugins\\jquery-validation\\dist"
     {
     "ProjRelPath" = "T"
     }
@@ -3760,11 +3760,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.hr.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.hr.js"
+    "plugins\\jquery-ui\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
     {
     "ProjRelPath" = "T"
     }
@@ -3784,7 +3784,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img"
+    "plugins\\ckeditor\\lang\\eu.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3792,7 +3792,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\eu.js"
+    "plugins\\theme\\img"
     {
     "ProjRelPath" = "T"
     }
@@ -3820,11 +3820,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\error.gif"
+    "images\\demo-config-on.gif"
     {
     "ProjRelPath" = "T"
     }
-    "images\\demo-config-on.gif"
+    "images\\error.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -3884,11 +3884,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\js\\jquery.Jcrop.js"
+    "plugins\\bootstrap-datepicker\\.travis.yml"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\.travis.yml"
+    "plugins\\jcrop\\js\\jquery.Jcrop.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3896,11 +3896,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\realtime"
+    "file\\logs_2012"
     {
     "ProjRelPath" = "T"
     }
-    "file\\logs_2012"
+    "plugins\\flot\\examples\\realtime"
     {
     "ProjRelPath" = "T"
     }
@@ -3908,11 +3908,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-bg_highlight-hard_100_f2f5f7_1x100.png"
+    "plugins\\clockface\\js\\clockface.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\clockface\\js\\clockface.js"
+    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-bg_highlight-hard_100_f2f5f7_1x100.png"
     {
     "ProjRelPath" = "T"
     }
@@ -3924,19 +3924,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\breakpoints\\breakpoints.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-editable\\bootstrap-editable\\img\\loading.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-nestable\\jquery.nestable.js"
+    "plugins\\breakpoints\\breakpoints.min.js"
     {
     "ProjRelPath" = "T"
     }
     "images\\ui-bg_glass_95_fef1ec_1x400.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-nestable\\jquery.nestable.js"
     {
     "ProjRelPath" = "T"
     }
@@ -3952,11 +3952,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-nestable\\index.html"
+    "lib\\log4php\\varia"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\varia"
+    "plugins\\jquery-nestable\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -3964,7 +3964,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\travel_route.html"
+    "include\\_admin_menu.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -3972,7 +3972,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "include\\_admin_menu.inc"
+    "plugins\\gmaps\\examples\\travel_route.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4012,11 +4012,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_pt-PT.js"
+    "include\\_menu.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_menu.inc"
+    "plugins\\select2\\select2_locale_pt-PT.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4024,11 +4024,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\jquery.maskedinput.js"
+    "plugins\\font-awesome\\css\\font-awesome.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\css\\font-awesome.css"
+    "plugins\\jquery-validation\\demo\\marketo\\jquery.maskedinput.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4036,11 +4036,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\bootstrap"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.it.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.it.js"
+    "plugins\\bootstrap-wizard\\bootstrap"
     {
     "ProjRelPath" = "T"
     }
@@ -4112,11 +4112,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\divreplace.html"
+    "css\\themes\\base\\jquery.ui.base.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.base.css"
+    "plugins\\ckeditor\\samples\\divreplace.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4144,11 +4144,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\portlet-reload-icon.png"
+    "plugins\\jquery-validation\\localization\\messages_pl.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_pl.js"
+    "plugins\\theme\\img\\portlet-reload-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -4172,11 +4172,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-scale.min.js"
+    "plugins\\ckeditor\\samples\\replacebyclass.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\replacebyclass.html"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-scale.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4188,11 +4188,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-editable"
+    "class\\model_auction.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_auction.php"
+    "plugins\\bootstrap-editable"
     {
     "ProjRelPath" = "T"
     }
@@ -4204,11 +4204,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js"
+    "plugins\\bootstrap-colorpicker\\img\\hue.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-colorpicker\\img\\hue.png"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4220,11 +4220,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\scroll-events.html"
+    "plugins\\flot\\examples\\ajax\\data-usa-gdp-growth.json"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\ajax\\data-usa-gdp-growth.json"
+    "plugins\\jquery-slimscroll\\examples\\scroll-events.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4240,11 +4240,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\data-tables\\jquery.dataTables.min.js"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.ca-CT.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.ca-CT.js"
+    "plugins\\data-tables\\jquery.dataTables.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4280,11 +4280,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\layers_places.html"
+    "plugins\\bootstrap-datetimepicker\\.travis.yml"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\.travis.yml"
+    "plugins\\gmaps\\examples\\layers_places.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4292,11 +4292,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\navigate"
+    "plugins\\bootstrap-timepicker\\less"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-timepicker\\less"
+    "plugins\\flot\\examples\\navigate"
     {
     "ProjRelPath" = "T"
     }
@@ -4304,11 +4304,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\css"
+    "plugins\\bootstrap-datepicker\\tests\\assets\\qunit-logging.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\assets\\qunit-logging.js"
+    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\css"
     {
     "ProjRelPath" = "T"
     }
@@ -4348,7 +4348,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-search-close.png"
+    "plugins\\flot\\examples\\axes-time-zones\\tz\\solar87"
     {
     "ProjRelPath" = "T"
     }
@@ -4356,7 +4356,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones\\tz\\solar87"
+    "plugins\\theme\\img\\sidebar-search-close.png"
     {
     "ProjRelPath" = "T"
     }
@@ -4376,11 +4376,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\captcha\\fonts"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js"
+    "plugins\\jquery-validation\\demo\\captcha\\fonts"
     {
     "ProjRelPath" = "T"
     }
@@ -4432,11 +4432,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\less\\halflings.less"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js"
+    "plugins\\glyphicons_halflings\\less\\halflings.less"
     {
     "ProjRelPath" = "T"
     }
@@ -4468,6 +4468,14 @@
     {
     "ProjRelPath" = "T"
     }
+    "class\\model_request.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\style_bk.css"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\fancybox\\source\\jquery.fancybox.pack - Copy.js"
     {
     "ProjRelPath" = "T"
@@ -4476,19 +4484,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\style_bk.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "class\\model_request.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\countdown\\plugin\\jquery.countdown.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jqvmap\\.gitignore"
     {
     "ProjRelPath" = "T"
     }
@@ -4496,15 +4492,11 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\jqvmap\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\ckeditor\\lang\\sr-latn.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2_locale_pt-BR.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-knob\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4512,15 +4504,23 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\jquery-knob\\index.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\select2\\select2_locale_pt-BR.js"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\ckeditor\\lang\\da.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-shake.min.js"
+    "plugins\\ckeditor\\contents.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\contents.css"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-shake.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4544,11 +4544,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js"
+    "plugins\\ckeditor\\lang\\bs.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\bs.js"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4556,11 +4556,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "file\\sphinx\\temp"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\ckeditor\\lang\\uk.js"
     {
     "ProjRelPath" = "T"
     }
-    "file\\sphinx\\temp"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4572,15 +4576,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js"
+    "plugins\\ckeditor\\plugins\\pastefromword"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-validation\\demo\\images\\bg.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\pastefromword"
     {
     "ProjRelPath" = "T"
     }
@@ -4592,11 +4592,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\tabletools"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.da.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.da.js"
+    "plugins\\ckeditor\\plugins\\tabletools"
     {
     "ProjRelPath" = "T"
     }
@@ -4608,11 +4608,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_pt_PT.js"
+    "plugins\\jquery-ui\\images\\ui-icons_2e83ff_256x240.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-icons_2e83ff_256x240.png"
+    "plugins\\jquery-validation\\localization\\messages_pt_PT.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4624,11 +4624,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\tabs"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js"
+    "plugins\\jquery-validation\\demo\\tabs"
     {
     "ProjRelPath" = "T"
     }
@@ -4676,11 +4676,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js"
+    "css\\scss\\footer.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\footer.scss"
+    "plugins\\bootstrap-datepicker\\js"
     {
     "ProjRelPath" = "T"
     }
@@ -4720,11 +4720,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\polylines.html"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\eot\\11014B_0.eot"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\eot\\11014B_0.eot"
+    "plugins\\gmaps\\examples\\polylines.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4788,11 +4788,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\dropzone\\css\\stylus\\dropzone.styl"
+    "plugins\\countdown\\plugin\\jquery.countdown-my.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-my.js"
+    "plugins\\dropzone\\css\\stylus\\dropzone.styl"
     {
     "ProjRelPath" = "T"
     }
@@ -4848,7 +4848,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\elevation_routes.html"
+    "plugins\\ckeditor\\lang\\lt.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4856,7 +4856,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\lt.js"
+    "plugins\\gmaps\\examples\\elevation_routes.html"
     {
     "ProjRelPath" = "T"
     }
@@ -4876,11 +4876,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\less"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.nb.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.nb.js"
+    "plugins\\glyphicons\\less"
     {
     "ProjRelPath" = "T"
     }
@@ -4900,11 +4900,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\annotating"
+    "class\\model_like.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_like.php"
+    "plugins\\flot\\examples\\annotating"
     {
     "ProjRelPath" = "T"
     }
@@ -4924,11 +4924,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\source\\fancybox_overlay.png"
+    "file\\avatar\\651 (4).jpg"
     {
     "ProjRelPath" = "T"
     }
-    "file\\avatar\\651 (4).jpg"
+    "plugins\\fancybox\\source\\fancybox_overlay.png"
     {
     "ProjRelPath" = "T"
     }
@@ -4940,11 +4940,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\libs\\prettify"
+    "js\\sela_paymentmode.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_paymentmode.js"
+    "plugins\\jquery-slimscroll\\examples\\libs\\prettify"
     {
     "ProjRelPath" = "T"
     }
@@ -4960,7 +4960,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\vendor\\canvas-to-blob.min.js"
+    "class\\model_notificationtype.php"
     {
     "ProjRelPath" = "T"
     }
@@ -4968,7 +4968,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_notificationtype.php"
+    "plugins\\jquery-file-upload\\js\\vendor\\canvas-to-blob.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -4976,19 +4976,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\bg-opacity.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\scss\\ignore_css\\article - Copy.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_ar.js"
+    "plugins\\theme\\img\\bg-opacity.png"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\FlexSlider\\changelog.txt"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\select2\\select2_locale_ar.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5004,7 +5004,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\examples\\basic-pills.html"
+    "profile.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5012,15 +5012,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "profile.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2_locale_sk.js"
+    "plugins\\bootstrap-wizard\\examples\\basic-pills.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\ckeditor\\samples\\replacebycode.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\select2\\select2_locale_sk.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5040,11 +5040,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\Makefile"
+    "plugins\\ckeditor\\plugins\\dialog"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\dialog"
+    "plugins\\flot\\Makefile"
     {
     "ProjRelPath" = "T"
     }
@@ -5060,11 +5060,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test"
+    "plugins\\flot\\examples\\axes-time-zones\\tz\\pacificnew"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones\\tz\\pacificnew"
+    "plugins\\jquery-validation\\test"
     {
     "ProjRelPath" = "T"
     }
@@ -5076,7 +5076,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\dropzone\\css\\basic.css"
+    "js\\sela_contentsummary.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5084,15 +5084,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_contentsummary.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap\\js\\bootstrap.js"
+    "plugins\\dropzone\\css\\basic.css"
     {
     "ProjRelPath" = "T"
     }
     "images\\search25.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\bootstrap\\js\\bootstrap.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5120,11 +5120,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_zh.js"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\logo_marketo.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\logo_marketo.gif"
+    "plugins\\jquery-validation\\localization\\messages_zh.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5136,11 +5136,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\swfobject.js"
+    "plugins\\bootstrap-wizard\\bootstrap\\img\\glyphicons-halflings-white.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\bootstrap\\img\\glyphicons-halflings-white.png"
+    "plugins\\ckeditor\\samples\\plugins\\htmlwriter\\assets\\outputforflash\\swfobject.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5212,11 +5212,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-tags-input\\README.md"
+    "plugins\\ckeditor\\lang\\bn.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\bn.js"
+    "plugins\\jquery-tags-input\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -5232,11 +5232,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "images\\ui-icons_2e83ff_256x240.png"
+    {
+    "ProjRelPath" = "T"
+    }
     "lib\\log4php\\appenders\\LoggerAppenderDailyFile.php"
     {
     "ProjRelPath" = "T"
     }
-    "images\\ui-icons_2e83ff_256x240.png"
+    "admin\\admin_paymentmode.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5245,10 +5249,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\gmaps"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_paymentmode.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5276,11 +5276,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-colorpicker\\img"
+    "images\\ui-bg_flat_0_aaaaaa_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "images\\ui-bg_flat_0_aaaaaa_40x100.png"
+    "plugins\\bootstrap-colorpicker\\img"
     {
     "ProjRelPath" = "T"
     }
@@ -5320,11 +5320,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\multipart\\js\\ui.accordion.js"
+    "plugins\\jquery-multi-select\\test\\src"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\src"
+    "plugins\\jquery-validation\\demo\\multipart\\js\\ui.accordion.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5424,11 +5424,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.css"
+    "plugins\\dropzone\\upload.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\dropzone\\upload.php"
+    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.css"
     {
     "ProjRelPath" = "T"
     }
@@ -5436,7 +5436,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\cors\\jquery.postmessage-transport.js"
+    "plugins\\bootstrap-tree\\.gitignore"
     {
     "ProjRelPath" = "T"
     }
@@ -5444,15 +5444,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\.gitignore"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\realtime\\index.html"
+    "plugins\\jquery-file-upload\\js\\cors\\jquery.postmessage-transport.js"
     {
     "ProjRelPath" = "T"
     }
     "lib\\log4php\\varia\\LoggerStringMatchFilter.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\examples\\realtime\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -5484,7 +5484,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\uniform\\css\\uniform.default.min.css"
+    "images\\ui-bg_glass_65_ffffff_1x400.png"
     {
     "ProjRelPath" = "T"
     }
@@ -5492,7 +5492,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\ui-bg_glass_65_ffffff_1x400.png"
+    "plugins\\uniform\\css\\uniform.default.min.css"
     {
     "ProjRelPath" = "T"
     }
@@ -5500,11 +5500,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\build\\build_standalone.less"
+    "css\\themes\\smoothness\\images\\ui-bg_glass_95_fef1ec_1x400.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_glass_95_fef1ec_1x400.png"
+    "plugins\\bootstrap-datepicker\\build\\build_standalone.less"
     {
     "ProjRelPath" = "T"
     }
@@ -5512,11 +5512,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\dist\\additional-methods.js"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js"
+    "plugins\\jquery-validation\\dist\\additional-methods.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5528,11 +5528,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_lv.js"
+    "plugins\\jquery-ui\\jquery-ui-1.10.2.custom.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.2.custom.min.js"
+    "plugins\\jquery-validation\\localization\\messages_lv.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5560,27 +5560,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\helpers\\LoggerPatternConverter.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\.sass-cache\\258fef5c9880e1d3525cb580915a139cfb48ab36\\style.scssc"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\libs\\prettify\\prettify.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\jquery.flot.canvas.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-tree\\bootstrap-tree\\img"
+    "lib\\log4php\\helpers\\LoggerPatternConverter.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5588,11 +5572,27 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\src\\jquery.js"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\jquery.flot.canvas.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-slimscroll\\examples\\libs\\prettify\\prettify.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\bootstrap-tree\\bootstrap-tree\\img"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\FlexSlider\\demo\\carousel-min-max.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-multi-select\\test\\src\\jquery.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5604,11 +5604,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\font-awesome\\less\\variables.less"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\select2\\select2_locale_sv.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\less\\variables.less"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.sk.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\FlexSlider\\demo\\js\\jquery.fitvid.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5617,14 +5625,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\gmaps\\test\\lib"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\js\\jquery.fitvid.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.sk.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5644,11 +5644,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\js\\bootstrap-switch.js"
+    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.ja.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.ja.js"
+    "plugins\\bootstrap-switch\\static\\js\\bootstrap-switch.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5676,11 +5676,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\rules.js"
+    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.min.js"
+    "plugins\\jquery-validation\\test\\rules.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5704,11 +5704,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\less"
+    "file\\avatar\\651 (5).jpg"
     {
     "ProjRelPath" = "T"
     }
-    "file\\avatar\\651 (5).jpg"
+    "plugins\\bootstrap-datepicker\\less"
     {
     "ProjRelPath" = "T"
     }
@@ -5772,11 +5772,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\basic-usage"
+    "include\\_article_list.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_article_list.inc"
+    "plugins\\flot\\examples\\basic-usage"
     {
     "ProjRelPath" = "T"
     }
@@ -5788,11 +5788,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples\\russia.html"
+    "plugins\\fancybox\\source\\fancybox_sprite.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\source\\fancybox_sprite.png"
+    "plugins\\jqvmap\\samples\\russia.html"
     {
     "ProjRelPath" = "T"
     }
@@ -5804,11 +5804,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\portlet-reload-icon.png"
+    "images\\avatar1_small.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "images\\avatar1_small.jpg"
+    "images\\portlet-reload-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -5816,11 +5816,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\ignore_css\\login.css"
+    "class\\global_system.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\global_system.php"
+    "css\\scss\\ignore_css\\login.css"
     {
     "ProjRelPath" = "T"
     }
@@ -5832,11 +5832,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\server\\node\\package.json"
+    "plugins\\gmaps\\lib\\gmaps.styles.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\lib\\gmaps.styles.js"
+    "plugins\\jquery-file-upload\\server\\node\\package.json"
     {
     "ProjRelPath" = "T"
     }
@@ -5848,19 +5848,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\jquery.flexslider.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "css\\scss\\ignore_css\\header-menu - Copy.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-th.js"
+    "plugins\\FlexSlider\\jquery.flexslider.js"
     {
     "ProjRelPath" = "T"
     }
     "lib\\log4php\\appenders\\LoggerAppenderSocket.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\countdown\\plugin\\jquery.countdown-th.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5872,11 +5872,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\ignore_css\\common - Copy.css"
+    "css\\scss\\post.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\post.scss"
+    "css\\scss\\ignore_css\\common - Copy.css"
     {
     "ProjRelPath" = "T"
     }
@@ -5888,11 +5888,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap\\coffee"
+    "include\\_option_section_type.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_option_section_type.inc"
+    "plugins\\chosen-bootstrap\\coffee"
     {
     "ProjRelPath" = "T"
     }
@@ -5924,19 +5924,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap"
-    {
-    "ProjRelPath" = "T"
-    }
     "class\\common\\include.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.navigate.js"
+    "plugins\\chosen-bootstrap"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\chosen-bootstrap\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\jquery.flot.navigate.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5964,11 +5964,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\captcha\\images\\.htaccess"
+    "plugins\\jquery-ui\\components\\jquery.ui.position.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.position.js"
+    "plugins\\jquery-validation\\demo\\captcha\\images\\.htaccess"
     {
     "ProjRelPath" = "T"
     }
@@ -5976,11 +5976,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.spinner.min.js"
+    "plugins\\flot\\examples\\index.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\index.html"
+    "plugins\\jquery-ui\\components\\jquery.ui.spinner.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -5988,11 +5988,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-pl.js"
+    "admin\\admin_setting.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_setting.php"
+    "plugins\\countdown\\plugin\\jquery.countdown-pl.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6032,19 +6032,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\source\\fancybox_loading.gif"
-    {
-    "ProjRelPath" = "T"
-    }
     "article_detail.php"
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_setting.js"
+    "plugins\\fancybox\\source\\fancybox_loading.gif"
     {
     "ProjRelPath" = "T"
     }
     "images\\icon-docs-info.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\sela_setting.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6056,11 +6056,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples\\germany.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\shared\\jquery-ui\\jquery-ui.min.css"
+    "plugins\\ckeditor\\lang\\zh-cn.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6068,7 +6064,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\zh-cn.js"
+    "plugins\\flot\\examples\\shared\\jquery-ui\\jquery-ui.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jqvmap\\samples\\germany.html"
     {
     "ProjRelPath" = "T"
     }
@@ -6076,15 +6076,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.nl-NL.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "images\\data\\slide5.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\hor-menu-search-close-white.png"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.nl-NL.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6092,15 +6088,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\theme\\img\\hor-menu-search-close-white.png"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.rs-latin.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\css"
+    "admin\\admin_product.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_product.php"
+    "plugins\\jquery-validation\\demo\\css"
     {
     "ProjRelPath" = "T"
     }
@@ -6128,11 +6128,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\scayt\\README.md"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js"
+    "plugins\\ckeditor\\plugins\\scayt\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -6140,19 +6140,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gritter\\images_original\\gritter.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\glyphicons\\index.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\less\\extras.less"
+    "plugins\\gritter\\images_original\\gritter.png"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\data-tables\\images\\sort_asc_disabled.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\font-awesome\\less\\extras.less"
     {
     "ProjRelPath" = "T"
     }
@@ -6164,15 +6164,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-toggle-buttons\\static\\sass"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css"
+    "plugins\\ckeditor\\plugins"
     {
     "ProjRelPath" = "T"
     }
@@ -6180,11 +6176,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-slimscroll\\examples\\libs\\prettify\\prettify.css"
+    "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_no.js"
+    "plugins\\jquery-slimscroll\\examples\\libs\\prettify\\prettify.css"
     {
     "ProjRelPath" = "T"
     }
@@ -6192,7 +6188,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_de.js"
+    "plugins\\jquery-validation\\localization\\messages_no.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6200,11 +6196,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.js"
+    "plugins\\select2\\select2_locale_de.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-wizard\\examples\\basic-formvalidation.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6228,19 +6228,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\test\\lib\\jasmine.css"
-    {
-    "ProjRelPath" = "T"
-    }
     "images\\default\\default_logo.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones\\tz\\australasia"
+    "plugins\\gmaps\\test\\lib\\jasmine.css"
     {
     "ProjRelPath" = "T"
     }
     "css\\themes\\base\\jquery.ui.button.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\flot\\examples\\axes-time-zones\\tz\\australasia"
     {
     "ProjRelPath" = "T"
     }
@@ -6252,11 +6252,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\hor-menu-search.jpg"
+    "plugins\\jquery-ui\\components\\jquery.ui.menu.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.menu.min.js"
+    "plugins\\theme\\img\\hor-menu-search.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -6312,19 +6312,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datetimepicker\\sample\\bootstrap\\css\\bootstrap.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\tests\\suites"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-datetimepicker\\tests\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\bootstrap-datetimepicker\\tests\\suites"
     {
     "ProjRelPath" = "T"
     }
@@ -6348,7 +6348,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\overlay-icon.png"
+    "plugins\\chosen-bootstrap\\Cakefile"
     {
     "ProjRelPath" = "T"
     }
@@ -6356,7 +6356,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap\\Cakefile"
+    "plugins\\theme\\img\\overlay-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -6364,11 +6364,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_it.js"
+    "plugins\\jquery-ui\\images\\ui-bg_flat_75_ffffff_40x100.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-bg_flat_75_ffffff_40x100.png"
+    "plugins\\jquery-validation\\localization\\messages_it.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6376,11 +6376,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\img"
+    "admin\\admin_city.php"
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_city.php"
+    "plugins\\jquery-multi-select\\img"
     {
     "ProjRelPath" = "T"
     }
@@ -6392,15 +6392,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_hu.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-ui\\components\\jquery.ui.dialog.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_metro.css"
+    "plugins\\jquery-validation\\localization\\messages_hu.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6408,15 +6404,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\select2\\select2_metro.css"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\jquery-validation\\demo\\tinymce\\themes\\simple\\editor_template.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_he.js"
+    "plugins\\ckeditor\\plugins\\fakeobjects"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\fakeobjects"
+    "plugins\\jquery-validation\\localization\\messages_he.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6444,11 +6444,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\images\\logo.png"
+    "plugins\\ckeditor\\samples\\plugins\\enterkey\\enterkey.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\enterkey\\enterkey.html"
+    "plugins\\FlexSlider\\demo\\images\\logo.png"
     {
     "ProjRelPath" = "T"
     }
@@ -6456,15 +6456,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\dropzone\\css\\dropzone.css"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\magicline\\images\\icon.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\test\\test.js"
+    "plugins\\dropzone\\css\\dropzone.css"
     {
     "ProjRelPath" = "T"
     }
@@ -6472,11 +6468,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\examples.css"
+    "plugins\\jquery-validation\\test\\test.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\ckeditor\\plugins\\wsc\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\gmaps\\examples\\examples.css"
     {
     "ProjRelPath" = "T"
     }
@@ -6520,11 +6520,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\images\\glyphicons-white.svg"
+    "plugins\\flot\\examples\\navigate\\index.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\navigate\\index.html"
+    "plugins\\glyphicons\\images\\glyphicons-white.svg"
     {
     "ProjRelPath" = "T"
     }
@@ -6532,7 +6532,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\uniform\\images"
+    "plugins\\fancybox\\demo\\2_s.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -6540,11 +6540,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\demo\\2_s.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-semibold\\svg\\index.html"
+    "plugins\\uniform\\images"
     {
     "ProjRelPath" = "T"
     }
@@ -6552,7 +6548,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_userrank.js"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-semibold\\svg\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -6560,11 +6556,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-easy-pie-chart\\Makefile"
+    "js\\sela_userrank.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\flot\\examples\\ajax\\data-eu-gdp-growth-1.json"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-easy-pie-chart\\Makefile"
     {
     "ProjRelPath" = "T"
     }
@@ -6576,11 +6576,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-bg_diagonals-thick_90_eeeeee_40x40.png"
+    "lib\\log4php\\LoggerManager.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\LoggerManager.php"
+    "plugins\\fullcalendar\\demos\\cupertino\\images\\ui-bg_diagonals-thick_90_eeeeee_40x40.png"
     {
     "ProjRelPath" = "T"
     }
@@ -6600,11 +6600,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\login"
+    "plugins\\bootstrap-datetimepicker\\sample\\bootstrap\\css\\bootstrap.min.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\sample\\bootstrap\\css\\bootstrap.min.css"
+    "plugins\\jquery-validation\\demo\\login"
     {
     "ProjRelPath" = "T"
     }
@@ -6612,11 +6612,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\ro.js"
+    "js\\sela_notificationtype.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_notificationtype.js"
+    "plugins\\ckeditor\\lang\\ro.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6660,11 +6660,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gritter\\images"
+    "plugins\\ckeditor\\samples\\plugins\\wysiwygarea\\fullpage.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\plugins\\wysiwygarea\\fullpage.html"
+    "plugins\\gritter\\images"
     {
     "ProjRelPath" = "T"
     }
@@ -6712,11 +6712,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\xmlexample.xml"
+    "css\\themes\\base\\jquery.ui.accordion.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.accordion.css"
+    "plugins\\bootstrap-tree\\xmlexample.xml"
     {
     "ProjRelPath" = "T"
     }
@@ -6728,11 +6728,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-tags-input\\jquery.tagsinput.min.js"
+    "plugins\\ckeditor\\skins\\moono\\editor_gecko.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\skins\\moono\\editor_gecko.css"
+    "plugins\\jquery-tags-input\\jquery.tagsinput.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6752,19 +6752,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\series-toggle"
-    {
-    "ProjRelPath" = "T"
-    }
     "class\\model_article.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\assets\\sample.css"
+    "plugins\\flot\\examples\\series-toggle"
     {
     "ProjRelPath" = "T"
     }
     "file\\avatar\\651 (14).jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\samples\\assets\\sample.css"
     {
     "ProjRelPath" = "T"
     }
@@ -6788,11 +6788,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\datatable-row-openclose.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-modal\\index.html"
+    "lib\\log4php\\varia\\LoggerLevelMatchFilter.php"
     {
     "ProjRelPath" = "T"
     }
@@ -6800,7 +6796,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\varia\\LoggerLevelMatchFilter.php"
+    "plugins\\bootstrap-modal\\index.html"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\theme\\img\\datatable-row-openclose.png"
     {
     "ProjRelPath" = "T"
     }
@@ -6868,11 +6868,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\examples"
+    "plugins\\bootstrap-datepicker\\.hgtags"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\.hgtags"
+    "plugins\\bootstrap-wizard\\examples"
     {
     "ProjRelPath" = "T"
     }
@@ -6884,11 +6884,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\appenders\\LoggerAppenderSyslog.php"
+    "forgot_password.php"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\images\\ui-bg_diagonals-thick_18_b81900_40x40.png"
+    "lib\\log4php\\appenders\\LoggerAppenderSyslog.php"
     {
     "ProjRelPath" = "T"
     }
@@ -6896,11 +6896,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\sample\\bootstrap"
+    "plugins\\jquery-ui\\images\\ui-bg_diagonals-thick_18_b81900_40x40.png"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-ui-touch-punch"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\bootstrap-datetimepicker\\sample\\bootstrap"
     {
     "ProjRelPath" = "T"
     }
@@ -6956,11 +6960,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\uniform\\images\\sprite_original.png"
+    "class\\model_role.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_role.php"
+    "plugins\\uniform\\images\\sprite_original.png"
     {
     "ProjRelPath" = "T"
     }
@@ -6972,11 +6976,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap\\src\\pwstrength.js"
+    "plugins\\jquery.pwstrength.bootstrap\\README.md"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap\\README.md"
+    "plugins\\jquery.pwstrength.bootstrap\\src\\pwstrength.js"
     {
     "ProjRelPath" = "T"
     }
@@ -6996,19 +7000,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.pt.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples\\europe.html"
+    "plugins\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\font-awesome\\scss\\_path.scss"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jqvmap\\samples\\europe.html"
     {
     "ProjRelPath" = "T"
     }
@@ -7048,7 +7052,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_es.js"
+    "plugins\\bootstrap-datetimepicker\\build\\build_standalone.less"
     {
     "ProjRelPath" = "T"
     }
@@ -7056,7 +7060,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\build\\build_standalone.less"
+    "plugins\\jquery-validation\\localization\\messages_es.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "bg_article.php"
     {
     "ProjRelPath" = "T"
     }
@@ -7112,11 +7120,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.tabs.min.js"
+    "plugins\\bootstrap-datepicker\\tests\\suites\\formats.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\suites\\formats.js"
+    "plugins\\jquery-ui\\components\\jquery.ui.tabs.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7124,11 +7132,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\jqvmap\\jquery.vmap.min.js"
+    "plugins\\jquery-validation\\demo\\login\\index.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\login\\index.html"
+    "plugins\\jqvmap\\jqvmap\\jquery.vmap.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7136,11 +7144,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\samples"
+    "plugins\\bootstrap-wizard\\jquery.bootstrap.wizard.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\jquery.bootstrap.wizard.min.js"
+    "plugins\\jqvmap\\samples"
     {
     "ProjRelPath" = "T"
     }
@@ -7160,11 +7168,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\fonts\\flexslider-icon.eot"
+    "plugins\\bootstrap-switch\\static\\less\\bootstrap-switch.less"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\less\\bootstrap-switch.less"
+    "plugins\\FlexSlider\\fonts\\flexslider-icon.eot"
     {
     "ProjRelPath" = "T"
     }
@@ -7208,11 +7216,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\images"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js"
+    "plugins\\jquery-validation\\demo\\images"
     {
     "ProjRelPath" = "T"
     }
@@ -7236,7 +7244,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\portlet-remove-icon-white.png"
+    "class\\model_numberaire.php"
     {
     "ProjRelPath" = "T"
     }
@@ -7244,7 +7252,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_numberaire.php"
+    "plugins\\theme\\img\\portlet-remove-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -7300,11 +7308,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.pwstrength.bootstrap\\src"
+    "plugins\\flot\\examples\\ajax\\data-eu-gdp-growth-2.json"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\ajax\\data-eu-gdp-growth-2.json"
+    "plugins\\jquery.pwstrength.bootstrap\\src"
     {
     "ProjRelPath" = "T"
     }
@@ -7332,11 +7340,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.min.css"
+    "css\\.sass-cache\\a7bb19f374ab0dce73dec3c45f8d91b5416ba915"
     {
     "ProjRelPath" = "T"
     }
-    "css\\.sass-cache\\a7bb19f374ab0dce73dec3c45f8d91b5416ba915"
+    "plugins\\jquery-ui\\jquery-ui-1.10.3.custom.min.css"
     {
     "ProjRelPath" = "T"
     }
@@ -7348,11 +7356,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\images\\kitchen_adventurer_caramel.jpg"
+    "plugins\\countdown\\plugin\\jquery.countdown-lv.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-lv.js"
+    "plugins\\FlexSlider\\demo\\images\\kitchen_adventurer_caramel.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -7368,19 +7376,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jqvmap\\jqvmap"
-    {
-    "ProjRelPath" = "T"
-    }
     "include\\_admin_header.inc"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\jquery.iframe-transport.js"
+    "plugins\\jqvmap\\jqvmap"
     {
     "ProjRelPath" = "T"
     }
     "file\\logs_2012\\fulltext.log"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-file-upload\\js\\jquery.iframe-transport.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7412,11 +7420,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\fullcalendar"
+    "plugins\\ckeditor\\lang\\ka.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\lang\\ka.js"
+    "plugins\\fullcalendar\\fullcalendar"
     {
     "ProjRelPath" = "T"
     }
@@ -7460,11 +7468,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\lib\\gmaps.events.js"
+    "lib\\log4php\\xml\\LoggerDOMConfigurator.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\xml\\LoggerDOMConfigurator.php"
+    "plugins\\gmaps\\lib\\gmaps.events.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7476,11 +7484,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\shared\\jquery-ui"
+    "plugins\\bootstrap-toggle-buttons\\static\\sass\\bootstrap-toggle-buttons.scss"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-toggle-buttons\\static\\sass\\bootstrap-toggle-buttons.scss"
+    "plugins\\flot\\examples\\shared\\jquery-ui"
     {
     "ProjRelPath" = "T"
     }
@@ -7492,11 +7500,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap\\example.proto.html"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.sl.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.sl.js"
+    "plugins\\chosen-bootstrap\\example.proto.html"
     {
     "ProjRelPath" = "T"
     }
@@ -7532,11 +7540,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-toggle-buttons\\README.md"
+    "plugins\\bootstrap-datepicker\\CONTRIBUTING.md"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\CONTRIBUTING.md"
+    "plugins\\bootstrap-toggle-buttons\\README.md"
     {
     "ProjRelPath" = "T"
     }
@@ -7552,11 +7560,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fullcalendar\\fullcalendar\\fullcalendar.js"
+    "css\\scss\\profile.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\profile.scss"
+    "plugins\\fullcalendar\\fullcalendar\\fullcalendar.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7588,11 +7596,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\package.json"
+    "js\\app.js"
     {
     "ProjRelPath" = "T"
     }
-    "js\\app.js"
+    "plugins\\jquery-file-upload\\package.json"
     {
     "ProjRelPath" = "T"
     }
@@ -7604,11 +7612,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery.mockjax.js"
+    "css\\themes\\smoothness\\images\\ui-icons_cd0a0a_256x240.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-icons_cd0a0a_256x240.png"
+    "plugins\\jquery.mockjax.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7632,11 +7640,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\suites\\options.js"
+    "css\\themes\\base\\jquery.ui.resizable.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.resizable.css"
+    "plugins\\bootstrap-datepicker\\tests\\suites\\options.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7660,11 +7668,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones"
+    "plugins\\bootstrap-switch\\static\\less\\deps\\mixins.less"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\less\\deps\\mixins.less"
+    "plugins\\flot\\examples\\axes-time-zones"
     {
     "ProjRelPath" = "T"
     }
@@ -7680,11 +7688,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\warning.gif"
+    "images\\portlet-remove-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
-    "images\\portlet-remove-icon-white.png"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\warning.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -7708,11 +7716,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\LoggerBasicConfigurator.php"
+    "include\\consts.php"
     {
     "ProjRelPath" = "T"
     }
-    "include\\consts.php"
+    "lib\\log4php\\LoggerBasicConfigurator.php"
     {
     "ProjRelPath" = "T"
     }
@@ -7720,11 +7728,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\sidebar-toggler-blue.jpg"
+    "plugins\\FlexSlider\\flexslider.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\flexslider.css"
+    "plugins\\theme\\img\\sidebar-toggler-blue.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -7748,15 +7756,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\package.json"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\fakeobjects\\images\\spacer.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\multipart\\js\\ui.core.js"
+    "plugins\\jquery-validation\\package.json"
     {
     "ProjRelPath" = "T"
     }
@@ -7764,11 +7768,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\spec\\multiSelectSpec.js"
+    "plugins\\jquery-validation\\demo\\multipart\\js\\ui.core.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\ttf\\11014B_0.ttf"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-multi-select\\test\\spec\\multiSelectSpec.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "js\\sela_adtype.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7780,10 +7792,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_adtype.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-wizard\\prettify.js"
     {
     "ProjRelPath" = "T"
@@ -7792,11 +7800,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_ar.js"
+    "class\\model_datatype.php"
     {
     "ProjRelPath" = "T"
     }
-    "class\\model_datatype.php"
+    "plugins\\jquery-validation\\localization\\messages_ar.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7820,11 +7828,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\visitors\\index.html"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js"
+    "plugins\\flot\\examples\\visitors\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -7832,11 +7840,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\localization\\messages_sk.js"
+    "plugins\\ckeditor\\plugins\\link\\images\\anchor.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\link\\images\\anchor.png"
+    "plugins\\jquery-validation\\localization\\messages_sk.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7848,11 +7856,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\portlet-reload-icon-white.png"
+    "plugins\\bootstrap-datetimepicker\\screenshot\\standard_hour.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\screenshot\\standard_hour.png"
+    "plugins\\theme\\img\\portlet-reload-icon-white.png"
     {
     "ProjRelPath" = "T"
     }
@@ -7868,11 +7876,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_hr.js"
+    "plugins\\bootstrap-tree\\bootstrap-tree\\img\\ajax-loader.gif"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\bootstrap-tree\\img\\ajax-loader.gif"
+    "plugins\\select2\\select2_locale_hr.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7888,6 +7896,14 @@
     {
     "ProjRelPath" = "T"
     }
+    "images\\data\\slide6.jpg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "lib\\log4php\\spi\\LoggerConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\gritter\\css\\jquery.gritter.css"
     {
     "ProjRelPath" = "T"
@@ -7896,19 +7912,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\spi\\LoggerConfigurator.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\data\\slide6.jpg"
+    "plugins\\bootstrap-wizard\\examples\\basic-finishbutton.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\gmaps\\lib\\gmaps.routes.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wizard\\examples\\basic-finishbutton.html"
     {
     "ProjRelPath" = "T"
     }
@@ -7920,11 +7928,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.sv-SE.js"
+    "css\\scss\\ignore_css\\right-slider.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\ignore_css\\right-slider.css"
+    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.sv-SE.js"
     {
     "ProjRelPath" = "T"
     }
@@ -7984,11 +7992,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-toggle-buttons\\static\\stylesheets\\bootstrap-toggle-buttons.css"
+    "css\\style-responsive.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\style-responsive.css"
+    "plugins\\bootstrap-toggle-buttons\\static\\stylesheets\\bootstrap-toggle-buttons.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8016,15 +8024,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\captcha\\images\\button.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datepicker\\LICENSE"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.autocomplete.min.js"
+    "plugins\\jquery-validation\\demo\\captcha\\images\\button.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8032,15 +8036,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\jquery-ui\\components\\jquery.ui.autocomplete.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\bootstrap-datetimepicker\\sample\\bootstrap\\img\\glyphicons-halflings.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\lib\\gmaps.core.js"
+    "include\\_search_box_detail.inc"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_search_box_detail.inc"
+    "plugins\\gmaps\\lib\\gmaps.core.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8056,11 +8064,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\basic-carousel.html"
+    "css\\themes\\smoothness\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
+    "plugins\\FlexSlider\\demo\\basic-carousel.html"
     {
     "ProjRelPath" = "T"
     }
@@ -8076,11 +8084,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\left-nav-callout-long.png"
+    "plugins\\countdown\\plugin\\jquery.countdown-id.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-id.js"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\left-nav-callout-long.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8096,11 +8104,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-fade.js"
+    "plugins\\bootstrap-toggle-buttons\\LICENSE"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-toggle-buttons\\LICENSE"
+    "plugins\\jquery-ui\\components\\jquery.ui.effect-fade.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8128,15 +8136,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-he.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datepicker\\.hgignore"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-switch\\static\\stylesheets\\bootstrap-switch.css"
+    "plugins\\countdown\\plugin\\jquery.countdown-he.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8144,15 +8148,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\bootstrap-switch\\static\\stylesheets\\bootstrap-switch.css"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\jquery-migrate-1.2.1.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.all.css"
+    "css\\scss\\header.scss"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\header.scss"
+    "css\\themes\\base\\jquery.ui.all.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8180,11 +8188,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\examples.css"
+    "css\\themes\\base\\jquery.ui.core.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\jquery.ui.core.css"
+    "plugins\\flot\\examples\\examples.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8200,11 +8208,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\test\\spec\\MapSpec.js"
+    "images\\ui-bg_glass_75_e6e6e6_1x400.png"
     {
     "ProjRelPath" = "T"
     }
-    "images\\ui-bg_glass_75_e6e6e6_1x400.png"
+    "plugins\\gmaps\\test\\spec\\MapSpec.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8212,11 +8220,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\font-awesome\\font\\fontawesome-webfont.woff"
+    "file\\avatar\\651 (10).jpg"
     {
     "ProjRelPath" = "T"
     }
-    "file\\avatar\\651 (10).jpg"
+    "plugins\\font-awesome\\font\\fontawesome-webfont.woff"
     {
     "ProjRelPath" = "T"
     }
@@ -8236,11 +8244,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\index.html"
+    "plugins\\bootstrap-datepicker\\tests\\suites\\inline.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datepicker\\tests\\suites\\inline.js"
+    "plugins\\ckeditor\\samples\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -8268,15 +8276,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\data-tables\\jquery.dataTables.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-daterangepicker\\daterangepicker.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test"
+    "plugins\\data-tables\\jquery.dataTables.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8284,11 +8288,15 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-ui\\components\\jquery.ui.selectable.js"
+    "plugins\\jquery-multi-select\\test"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\fullcalendar\\demos\\cupertino\\images\\animated-overlay.gif"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\jquery-ui\\components\\jquery.ui.selectable.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8312,11 +8320,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.nl.js"
+    "css\\scss\\ignore_css\\article-list - Copy.css"
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\ignore_css\\article-list - Copy.css"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.nl.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8344,11 +8352,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\loading_4.gif"
+    "login.php"
     {
     "ProjRelPath" = "T"
     }
-    "login.php"
+    "images\\loading_4.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -8356,19 +8364,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datepicker\\tests\\assets\\qunit.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\skins\\moono\\readme.md"
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-switch\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\skins\\moono\\readme.md"
     {
     "ProjRelPath" = "T"
     }
@@ -8388,19 +8396,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-semibold\\eot"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\fancybox\\demo\\4_s.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-semibold\\eot"
     {
     "ProjRelPath" = "T"
     }
     "lib\\log4php\\LoggerPropertyConfigurator.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8440,7 +8448,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js"
+    "images\\remove-icon-small.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8448,7 +8456,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "images\\remove-icon-small.png"
+    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8460,11 +8468,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gritter\\images\\gritter-long.png"
+    "plugins\\chosen-bootstrap\\chosen\\chosen.proto.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\chosen-bootstrap\\chosen\\chosen.proto.js"
+    "plugins\\gritter\\images\\gritter-long.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8484,11 +8492,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\wysiwyg-color.css"
+    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.hr.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.hr.js"
+    "plugins\\bootstrap-wysihtml5\\wysiwyg-color.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8496,7 +8504,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-zh-TW.js"
+    "css\\scss\\gallery.scss"
     {
     "ProjRelPath" = "T"
     }
@@ -8504,11 +8512,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\gallery.scss"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium"
+    "plugins\\countdown\\plugin\\jquery.countdown-zh-TW.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8516,15 +8520,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2x2.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery.pwstrength.bootstrap\\test\\bootstrap.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\excanvas.js"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium"
     {
     "ProjRelPath" = "T"
     }
@@ -8532,11 +8528,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\samples\\appendto.html"
+    "plugins\\flot\\excanvas.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\jquery.flot.selection.js"
+    "plugins\\jquery.pwstrength.bootstrap\\test\\bootstrap.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\select2\\select2x2.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "plugins\\ckeditor\\samples\\appendto.html"
     {
     "ProjRelPath" = "T"
     }
@@ -8544,11 +8548,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\flot\\jquery.flot.selection.js"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\countdown\\plugin\\jquery.countdown-pt-BR.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\lib\\gmaps.layers.js"
+    "plugins\\glyphicons\\css\\glyphicons.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8556,7 +8564,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\css\\glyphicons.css"
+    "plugins\\gmaps\\lib\\gmaps.layers.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8584,11 +8592,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\search-icon.png"
+    "plugins\\jcrop\\demos\\demo_files\\image4.jpg"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jcrop\\demos\\demo_files\\image4.jpg"
+    "plugins\\theme\\img\\search-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8608,11 +8616,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\theme\\img\\bg-white-lock.png"
+    "plugins\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
+    "plugins\\theme\\img\\bg-white-lock.png"
     {
     "ProjRelPath" = "T"
     }
@@ -8632,11 +8640,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\select2\\select2_locale_da.js"
+    "plugins\\fancybox\\demo\\iframe.html"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\demo\\iframe.html"
+    "plugins\\select2\\select2_locale_da.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8660,19 +8668,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\gmaps\\examples\\overlay_map_types.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.lv.js"
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\jquery.ui.resizable.css"
+    "plugins\\gmaps\\examples\\overlay_map_types.html"
     {
     "ProjRelPath" = "T"
     }
     "css\\scss\\ignore_css\\login - Copy (2).css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "css\\themes\\smoothness\\jquery.ui.resizable.css"
     {
     "ProjRelPath" = "T"
     }
@@ -8728,11 +8736,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.coffee"
+    "lib\\log4php\\appenders\\LoggerAppenderConsole.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\appenders\\LoggerAppenderConsole.php"
+    "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.coffee"
     {
     "ProjRelPath" = "T"
     }
@@ -8740,11 +8748,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\step1-24.gif"
+    "plugins\\jquery-inputmask\\jquery.inputmask.bundle.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-inputmask\\jquery.inputmask.bundle.js"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\step1-24.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -8784,11 +8792,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\step2-24.gif"
+    "plugins\\bootstrap-editable\\bootstrap-editable\\css\\bootstrap-editable.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-editable\\bootstrap-editable\\css\\bootstrap-editable.css"
+    "plugins\\jquery-validation\\demo\\marketo\\images\\step2-24.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -8800,11 +8808,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\countdown\\plugin\\jquery.countdown-es.js"
+    "lib\\log4php\\helpers\\LoggerPatternParser.php"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\helpers\\LoggerPatternParser.php"
+    "plugins\\countdown\\plugin\\jquery.countdown-es.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8820,11 +8828,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-file-upload\\js\\vendor\\load-image.min.js"
+    "plugins\\flot\\examples\\axes-time-zones\\tz\\factory"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\examples\\axes-time-zones\\tz\\factory"
+    "plugins\\jquery-file-upload\\js\\vendor\\load-image.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8836,15 +8844,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\eot"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datetimepicker\\tests\\assets\\jquery-1.7.1.min.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\back_green-fade.gif"
+    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-regular\\eot"
     {
     "ProjRelPath" = "T"
     }
@@ -8852,15 +8856,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "plugins\\jquery-validation\\demo\\marketo\\images\\back_green-fade.gif"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\fullcalendar\\fullcalendar\\fullcalendar.print.css"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\FlexSlider\\demo\\js\\froogaloop.js"
+    "plugins\\breakpoints\\breakpoints.js"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\breakpoints\\breakpoints.js"
+    "plugins\\FlexSlider\\demo\\js\\froogaloop.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8880,15 +8888,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\wsc\\LICENSE.md"
-    {
-    "ProjRelPath" = "T"
-    }
     "images\\bg_play_pause.png"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\link"
+    "plugins\\ckeditor\\plugins\\wsc\\LICENSE.md"
     {
     "ProjRelPath" = "T"
     }
@@ -8896,15 +8900,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\fonts\\glyphiconshalflings-regular.eot"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\ajax\\data-eu-gdp-growth-4.json"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\jquery.min.js"
+    "plugins\\ckeditor\\plugins\\link"
     {
     "ProjRelPath" = "T"
     }
@@ -8912,35 +8908,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\fancybox\\CHANGELOG.md"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_article.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\fullcalendar\\jquery"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-fade.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.zh-CN.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\data\\kitchen_adventurer_cheesecake_brownie.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium\\ttf\\1110FC_0.ttf"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\respond.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -8948,31 +8916,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\inputs-ext\\wysihtml5\\bootstrap-wysihtml5-0.0.2\\bootstrap-wysihtml5-0.0.2.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_et.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\blueimp-file-upload.jquery.json"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\CONTRIBUTING.md"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-toggle-buttons\\examples"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jcrop\\demos\\crop.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\zooming\\index.html"
     {
     "ProjRelPath" = "T"
     }
@@ -8980,51 +8924,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\smoothness\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-modal\\LICENSE"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-easy-pie-chart\\examples\\style.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\about\\dialogs\\about.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_de.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gmaps\\examples\\basic.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\skins\\moono\\editor_ie.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\avatar\\651 (11).jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2_locale_lt.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\thumbnail-controlnav.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-file-upload\\cors"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\portlet-config-icon.png"
     {
     "ProjRelPath" = "T"
     }
@@ -9032,31 +8932,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hr.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jcrop\\demos\\demo_files\\sagomod.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\chosen-bootstrap\\chosen\\chosen.jquery.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-colorpicker\\img\\alpha.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-timepicker\\compiled"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_property.php"
     {
     "ProjRelPath" = "T"
     }
@@ -9064,91 +8940,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tree\\bootstrap\\img\\glyphicons-halflings.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\js\\bootstrap-editable.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\insertimage.JPG"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-tree\\bootstrap-tree\\js\\bootstrap-tree.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_bg.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\css\\cmxform.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "register.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_like.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\scss\\right-slider.scss"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wizard\\examples\\basic.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wysihtml5\\bootstrap-wysihtml5.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\combinecss.bat"
-    {
-    "ProjRelPath" = "T"
-    }
-    "include\\_right_side.inc"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\data\\gfp57KR.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\jquery.flot.selection.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\loadingfb.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2-spinner.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\jquerymobile.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\samples\\sample.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\themes\\base\\jquery.ui.progressbar.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-tags-input\\test"
     {
     "ProjRelPath" = "T"
     }
@@ -9156,7 +8948,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons\\fonts\\glyphicons-regular.eot"
+    "plugins\\jquery-tags-input\\test"
     {
     "ProjRelPath" = "T"
     }
@@ -9168,43 +8960,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\flot\\LICENSE.txt"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2_locale_zh-TW.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-tags-input\\test\\fake_plaintext_endpoint.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\avatar\\651 (17).jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-modal\\component.json"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\icon-img-down.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\sample\\bootstrap\\js\\bootstrap.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery.blockui.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\ajaxSubmit-integration-demo.html"
+    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\img\\loading.gif"
     {
     "ProjRelPath" = "T"
     }
@@ -9212,87 +8968,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\bootstrap-editable\\img\\loading.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\portlet-config-icon-white.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\tracking\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gmaps\\lib\\gmaps.static.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\js\\jquery.easing.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\hor-menu-search.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\photo1.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\blank.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-easy-pie-chart\\Readme.md"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\server\\php\\files\\.htaccess"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\table\\dialogs\\table.js"
     {
     "ProjRelPath" = "T"
     }
-    "lib\\log4php\\layouts\\LoggerLayoutHtml.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\inputs-ext\\address"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_evaluationtype.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\captcha\\image_req.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\inputs-ext\\wysihtml5\\wysihtml5.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery.pulsate.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\lang\\no.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\sidebar-search-close-blue.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\backstretch\\jquery.backstretch.min.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9304,71 +8984,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wizard\\examples\\basic-disabletabclick.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_manufactory.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-ui\\components\\jquery.ui.selectable.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "class\\model_evaluationtype.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\countdown\\plugin\\countdownBasic.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gmaps\\test\\spec\\OverlaySpec.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\zooming"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-inputmask\\README.md"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\clockface\\js"
     {
     "ProjRelPath" = "T"
     }
-    "include\\_comment_editor_delete.inc"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-datetimepicker\\tests"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gmaps\\lib\\gmaps.geofences.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fancybox\\demo\\1_b.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\tests\\assets\\coverage.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\tests\\suites\\formats.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-daterangepicker\\date.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\avatar.jpg"
     {
     "ProjRelPath" = "T"
     }
@@ -9380,14 +9000,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.da.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\axes-time-zones\\tz\\asia"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-file-upload\\css"
     {
     "ProjRelPath" = "T"
@@ -9396,39 +9008,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.da-DK.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_district.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\skins\\moono\\images\\arrow.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "cat_detail.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\skins\\moono\\editor_ie7.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-ui\\images\\ui-bg_flat_0_aaaaaa_40x100.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-semibold\\svg"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\glyphicons\\scripts\\modernizr.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.uk.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9436,63 +9016,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-multi-select\\test\\lib\\jasmine-1.2.0\\MIT.LICENSE"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\fonts\\webfonts\\geo-medium\\ttf"
-    {
-    "ProjRelPath" = "T"
-    }
     "lib\\log4php\\layouts"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fullcalendar\\demos\\agenda-views.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\lang\\it.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.kr.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\dropzone\\images\\spritemap@2x.png"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-file-upload\\server"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\scss\\ignore_css\\article-list.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\lang\\hu.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "lib\\log4php\\LoggerMDC.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\maxid\\sl_article.app"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\lang\\he.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\countdown\\plugin\\jquery.countdown-gl.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9504,71 +9032,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\scss\\ignore_css\\font - Copy.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.it.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-fileupload"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\user_user.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\glyphicons\\images\\glyphicons-white.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.id.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fullcalendar\\fullcalendar\\gcal.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.cs-CZ.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\server\\gae-python\\app.yaml"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\tests\\tests.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.hu.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\data-tables\\DT_bootstrap.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "class\\model_status.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "lib\\log4php\\LoggerLog.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\tests\\run-qunit.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.he.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9580,59 +9044,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "js\\sela_articletype.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\chosen-bootstrap\\chosen\\chosen-sprite.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\ajax\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\tracking"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wysihtml5\\locales\\bootstrap-wysihtml5.el-GR.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\countdown\\jquery.countdown.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gritter\\images\\gritter-purple.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\glyphicons\\fonts\\glyphicons-regular.woff"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\test\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jcrop\\demos\\demo_files\\main.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\test\\methods.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\fancybox\\demo"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\test\\tabs.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-ui\\components\\jquery.ui.effect-scale.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9640,35 +9052,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.nb.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_numberaire.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.ms.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-validation\\demo\\milk"
-    {
-    "ProjRelPath" = "T"
-    }
-    "include\\_option_article_type.inc"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\FlexSlider\\demo\\js\\demo.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "include\\_admin_footer.inc"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\countdown\\plugin\\jquery.countdown-ar.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9680,59 +9064,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "css\\themes\\base\\images\\ui-bg_glass_55_fbf9ee_1x400.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\portlet-config-icon-white.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-fileupload\\bootstrap-editable-1.4.4\\LICENSE-MIT"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.lt.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gmaps\\lib\\gmaps.controls.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\js\\jquery.fileupload-ui.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\gritter\\images\\gritter-brown.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_vi.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\samples\\uilanguages.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\countdown\\plugin\\jquery.countdown-sk.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_ca.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\glyphicons\\css\\style.css"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\image\\dialogs\\image.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\lang\\pt-br.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9744,39 +9076,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-datetimepicker\\js\\locales\\bootstrap-datetimepicker.zh-TW.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "js\\sela_manufactory.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\flot\\examples\\ajax\\data-eu-gdp-growth-5.json"
-    {
-    "ProjRelPath" = "T"
-    }
-    "images\\pbar-ani.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fullcalendar\\jquery\\jquery-ui-1.10.2.custom.min.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-file-upload\\cors\\postmessage.html"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-editable\\inputs-ext\\address"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\themes\\base\\images\\ui-bg_highlight-soft_75_cccccc_1x100.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\methods_de.js"
     {
     "ProjRelPath" = "T"
     }
@@ -9784,27 +9084,7 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\bootstrap-tag\\docs\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\theme\\img\\hor-menu-search-close.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\select2\\select2_locale_ja.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-easy-pie-chart\\img\\easy-pie-chart.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_advertising.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "lib\\log4php\\layouts\\LoggerLayoutTTCC.php"
     {
     "ProjRelPath" = "T"
     }
@@ -9812,63 +9092,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\jquery-validation\\demo\\css\\cmxformTemplate.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\localization\\messages_sl.js"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-editable\\inputs-ext"
     {
     "ProjRelPath" = "T"
     }
-    "plugins\\glyphicons_halflings\\scripts\\modernizr.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\fancybox\\demo\\5_s.jpg"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-multi-select\\js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "css\\themes\\smoothness\\images\\ui-bg_glass_75_e6e6e6_1x400.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\uniform\\css\\uniform.default.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-ui\\components\\jquery.ui.resizable.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-wizard\\examples\\basic-progressbar.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\jquery-validation\\demo\\marketo\\images\\toggle.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\bootstrap-datepicker\\js\\locales\\bootstrap-datepicker.rs-latin.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "plugins\\data-tables\\images\\sort_both.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\avatar\\651 (12).jpg"
     {
     "ProjRelPath" = "T"
     }

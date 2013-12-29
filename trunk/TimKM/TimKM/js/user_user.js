@@ -33,75 +33,82 @@ var user = {
 		
         core.util.disableControl("btnOK", true);
         var isValid = true;
-        
-        var userName = core.util.getObjectValueByID("txtUserName");
-        core.util.validateInputTextBox('txtUserName', '');
-        if (userName == '') {
-            core.util.validateInputTextBox('txtUserName', 'Tên đăng nhập không được rỗng', isValid);
+        var controlID = 'txtUserName';		
+        var userName = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
+        if (core.util.isNull(userName)) {
+            core.util.validateInputTextBox(controlID, 'Tên đăng nhập không được rỗng', isValid);
             isValid = false;
         } else if (userName.length > 50) {
-            core.util.validateInputTextBox('txtUserName', 'Tên đăng nhập phải ngắn hơn 255 ký tự', isValid);
-            isValid = false;
-        }
-
-        var password = core.util.getObjectValueByID("txtPassword");
-        core.util.validateInputTextBox('txtPassword', '');
-        if (password == '') {
-            core.util.validateInputTextBox('txtPassword', 'Mật khẩu không được rỗng', isValid);
-            isValid = false;
-        } 
-		else if (password.length < 6 ) {
-            core.util.validateInputTextBox('txtPassword', 'Mật khẩu phải tối thiều 6 ký tự', isValid);
-            isValid = false;
-        }
-		else if (password.length > 255) {
-            core.util.validateInputTextBox('txtPassword', 'Mật khẩu phải ngắn hơn 255 ký tự', isValid);
+            core.util.validateInputTextBox(controlID, 'Tên đăng nhập phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
 		
-		var txtRepassword = core.util.getObjectValueByID("txtRepassword");
-        core.util.validateInputTextBox('txtRepassword', '');
-		if (txtRepassword != password) {
-            core.util.validateInputTextBox('txtRepassword', 'Mật khẩu không trùng nhau', isValid);
+		controlID = 'txtPassword';	
+        var password = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
+        if (core.util.isNull(password)) {
+            core.util.validateInputTextBox(controlID, 'Mật khẩu không được rỗng', isValid);
             isValid = false;
         } 
-        var fullname = core.util.getObjectValueByID("txtFullname");
-        core.util.validateInputTextBox('txtFullname', '');
-        if (fullname == '') {
-            core.util.validateInputTextBox('txtFullname', 'Họ tên không được rỗng', isValid);
+		else if (password.length < 6 ) {
+            core.util.validateInputTextBox(controlID, 'Mật khẩu phải tối thiều 6 ký tự', isValid);
+            isValid = false;
+        }
+		else if (password.length > 255) {
+            core.util.validateInputTextBox(controlID, 'Mật khẩu phải ngắn hơn 255 ký tự', isValid);
+            isValid = false;
+        }
+		
+		controlID = 'txtRepassword';	
+		var txtRepassword = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
+		if (txtRepassword != password) {
+            core.util.validateInputTextBox(controlID, 'Mật khẩu không trùng nhau', isValid);
+            isValid = false;
+        } 
+		
+		controlID = 'txtFullname';	
+        var fullname = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
+        if (core.util.isNull(fullname)) {
+            core.util.validateInputTextBox(controlID, 'Họ tên không được rỗng', isValid);
             isValid = false;
         } else if (fullname.length > 255) {
-            core.util.validateInputTextBox('txtFullname', 'Họ tên phải ngắn hơn 255 ký tự', isValid);
+            core.util.validateInputTextBox(controlID, 'Họ tên phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
 
-        var birthDate = core.util.getObjectValueByID("txtBirthDate");
-        core.util.validateInputTextBox('txtBirthDate', '');
+		controlID = 'txtBirthDate';	
+        var birthDate = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
 		
 		var validDate = new Date();
 		validDate.setFullYear(validDate.getFullYear()-5);
 		
-        if (birthDate == '') {
-            core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không được rỗng', isValid);
+        if (core.util.isNull(birthDate)) {
+            core.util.validateInputTextBox(controlID, 'Ngày sinh không được rỗng', isValid);
             isValid = false;
         } else if (core.util.validateDateTime(birthDate) == false) {
-			 core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không hợp lệ', isValid);
+			 core.util.validateInputTextBox(controlID, 'Ngày sinh không hợp lệ', isValid);
 			 isValid = false;
         }
 		else if (new Date(birthDate) >= validDate ) {
-			 core.util.validateInputTextBox('txtBirthDate', 'Ngày sinh không hợp lệ', isValid);
+			 core.util.validateInputTextBox(controlID, 'Ngày sinh không hợp lệ', isValid);
 			 isValid = false;
         }
-
-        var email = core.util.getObjectValueByID("txtEmail");
-        core.util.validateInputTextBox('txtEmail', '');
-        if (email == '') {
-            core.util.validateInputTextBox('txtEmail', 'Email không được rỗng', isValid);
+		
+		controlID = 'txtEmail';	
+        var email = core.util.getObjectValueByID(controlID);
+        core.util.validateInputTextBox(controlID, '');
+        if (core.util.isNull(email)) {
+            core.util.validateInputTextBox(controlID, 'Email không được rỗng', isValid);
             isValid = false;
         } else if (email.length > 255) {
-            core.util.validateInputTextBox('txtEmail', 'Email phải ngắn hơn 255 ký tự', isValid);
+            core.util.validateInputTextBox(controlID, 'Email phải ngắn hơn 255 ký tự', isValid);
             isValid = false;
         }
+				
 		var sex ;
 		if(core.util.isChecked("rdMale"))
 		{
@@ -112,7 +119,7 @@ var user = {
 			sex = core.util.getObjectValueByID("rdFemale");
 		}
        
-        if (typeof(sex) == 'undefined') {
+        if (core.util.isNull(sex)) {
             core.util.validateInputTextBox('rdMale', 'Bạn chưa chọn giới tính', isValid);
             isValid = false;
         }
@@ -133,20 +140,11 @@ var user = {
 			email: email,
 			sex: sex,
 			birthdate: birthDate
-	   }
-       /*return {
-			username:'vle1',
-			password: 'abcd1234',
-			fullname:'viet le',
-			email: 'vle1@yahoo.com',
-			sex: 1,
-			birthdate: '12/12/2013'
-	   }
-       */
+	   }      
     },
     register: function() {  
 		var regiserInfo = this.getRegisterInfo();
-		if(typeof(regiserInfo) == 'undefined')
+		if(core.util.isNull(regiserInfo))
 		{
 			return false;
 		}

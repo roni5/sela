@@ -1,15 +1,15 @@
-#login-page {
+#forgot-page {
   min-height: 500px;
   text-aign: center; }
-  #login-page form {
-    padding: 90px 0; }
-    #login-page form div.table-login {
+  #forgot-page form {
+    padding: 60px 0; }
+    #forgot-page form div.table-forgot {
       margin: auto;
       width: 57%; }
-      #login-page form div.table-login .l-remember {
+      #forgot-page form div.table-forgot .l-remember {
         display: inline;
         vertical-align: middle;
         padding: 0 5px; }
-      #login-page form div.table-login input.remember {
+      #forgot-page form div.table-forgot input.remember {
         margin: 0 0 3px;
         vertical-align: middle; }

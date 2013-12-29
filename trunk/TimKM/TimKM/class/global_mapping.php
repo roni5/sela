@@ -16,6 +16,7 @@ class global_mapping
 	const UserName					= 'UserName';
 	const Email						= 'Email';
 	const UserID					= 'UserID';
+	const Password					= 'Password';
 	const CommentID					= 'CommentID';
 	const Title						= 'Title';
 	const Articles					= 'Articles';
@@ -25,5 +26,23 @@ class global_mapping
 	const SubContents				= 'SubContents';
 	const PeriodTime				= 'PeriodTime';
 	const Type						= 'Type';
+	
+	const Tags						= 'Tags';
+	const CatalogueID				= 'CatalogueID';
+	const SectionID					= 'SectionID';
+	const CompanyName				= 'CompanyName';
+	const CompanyAddress			= 'CompanyAddress';
+	const CompanyWebsite			= 'CompanyWebsite';
+	const CompanyPhone				= 'CompanyPhone';
+	const AdType					= 'AdType';
+	const StartDate					= 'StartDate';
+	const EndDate					= 'EndDate';
+	const HappyDays					= 'HappyDays';
+	const StartHappyHour			= 'StartHappyHour';
+	const EndHappyHour				= 'EndHappyHour';
+	const Addresses					= 'Addresses';
+	const Dictricts					= 'Dictricts';
+	const Cities					= 'Cities';
+	const FileName					= 'FileName';
 }
 ?>
