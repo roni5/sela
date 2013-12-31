@@ -55,4 +55,17 @@ if ($_pgR["act"] == Model_User::ACT_REGISTER)
 		return;
 	}
 }
+else if ($_pgR["act"] == Model_User::ACT_LOGOUT)
+{
+		// or this would remove all the variables in the session, but not the session itself 
+		session_unset(); 		
+		// this would destroy the session variables 
+		session_destroy(); 
+		echo global_common::convertToXML(
+				$arrHeader, array('rs', 'inf'), 
+				array(1, ''), 
+				array( 0, 1 )
+				);
+		return;
+}
 ?>

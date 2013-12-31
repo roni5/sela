@@ -8,16 +8,9 @@ include_once('class/model_comment.php');
 include_once('class/model_user.php');
 
 //$objArticleType = new model_ArticleType($objConnection);
-//$objArticle = new model_Article($objConnection);
-//$objComment = new Model_Comment($objConnection);
-//if ($_pgR["articleid"])
-//{
-//	$articleID = $_pgR["articleid"];
-//	$article = $objArticle->getArticleByID($articleID);
-//	$intPage = 1;
-//	$total = 0;
-//	$comments = $objComment->getCommentByArticle($intPage,$total,$articleID,'*','',' CreatedDate DESC');
-//}
+$objArticle = new Model_Article($objConnection);
+$objComment = new Model_Comment($objConnection);
+
 ?>
 <?php
 include_once('include/_header.inc');

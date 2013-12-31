@@ -194,6 +194,7 @@ class db_connection extends mysqli
 			while($resultRow = mysqli_fetch_array($this->_currentCursor))
 			{
 				array_push($arrRows,$resultRow);
+				
 			}		
 			mysqli_free_result($this->_currentCursor);
 		}

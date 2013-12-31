@@ -742,9 +742,10 @@ class global_common
 	 */
 	public function isCLogin()
 	{		
-		return true;
+		//return true;
 		// is authenticated
-		if(isset($_SESSION[self::SES_C_USERINFO]) && $_SESSION[self::SES_C_USERINFO]["active"]==1)
+		//if(isset($_SESSION[self::SES_C_USERINFO]) && $_SESSION[self::SES_C_USERINFO]["active"]==1)
+		if(isset($_SESSION[self::SES_C_USERINFO]))
 		{	
 			return true;
 		}
@@ -3487,13 +3488,21 @@ class global_common
 	
 	/**
 	 * Input exampale: 2013-12-21 00:00:00
-	 * Output: 21/12/2013
+	 * Output: 21/12/2013  00:00:00
 	 **/
 	public function formatDateTimeVN($mySqlDateTime)
 	{
 		return substr($mySqlDateTime,8,2)."/".substr($mySqlDateTime,5,2)."/".substr($mySqlDateTime,0,4) .' '. substr($mySqlDateTime,11,2).":".substr($mySqlDateTime,14,2).":".substr($mySqlDateTime,17,2) ;
 	}
 	
+	/**
+	 * Input exampale: 2013-12-21 00:00:00
+	 * Output: 21/12/2013
+	 **/
+	public function formatDateVN($mySqlDateTime)
+	{
+		return substr($mySqlDateTime,8,2)."/".substr($mySqlDateTime,5,2)."/".substr($mySqlDateTime,0,4) ;
+	}
 	/**
 	 * Input exampale: 21/12/2013
 	 * Output: 12/21/2013

@@ -1,15 +1,7 @@
 <?php
-//require variable: $arrArticle
-//print_r($arrTopArticles);
-/*if($arrArticle && count($arrArticle)>0)
-{
-	foreach($arrArticle as $item)
-	{
-		echo $objArticle->getArticleMemo($item);
-	}
-	echo global_common::getPagingHTMLByNum(0,Model_Article::NUM_PER_PAGE,$total,'_objArticle.changePage');
-}
-*/
+
+$articles = $objArticle->getTopArticleByType('1',10);
+//print_r($articles);
 ?>
 <style>
  
@@ -18,23 +10,27 @@
 <div id="article-list">	
 	<div id="articles">
 	<?php
-		for($i=0;$i<20;$i++)
+		foreach($articles as $item)
+{
+	$thumbnail = $item[global_mapping::FileName];
+	if($thumbnail)
 	{
-		?>	
-		<div class="item">	
+		$thumbnail = '/images/150x150.gif';
+	}
+	echo '
+			<div class="item">	
 			<div class="info article-thumbnail">
-				<a href="article_detail.php" title="Xem chi tiết khuyến mãi"><img src="/images/150x150.gif" /></a>
+			<a href="article_detail.php?id='.$item[global_mapping::ArticleID].'" title="'.$item[global_mapping::Title].'"><img src="'.$thumbnail.'" /></a>
 			</div>		
-			<div class="info price"><a href="#">Giam 30%</a></div>
+			<div class="info price"><a href="#">'.$item[global_mapping::AdType].'</a></div>
 			<div class="info name">
-				<a href="article_detail.php">An vat Aiya</a>
+			<a href="article_detail.php?id='.$item[global_mapping::ArticleID].'">'.$item[global_mapping::CompanyName].'</a>
 			</div>
-			<div class="info artcile-title">Giam gia ngay Noel</div>
-			<div class="info">Bat dau: 10/9/2013</div>
-			<div class="info">Ket thuc: 10/9/2013</div>		
-		</div>
-		<?php
-		}
+			<div class="info artcile-title">'.$item[global_mapping::Title].'</div>
+			<div class="info">Bat dau: '.global_common::formatDateVN($item[global_mapping::StartDate]).'</div>
+			<div class="info">Ket thuc: '.global_common::formatDateVN($item[global_mapping::EndDate]).'</div>		
+			</div>';
+}
 		?>	
 	</div>
 	<div id="advertises">

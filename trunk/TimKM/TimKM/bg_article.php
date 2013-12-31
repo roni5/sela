@@ -52,7 +52,7 @@ if ($_pgR["act"] == model_Article::ACT_ADD)
 			$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
 			echo global_common::convertToXML(
 					$arrHeader, array("rs", "inf"), 
-					array(1, $result), 
+					array(1, 'Bài viết đã được đưa vào danh sách chờ kiểm duyệt'), 
 					array( 0, 1 )
 					);
 			return;

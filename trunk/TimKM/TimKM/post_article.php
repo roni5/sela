@@ -16,7 +16,10 @@
 /* TODO: Add code here */
 require('config/globalconfig.php');
 
-
+if (!global_common::isCLogin())
+{
+	global_common::redirectByScript("Login.php");
+}
 ?>
 
 
@@ -25,7 +28,7 @@ include_once('include/_header.inc');
 ?>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('user_article.js');?>"></script>
 <div id="post-page" class="span10">
-	<form method="POST" class="form-horizontal">
+	<form method="POST" class="form-horizontal" id="post-article">
 		<!--Begin Form Input -->
 		<input type="hidden" id="adddocmode" name="adddocmode" value="1<?php //echo $intMode;?>" />
 		<input type="hidden" id="txtPage" name="txtPage" value="<?php echo $_pgR["p"]?$intPage:1;?>" />
@@ -86,6 +89,7 @@ include_once('include/_header.inc');
 				<label class="control-label">Chuyên Mục *</label>
 				<div class="controls">	
 					<select class="span6 chosen" name="cmCategory" id="cmCategory" data-placeholder="Chọn chuyên mục" multiple="multiple" tabindex="1">
+						<option value="" >Chọn Danh Mục</option>
 						<option value="1" >Nhà hàng</option>
 						<option value="2">Ăn vặt</option>
 					</select>
@@ -95,20 +99,20 @@ include_once('include/_header.inc');
 			<div class="control-group">
 				<label class="control-label">Loại khuyến mãi *</label>
 				<div class="controls">
-					<input type="text" name="txtAdTypeValue" id="txtAdTypeValue" class="text ad-value" placeholder="Mua 1 tặng 1" maxlength="15" />
+					<input type="text" name="txtAdTypeValue" id="txtAdTypeValue" class="text ad-value" placeholder="vd: Mua 1 tặng 1" maxlength="15" />
 					<div class="help-inline message"></div>			
 				</div>
 			</div>
 			<div class="control-group">
 				<label class="control-label">Từ *</label>
 				<div class="controls">
-					<div class="input-append date date-picker text" data-date="" readonly="readonly"  data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
-						<input name="txtStartDate" id="txtStartDate" class="m-wrap m-ctrl-medium date-picker "size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+					<div class="input-append date date-picker text " data-date="" readonly="readonly"  data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
+						<input name="txtStartDate" id="txtStartDate" disabled="disabled" class="m-wrap m-ctrl-medium date-picker"size="16" type="text" value="" placeholder="dd/mm/yyyy" />
 							<span class="add-on"><i class="icon-calendar"></i></span>
 					</div>
 					<label class="m-wrap inline">Đến * </label>
 					<div class="input-append date date-picker text " data-date=""  data-date-format="dd/mm/yyyy"  data-date-viewmode="days">
-						<input name="txtEndDate" id="txtEndDate" class="m-wrap m-ctrl-medium date-picker" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
+						<input name="txtEndDate" id="txtEndDate" disabled="disabled" class="m-wrap m-ctrl-medium date-picker" size="16" type="text" value="" placeholder="dd/mm/yyyy" />
 							<span class="add-on"><i class="icon-calendar"></i></span>
 					</div>
 					<div class="help-inline message"></div>			
@@ -159,12 +163,11 @@ include_once('include/_header.inc');
 				<label class="control-label">Địa điểm *</label>
 				<div class="controls">
 					<input type="text" name="txtAddressArticle" id="txtAddressArticle" class="text m-wrap  span3" maxlength="255" placeholder="vd: 1A Trần Hưng Đạo" />
-					
-					<select id="optCity" name="optCity" class="chosen span2 m-wrap " single="single" data-placeholder="Chọn TP/Tỉnh" tabindex="1">
+					<select id="optCity" name="optCity" class="chosen span2 "  data-placeholder="Chọn TP/Tỉnh" >
 						<option value="HCM">HCM</option>
-						<option value="HCM">HN</option>
+						<option value="HN">HN</option>
 					</select>
-					<select id="optDistrict" name="optDistrict"  class="chosen span2 m-wrap " data-placeholder="Chọn Quận/Huyện" tabindex="1">
+					<select id="optDistrict" name="optDistrict"  class="chosen span2" data-placeholder="Chọn Quận/Huyện" >
 						<option value="Quận 1">Quận 1</option>
 						<option value="Quận 2">Quận 2</option>
 						<option value="Quận 3">Quận 3</option>
@@ -181,7 +184,7 @@ include_once('include/_header.inc');
 					<div class="help-inline message"></div>					
 				</div>
 			</div>
-			<div class="control-group">
+			<div class="control-group no-display">
 				<label class="control-label">Tags </label>
 				<div class="controls">
 					<textarea id='txtTags' name='txtTags' class="m-wrap span6" rows="2"></textarea>
@@ -189,38 +192,41 @@ include_once('include/_header.inc');
 			</div>
 			<div class="control-group">
 				<div class="controls">
-						<label class="checkbox">
-						<input type="checkbox" value="" /> Tôi đã đọc và đồng ý với <a href="#" class="link">điều khoản đăng tin</a>  của hệ thống timkm.com
+					<label class="checkbox">
+						<input type="checkbox" id="chkTerm" value="" /> Tôi đã đọc và đồng ý với <a href="#" class="link">điều khoản đăng tin</a>  của hệ thống timkm.com
 					</label>
+					<div class="help-inline message"></div>		
 				</div>
 			</div>
 			<div class="control-group">				
 				<div class="controls">
-					<input type="button" name="btnOK" id="btnOK" class="btn" value="Đăng tin"/>
+					<input type="submit" name="btnOK" id="btnOK" class="btn" value="Đăng tin"/>
 					<input type="reset" name="btnReset" id="btnReset" class="btn gray" value="Nhập lại"/>
 				</div>
 			</div>
 		</div>
 	</form>
 </div>
+
 <!--End Form Input -->
 <?php 
 //footer
 include_once('include/_footer.inc');
+include_once('include/_location.inc');
+
 ?>
 <script language="javascript" type="text/javascript">
     $(document).ready(function () {
-			
+			core.util.deSelectOption('optCity');
+			core.util.deSelectOption('optDistrict');
 			core.util.getObjectByID("btnOK").click(function(){
-				 article.postArticle();			
+				return;
+				 //article.postArticle();			
 			});
 			
-			/*
-			core.util.getObjectByID("form-register").submit(function () {
-               user.register();				
+			core.util.getObjectByID("post-article").submit(function () {
+                article.postArticle();				
 				return false;				
             });
-			*/
-			
     });
 </script>

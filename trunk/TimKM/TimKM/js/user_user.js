@@ -93,7 +93,7 @@ var user = {
 			 core.util.validateInputTextBox(controlID, 'Ngày sinh không hợp lệ', isValid);
 			 isValid = false;
         }
-		else if (new Date(birthDate) >= validDate ) {
+		else if (new Date(core.util.formatDateTimeVN(birthDate)) >= validDate ) {
 			 core.util.validateInputTextBox(controlID, 'Ngày sinh không hợp lệ', isValid);
 			 isValid = false;
         }
@@ -336,7 +336,25 @@ var user = {
             edit();
         }
     },
-    
+    logout: function()
+	{		
+		var data ={act:this.ACT_LOGOUT}
+        core.request.post(this.Page,data,
+            function(respone, info){
+				 var strRespond = core.util.parserXML(respone);
+				if (parseInt(strRespond[1]['rs']) == 1) {					
+					core.util.goTo("index.php");
+                }
+                else{					
+                    core.ui.showInfoBar(2, strRespond[1]["inf"]);						
+                }
+            },
+            function()
+            {
+				core.ui.showInfoBar(2, core.constant.MsgProcessError);					
+            }
+        );//logout
+	},
     //endregion   
 
     //region Public Functions

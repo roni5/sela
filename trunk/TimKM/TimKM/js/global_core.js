@@ -330,6 +330,14 @@ core.util = {
 		return dtRegex.test(input);
     },
     
+	formatDateTimeVN: function (input) {
+		var dtArray = input.split('/');
+		dtDay= dtArray[0];
+		dtMonth = dtArray[1];		
+		dtYear = dtArray[2];
+		return dtMonth+'/'+dtDay+'/'+dtYear;
+    },
+	
     focusControl: function (controlID) {
         try {
             var control = this.getObjectByID(controlID)
@@ -490,6 +498,13 @@ core.util = {
 		}
 		return false;
 	},
+	deSelectOption: function(controlID){
+		core.util.getObjectByID(controlID).val([]);
+		core.util.getObjectByID(controlID).trigger("liszt:updated");
+	},
+	clearValue: function(controlID){
+		core.util.getObjectByID(controlID).val('');		
+	}
 };
 
 core.init = function() {

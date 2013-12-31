@@ -4,6 +4,14 @@
 //map fieldname from table 
 class global_mapping
 {
+	const UserName					= 'UserName';
+	const FullName					= 'FullName';	
+	const Sex						= 'Sex';	
+	const Email						= 'Email';
+	const UserID					= 'UserID';
+	const Avatar					= 'Avatar';
+	const Password					= 'Password';
+	
 	//table Article Type
 	const ArticleTypeID				= 'ArticleTypeID';
 	const ArticleTypeName           = 'ArticleTypeName';
@@ -12,11 +20,8 @@ class global_mapping
 	const CreatedBy					= 'CreatedBy';
 	const ArticleID					= 'ArticleID';
 	const Content					= 'Content';
-	const Avatar					= 'Avatar';
-	const UserName					= 'UserName';
-	const Email						= 'Email';
-	const UserID					= 'UserID';
-	const Password					= 'Password';
+
+		
 	const CommentID					= 'CommentID';
 	const Title						= 'Title';
 	const Articles					= 'Articles';

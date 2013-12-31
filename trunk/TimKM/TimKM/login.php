@@ -18,6 +18,7 @@ if ($_pgR["act"] == Model_User::ACT_LOGIN)
 	$result = $objUser->login($userName,$password);
 	if ($result)
 	{
+		$_SESSION[global_common::SES_C_USERINFO] = $result;
 		$curPage = $_SESSION[global_common::SES_C_CUR_PAGE];
 		if($curPage)
 		{
@@ -42,7 +43,6 @@ if ($_pgR["act"] == Model_User::ACT_LOGIN)
 include_once('include/_header.inc');
 include_once('include/_menu.inc');
 ?>
-<script type="text/javascript" src="<?php echo $_objSystem->locateJs('sela_user.js');?>"></script>
 <div id="login-page">
 	<form method="POST"  class="form-horizontal">
 		<div class="table-login">
