@@ -115,7 +115,7 @@ var article = {
         } else if (core.util.validateDateTime(endDate) == false) {
 			 core.util.validateInputTextBox(controlID, 'Ngày kết thúc không hợp lệ', isValid);
 			 isValid = false;
-        }else if (new Date(startDate) >= new Date(endDate) ) {
+        }else if (new Date(core.util.formatDateTimeVN(startDate)) >= new Date(core.util.formatDateTimeVN(endDate)) ) {
 			 core.util.validateInputTextBox(controlID, 'Ngày kết thúc phải sau ngày bắt đầu', isValid);
 			 isValid = false;
         }	
@@ -171,7 +171,12 @@ var article = {
 			core.util.validateInputTextBox(controlID,'Nội dung khuyến mãi không được rỗng', isValid);
 			isValid =  false;
 		}
-			       
+
+		if(!core.util.isChecked("chkTerm")){		 
+            core.util.validateInputTextBox('chkTerm', 'Bạn cần phải đồng ý điều khoản sử dụng', isValid);
+            isValid = false;
+        }
+		
         if (isValid == false) {
 			core.util.disableControl("btnOK", false);
             return;
@@ -217,6 +222,8 @@ var article = {
 				if (parseInt(strRespond[1]['rs']) == 1) {
 					core.ui.showInfoBar(1, strRespond[1]["inf"]);	
 					//core.util.goTo("PostSucess.php");
+					//article.clearForm();
+					core.util.disableControl("btnOK", false);
                 }
                 else{
                     core.ui.showInfoBar(2, strRespond[1]["inf"]);	
@@ -230,6 +237,72 @@ var article = {
             }
         );
     },
+	
+	clearForm: function()
+	{
+		var controlID = 'txtCompanyName';		
+		core.util.clearValue(controlID);
+		
+		
+		controlID = 'txtCompanyAddress';		
+		core.util.clearValue(controlID);
+		
+		controlID = 'txtCompanySite';		
+		core.util.clearValue(controlID);
+		
+		
+		controlID = 'txtCompanyPhone';		
+		core.util.clearValue(controlID);
+		
+		
+		controlID = 'cmArea';	
+		core.util.deSelectOption(controlID);
+		
+		
+		controlID = 'cmCategory';	
+		core.util.deSelectOption(controlID);		
+		
+		controlID = 'txtAdTypeValue';	
+		core.util.clearValue(controlID);
+		
+		controlID = 'txtStartDate';	
+		core.util.clearValue(controlID);		
+					
+		controlID = 'txtEndDate';		
+		core.util.clearValue(controlID);			
+		
+		controlID = 'txtHappyFrom';		
+		core.util.clearValue(controlID);			
+		
+		controlID = 'txtName';		
+		core.util.clearValue(controlID);	
+		
+		controlID = 'txtImage';		
+		core.util.clearValue(controlID);		
+		
+		controlID = 'cmHappyDays';	
+		core.util.deSelectOption(controlID);		
+		
+		controlID = 'txtHappyFrom';		
+		core.util.clearValue(controlID);			
+		
+		controlID = 'txtHappyTo';		
+		core.util.clearValue(controlID);
+		
+		controlID = 'txtAddressArticle';		
+		core.util.clearValue(controlID);		
+		controlID = 'optCity';		
+		core.util.deSelectOption(controlID);
+		controlID = 'optDistrict';		
+		core.util.deSelectOption(controlID);
+		$('.row-item').remove();
+					
+		controlID = 'txtContent';		
+		var content = CKEDITOR.instances[controlID].setData('');
+		
+		controlID = 'txtTags';		
+		core.util.clearValue(controlID);		
+	},
 	
 	addLocation: function(obj) {
 		var root = $('div.address-article');
@@ -254,14 +327,91 @@ var article = {
 							'<span class="location-city">' + city + '</span>' +
 						' </label>' +
 						'<a href="javascript:void(0);" class="btn btn-mini " onclick="article.clickEDIT(this);"><i class="icon-pencil"></i> Sửa</a> ' +
-						'<a href="javascript:void(0);" class="btn btn-mini " onclick="article.clickDELETE(this);"><i class="icon-icon-remove"></i> Xóa</a>'+
+						'<a href="javascript:void(0);" class="btn btn-mini " onclick="article.clickDELETE(this);"><i class="icon-remove"></i> Xóa</a>'+
+						'<a href="javascript:void(0);" class="btn btn-mini " onclick="article.showMap(this);"><i class="icon-eye-open"></i> Xem Trước</a>'+
 					'</div>'	
 		);
 		root.append(newRow);
 		core.util.focusControl('txtAddressArticle');
 		this.clearInputLocation();
 	},
-
+	showMap: function(obj)
+	{		
+		/*
+		$modal.on('click', '.update', function(){
+		  $modal.modal('loading');
+		  setTimeout(function(){
+		    $modal
+		      .modal('loading')
+		      .find('.modal-body')
+		        .prepend('<div class="alert alert-info fade in">' +
+		          'Updated!<button type="button" class="close" data-dismiss="alert"></button>' +
+		        '</div>');
+		  }, 1000);
+		}); 
+		*/
+		
+		var parent = $(obj).parent();
+		var address =  $.trim(parent.find('.location-address').html());
+		var city =  $.trim(parent.find('.location-city').html());
+		var district =  $.trim(parent.find('.location-district').html());
+		var location = address + ', ' + district + ', ' + city;
+		
+		$('#popup-location').modal();
+		$('#popup-location').on('shown', function () {
+			var map = new GMaps({
+				el: '#map',
+				lat: -12.043333,
+				lng: -77.028333
+			});
+			GMaps.geocode({
+			  address: location,
+			  callback: function(results, status){
+				if(status=='OK'){
+					var latlng = results[0].geometry.location;
+					google.maps.event.trigger(map, "resize");
+					map.setCenter(latlng.lat(), latlng.lng());
+					map.addMarker({
+						lat: latlng.lat(),
+						lng: latlng.lng()
+					});
+					
+				}
+			  }
+			});
+			GMaps.geocode({
+			  address: "1 Bui Thi Xuan, Quan 1, HCM",
+			  callback: function(results, status){
+				if(status=='OK'){
+					var latlng = results[0].geometry.location;
+					google.maps.event.trigger(map, "resize");
+					map.setCenter(latlng.lat(), latlng.lng());
+					map.addMarker({
+						lat: latlng.lat(),
+						lng: latlng.lng()
+					});
+					
+				}
+			  }
+			});
+			GMaps.geocode({
+			  address: "1 Ky Con, Quan 1, HCM",
+			  callback: function(results, status){
+				if(status=='OK'){
+					var latlng = results[0].geometry.location;
+					google.maps.event.trigger(map, "resize");
+					map.setCenter(latlng.lat(), latlng.lng());
+					map.addMarker({
+						lat: latlng.lat(),
+						lng: latlng.lng()
+					});
+					
+				}
+			  }
+			});
+		})
+		
+	},
 	clickDELETE: function (obj) {
 		var parent = $(obj).parent();
 		var address =  $.trim(parent.find('.location-address').html());
@@ -322,9 +472,9 @@ var article = {
 	
 	clearInputLocation: function()
 	{
-		core.util.getObjectByID('txtAddressArticle').val('');
-		core.util.getObjectByID('optCity')[0].selected = true;;
-		core.util.getObjectByID('optDistrict')[0].selected = true;
+		core.util.clearValue('txtAddressArticle');
+		core.util.deSelectOption('optCity');
+		core.util.deSelectOption('optDistrict');
 	},
 	
 	showEditMode: function(isEdit)
@@ -347,6 +497,7 @@ var article = {
 		this.clearInputLocation();
 		this.showEditMode(false);
 		var parent = $(obj).parent();
+		var root = $('div.address-article');
 		root.find('.row-item').removeClass('updating');
 	},
 	clickEDIT: function (obj) {

@@ -12,7 +12,6 @@ $objUser = new Model_User($objConnection);
 include_once('include/_header.inc');
 include_once('include/_menu.inc');
 ?>
-<script type="text/javascript" src="<?php echo $_objSystem->locateJs('user_user.js');?>"></script>
 <div id="register-page">
 	<form method="POST" id="form-register" class="form-horizontal" onsubmit=" ">
 		<div class="table-register">

@@ -13,5 +13,14 @@
 	</label>
 	<input type="text" id="txtkeyword" placeholder="Tìm kiếm..."> 
 	<input type="button" class="btnSearch" value=""/>	
-	<a href="post_article.php" class="btn btn-large">Đăng Tim Mới</a>
+<?php
+if (global_common::isCLogin())
+{
+				?>
+				<a href="post_article.php" class="btn btn-large">Đăng Tim Mới</a>
+				
+	<?php
+}
+				?>
+	
 </div>

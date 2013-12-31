@@ -67,7 +67,7 @@ class Model_Article
 		VALUES (
 		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\', 
 		\'{13}\', \'{14}\', \'{15}\', \'{16}\', \'{17}\', \'{18}\', \'{19}\', \'{20}\', \'{21}\', \'{22}\', \'{23}\',
-		\'{24}\', \'{25}\', \'{26}\', \'{27}\', \'{28}\', \'{29}\', \'{30}\', \'{31}\', \'{32}\', \'{33}\');';
+		\'{24}\', \'{25}\', \'{26}\', \'{27}\', \'{28}\', {29}, {30}, \'{31}\', \'{32}\', \'{33}\');';
 	
 	const SQL_INSERT_SL_ARTICLE_TYPE_ID		= 'INSERT INTO `{0}` (ArticleTypeID,ArticleID) VALUES {1};';    
 	
@@ -197,11 +197,12 @@ class Model_Article
 					global_common::escape_mysql_string($companyAddress),global_common::escape_mysql_string($companyWebsite),
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
 					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
-					global_common::escape_mysql_string($happyDays),$startHappyHour,
-					$endHappyHour,global_common::escape_mysql_string($addresses),
+					global_common::escape_mysql_string($happyDays),
+					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
+					global_common::escape_mysql_string($addresses),
 					global_common::escape_mysql_string($dictricts),	global_common::escape_mysql_string($cities)
 					));
-		
+		global_common::writeLog('Error add sl_article:'.$strSQL,1);
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
 			
@@ -246,9 +247,11 @@ class Model_Article
 					global_common::escape_mysql_string($renewednum),global_common::escape_mysql_string($companyname),
 					global_common::escape_mysql_string($companyAddress),global_common::escape_mysql_string($companyWebsite),
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
-					global_common::escape_mysql_string($startDate),global_common::escape_mysql_string($endDate),
-					global_common::escape_mysql_string($happyDays),global_common::escape_mysql_string($startHappyHour),
-					global_common::escape_mysql_string($addresses),global_common::escape_mysql_string($dictricts),
+					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
+					global_common::escape_mysql_string($happyDays),
+					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
+					global_common::escape_mysql_string($addresses),
+					global_common::escape_mysql_string($dictricts),
 					global_common::escape_mysql_string($cities)
 					));
 		
@@ -263,10 +266,10 @@ class Model_Article
 	
 	public function getArticleByID($objID,$selectField='*') 
 	{		
-		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
+		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE ,							
-					'WHERE ArticleID = \''.$objID.'\' '));
-		//echo '<br>SQL:'.$strSQL;
+					'WHERE '.global_mapping::ArticleID.' = \''.$objID.'\' '));
+		//return $strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
 		{
@@ -398,13 +401,15 @@ class Model_Article
 	 * @return mixed This is the return value description
 	 *
 	 */
-	public function getTopArticleByType($listTypeID,$limitRow, $selectField='*',$whereClause='',$orderBy='') 
+	public function getTopArticleByType($listTypeID,$topRow, $selectField='*',$whereClause='',$orderBy='') 
 	{		
 		$arrTypeID = global_common::splitString($listTypeID);
 		$strQueryIN = global_common::convertToQueryIN($arrTypeID);
 		
 		$arrArticleID = self::getArticleIDsByTypes($listTypeID);
+		
 		$strQueryArticleIN = global_common::convertToQueryIN($arrArticleID);
+	
 		if($orderBy)
 		{
 			$orderBy = ' ORDER BY '.$orderBy;
@@ -418,10 +423,10 @@ class Model_Article
 		else
 		{
 			$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
-				global_mapping::ArticleID.'` IN ('.$listTypeID.')';	
+				global_mapping::ArticleID.'` IN ('.$strQueryArticleIN.')';	
 		}
 		
-		if($topRow < 0)
+		if($topRow)
 		{
 			
 			$topRow = consts::DEFAULT_TOP_ITEMS;
@@ -429,7 +434,7 @@ class Model_Article
 		
 		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE_LIMIT, 
 				array($selectField, self::TBL_SL_ARTICLE, $condition.$orderBy,0,$topRow ));					
-		
+		//return $strSQL;
 		$arrResult = self::getArticlesFromDB($strSQL);
 		//print_r($arrResult);
 		return $arrResult;

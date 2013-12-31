@@ -2,6 +2,7 @@
 
 /* TODO: Add code here */
 require('config/globalconfig.php');
+require('include/consts.php');
 include_once('class/model_articletype.php');
 include_once('class/model_article.php');
 include_once('class/model_user.php');
@@ -11,9 +12,6 @@ $objArticle = new model_Article($objConnection);
 $arrCategory =  $objArticleType->getAllArticleType();
 
 $objUser = new Model_User($objConnection);
-
-$articles = $objArticle->getTopArticleByType('1',10);
-print_r($articles);
 
 ?>
 

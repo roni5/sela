@@ -53,6 +53,17 @@
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/ckeditor.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/adapters/jquery.js');?>"></script>
 
+<link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('bootstrap-modal/css/bootstrap-modal.css');?>">
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-modal/js/bootstrap-modal.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('bootstrap-modal/js/bootstrap-modalmanager.js');?>"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('gmaps/gmaps.js');?>"></script>
+
+
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/ckeditor.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJPlugin('ckeditor/adapters/jquery.js');?>"></script>
+
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateJPlugin('theme/css/style.css');?>">
 
 <link type="text/css" rel="stylesheet"  href="<?php echo $_objSystem->locateCss('style.css');?>">
@@ -65,6 +76,8 @@
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('global_core.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('app.js');?>"></script>
 <script type="text/javascript" src="<?php echo $_objSystem->locateJs('form-components.js');?>"></script>
+<script type="text/javascript" src="<?php echo $_objSystem->locateJs('user_user.js');?>"></script>
+
 
 <script>
 		jQuery(document).ready(function() {
@@ -106,9 +119,36 @@
 		</div>
 		 <div id="div-login" align="right" style=""  class="navbar navbar-inverse navbar-fixed-top">
 			<ul class="nav pull-right">		
-				
-				<!-- END  DROPDOWN -->	
+<?php 
+
+if (global_common::isCLogin())
+{
+	//print_r($_SESSION[global_common::SES_C_USERINFO]);
+				?>
 				<!-- BEGIN USER LOGIN DROPDOWN -->
+				<li class="dropdown user">
+					
+					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+						<img class="avatar" src="<?php echo $_SESSION[global_common::SES_C_USERINFO][global_mapping::Avatar] ?>" alt="">
+						<span class="username"><?php echo $_SESSION[global_common::SES_C_USERINFO][global_mapping::FullName] ?></span>
+						<i class="icon-angle-down"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="profile.php"><i class="icon-user"></i> Thông tin cá nhân</a></li>
+						<li><a href="profile_article.php"><i class="icon-reorder"></i> Quản lý khuyến mãi</a></li>
+						<li class="divider"></li>
+						<li><a href="javascript:user.logout();"><i class="icon-signout"></i> Đăng xuất</a></li>
+					</ul>
+				</li>
+				<!-- END USER LOGIN DROPDOWN -->
+				<!-- END  DROPDOWN -->	
+				
+	<?php
+}
+else{
+				?>
+				
+				<!-- BEGIN USER LOGIN ACTIONS -->
 				<li>
 					<a href="login.php" class="btn btn-mini inline">
 						Đăng nhập
@@ -117,21 +157,9 @@
 						Đăng ký
 					</a>				
 				</li>
-				<!-- END USER LOGIN DROPDOWN -->
-				<!-- BEGIN USER LOGIN DROPDOWN -->
-				<li class="dropdown user">
-					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						<img class="avatar" src="/images/default/default-avatar-male.png" alt="">
-						<span class="username">Aiya Quan</span>
-						<i class="icon-angle-down"></i>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="profile.php"><i class="icon-user"></i> Thông tin cá nhân</a></li>
-						<li><a href="profile_article.php"><i class="icon-reorder"></i> Quản lý khuyến mãi</a></li>
-						<li class="divider"></li>
-						<li><a href="login.html"><i class="icon-signout"></i> Đăng xuất</a></li>
-					</ul>
-				</li>
+	<?php
+}
+				?>
 				<!-- END USER LOGIN DROPDOWN -->
 				</ul>
 		 </div>
