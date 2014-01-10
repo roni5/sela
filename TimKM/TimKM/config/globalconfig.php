@@ -1,5 +1,6 @@
 <?php
 // Neu tao session FAIL thi khoi tao session moi
+//session_save_path('/tmp');
 if(!session_start())
 {
 	session_regenerate_id();
@@ -7,7 +8,7 @@ if(!session_start())
 
 require('class/common/include.php');
 require('class/common/dbconnection.php');
-//require('include/consts.php');
+
 require('class/application.php');
 require('class/global_system.php');
 //require('class/user_mobile_detect.php');

@@ -1,6 +1,6 @@
 <?php
 
-$articles = $objArticle->getTopArticleByType('1',10);
+$articles = $objArticle->getTopArticleByType('7',10);
 //print_r($articles);
 ?>
 <style>

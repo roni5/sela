@@ -36,7 +36,7 @@ core.request = {
 		success: "success",//"1"
 		error: "error",//"2"
 	},
-    execute: function(urlVal, data, fx, method, fxFail) {
+    execute: function(urlVal, data, fx, method, fxFail,showLoading) {
         if (method == undefined) method = 'GET';
         $.ajax({
             url: urlVal,
@@ -45,10 +45,13 @@ core.request = {
             data: data,
             crossDomain: true,
             beforeSend: function() {
-                core.ui.showInfoBar(0, core.constant.MsgProcessing);
+				if(showLoading)
+				{
+					core.ui.showInfoBar(0, core.constant.MsgProcessing);
+				}
             },
             success: function(data, textStatus, jqXHR) {
-				if (!core.util.isNull(fxFail)) {
+				if (!core.util.isNull(fx)) {
                      fx(data, { textStatus: textStatus, jqXHR: jqXHR });	
                 }
                 else {
@@ -67,7 +70,9 @@ core.request = {
 				
             },
             complete: function() {
-                //core.ui.hideInfoBar();
+				if (core.util.isNull(fx) && core.util.isNull(fxFail)) {
+					core.ui.hideInfoBar();
+				}
             }
 
         });

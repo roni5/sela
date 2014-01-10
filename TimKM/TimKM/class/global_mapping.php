@@ -20,6 +20,8 @@ class global_mapping
 	const CreatedBy					= 'CreatedBy';
 	const ArticleID					= 'ArticleID';
 	const Content					= 'Content';
+	const Status					= 'Status';
+	const ParentID					= 'ParentID';
 
 		
 	const CommentID					= 'CommentID';

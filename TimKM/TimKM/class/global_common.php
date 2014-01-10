@@ -5,6 +5,13 @@
 class global_common
 {
 	#region self
+	/*****************************************************************************
+	* 
+	* Common Variable
+	* 
+	*****************************************************************************/
+	const DEFAULT_TOP_ITEMS = 25;
+	const DEFAULT_PAGE_SIZE = 10;
 	
 	/*****************************************************************************
 	* 
@@ -384,6 +391,12 @@ class global_common
 		$replace = array("'", "'", '"', '"','...',' '); 
 		return str_replace($search, $replace, $string);
 	}
+	
+	public function nowSQL()
+	{
+		return date('Y-m-d H:i:s');
+	}
+	
 	/**
 	 * thực hiện escape một chuỗi trước khi được dùng làm tham số cho câu sql. Bat buoc truyen doi so thu 2
 	 *

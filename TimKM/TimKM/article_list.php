@@ -2,7 +2,7 @@
 
 /* TODO: Add code here */
 require('config/globalconfig.php');
-require('include/consts.php');
+
 include_once('class/model_articletype.php');
 include_once('class/model_article.php');
 include_once('class/model_user.php');
