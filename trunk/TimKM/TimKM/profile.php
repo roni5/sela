@@ -2,6 +2,7 @@
 
 /* TODO: Add code here */
 require('config/globalconfig.php');
+include_once('include/_permission.inc');
 include_once('class/model_user.php');
 
 $objUser = new Model_User($objConnection);

@@ -201,7 +201,9 @@ var article = {
 			 Addresses:addresses,
 			 Dictricts:districts,
 			 Cities: cities,
-			 FileName: core.util.getObjectValueByID('txtImage')
+			 FileName: core.util.getObjectValueByID('txtImage'),
+			 ArticleID: core.util.getObjectValueByID('ArticleID'),
+			 Mode: core.util.getObjectValueByID('adddocmode')
 		};
 		return articleInfo;
     },
@@ -213,9 +215,16 @@ var article = {
 		{
 			return false;
 		}
-		
+		if(articleInfo.Mode=='1' || articleInfo.Mode==1)
+		{
+			articleInfo.act = this.ACT_UPDATE;
+		}
+		else
+		{
+			articleInfo.act = this.ACT_ADD;
+		}
 		//return false;;
-		articleInfo.act = this.ACT_ADD;
+		
         core.request.post(this.Page,articleInfo,
             function(respone, info){
 				var strRespond = core.util.parserXML(respone);
@@ -379,7 +388,7 @@ var article = {
 				}
 			  }
 			});
-			GMaps.geocode({
+			/*GMaps.geocode({
 			  address: "1 Bui Thi Xuan, Quan 1, HCM",
 			  callback: function(results, status){
 				if(status=='OK'){
@@ -394,21 +403,7 @@ var article = {
 				}
 			  }
 			});
-			GMaps.geocode({
-			  address: "1 Ky Con, Quan 1, HCM",
-			  callback: function(results, status){
-				if(status=='OK'){
-					var latlng = results[0].geometry.location;
-					google.maps.event.trigger(map, "resize");
-					map.setCenter(latlng.lat(), latlng.lng());
-					map.addMarker({
-						lat: latlng.lat(),
-						lng: latlng.lng()
-					});
-					
-				}
-			  }
-			});
+			*/			
 		})
 		
 	},
@@ -532,8 +527,8 @@ var article = {
 		
 		var rowUpdate = root.find('.row-item.updating');
 		rowUpdate.find('.location-address').html(address);
-		rowUpdate.find('.location-district').html(city);
-		rowUpdate.find('.location-city').html(district);
+		rowUpdate.find('.location-district').html(district);
+		rowUpdate.find('.location-city').html(city);
 		
 		this.clearInputLocation();		
 		this.showEditMode(false);

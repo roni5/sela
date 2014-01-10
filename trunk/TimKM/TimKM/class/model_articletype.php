@@ -22,7 +22,10 @@ class Model_ArticleType
     const ACT_DELETE						= 12;
     const ACT_CHANGE_PAGE					= 13;
     const ACT_SHOW_EDIT                     = 14;
-    const ACT_GET                           = 15;
+	const ACT_GET                           = 15;
+	const ACT_GET_ALL                       = 16;
+	
+	
     const NUM_PER_PAGE                      = 15;
     
     const TBL_SL_ARTICLE_TYPE			            = 'sl_article_type';
@@ -139,10 +142,11 @@ class Model_ArticleType
     
     public function getArticleTypeByID($objID,$selectField='*') 
 	{		
+		$selectField = $selectField? $selectField : '*';
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE_TYPE ,							
-					'WHERE ArticleTypeID = \''.$objID.'\' '));
-		//echo '<br>SQL:'.$strSQL;
+					'WHERE '.global_mapping::ArticleTypeID.' = \''.$objID.'\' '));
+		//return $strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
 		{
@@ -155,6 +159,7 @@ class Model_ArticleType
     
     public function getAllArticleType($intPage = 0,$selectField='*',$whereClause='',$orderBy='') 
 	{		
+		$selectField = $selectField? $selectField : '*';
         if($whereClause)
 		{
 			$whereClause = ' WHERE '.$whereClause;
@@ -176,7 +181,7 @@ class Model_ArticleType
 				array($selectField, Model_ArticleType::TBL_SL_ARTICLE_TYPE ,							
 					$whereClause.$orderBy ));
         }
-		//echo '<br>SQL:'.$strSQL;
+		//return $strSQL;
 		$arrResult =$this->_objConnection->selectCommand($strSQL);		
 		if(!$arrResult)
 		{
@@ -189,6 +194,7 @@ class Model_ArticleType
     
     public function getListArticleType($intPage,$orderBy='ArticleTypeID', $whereClause)
 	{		
+		$selectField = $selectField? $selectField : '*';
         if($whereClause)
         {
             $whereClause='WHERE'+ $whereClause;						

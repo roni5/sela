@@ -2,9 +2,23 @@
 
 /* TODO: Add code here */
 require('config/globalconfig.php');
+include_once('include/_permission.inc');
 include_once('class/model_user.php');
+include_once('class/model_article.php');
 
+$objArticle = new Model_Article($objConnection);
 $objUser = new Model_User($objConnection);
+
+if (global_common::isCLogin())
+{
+	//get user info
+	$userInfo = $_SESSION[global_common::SES_C_USERINFO];
+	$userID = $userInfo[global_mapping::UserID];
+	
+	$articles = $objArticle->getArticleByUser($userID,0,global_common::DEFAULT_PAGE_SIZE,null,'','CreatedDate desc');
+	
+	//print_r($articles);
+}
 
 ?>
 
@@ -98,39 +112,23 @@ include_once('include/_menu.inc');
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
-												<td>Khuyến mãi tháng 12</td>
-												<td>12/12/2013</td>
-												<td>01/01/2014</td>
-												<td>
-													<a href="javascript:void(0)" class="btn btn-mini purple">Xem</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Sửa</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Ẩn tin</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Xóa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>Khuyến mãi tháng 12</td>
-												<td>12/12/2013</td>
-												<td>01/01/2014</td>
-												<td>
-													<a href="javascript:void(0)" class="btn btn-mini purple">Xem</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Sửa</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Ẩn tin</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Xóa</a>
-												</td>
-											</tr>
-											<tr>
-												<td>Khuyến mãi tháng 12</td>
-												<td>12/12/2013</td>
-												<td>01/01/2014</td>
-												<td>
-													<a href="javascript:void(0)" class="btn btn-mini purple">Xem</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Sửa</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Ẩn tin</a>
-													<a href="javascript:void(0)" class="btn btn-mini">Xóa</a>
-												</td>
-											</tr>
+<?php
+foreach($articles as $item)
+{
+	echo '								<tr>';
+	echo '									<td>'.$item[global_mapping::Title].'</td>';
+	echo '									<td>'.global_common::formatDateVN($item[global_mapping::StartDate]).'</td>';
+	echo '									<td>'.global_common::formatDateVN($item[global_mapping::EndDate]).'</td>';
+	echo '									<td>';
+	echo '										<a href="article_detail.php?id='.$item[global_mapping::ArticleID].'" class="btn btn-mini purple">Xem</a>';
+	echo '										<a href="post_article.php?id='.$item[global_mapping::ArticleID].'" class="btn btn-mini">Sửa</a>';
+	echo '										<a href="javascript:void(0)" class="btn btn-mini">Ẩn tin</a>';
+	echo '										<a href="javascript:void(0)" class="btn btn-mini">Xóa</a>';
+	echo '									</td>';
+	echo '								</tr>';
+}
+?>
+											
 										</tbody>
 									</table>
 								</div>						
@@ -163,42 +161,6 @@ include_once('include/_menu.inc');
 								<div class="portlet-title hide">
 									<div class="caption">
 										<!--i class="icon-reorder"></i-->
-									</div>
-									
-									<div class="tools">                                
-										<!--a href="#config-form" data-toggle="modal" class="config"></a-->
-										<!--a href="javascript:;" class="reload" title="Reload"></a-->
-									</div>
-									<div class="actions">									
-										<!--div class="btn-group">
-											<a class="btn green" href="#" title="Columns" data-toggle="dropdown">
-												<i class="icon-columns"></i>
-												
-											</a>
-											<div class="dropdown-menu hold-on-click dropdown-checkboxes right column-toggler">
-												<label>
-													<input type="checkbox" checked column-name="Showall">Show all</label>
-												<label>
-													<input type="checkbox" checked column-name="Name">Name</label>
-												<label>
-													<input type="checkbox" checked column-name="Content">Content</label>
-												<label>
-													<input type="checkbox" checked column-name="CreateDate">Create Date</label>
-												<label>
-													<input type="checkbox" checked column-name="ModifiedDate">Modified date</label>
-											</div>
-										</div-->	
-										<!--div class="btn-group">	
-											<a class="btn green" href="#" title="Page Size" data-toggle="dropdown">
-												<i class="icon-list"></i>										
-											</a>
-											<ul class="dropdown-menu right">
-												<li><a href="#">5</a></li>
-												<li><a href="#">10</a></li>
-												<li><a href="#">15</a></li>
-												<li><a href="#">20</a></li>											
-											</ul>
-										</div-->
 									</div>
 								</div>
 								<!---->
@@ -279,42 +241,6 @@ include_once('include/_menu.inc');
 									<div class="caption">
 										<!--i class="icon-reorder"></i-->
 									</div>
-									
-									<div class="tools">                                
-										<!--a href="#config-form" data-toggle="modal" class="config"></a-->
-										<!--a href="javascript:;" class="reload" title="Reload"></a-->
-									</div>
-									<div class="actions">									
-										<!--div class="btn-group">
-											<a class="btn green" href="#" title="Columns" data-toggle="dropdown">
-												<i class="icon-columns"></i>
-												
-											</a>
-											<div class="dropdown-menu hold-on-click dropdown-checkboxes right column-toggler">
-												<label>
-													<input type="checkbox" checked column-name="Showall">Show all</label>
-												<label>
-													<input type="checkbox" checked column-name="Name">Name</label>
-												<label>
-													<input type="checkbox" checked column-name="Content">Content</label>
-												<label>
-													<input type="checkbox" checked column-name="CreateDate">Create Date</label>
-												<label>
-													<input type="checkbox" checked column-name="ModifiedDate">Modified date</label>
-											</div>
-										</div-->	
-										<!--div class="btn-group">	
-											<a class="btn green" href="#" title="Page Size" data-toggle="dropdown">
-												<i class="icon-list"></i>										
-											</a>
-											<ul class="dropdown-menu right">
-												<li><a href="#">5</a></li>
-												<li><a href="#">10</a></li>
-												<li><a href="#">15</a></li>
-												<li><a href="#">20</a></li>											
-											</ul>
-										</div-->
-									</div>
 								</div>
 								<!---->
 								<div class="portlet-body">
@@ -393,42 +319,6 @@ include_once('include/_menu.inc');
 								<div class="portlet-title hide">
 									<div class="caption">
 										<!--i class="icon-reorder"></i-->
-									</div>
-									
-									<div class="tools">                                
-										<!--a href="#config-form" data-toggle="modal" class="config"></a-->
-										<!--a href="javascript:;" class="reload" title="Reload"></a-->
-									</div>
-									<div class="actions">									
-										<!--div class="btn-group">
-											<a class="btn green" href="#" title="Columns" data-toggle="dropdown">
-												<i class="icon-columns"></i>
-												
-											</a>
-											<div class="dropdown-menu hold-on-click dropdown-checkboxes right column-toggler">
-												<label>
-													<input type="checkbox" checked column-name="Showall">Show all</label>
-												<label>
-													<input type="checkbox" checked column-name="Name">Name</label>
-												<label>
-													<input type="checkbox" checked column-name="Content">Content</label>
-												<label>
-													<input type="checkbox" checked column-name="CreateDate">Create Date</label>
-												<label>
-													<input type="checkbox" checked column-name="ModifiedDate">Modified date</label>
-											</div>
-										</div-->	
-										<!--div class="btn-group">	
-											<a class="btn green" href="#" title="Page Size" data-toggle="dropdown">
-												<i class="icon-list"></i>										
-											</a>
-											<ul class="dropdown-menu right">
-												<li><a href="#">5</a></li>
-												<li><a href="#">10</a></li>
-												<li><a href="#">15</a></li>
-												<li><a href="#">20</a></li>											
-											</ul>
-										</div-->
 									</div>
 								</div>
 								<!---->

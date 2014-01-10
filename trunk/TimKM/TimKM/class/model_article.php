@@ -74,25 +74,25 @@ class Model_Article
 	const SQL_UPDATE_SL_ARTICLE		= 'UPDATE `{0}`
 		SET  
 		`ArticleID` = \'{1}\',
-		`Prefix` = \'{2}\',
+		#`Prefix` = \'{2}\',
 		`Title` = \'{3}\',
 		`FileName` = \'{4}\',
 		`Content` = \'{5}\',
-		`NotificationType` = \'{6}\',
-		`Tags` = \'{7}\',
-		`NumView` = \'{8}\',
-		`NumComment` = \'{9}\',
-		`CreatedBy` = \'{10}\',
-		`CreatedDate` = \'{11}\',
+		#`NotificationType` = \'{6}\',
+		#`Tags` = \'{7}\',
+		#`NumView` = \'{8}\',
+		#`NumComment` = \'{9}\',
+		#`CreatedBy` = \'{10}\',
+		#`CreatedDate` = \'{11}\',
 		`ModifiedBy` = \'{12}\',
 		`ModifiedDate` = \'{13}\',
-		`DeletedBy` = \'{14}\',
-		`DeletedDate` = \'{15}\',
-		`IsDeleted` = \'{16}\',
-		`Status` = \'{17}\',
-		`comments` = \'{18}\',
-		`RenewedDate` = \'{19}\',
-		`RenewedNum` = \'{20}\',
+		#`DeletedBy` = \'{14}\',
+		#`DeletedDate` = \'{15}\',
+		#`IsDeleted` = \'{16}\',
+		#`Status` = \'{17}\',
+		#`comments` = \'{18}\',
+		#`RenewedDate` = \'{19}\',
+		#`RenewedNum` = \'{20}\',
 		`CompanyName` = \'{21}\',
 		`CompanyAddress`= \'{22}\',
 		`CompanyWebsite`= \'{23}\',
@@ -188,7 +188,7 @@ class Model_Article
 					global_common::escape_mysql_string($content),global_common::escape_mysql_string($notificationtype),
 					global_common::escape_mysql_string($tags),					
 					global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),
-					global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),
+					global_common::escape_mysql_string($createdby),global_common::nowSQL(),
 					global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
 					global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
 					global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status),
@@ -198,7 +198,7 @@ class Model_Article
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
 					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
 					global_common::escape_mysql_string($happyDays),
-					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
+					$startHappyHour?$startHappyHour:'null',$endHappyHour?$endHappyHour:'null',
 					global_common::escape_mysql_string($addresses),
 					global_common::escape_mysql_string($dictricts),	global_common::escape_mysql_string($cities)
 					));
@@ -226,7 +226,7 @@ class Model_Article
 		}	
 		return $articleID;
 	}
-	
+		
 	public function update($articleid,$prefix,$title,$filename,$articletype,$content,$notificationtype,$tags,
 		$numview,$numcomment,$createdby,$createddate,$modifiedby,$modifieddate,$deletedby,$deleteddate,$isdeleted,
 		$status,$comments,$reneweddate,$renewednum,$companyname,$companyAddress,$companyWebsite,$companyPhone,
@@ -240,7 +240,7 @@ class Model_Article
 					global_common::escape_mysql_string($notificationtype),global_common::escape_mysql_string($tags),
 					global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),
 					global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),
-					global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
+					global_common::escape_mysql_string($modifiedby),global_common::nowSQL(),
 					global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
 					global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status),
 					global_common::escape_mysql_string($comments),global_common::escape_mysql_string($reneweddate),
@@ -249,7 +249,7 @@ class Model_Article
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
 					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
 					global_common::escape_mysql_string($happyDays),
-					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
+					$startHappyHour?$startHappyHour:'null',$endHappyHour?$endHappyHour:'null',
 					global_common::escape_mysql_string($addresses),
 					global_common::escape_mysql_string($dictricts),
 					global_common::escape_mysql_string($cities)
@@ -261,11 +261,12 @@ class Model_Article
 			global_common::writeLog('Error add sl_article:'.$strSQL,1);
 			return false;
 		}	
-		return $intNewID;		
+		return $articleid;		
 	}
 	
 	public function getArticleByID($objID,$selectField='*') 
 	{		
+		$selectField = $selectField? $selectField : '*';
 		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
 				array($selectField, self::TBL_SL_ARTICLE ,							
 					'WHERE '.global_mapping::ArticleID.' = \''.$objID.'\' '));
@@ -282,6 +283,7 @@ class Model_Article
 	
 	public function getAllArticle($intPage = 0,$selectField='*',$whereClause='',$orderBy='') 
 	{		
+		$selectField = $selectField? $selectField : '*';
 		if($whereClause)
 		{
 			$whereClause = ' WHERE '.$whereClause;
@@ -394,6 +396,7 @@ class Model_Article
 	
 	/**
 	 * This is method getTopArticleByType. For show article type list page
+	 * Usage: Load default articles on font end
 	 *
 	 * @param mixed $listTypeID This is a description
 	 * @param mixed $limitRow This is a description
@@ -409,7 +412,9 @@ class Model_Article
 		$arrArticleID = self::getArticleIDsByTypes($listTypeID);
 		
 		$strQueryArticleIN = global_common::convertToQueryIN($arrArticleID);
-	
+		
+		$selectField = $selectField? $selectField : '*';
+		
 		if($orderBy)
 		{
 			$orderBy = ' ORDER BY '.$orderBy;
@@ -426,10 +431,10 @@ class Model_Article
 				global_mapping::ArticleID.'` IN ('.$strQueryArticleIN.')';	
 		}
 		
-		if($topRow)
+		if(!$topRow)
 		{
 			
-			$topRow = consts::DEFAULT_TOP_ITEMS;
+			$topRow = global_common::DEFAULT_TOP_ITEMS;
 		}
 		
 		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE_LIMIT, 
@@ -440,6 +445,61 @@ class Model_Article
 		return $arrResult;
 	}
 	
+	
+	/**
+	 * Get Article with UserID and Status Article. Using on Profile Page
+	 *
+	 * @param mixed $userID This is a description
+	 * @param mixed $status This is a description
+	 * @param mixed $topRow This is a description
+	 * @param mixed $selectField This is a description
+	 * @param mixed $whereClause This is a description
+	 * @param mixed $orderBy This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	public function getArticleByUser($userID,$status, $topRow, $selectField='*',$whereClause='',$orderBy='') 
+	{		
+		$selectField = $selectField? $selectField : '*';
+		if($orderBy)
+		{
+			$orderBy = ' ORDER BY '.$orderBy;
+		}
+		
+		if($whereClause)
+		{
+			$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+				global_mapping::CreatedBy.'` = `'.$userID.'` and `'.
+				global_mapping::Status.'` = `'.$status.'` and '.$whereClause;	
+		}
+		else
+		{
+			$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
+				global_mapping::CreatedBy.'` = \''.$userID.'\' and `'.
+				global_mapping::Status.'` = \''.$status.'\' ';	
+		}
+		//return $topRow;
+		if(!$topRow)
+		{
+			
+			$topRow = global_common::DEFAULT_PAGE_SIZE;
+		}
+		
+		$strSQL = global_common::prepareQuery(global_common::SQL_SELECT_FREE_LIMIT, 
+				array($selectField, self::TBL_SL_ARTICLE, $condition.$orderBy,0,$topRow ));					
+		//return $strSQL;
+		$arrResult = self::getArticlesFromDB($strSQL);
+		//print_r($arrResult);
+		return $arrResult;
+	}
+	
+	/**
+	 * Get Aticles By Type (Categories)
+	 *
+	 * @param mixed $articleTypeIDs This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
 	private function getArticleIDsByTypes($articleTypeIDs)
 	{
 		$arrTypeID = global_common::splitString($articleTypeIDs);
@@ -452,6 +512,30 @@ class Model_Article
 		return global_common::getArrayColumn($articleTypes,global_mapping::ArticleID);
 	}
 	
+	/**
+	 * Get Aticles By Type (Categories)
+	 *
+	 * @param mixed $articleTypeIDs This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
+	public function getArticleTypesByID($objID)
+	{
+		$whereClause = 'WHERE '.global_mapping::ArticleID.' = \''.$objID.'\'';
+		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
+					self::TBL_SL_ARTICLE_TYPE_ID,$whereClause));
+		//return $strSQL;
+		$articleTypes =  $this->_objConnection->selectCommand($strSQL);	
+		return global_common::getArrayColumn($articleTypes,global_mapping::ArticleTypeID);
+	}
+	
+	/**
+	 * Get Article with input is sql script
+	 *
+	 * @param mixed $strSQL This is a description
+	 * @return mixed This is the return value description
+	 *
+	 */
 	private function getArticlesFromDB($strSQL)
 	{
 		$arrResult = $this->_objConnection->selectCommand($strSQL);
