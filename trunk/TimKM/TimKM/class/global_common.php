@@ -10,8 +10,8 @@ class global_common
 	* Common Variable
 	* 
 	*****************************************************************************/
-	const DEFAULT_TOP_ITEMS = 25;
-	const DEFAULT_PAGE_SIZE = 10;
+	const DEFAULT_TOP_ITEMS = 1000;//24
+	const DEFAULT_PAGE_SIZE = 1000;//100
 	
 	/*****************************************************************************
 	* 

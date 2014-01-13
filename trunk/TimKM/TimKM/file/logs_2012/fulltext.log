@@ -1,0 +1,172 @@
+2014-01-11 18:44:54,452 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:44:54,452 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:45:58,969 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:45:58,969 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:49:07,599 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:49:07,599 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type_id WHERE ArticleTypeID IN ()
+2014-01-11 18:49:07,599 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2014-01-11 18:49:07,599 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:07' And EndDate >= '2014-01-11 18:49:07' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:07,599 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 18:49:07' And EndDate >= '2014-01-11 18:49:07' OR' at line 1
+2014-01-11 18:49:07,599 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:07' And EndDate >= '2014-01-11 18:49:07' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:12,337 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=8
+2014-01-11 18:49:12,337 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type_id WHERE ArticleTypeID IN ()
+2014-01-11 18:49:12,337 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2014-01-11 18:49:12,337 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:12' And EndDate >= '2014-01-11 18:49:12' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:12,337 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 18:49:12' And EndDate >= '2014-01-11 18:49:12' OR' at line 1
+2014-01-11 18:49:12,337 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:12' And EndDate >= '2014-01-11 18:49:12' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:15,018 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=9
+2014-01-11 18:49:15,018 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type_id WHERE ArticleTypeID IN ()
+2014-01-11 18:49:15,018 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2014-01-11 18:49:15,018 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:15' And EndDate >= '2014-01-11 18:49:15' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:15,018 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 18:49:15' And EndDate >= '2014-01-11 18:49:15' OR' at line 1
+2014-01-11 18:49:15,018 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:15' And EndDate >= '2014-01-11 18:49:15' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:17,573 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=10
+2014-01-11 18:49:17,573 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article_type_id WHERE ArticleTypeID IN ()
+2014-01-11 18:49:17,573 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2014-01-11 18:49:17,573 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:17' And EndDate >= '2014-01-11 18:49:17' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:49:17,573 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 18:49:17' And EndDate >= '2014-01-11 18:49:17' OR' at line 1
+2014-01-11 18:49:17,573 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:49:17' And EndDate >= '2014-01-11 18:49:17' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:52:33,385 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=10
+2014-01-11 18:52:33,385 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:52:33' And EndDate >= '2014-01-11 18:52:33' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:52:33,385 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 18:52:33' And EndDate >= '2014-01-11 18:52:33' OR' at line 1
+2014-01-11 18:52:33,385 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 18:52:33' And EndDate >= '2014-01-11 18:52:33' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 18:52:36,361 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:52:36,361 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:52:36,361 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:52:40,966 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=8
+2014-01-11 18:52:40,966 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18'))) as tbl_user)
+2014-01-11 18:52:40,966 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:52:45,898 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:52:45,898 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:52:45,898 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:53:53,662 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:53:53,662 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:53:53,662 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:53:59,422 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:53:59,422 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:53:59,422 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:56:16,162 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:56:16,162 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:56:16,162 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:56:32,135 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:56:32,135 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:56:32,135 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 18:59:16,689 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 18:59:16,689 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 18:59:16,689 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:00:35,210 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:00:35,210 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:00:35,210 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:00:53,475 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:00:53,475 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:00:53,475 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:02:32,989 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:02:33,989 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:02:33,989 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:02:49,665 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:02:49,665 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:18:12,398 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:18:12,398 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:19:36,647 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:19:36,647 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:20:34,262 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:20:34,262 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:20:45,635 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:20:45,635 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:22:55,183 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:22:55,183 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:23:16,218 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:23:16,218 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:24:50,427 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:24:50,427 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:25:10,848 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:25:10,848 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:25:45,612 [5596] FATAL  Error Update sl_article:UPDATE `sl_article`
+		SET  
+		`ArticleID` = '229',
+		#`Prefix` = '',
+		`Title` = 'Đón Xuân Giáp Ngọ với ưu đãi đặc biệt dành cho Finger Chicken tại Lotteria',
+		`FileName` = 'http://saigonamthuc.thanhnien.com.vn/Pictures201401/Tan_Nhan/Lotteria_New_Year_2014_Finger_chicken.jpg',
+		`Content` = '<h1 class=\"main-Title\">Đón Xuân Giáp Ngọ với ưu đãi đặc biệt dành cho Finger Chicken tại Lotteria</h1>  <p><span class=\"date-line\">06/01/2014 11:40 </span></p>         <h2 class=\"ms-rteElement-H2\">Nhận ngay ưu đãi cực kỳ hấp dẫn chào đón Xuân Giáp Ngọ tại Lotteria: giảm giá đến 35% khi mua phần gà Finger Chicken. Chương trình áp dụng đến hết ngày 31/01/2014.</h2>   	 		 			<a class=\"highslide \" href=\"http://saigonamthuc.thanhnien.com.vn/Pictures201401/Tan_Nhan/Lotteria_New_Year_2014_Finger_chicken.jpg\"><img alt=\"Đón Xuân Giáp Ngọ với ưu đãi đặc biệt dành cho Finger Chicken tại Lotteria 1\" src=\"http://saigonamthuc.thanhnien.com.vn/Pictures201401/Tan_Nhan/Lotteria_New_Year_2014_Finger_chicken.jpg;pvd2e874691a5a0113\" /></a>  		 	   <p>Chào đón Xuân Giáp Ngọ 2014, bạn sẽ nhận ngay ưu đãi đặc biệt khi mua phần gà Finger Chicken tại Lotteria:</p>  <p><strong>Phần 200g:</strong> giảm 28% chỉ còn 25.000đ (giá chính thức 35.000đ)</p>  <p><strong>Phần 500g:</strong> giảm 35% chỉ còn 55.000đ (giá chính thức 85.000đ)</p> ',
+		#`NotificationType` = '',
+		#`Tags` = '',
+		#`NumView` = '',
+		#`NumComment` = '',
+		#`CreatedBy` = '18',
+		#`CreatedDate` = '2014-01-11 17:23:27',
+		`ModifiedBy` = '18',
+		`ModifiedDate` = '2014-01-11 19:25:45',
+		#`DeletedBy` = '',
+		#`DeletedDate` = '',
+		#`IsDeleted` = '1',
+		#`Status` = '',
+		#`comments` = '',
+		#`RenewedDate` = '',
+		#`RenewedNum` = '',
+		`CompanyName` = ' Passio Cafe - Nguyễn Du',
+		`CompanyAddress`= '53C Nguyễn Du, P. Bến Nghé, Quận 1',
+		`CompanyWebsite`= '',
+		`CompanyPhone`= '(08) 38 226 234 ',
+		`AdType`= 'Giảm 50%',
+		`StartDate`= '2014-01-10 00:00:00',
+		`EndDate`= '2014-01-18 00:00:00',
+		`HappyDays`= '',
+		`StartHappyHour`= null,
+		`EndHappyHour`= null,
+		`Addresses`= ' Toàn hệ thống;',
+		`Dictricts`= 'Quận 1;',
+		`Cities`= 'HCM;'
+		WHERE `ArticleID` = '229'  
+2014-01-11 19:25:45,977 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:25:45,977 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:26:04,501 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:26:04,501 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:26:10,126 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:26:10,126 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:26:10,126 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:26:34,499 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:26:34,499 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:26:34,499 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:28:29,537 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:28:29,537 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:28:29,537 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:28:52,123 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:28:52,123 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:28:52,123 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:29:58,574 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:29:58,574 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:29:58,574 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:32:01,546 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=3
+2014-01-11 19:32:01,546 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=3
+2014-01-11 19:32:01,546 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 19:32:01' And EndDate >= '2014-01-11 19:32:01' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 19:32:01,546 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 19:32:01' And EndDate >= '2014-01-11 19:32:01' OR' at line 1
+2014-01-11 19:32:01,546 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 19:32:01' And EndDate >= '2014-01-11 19:32:01' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 19:32:06,051 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:32:06,051 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:32:10,080 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=8
+2014-01-11 19:32:10,080 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18'))) as tbl_user)
+2014-01-11 19:32:10,080 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:32:14,026 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=9
+2014-01-11 19:32:14,026 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18'))) as tbl_user)
+2014-01-11 19:32:14,026 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:32:24,707 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=10
+2014-01-11 19:32:24,707 [5596] DEBUG dbconnection.php Execute SQL=SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 19:32:24' And EndDate >= '2014-01-11 19:32:24' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 19:32:24,707 [5596] FATAL dbconnection.php Execute SQL error=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') and StartDate <= '2014-01-11 19:32:24' And EndDate >= '2014-01-11 19:32:24' OR' at line 1
+2014-01-11 19:32:24,707 [5596] FATAL  get sl_article from DB:SELECT * FROM sl_article WHERE (IsDeleted IS NULL or IsDeleted = '0') and `ArticleID` IN () and StartDate <= '2014-01-11 19:32:24' And EndDate >= '2014-01-11 19:32:24' ORDER BY ModifiedDate DESC LIMIT 0,1000
+2014-01-11 19:32:28,166 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=9
+2014-01-11 19:32:28,166 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18'))) as tbl_user)
+2014-01-11 19:32:28,166 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:35:37,508 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=9
+2014-01-11 19:35:37,508 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18'))) as tbl_user)
+2014-01-11 19:35:37,508 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:40:50,515 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:40:50,515 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:40:50,515 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:41:00,168 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:41:00,168 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:41:00,168 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-11 19:41:46,258 [5596] FATAL  get All sl_article_type:SELECT * FROM sl_article_type  WHERE ParentID=7
+2014-01-11 19:41:46,258 [5596] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-11 19:41:46,258 [5596] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist
+2014-01-13 19:09:15,802 [8128] DEBUG dbconnection.php Execute SQL=(select * from ((SELECT * FROM sl_user__ WHERE `UserID` IN ('18','18','18','18','18','18','18','18','18'))) as tbl_user)
+2014-01-13 19:09:15,802 [8128] FATAL dbconnection.php Execute SQL error=Table 'timkm.sl_user__' doesn't exist

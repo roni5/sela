@@ -22,7 +22,7 @@
 				padding: 10px 9px; 
 				text-align: center;*/
 				
-				border-right: 1px dotted white;
+				border-right: 1px dotted $color_body;
 				color: white;
 				float: left;
 				font-size: 1em;
@@ -31,6 +31,7 @@
 				padding: 10px 9px;
 				text-align: center;
 				line-height:12px;
+				width:80px;
 				a
 				{
 					color: $color_body;

@@ -509,7 +509,11 @@ core.util = {
 	},
 	clearValue: function(controlID){
 		core.util.getObjectByID(controlID).val('');		
-	}
+	},
+
+    redirect: function(url) {
+        window.location.href = url;
+    },
 };
 
 core.init = function() {

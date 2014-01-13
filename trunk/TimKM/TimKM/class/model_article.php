@@ -101,8 +101,8 @@ class Model_Article
 		`StartDate`= \'{26}\',
 		`EndDate`= \'{27}\',
 		`HappyDays`= \'{28}\',
-		`StartHappyHour`= \'{29}\',
-		`EndHappyHour`= \'{30}\',
+		`StartHappyHour`= {29},
+		`EndHappyHour`= {30},
 		`Addresses`= \'{31}\',
 		`Dictricts`= \'{32}\',
 		`Cities`= \'{33}\'
@@ -178,7 +178,8 @@ class Model_Article
 	
 	public function insert($title,$filename,$content,$notificationtype,$tags,$articletype,
 		$createdby,$renewednum,$companyname,$companyAddress,$companyWebsite,$companyPhone,
-		$adType,$startDate,$endDate,$happyDays,$startHappyHour,$endHappyHour,$addresses,$dictricts,$cities)
+		$adType,$startDate,$endDate,$happyDays,$startHappyHour,$endHappyHour,$addresses,
+		$dictricts,$cities,$status)
 	{
 		$strTableName = self::TBL_SL_ARTICLE;
 		$strSQL = global_common::prepareQuery(self::SQL_INSERT_SL_ARTICLE,
@@ -189,7 +190,7 @@ class Model_Article
 					global_common::escape_mysql_string($tags),					
 					global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),
 					global_common::escape_mysql_string($createdby),global_common::nowSQL(),
-					global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
+					global_common::escape_mysql_string($modifiedby),global_common::nowSQL(),
 					global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
 					global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status),
 					global_common::escape_mysql_string($comments),global_common::escape_mysql_string($reneweddate),
@@ -198,11 +199,11 @@ class Model_Article
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
 					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
 					global_common::escape_mysql_string($happyDays),
-					$startHappyHour?$startHappyHour:'null',$endHappyHour?$endHappyHour:'null',
+					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
 					global_common::escape_mysql_string($addresses),
 					global_common::escape_mysql_string($dictricts),	global_common::escape_mysql_string($cities)
 					));
-		global_common::writeLog('Error add sl_article:'.$strSQL,1);
+		//global_common::writeLog('Error add sl_article:'.$strSQL,1);
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
 			
@@ -240,7 +241,7 @@ class Model_Article
 					global_common::escape_mysql_string($notificationtype),global_common::escape_mysql_string($tags),
 					global_common::escape_mysql_string($numview),global_common::escape_mysql_string($numcomment),
 					global_common::escape_mysql_string($createdby),global_common::escape_mysql_string($createddate),
-					global_common::escape_mysql_string($modifiedby),global_common::nowSQL(),
+					global_common::escape_mysql_string($modifiedby),global_common::escape_mysql_string($modifieddate),
 					global_common::escape_mysql_string($deletedby),global_common::escape_mysql_string($deleteddate),
 					global_common::escape_mysql_string($isdeleted),global_common::escape_mysql_string($status),
 					global_common::escape_mysql_string($comments),global_common::escape_mysql_string($reneweddate),
@@ -249,12 +250,12 @@ class Model_Article
 					global_common::escape_mysql_string($companyPhone),global_common::escape_mysql_string($adType),
 					global_common::formatDateTimeSQL($startDate),global_common::formatDateTimeSQL($endDate),
 					global_common::escape_mysql_string($happyDays),
-					$startHappyHour?$startHappyHour:'null',$endHappyHour?$endHappyHour:'null',
+					$startHappyHour?'\''.$startHappyHour.'\'':'null',$endHappyHour?'\''.$endHappyHour.'\'':'null',
 					global_common::escape_mysql_string($addresses),
 					global_common::escape_mysql_string($dictricts),
 					global_common::escape_mysql_string($cities)
 					));
-		
+		global_common::writeLog('Error Update sl_article:'.$strSQL,1);
 		if (!global_common::ExecutequeryWithCheckExistedTable($strSQL,self::SQL_CREATE_TABLE_SL_ARTICLE,$this->_objConnection,$strTableName))
 		{
 			//echo $strSQL;
@@ -291,8 +292,10 @@ class Model_Article
 		
 		if($orderBy)
 		{
-			$orderBy = ' ORDER BY '.$orderBy;
+			$orderBy .= ',';
 		}
+		$orderBy = ' ORDER BY '.$orderBy. 'ModifiedDate DESC';
+		
 		if($intPage>0)
 		{
 			$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE, 
@@ -417,9 +420,9 @@ class Model_Article
 		
 		if($orderBy)
 		{
-			$orderBy = ' ORDER BY '.$orderBy;
+			$orderBy = ',';
 		}
-		
+		$orderBy = ' ORDER BY '.$orderBy. 'ModifiedDate DESC';
 		if($whereClause)
 		{
 			$condition = 'WHERE ('.global_mapping::IsDeleted.' IS NULL or '.global_mapping::IsDeleted.' = \'0\') and `'.
@@ -463,8 +466,9 @@ class Model_Article
 		$selectField = $selectField? $selectField : '*';
 		if($orderBy)
 		{
-			$orderBy = ' ORDER BY '.$orderBy;
+			$orderBy = ',';
 		}
+		$orderBy = ' ORDER BY '.$orderBy. 'ModifiedDate DESC';
 		
 		if($whereClause)
 		{
@@ -519,9 +523,9 @@ class Model_Article
 	 * @return mixed This is the return value description
 	 *
 	 */
-	public function getArticleTypesByID($objID)
+	public function getArticleTypesByID($articleID)
 	{
-		$whereClause = 'WHERE '.global_mapping::ArticleID.' = \''.$objID.'\'';
+		$whereClause = 'WHERE '.global_mapping::ArticleID.' = \''.$articleID.'\'';
 		$strSQL .= global_common::prepareQuery(global_common::SQL_SELECT_FREE,array('*',
 					self::TBL_SL_ARTICLE_TYPE_ID,$whereClause));
 		//return $strSQL;

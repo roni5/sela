@@ -14,8 +14,7 @@ if (global_common::isCLogin())
 	//get user info
 	$userInfo = $_SESSION[global_common::SES_C_USERINFO];
 	$userID = $userInfo[global_mapping::UserID];
-	
-	$articles = $objArticle->getArticleByUser($userID,0,global_common::DEFAULT_PAGE_SIZE,null,'','CreatedDate desc');
+	$articles = $objArticle->getArticleByUser($userID,0,global_common::DEFAULT_PAGE_SIZE,null,'','');
 	
 	//print_r($articles);
 }
@@ -51,8 +50,8 @@ include_once('include/_menu.inc');
                 <div class="span9 tabbable tabbable-custom tabbable-full-width">
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#dislaying" data-toggle="tab">Đang hiển thị</a></li>
-						<li class=""><a href="#verifying" data-toggle="tab">Chờ duyệt</a></li>
-						<li class=""><a href="#draff" data-toggle="tab">Lưu nháp</a></li>
+						<!--li class=""><a href="#verifying" data-toggle="tab">Chờ duyệt</a></li-->
+						<!--li class=""><a href="#draff" data-toggle="tab">Lưu nháp</a></li-->
 						<li class=""><a href="#inactive" data-toggle="tab">Hết hạn</a></li>
 						
                     </ul>
@@ -120,20 +119,19 @@ foreach($articles as $item)
 	echo '									<td>'.global_common::formatDateVN($item[global_mapping::StartDate]).'</td>';
 	echo '									<td>'.global_common::formatDateVN($item[global_mapping::EndDate]).'</td>';
 	echo '									<td>';
-	echo '										<a href="article_detail.php?id='.$item[global_mapping::ArticleID].'" class="btn btn-mini purple">Xem</a>';
-	echo '										<a href="post_article.php?id='.$item[global_mapping::ArticleID].'" class="btn btn-mini">Sửa</a>';
+	echo '										<a href="article_detail.php?aid='.$item[global_mapping::ArticleID].'" class="btn btn-mini purple">Xem</a>';
+	echo '										<a href="post_article.php?aid='.$item[global_mapping::ArticleID].'" class="btn btn-mini">Sửa</a>';
 	echo '										<a href="javascript:void(0)" class="btn btn-mini">Ẩn tin</a>';
 	echo '										<a href="javascript:void(0)" class="btn btn-mini">Xóa</a>';
 	echo '									</td>';
 	echo '								</tr>';
 }
 ?>
-											
 										</tbody>
 									</table>
 								</div>						
 								<!-- BEGIN PAGINATION-->
-								<div class="row-fluid no-background">
+								<div class="row-fluid no-background no-display">
 									<div class="span12">
 										<div class="pagination pull-right margin-right">
 											<ul>
@@ -212,7 +210,7 @@ foreach($articles as $item)
 									</table>
 								</div>						
 								<!-- BEGIN PAGINATION-->
-								<div class="row-fluid no-background">
+								<div class="row-fluid no-background no-display">
 									<div class="span12">
 										<div class="pagination pull-right margin-right">
 											<ul>
@@ -291,7 +289,7 @@ foreach($articles as $item)
 									</table>
 								</div>						
 								<!-- BEGIN PAGINATION-->
-								<div class="row-fluid no-background">
+								<div class="row-fluid no-background no-display">
 									<div class="span12">
 										<div class="pagination pull-right margin-right">
 											<ul>
@@ -367,7 +365,7 @@ foreach($articles as $item)
 									</table>
 								</div>						
 								<!-- BEGIN PAGINATION-->
-								<div class="row-fluid no-background">
+								<div class="row-fluid no-background no-display">
 									<div class="span12">
 										<div class="pagination pull-right margin-right">
 											<ul>

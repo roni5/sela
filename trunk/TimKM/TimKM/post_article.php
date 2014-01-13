@@ -1,6 +1,9 @@
 <?php
 /* TODO: Add code here */
 require('config/globalconfig.php');
+
+$_SESSION[global_common::SES_C_CUR_PAGE] = "post_article.php";
+
 include_once('include/_permission.inc');
 include_once('include/_header.inc');
 include_once('class/model_articletype.php');
@@ -13,9 +16,9 @@ $objArticleType = new Model_ArticleType($objConnection);
 $intMode = 0;//add mode
 $parentTypes = $objArticleType->getAllArticleType(0,null, 'ParentID=0','Level');
 $allTypes = $objArticleType->getAllArticleType(0,null, 'ParentID='.$parentTypes[0][global_mapping::ArticleTypeID] ,'Level');
-if ($_pgR["id"])
+if ($_pgR["aid"])
 {
-	$articleID = $_pgR["id"];
+	$articleID = $_pgR["aid"];
 	$article = $objArticle->getArticleByID($articleID);
 	
 	$intMode = 1;//edit mode
@@ -218,7 +221,7 @@ foreach($allTypes as $item)
 				</div>
 			</div>
 			<div class="control-group address-article">
-				<label class="control-label">Địa điểm *</label>
+				<label class="control-label">Địa điểm KM</label>
 				<div class="controls">
 					<input type="text" name="txtAddressArticle" id="txtAddressArticle" class="text m-wrap  span3" maxlength="255" placeholder="vd: 1A Trần Hưng Đạo" />
 					<select id="optCity" name="optCity" class="chosen span2 "  data-placeholder="Chọn TP/Tỉnh" >
@@ -233,6 +236,7 @@ foreach($allTypes as $item)
 					<a href="javascript:void(0);" class="btn btn-mini btn-add" onclick="article.addLocation(this)"/><i class="icon-plus"></i> Thêm</a>
 					<a href="javascript:void(0);" class="btn btn-mini btn-update no-display" onclick="article.updateLocation(this)"/><i class="icon-ok"></i> Cập nhật</a>
 					<a href="javascript:void(0);" class="btn  btn-mini btn-cancel no-display" onclick="article.cancelLocation(this)"/></i> Hủy bỏ</a>
+					<div class="help-inline">Áp dụng cho toàn bộ hệ thống nếu không nhập địa chỉ khuyến mãi</div>					
 				</div>	
 <?php
 $total = count($addresses);
@@ -251,7 +255,7 @@ for($i=0; $i<$total; $i++)
 			<div class="control-group">
 				<label class="control-label">Nội dung *</label>
 				<div class="controls">
-					<textarea class="span6 ckeditor m-wrap" name="txtContent" id="txtContent" rows="6"><?php echo $article[global_mapping::Content];?></textarea>
+					<textarea class="span6 ckeditor m-wrap" name="txtContent" id="txtContent" rows="10"><?php echo $article[global_mapping::Content];?></textarea>
 					<div class="help-inline message"></div>					
 				</div>
 			</div>
@@ -288,6 +292,10 @@ include_once('include/_location.inc');
 ?>
 <script language="javascript" type="text/javascript">
     $(document).ready(function () {
+			CKEDITOR.replace( 'txtContent',
+			{
+				height: 400
+			});
 			
 			core.util.deSelectOption('optCity');
 			core.util.deSelectOption('optDistrict');
@@ -307,8 +315,10 @@ include_once('include/_location.inc');
 <?php
 if($intMode)
 {
-	echo '$("#txtHappyFrom").val(\''.$article[global_mapping::StartHappyHour].'\');';
-	echo '$("#txtHappyTo").val(\''.$article[global_mapping::EndHappyHour].'\');';
+	if($article[global_mapping::StartHappyHour])
+		echo '$("#txtHappyFrom").val(\''.$article[global_mapping::StartHappyHour].'\');';
+	if($article[global_mapping::EndHappyHour])
+		echo '$("#txtHappyTo").val(\''.$article[global_mapping::EndHappyHour].'\');';
 }
 			?>
     });

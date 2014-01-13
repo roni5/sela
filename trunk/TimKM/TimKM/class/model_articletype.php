@@ -43,10 +43,12 @@ class Model_ArticleType
 			IsDeleted,
 			Status,
 			Level,
-			ParentID
+			ParentID,
+			Thumbnail,
+			Logo
         )
         VALUES (
-			\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\'
+		\'{1}\', \'{2}\', \'{3}\', \'{4}\', \'{5}\', \'{6}\', \'{7}\', \'{8}\', \'{9}\', \'{10}\', \'{11}\', \'{12}\',\'{13}\', \'{14}\'
         );';
         
 	const SQL_UPDATE_SL_ARTICLE_TYPE		= 'UPDATE `{0}`
@@ -62,7 +64,9 @@ class Model_ArticleType
 			`IsDeleted` = \'{9}\',
 			`Status` = \'{10}\',
 			`Level` = \'{11}\',
-			`ParentID` = \'{12}\'
+			`ParentID` = \'{12}\',
+			`Thumbnail` = \'{13}\',
+			`Logo` = \'{14}\'
 		WHERE `ArticleTypeID` = \'{1}\'  ';
 		   
 
@@ -80,6 +84,8 @@ class Model_ArticleType
 			`Status` varchar(20),
 			`Level` ,
 			`ParentID` varchar(20),
+			`Thumbnail` varchar(250),
+			`Logo` varchar(240),
 			PRIMARY KEY(ArticleTypeID)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;';
 	

@@ -21,7 +21,10 @@ include_once('include/_menu.inc');
 <script type="text/javascript"> 
 
 </script>
-
+<?php 
+//left side
+include_once('include/_slogan.inc');
+?>
 <?php 
 //left side
 include_once('include/_left_side.inc');

@@ -7,7 +7,11 @@ $color_border: #716C68;
 
 $color_hover: #FFBC00;  
 
+$color_active: #FFDC40;
+
 $size_header: 20px ;
+
+
 $size_sub_header: 16px ;
 
 @charset "utf-8";
@@ -35,7 +39,7 @@ body{
 		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
 		
 	}
-.wrapper{width:100%; display:block;}
+.wrapper{width:100%; display:block; min-height: 360px;}
 /*
 #slider-left {float:left; height:100%;width:15%;}
 #content {float:left; min-height:583px;width:75%;  display:block}
@@ -123,6 +127,25 @@ h1  a:hover {color:$color_header !important;}
 /*********** map ************/
 @import "map.scss"; 
 /*********** end map ************/
+
+.wrapper 
+{
+	p.slogan
+	{
+		font-size: 24px;
+		text-align:center;
+		padding-top:0px;
+		padding-bottom:8px;
+		color: $color_header_menu;
+	}
+	#content
+	{
+		p.slogan
+		{
+			padding-top:80px;
+		}
+	}
+}
 
 .tooltipBox{border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background-color:#fffbe7;border:1px #ffb950 solid;padding:5px 25px 5px 10px;.display:inline-block}
 .tooltipBox{font-style:italic}
