@@ -7,11 +7,10 @@ include_once('class/model_articletype.php');
 include_once('class/model_article.php');
 include_once('class/model_user.php');
 
-$objArticleType = new model_ArticleType($objConnection);
-$objArticle = new model_Article($objConnection);
-$arrCategory =  $objArticleType->getAllArticleType();
-
-$objUser = new Model_User($objConnection);
+if (!$_pgR["cid"])
+{
+	global_common::redirectByScript("index.php");
+}
 
 ?>
 
@@ -25,7 +24,11 @@ include_once('include/_menu.inc');
 <script type="text/javascript"> 
 
 </script>
-
+	
+<?php 
+//left side
+include_once('include/_slogan.inc');
+?>
 <?php 
 //left side
 include_once('include/_left_side.inc');

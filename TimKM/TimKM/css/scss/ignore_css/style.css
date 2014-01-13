@@ -50,7 +50,8 @@ body {
 
 .wrapper {
   width: 100%;
-  display: block; }
+  display: block;
+  min-height: 360px; }
 
 /*
 #slider-left {float:left; height:100%;width:15%;}
@@ -433,7 +434,8 @@ table.table {
       height: 24px;
       padding: 10px 9px;
       text-align: center;
-      line-height: 12px; }
+      line-height: 12px;
+      width: 80px; }
       #header #header-menu > ul li a {
         color: white; }
       #header #header-menu > ul li a:hover {
@@ -469,6 +471,10 @@ table.table {
         color: white; }
       #left-sider > ul li a:hover {
         color: #ffbc00; }
+    #left-sider > ul li.active a {
+      color: #ffdc40; }
+    #left-sider > ul li.active a:hover {
+      color: #ffbc00; }
 
 /*********** end left-sider ************/
 /*********** right-sider ************/
@@ -486,7 +492,7 @@ table.table {
 /*********** gallery ************/
 #content .gallery {
   margin-left: 19px;
-  margin-top: 200px; }
+  margin-top: 150px; }
 
 /*********** end gallery ************/
 /*********** login ************/
@@ -769,6 +775,8 @@ table.table {
           color: white !important; }
       #article-list #articles .item .article-thumbnail {
         border: 5px solid; }
+        #article-list #articles .item .article-thumbnail img {
+          max-height: 180px; }
       #article-list #articles .item img {
         -webkit-transition: box-shadow 0.5s ease;
         -moz-transition: box-shadow 0.5s ease;
@@ -888,6 +896,10 @@ table.table {
     text-align: right;
     vertical-align: top;
     width: 22%; }
+    #article #company-info .title {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 3px 0; }
     #article #company-info #company_address {
       text-align: center;
       font-weight: bold;
@@ -897,9 +909,17 @@ table.table {
       /* for Safari */
       background-clip: padding-box;
       /* for IE9+, Firefox 4+, Opera, Chrome */ }
-    #article #company-info #company_map .map-address {
-      margin-top: 11px;
-      width: 100%; }
+      #article #company-info #company_address .address {
+        font-size: 10px; }
+      #article #company-info #company_address .mobile {
+        font-size: 10px; }
+      #article #company-info #company_address .website {
+        font-size: 10px; }
+    #article #company-info #company_map {
+      text-align: center; }
+      #article #company-info #company_map .map-address {
+        margin-top: 1px;
+        width: 100%; }
     #article #company-info #company_partner .partner {
       margin-top: 11px;
       width: 100%; }
@@ -952,6 +972,15 @@ table.table {
   border-bottom: 16px solid #336699; }
 
 /*********** end map ************/
+.wrapper p.slogan {
+  font-size: 24px;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  color: #0099ff; }
+.wrapper #content p.slogan {
+  padding-top: 80px; }
+
 .tooltipBox {
   border-radius: 5px;
   -moz-border-radius: 5px;

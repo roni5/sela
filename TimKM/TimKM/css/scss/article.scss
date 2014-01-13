@@ -155,7 +155,12 @@
 		text-align: right;
 		vertical-align: top;
 		width: 22%;
-		
+		.title
+		{
+			font-size: 14px;
+			font-weight: bold;
+			margin: 3px 0;
+		}
 		#company_address
 		{		
 			text-align:center;
@@ -165,15 +170,25 @@
 			-webkit-background-clip: padding-box; /* for Safari */
 			background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 			.name{}
-			.address{}
-			.mobile{}
-			.website{}		
+			.address
+			{
+				font-size: 10px;
+			}
+			.mobile
+			{
+				font-size: 10px;
+			}
+			.website
+			{
+				font-size: 10px;
+			}			
 		}
 		#company_map
 		{
+			text-align:center;
 			.map-address
 			{
-				margin-top: 11px;
+				margin-top: 1px;
 				width: 100%;
 			}
 		}

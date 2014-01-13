@@ -26,6 +26,17 @@
 			{
 				color:$color_hover;
 			}
-		}		
+		}	
+		li.active
+		{					
+			a
+			{
+				color: $color_active;
+			}	
+			a:hover
+			{
+				color:$color_hover;
+			}			
+		}			
 	}
 }

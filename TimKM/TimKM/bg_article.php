@@ -45,13 +45,13 @@ if ($_pgR["act"] == model_Article::ACT_ADD || $_pgR["act"] == model_Article::ACT
 		$dictricts = global_editor::rteSafe(html_entity_decode($_pgR[global_mapping::Dictricts],ENT_COMPAT ,'UTF-8' ));
 		$cities = global_editor::rteSafe(html_entity_decode($_pgR[global_mapping::Cities],ENT_COMPAT ,'UTF-8' ));
 		$fileName = global_editor::rteSafe(html_entity_decode($_pgR[global_mapping::FileName],ENT_COMPAT ,'UTF-8' ));
-		
+		$status = 1;
 		if($_pgR["act"] == model_Article::ACT_ADD)
 		{
 			$createdBy = $c_userInfo[global_mapping::UserID];
 			$resultID = $objArticle->insert($title,$fileName, $content,null,$tags,$catalogueID,$createdBy,$renewedNum,$companyName,
 					$companyAddress,$companyWebsite,$companyPhone,$adType,$startDate,$endDate,$happyDays,
-					$startHappyHour,$endHappyHour, $addresses,$dictricts,$cities);
+					$startHappyHour,$endHappyHour, $addresses,$dictricts,$cities,$status);
 			if ($resultID)
 			{
 				$arrHeader = global_common::getMessageHeaderArr($banCode);//$banCode
@@ -74,7 +74,7 @@ if ($_pgR["act"] == model_Article::ACT_ADD || $_pgR["act"] == model_Article::ACT
 			$articleID = global_editor::rteSafe(html_entity_decode($_pgR[global_mapping::ArticleID],ENT_COMPAT ,'UTF-8' ));
 			$currentArticle = $objArticle->getArticleByID($articleID);
 			$resultID = $objArticle->update($articleID,null,$title,$fileName,$catalogueID, $content,null,$tags,null,null,$currentArticle[global_mapping::CreatedBy],
-					$currentArticle[global_mapping::CreatedDate],$modifiedBy,global_common::nowSQL(),null,null,null,null,null,null,null,$companyName,
+					$currentArticle[global_mapping::CreatedDate],$modifiedBy,global_common::nowSQL(),null,null,1,null,null,null,null,$companyName,
 					$companyAddress,$companyWebsite,$companyPhone,$adType,$startDate,$endDate,$happyDays,
 					$startHappyHour,$endHappyHour, $addresses,$dictricts,$cities);
 			if ($resultID)
@@ -144,7 +144,7 @@ elseif($_pgR['act'] == model_Article::ACT_DELETE)
 {
 	
 	$IDName = "menu_id";
-	$contentID = $_pgR["id"];
+	$contentID = $_pgR["aid"];
 	$strTableName = user_menu::TBL_T_MENU;
 	$result = global_common::updateDeleteFlag($contentID,$IDName,$strTableName ,$_pgR["status"],$objConnection);
 	if($result)

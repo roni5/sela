@@ -139,30 +139,31 @@ var article = {
 			 core.util.validateInputTextBox(controlID,'Tên khuyến mãi phải ngắn hơn 255', isValid);
 			isValid =  false;
 		}
-		
-		if(core.util.getObjectByClass('location-district').length <1)
-		{
-			core.util.validateInputTextBox('txtAddressArticle','Phải có ít nhất một địa điểm', isValid);
-			isValid =  false;
-		}
+		var btnAdd = core.util.getObjectByClass('address-article .btn-add');
+		btnAdd.click();
+		controlID = 'txtAddressArticle';
+		core.util.validateInputTextBox(controlID,'');
 		
 		var addresses='';
 		var districts = '';
 		var cities = '';
-		core.util.getObjectByClass('location-address').each(function(){
-			var text = ($(this).text()+"").replace(';',',');
-			addresses += text + ";";
-		})
-		
-		core.util.getObjectByClass('location-district').each(function(){
-			var text = ($(this).text()+"").replace(';',',');
-			districts += text + ";";
-		})
-		
-		core.util.getObjectByClass('location-city').each(function(){
-			var text = ($(this).text()+"").replace(';',',');
-			cities += text + ";";
-		})
+		if(core.util.getObjectByClass('location-district').length >=1 )
+		{
+			core.util.getObjectByClass('location-address').each(function(){
+				var text = ($(this).text()+"").replace(';',',');
+				addresses += text + ";";
+			})
+			
+			core.util.getObjectByClass('location-district').each(function(){
+				var text = ($(this).text()+"").replace(';',',');
+				districts += text + ";";
+			})
+			
+			core.util.getObjectByClass('location-city').each(function(){
+				var text = ($(this).text()+"").replace(';',',');
+				cities += text + ";";
+			})
+		}
 		
 		controlID = 'txtContent';		
 		var content = CKEDITOR.instances[controlID].getData()
@@ -231,8 +232,12 @@ var article = {
 				if (parseInt(strRespond[1]['rs']) == 1) {
 					core.ui.showInfoBar(1, strRespond[1]["inf"]);	
 					//core.util.goTo("PostSucess.php");
-					//article.clearForm();
+					article.clearForm();
 					core.util.disableControl("btnOK", false);
+					if(articleInfo.Mode=='1' || articleInfo.Mode==1)
+					{
+						core.util.redirect('profile_article.php')
+					}
                 }
                 else{
                     core.ui.showInfoBar(2, strRespond[1]["inf"]);	

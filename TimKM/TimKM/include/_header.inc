@@ -87,6 +87,17 @@
 		});
 	</script>
 </head>
+<?php
+
+/* TODO: Add code here */
+include_once('class/model_articletype.php');
+include_once('class/model_article.php');
+
+$objArticleType = new model_ArticleType($objConnection);
+$arrCategories =  $objArticleType->getAllArticleType(0,null,'`ParentID`=0','Level');
+
+
+?>
 
 <body >
 <div id="main" align="">
@@ -97,24 +108,14 @@
 			<li>
 				<a href="index.php">Logo</a>
 			</li>
-			<li>
-				<a href="article_list.php">Ăn uống <br> Giải trí</a>
-			</li>
-			<li>
-				<a href="article_list.php">Thời trang<br>Làm đẹp</a>			
-			</li>
-			<li>
-				<a href="article_list.php">Điện thoại<br>Máy tính</a>
-			</li>
-			<li>
-				<a href="article_list.php">Đồ gia đình<br>Văn phòng</a>
-			</li>			
-			<li>
-				<a href="article_list.php">Nhà cửa<br>Xe cộ</a>
-			</li>			
-			<li>
-				<a href="article_list.php">Du lịch-Tài chính<br>Dịch vụ</a>
-			</li>			
+<?php
+foreach($arrCategories as $item)
+{
+	echo '	<li>';
+	echo '		<a href="article_list.php?cid='.$item[global_mapping::ArticleTypeID].'">'.str_replace('-',' ',$item[global_mapping::ArticleTypeName]).'</a>';	
+	echo '	</li>';
+}
+	?>
 			</ul>
 		</div>
 		 <div id="div-login" align="right" style=""  class="navbar navbar-inverse navbar-fixed-top">

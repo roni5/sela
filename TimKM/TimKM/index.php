@@ -7,15 +7,8 @@ include_once('class/model_article.php');
 include_once('class/model_user.php');
 
 $objArticleType = new model_ArticleType($objConnection);
-$objArticle = new model_Article($objConnection);
-$arrCategory =  $objArticleType->getAllArticleType();
+$arrCategories =  $objArticleType->getAllArticleType(0,null,'`ParentID`=0','Level');
 
-$objUser = new Model_User($objConnection);
-
-if ($_pgR["act"] == Model_User::ACT_LOGIN)
-{
-	
-}
 
 ?>
 
@@ -61,73 +54,27 @@ include_once('include/_cat_list.inc');
 }
 </style>
 <div id="content">	
+<?php 
+//left side
+include_once('include/_slogan.inc');
+?>
 	<div class="gallery">
-	  <div class="item">
-		<a href="article_list.php"><img align="left" src="images/data//c2NAjXD.jpg"></a>		
-		<span class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</span>
-	  </div>
-	  <div class="item">
-		<a href="article_list.php"><img align="left" src="images/data//FeCziip.png"></a>	
-		<span class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</span>
-	  </div>
-	  <div class="item">
-		<img align="left" src="images/data//OYlw7Pw.jpg">
-		<span class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</span>
-	  </div>
-	  <div class="item">
-		<img align="left" src="images/data//MVammek.jpg">
-		<span class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</span>
-	  </div>
-	  <div href="#" class="item">
-		<img align="left" src="images/data//gfp57KR.png">
-		<span class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</span>
-	  </div>
-	  <div class="item">
-		<img align="left" src="images/data//FeCziip.png">
-		<div class="caption">
-		  <h1>
-			Tim KM
-		  </h1>
-		  <p>
-			Tim KM
-		  </p>
-		</div>
-	  </div>
+<?php
+foreach($arrCategories as $item)
+{
+	echo '<div class="item">';
+	echo '	<a href="article_list.php?cid='.$item[global_mapping::ArticleTypeID].'" title="'.$item[global_mapping::ArticleTypeName].'"><img align="left" src="'.$item[global_mapping::Thumbnail].'"></a>	';	
+	echo '	<span class="caption">';
+	echo '	  <h1>';
+	echo '		'.$item[global_mapping::ArticleTypeName];
+	echo '	  </h1>';
+	echo '	  <p>';
+	echo '		'.$item[global_mapping::ArticleTypeName];
+	echo '	  </p>';
+	echo '	</span>';
+	echo '  </div>';
+}
+	?>
 	</div>
 </div>
 

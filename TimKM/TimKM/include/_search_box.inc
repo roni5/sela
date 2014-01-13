@@ -1,5 +1,5 @@
 <div id="search-box">
-<label>
+	<label>
 		<select id="optlocation">
 			<option>Tỉnh/Thành Phố</option>
 			<option>Hồ chí minh</option>

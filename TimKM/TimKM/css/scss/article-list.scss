@@ -43,7 +43,11 @@
 			}
 			.article-thumbnail
 			{			
-				border: 5px solid;				
+				border: 5px solid;		
+				img 
+				{	
+					max-height:180px;
+				}				
 			}
 			img 
 			{	

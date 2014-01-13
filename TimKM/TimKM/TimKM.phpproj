@@ -128,10 +128,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_evaluationtype.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\lang\\km.js"
     {
     "ProjRelPath" = "T"
@@ -212,10 +208,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_menu.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\FlexSlider\\demo\\js\\shBrushXml.js"
     {
     "ProjRelPath" = "T"
@@ -277,10 +269,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-daterangepicker\\examples.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "include\\_cat_list.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -401,10 +389,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-ui\\components\\jquery.ui.autocomplete.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_comment.php"
     {
     "ProjRelPath" = "T"
     }
@@ -892,10 +876,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_contentsummary.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-multi-select\\test\\spec"
     {
     "ProjRelPath" = "T"
@@ -961,10 +941,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-easy-pie-chart\\examples\\index.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_adtype.php"
     {
     "ProjRelPath" = "T"
     }
@@ -1680,10 +1656,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "include\\header box_delete.txt"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eo.js"
     {
     "ProjRelPath" = "T"
@@ -1964,10 +1936,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_articletype.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-validation\\demo\\css\\reset.css"
     {
     "ProjRelPath" = "T"
@@ -2033,10 +2001,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-ui\\images\\ui-icons_cd0a0a_256x240.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_datatype.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2432,10 +2396,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_user.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\uniform\\css\\uniform.default.scss"
     {
     "ProjRelPath" = "T"
@@ -2629,10 +2589,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-datetimepicker\\tests\\assets\\mock.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_auction.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2884,15 +2840,15 @@
     {
     "ProjRelPath" = "T"
     }
+    "include\\_slogan.inc"
+    {
+    "ProjRelPath" = "T"
+    }
     "plugins\\excanvas.min.js"
     {
     "ProjRelPath" = "T"
     }
     "js\\ga.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_request.php"
     {
     "ProjRelPath" = "T"
     }
@@ -3552,10 +3508,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_offer.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\uk.js"
     {
     "ProjRelPath" = "T"
@@ -3601,10 +3553,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\gmaps\\examples\\static_polylines.html"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_currency.php"
     {
     "ProjRelPath" = "T"
     }
@@ -3868,10 +3816,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_evaluation.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\countdown\\plugin\\jquery.countdown-bn.js"
     {
     "ProjRelPath" = "T"
@@ -3905,10 +3849,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\flot\\examples\\realtime"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\logs_2012"
     {
     "ProjRelPath" = "T"
     }
@@ -4560,10 +4500,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_partner.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\ckeditor\\lang\\uk.js"
     {
     "ProjRelPath" = "T"
@@ -4712,19 +4648,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_userrank.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jcrop\\demos\\styling.html"
     {
     "ProjRelPath" = "T"
     }
     "plugins\\bootstrap-wizard\\bootstrap\\js\\bootstrap.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_role.php"
     {
     "ProjRelPath" = "T"
     }
@@ -4781,10 +4709,6 @@
     "ProjRelPath" = "T"
     }
     "css\\scss\\article.scss"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_numberaire.php"
     {
     "ProjRelPath" = "T"
     }
@@ -4913,10 +4837,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\flot\\examples\\annotating"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_district.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5140,10 +5060,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_commentbad.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\bootstrap-switch\\examples"
     {
     "ProjRelPath" = "T"
@@ -5177,10 +5093,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-file-upload\\server\\node\\public"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_article.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5232,10 +5144,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\font-awesome\\css\\font-awesome-ie7.css"
     {
     "ProjRelPath" = "T"
@@ -5253,10 +5161,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-slimscroll\\examples\\style.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_paymentmode.php"
     {
     "ProjRelPath" = "T"
     }
@@ -5664,10 +5568,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "file\\logs_2012\\phperrors.log"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\flot\\examples\\series-pie"
     {
     "ProjRelPath" = "T"
@@ -5968,10 +5868,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_status.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\FlexSlider\\jquery.flexslider-min.js"
     {
     "ProjRelPath" = "T"
@@ -6009,10 +5905,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\countdown\\plugin\\jquery.countdown-pl.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_setting.php"
     {
     "ProjRelPath" = "T"
     }
@@ -6120,10 +6012,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_product.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-validation\\demo\\css"
     {
     "ProjRelPath" = "T"
@@ -6197,10 +6085,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_notificationtype.php"
     {
     "ProjRelPath" = "T"
     }
@@ -6405,10 +6289,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-multi-select\\img"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_city.php"
     {
     "ProjRelPath" = "T"
     }
@@ -7272,10 +7152,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_shiptype.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\theme\\img\\portlet-remove-icon-white.png"
     {
     "ProjRelPath" = "T"
@@ -7317,10 +7193,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\flot\\examples\\navigate\\arrow-up.gif"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_like.php"
     {
     "ProjRelPath" = "T"
     }
@@ -7417,10 +7289,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-file-upload\\js\\jquery.iframe-transport.js"
-    {
-    "ProjRelPath" = "T"
-    }
-    "file\\logs_2012\\fulltext.log"
     {
     "ProjRelPath" = "T"
     }
@@ -9092,10 +8960,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_property.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\gritter"
     {
     "ProjRelPath" = "T"
@@ -9344,10 +9208,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "admin\\admin_manufactory.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "plugins\\jquery-ui\\components\\jquery.ui.selectable.min.js"
     {
     "ProjRelPath" = "T"
@@ -9369,10 +9229,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-inputmask\\README.md"
-    {
-    "ProjRelPath" = "T"
-    }
-    "include\\_comment_editor_delete.inc"
     {
     "ProjRelPath" = "T"
     }
@@ -9841,10 +9697,6 @@
     "ProjRelPath" = "T"
     }
     "plugins\\jquery-easy-pie-chart\\img\\easy-pie-chart.png"
-    {
-    "ProjRelPath" = "T"
-    }
-    "admin\\admin_advertising.php"
     {
     "ProjRelPath" = "T"
     }

@@ -22,6 +22,8 @@ class global_mapping
 	const Content					= 'Content';
 	const Status					= 'Status';
 	const ParentID					= 'ParentID';
+	const Thumbnail					= 'Thumbnail';
+	const Logo						= 'Logo';
 
 		
 	const CommentID					= 'CommentID';

@@ -1,0 +1,1 @@
+<p class="slogan">Đăng ký đơn giản - Đăng tin miễn phí</p>
