@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "TimKM", "TimKM\TimKM.phpproj", "{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "TimKM", "TimKM\TimKM.phpproj", "{F7276205-2E93-47D9-9568-CA3D6C1B4C6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

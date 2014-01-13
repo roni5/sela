@@ -8,29 +8,58 @@
  */
 
 
-
-/// <summary>
-/// Implementations of slarticletypes represent a ArticleType
-///
-/// </summary>
-function ArticleType()
-{		   
-	//region PRESERVE ExtraMethods For ArticleType
-	//endregion
+var articleType = {	   
+	
     //region Contants	
-    var ACT_ADD = 10;
-    var ACT_UPDATE = 11;
-    var ACT_DELETE = 12;
-    var ACT_CHANGE_PAGE = 13;
-    var ACT_SHOW_EDIT = 14;
-    var ACT_GET = 15;
-    var _strPage = "admin_articleType.php";
+    ACT_ADD : 10,
+    ACT_UPDATE : 11,
+    ACT_DELETE : 12,
+    ACT_CHANGE_PAGE : 13,
+    ACT_SHOW_EDIT : 14,
+    ACT_GET : 15,
+	ACT_GET_ALL : 16,
+    Page : "bg_article.php",
     
+    AllCategories: null,
    
+    //region Public Functions
+    setAllCategories: function(){
+		model = this;
+		core.request.post(this.Page,
+			{
+				act:this.ACT_GET_ALL
+			},
+            function(respone, info){
+				model.AllCategories = jQuery.parseJSON(respone);
+				core.ui.hideInfoBar();
+            },
+            function()
+            {
+				core.ui.hideInfoBar();
+            },false
+        );
+	},
+	
+	bindCategory: function(obj)
+	{
+		me = this;
+		var categories = me.AllCategories;
+		var currentParent = core.util.getObjectValueByID('cmArea');
+		$("#cmCategory").empty();
+		for (var item in categories) {
+			if( categories[item].ParentID == currentParent)
+			{				
+				key = categories[item].ArticleTypeID;
+				val =  categories[item].ArticleTypeName;			
+				$("#cmCategory").append("<option value=\"" + key + "\">" + val + "</option>");
+			}
+		}
+		$("#cmCategory").trigger("liszt:updated");
+	},
     //endregion   
     
     //region Public Functions
-    
+    /*
     this.btnSave_OnClick = btnSave_OnClick;
     function btnSave_OnClick() {
         core.disableControl("btnOK", true);
@@ -290,5 +319,6 @@ else if (core.isInteger(level)) {
 		core.getObject('txtParentID').val('');
     }
     //endregion   
+	*/
 }
-var _objArticleType = new  ArticleType();
+//var _objArticleType = new  ArticleType();
