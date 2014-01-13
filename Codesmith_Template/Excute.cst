@@ -9,7 +9,7 @@ Description: Run SubTemplates From This File And OutPut those templates to file
 <%@ Assembly Name="SchemaExplorer" %>
 <%@ Import Namespace="SchemaExplorer" %>
 
-<%--connection string: Server=192.168.0.108;Database=mysql;Uid=devadmin;Pwd=123456 %>
+<%--connection string: Server=192.168.0.108;Database=timkm;Uid=userdev;Pwd=123456 %>
 <%-- Use the Register directive to register a subtemplate --%>
 <%@ Property Name="SourceDatabase" Optional="True" Type="SchemaExplorer.DatabaseSchema" Category="1. Context" Description="Database that the stored procedures should be based on." %>
 <%--@ Property Name="_outputDirectory" Optional="True" Type="System.String" Category="1. Context" Description="Database that the stored procedures should be based on." --%>
